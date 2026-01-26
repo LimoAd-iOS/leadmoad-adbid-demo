@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AdbidSDK"
-  spec.version      = "0.1.3"
+  spec.version      = "0.1.4"
   spec.summary      = "Adbid广告SDK"
   spec.description  = <<-DESC
                     Adbid广告SDK提供了广告展示和管理功能
