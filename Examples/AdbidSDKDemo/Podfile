@@ -1,0 +1,12 @@
+platform :ios, '13.0'
+source 'https://github.com/CocoaPods/Specs.git'
+workspace '../../AdbidSDKWorkspace.xcworkspace'
+
+target 'AdbidSDKDemo' do
+  use_frameworks!
+  
+  pod 'UBiXMerakSDK', '2.9.0'
+  pod 'LeadmoadAdSDK'
+  pod 'AdbidSDK','0.1.24'
+  
+end
