@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>taobao</string>
+		<string>pinduoduo</string>
+		<string>openapp.jdmobile</string>
+		<string>imeituan</string>
+		<string>iosamap</string>
+		<string>alipay</string>
+		<string>baiduboxapp</string>
+		<string>vipshop</string>
+		<string>tmall</string>
+		<string>meituanwaimai</string>
+		<string>kwai</string>
+		<string>eleme</string>
+		<string>xhsdiscover</string>
+		<string>ksnebula</string>
+		<string>sinaweibo</string>
+		<string>fleamarket</string>
+		<string>bilibili</string>
+		<string>quark</string>
+		<string>com.sy.dldllhsj</string>
+		<string>com.yunkai.xianyu</string>
+		<string>com.netease.nshm</string>
+		<string>com.lilithgames.solarland.ios.cnnew</string>
+		<string>com.netease.yyslscn</string>
+		<string>infinitynikkicn</string>
+		<string>mdd</string>
+		<string>moyi</string>
+		<string>glg136c4b5fbccab</string>
+		<string>guazi</string>
+		<string>momochat</string>
+		<string>comdzhongfhjc</string>
+		<string>hmjc</string>
+		<string>com.aio.fasting</string>
+		<string>com.pwrd.zhuxian2.zs</string>
+		<string>com.khorgas.hsdj</string>
+		<string>com.gof.china</string>
+		<string>openjdjrapp</string>
+		<string>xtlqabroad</string>
+		<string>com.netease.stzb</string>
+		<string>com.gf.cxswz</string>
+		<string>SilverandBlood</string>
+		<string>stbnt</string>
+		<string>tbopen</string>
+		<string>pddopen</string>
+		<string>baiduboxlite</string>
+		<string>wireless1688</string>
+		<string>iqiyi</string>
+		<string>weixin</string>
+		<string>taobaotravel</string>
+		<string>alipays</string>
+		<string>youku</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

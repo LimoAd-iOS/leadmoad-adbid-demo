@@ -7,6 +7,6 @@ target 'AdbidSDKDemo' do
   
   pod 'UBiXMerakSDK', '2.9.0'
   pod 'LeadmoadAdSDK'
-  pod 'AdbidSDK','0.1.24'
+  pod 'AdbidSDK','0.1.25'
   
 end
