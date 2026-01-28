@@ -101,7 +101,6 @@
 				3F5E35672E7A35C8004E9A2C /* Frameworks */,
 				3F5E35682E7A35C8004E9A2C /* Resources */,
 				55F0D32DDAF73D72989B0B81 /* [CP] Copy Pods Resources */,
-				9EBD70CCF1C3F60EE9BB2A0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,38 +189,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9EBD70CCF1C3F60EE9BB2A0B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
