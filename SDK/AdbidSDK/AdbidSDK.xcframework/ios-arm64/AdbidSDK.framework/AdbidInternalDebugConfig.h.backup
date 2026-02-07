@@ -1,0 +1,30 @@
+//
+//  AdbidInternalDebugConfig.h
+//  AdbidSDK
+//
+//  Created by Assistant on 2025/1/21.
+//
+
+#ifndef AdbidInternalDebugConfig_h
+#define AdbidInternalDebugConfig_h
+
+/**
+ * SDK内部调试配置
+ * 
+ * 使用说明：
+ * 1. 开发调试时：取消注释下面的 #define LM_SDK_INTERNAL_DEBUG 1
+ * 2. 发布版本时：注释掉下面的 #define LM_SDK_INTERNAL_DEBUG 1
+ * 
+ * 这样可以确保内部调试日志只在开发时输出，发布版本中完全移除
+ */
+
+// 开发调试时启用（发布时请注释掉）
+#define Adbid_SDK_INTERNAL_DEBUG 1
+
+// 或者可以基于编译配置自动判断
+#ifdef DEBUG
+    // 在Debug模式下可以选择性启用内部日志
+    // #define Adbid_SDK_INTERNAL_DEBUG 1
+#endif
+
+#endif /* AdbidInternalDebugConfig_h */
