@@ -25,6 +25,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)rewardVideoAdDidClick:(AdbidRewardVideoAd *)rewardVideoAd;
 /// 开屏广告关闭
 - (void)rewardVideoAdDidClose:(AdbidRewardVideoAd *)rewardVideoAd;
+
+///激励视频开始播放
+- (void)rewardVideoAdDidStartPlay:(AdbidRewardVideoAd *)rewardedVideoAd;
+
+ ///激励视频播放完成或者发生错误时回调
+- (void)rewardVideoAdDidEndPlay:(AdbidRewardVideoAd *)rewardedVideoAd withError:(NSError *_Nullable)error;
+
+ ///视频广告播放达到激励条件回调
+- (void)rewardVideoAdDidReward:(AdbidRewardVideoAd *)rewardedVideoAd;
+
 @end
 
 @interface AdbidRewardVideoAd : NSObject

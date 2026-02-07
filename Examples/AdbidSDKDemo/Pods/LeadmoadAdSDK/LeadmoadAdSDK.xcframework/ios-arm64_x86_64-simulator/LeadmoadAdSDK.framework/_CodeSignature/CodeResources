@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/LMAdSDKConfiguration.h</key>
 		<data>
-		KvJxCjjLYsrGqteyCI7xJXqnJBk=
+		OJMQO8iJ7UEhT+iF/3DbBGh28YQ=
 		</data>
 		<key>Headers/LMAdSDKManager.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/LMRewardVideoAd.h</key>
 		<data>
-		d8ktr7SAtMq2Cvf5xdRnhPFOM5E=
+		GTF7VpE14rDOMpz9rTv+SegfSCM=
 		</data>
 		<key>Headers/LMSplashAd.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		A9uI8Y2M35q6ESn8BlFpajY7r7s=
+		5iIoabnZDya3G8Ak1az/lcyU0wo=
 		</data>
 		<key>LMAdInternalDebugConfig.h.backup</key>
 		<data>
@@ -65,10 +65,6 @@
 	<dict>
 		<key>Headers/LMAdBidLossInfo.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			bBPvcHj/aYmnCBpUJyCyldNP4E0=
-			</data>
 			<key>hash2</key>
 			<data>
 			nXQd0ihT0eNfsbzlf1afi1qUy7zI5WoQ2dfqr6++M7I=
@@ -76,10 +72,6 @@
 		</dict>
 		<key>Headers/LMAdPublicDefine.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			zoVDIvjzBUVaZOO3g9W6UOwQHuc=
-			</data>
 			<key>hash2</key>
 			<data>
 			mRXu4DUqUdYN+78Bh/rkbQrdrO6baNPgut//rPAgD0M=
@@ -87,21 +79,13 @@
 		</dict>
 		<key>Headers/LMAdSDKConfiguration.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			KvJxCjjLYsrGqteyCI7xJXqnJBk=
-			</data>
 			<key>hash2</key>
 			<data>
-			gjJGtHYjG5m+ZHoLxZobO7IPYD5YvbpI1djaVA5C0a0=
+			GG4DB2JFpNmEeqV/+zF/emILGPyzlDYKPl27E7KLJiU=
 			</data>
 		</dict>
 		<key>Headers/LMAdSDKManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			M/C4WA5cgaKDr2ZXpv0iBmfI/D4=
-			</data>
 			<key>hash2</key>
 			<data>
 			DwqEseS7pLAoGTtsYJEDxRE9nff0Mkz2cQYrI/2EKrM=
@@ -109,10 +93,6 @@
 		</dict>
 		<key>Headers/LMNativeAd.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jM0gVvnXyV3oF8ek39jUm4aCAHY=
-			</data>
 			<key>hash2</key>
 			<data>
 			alNfmLNyIh5sGhf22my4N9w0pzCllzX7xXAhokVAtHY=
@@ -120,10 +100,6 @@
 		</dict>
 		<key>Headers/LMNativeMediaView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			m/LVP/ITU6RVgDGxctG9FxYY82s=
-			</data>
 			<key>hash2</key>
 			<data>
 			n3TOWOO0hOcH8qOiesxmTnfN5GAe9ztWD0KNwiiJfcI=
@@ -131,10 +107,6 @@
 		</dict>
 		<key>Headers/LMNativeObj.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BmDr8ej3vhvdTgiD8wytRDSJMB0=
-			</data>
 			<key>hash2</key>
 			<data>
 			7U+xcp9O1jMiFnqa8Tmis51aqxkNBwuPOB4SMa1SVj8=
@@ -142,10 +114,6 @@
 		</dict>
 		<key>Headers/LMNativeView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			WeCpn/etZrsT2dDtQ47+D9nmYXc=
-			</data>
 			<key>hash2</key>
 			<data>
 			q2ukp4+ZOl35DeDibxC3K+K2XtG2OAAS84ftlfVc2dc=
@@ -153,21 +121,13 @@
 		</dict>
 		<key>Headers/LMRewardVideoAd.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			d8ktr7SAtMq2Cvf5xdRnhPFOM5E=
-			</data>
 			<key>hash2</key>
 			<data>
-			th4wnFDwPWbfkVnFOmafbvVP1UeQCBi7jV9SZvbdL5c=
+			QTY8d69nAeO2+AIpfyOc+gTamOWMDBXSb3Z6hhHgUx0=
 			</data>
 		</dict>
 		<key>Headers/LMSplashAd.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Z8W13U2dPXwb214sxQoQcnfbauc=
-			</data>
 			<key>hash2</key>
 			<data>
 			SjuV4lvj9MH41LIojsPsBAve2PTGv4mm+R8CFR/AMrk=
@@ -175,10 +135,6 @@
 		</dict>
 		<key>Headers/LeadmoadAdSDK.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tFQ+kVhRa0OCdxI+D+c/CJw3rLw=
-			</data>
 			<key>hash2</key>
 			<data>
 			gHAs/lu8ivgtzfqRCY/LVMJNdMWkZRH/C3OTIjpBLvM=
@@ -186,10 +142,6 @@
 		</dict>
 		<key>LMAdInternalDebugConfig.h.backup</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			q6OlvtrDSB+hy77RFa+YwipO768=
-			</data>
 			<key>hash2</key>
 			<data>
 			IwEnDhjY99N1uLKV+b/FrUbdjcY1EpZU8gHVkzu3SdU=
@@ -197,10 +149,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			8UpmyK71dHzGySKP3yc+Ynqaj50=
-			</data>
 			<key>hash2</key>
 			<data>
 			fKxNqKBVbV9EbU1XxqZccK8KoT2QLxmsgZoe7sFIC9w=

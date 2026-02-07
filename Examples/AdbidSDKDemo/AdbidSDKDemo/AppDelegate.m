@@ -9,6 +9,8 @@
 #import <AdSupport/AdSupport.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import <AdbidSDK/AdbidSDK.h>
+#import <AdbidSDK/AdbidSDKConfiguration.h>
+
 #import "ViewController.h"
 #import "GDTAction+convenience.h"
 #import "GDTAction.h"
@@ -42,6 +44,9 @@
     
     AdbidSDKConfiguration *configuration = [AdbidSDKConfiguration configuration];
     configuration.appID = @"10004";
+    configuration.userId = @"111111";
+    configuration.IDFA = @"";
+    NSString* sdkVersion = [AdbidSDKConfiguration sdkVersion];
     configuration.debugMode = YES;
     
     AdCustomPermissionController* adP = [[AdCustomPermissionController alloc]init];
@@ -49,12 +54,6 @@
     configuration.adCustomController = adP;
     configuration.age = 12;
     configuration.gender = AdbidUserGenderMale;
-    
-    //configuration.logLevel = LMAdLogLevelDebug;
-    NSDictionary *caidDict = [self saveCaidToUserDefaults];
-    [AdbidSDKManager setExtraUserData:caidDict];
-    NSLog(@"[AppDelegate] setupLMAdSDK");
-
     [AdbidSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *_Nullable error) {
         if (success) {
 //            [self loadSplashAd];
@@ -67,28 +66,6 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self requestIDFATracking];
     });
-}
-
-- (NSDictionary *)saveCaidToUserDefaults {
-    // 检查是否已保存CAID
-    NSDictionary *savedCaidDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"LMNativeDemoCaidsKey"];
-    if (savedCaidDict && savedCaidDict.count > 0) {
-        return savedCaidDict;
-    }
-    NSLog(@"[AppDelegate] saveCaidToUserDefaults");
-    [GDTAction init:@"1209177436" secretKey:@"e22062d669e375ab459382163dbb34ee"];
-    [GDTAction start];
-    NSDictionary *caids = [GDTAction getCaid];
-    // 结构[{"caid":"b0549fa553a4ea1da50c09c2069ebeda","version":"20250325"},{"caid":"712e8e31d2c13a37dec327341353b280","version":"20230330"}]
-    NSArray *caidArray = caids[@"data"];
-    NSDictionary *lastCaid = caidArray.lastObject;
-    NSString *caid = lastCaid[@"value"];
-    NSString *version = lastCaid[@"version"];
-    NSLog(@"[AppDelegate] caidArray: %@", caidArray);
-    NSDictionary *caidDict = @{@"caid_value": caid, @"caid_version": version};
-    [[NSUserDefaults standardUserDefaults] setObject:caidDict forKey:@"LMNativeDemoCaidsKey"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    return caidDict;
 }
 
 - (void)requestIDFATracking {

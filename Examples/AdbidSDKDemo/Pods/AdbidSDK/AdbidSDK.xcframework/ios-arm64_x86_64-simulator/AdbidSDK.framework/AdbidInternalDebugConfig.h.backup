@@ -19,7 +19,7 @@
  */
 
 // 开发调试时启用（发布时请注释掉）
-//#define Adbid_SDK_INTERNAL_DEBUG 1
+#define Adbid_SDK_INTERNAL_DEBUG 1
 
 // 或者可以基于编译配置自动判断
 #ifdef DEBUG

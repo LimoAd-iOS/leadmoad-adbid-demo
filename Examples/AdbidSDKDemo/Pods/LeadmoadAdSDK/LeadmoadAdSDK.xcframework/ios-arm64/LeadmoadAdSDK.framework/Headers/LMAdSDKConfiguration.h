@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 必传
 @property (nonatomic, copy) NSString *appID;
+/// 必传
+@property (nonatomic, copy) NSString *userId;
 
 @property (nonatomic, assign) BOOL logDirectSend;
 

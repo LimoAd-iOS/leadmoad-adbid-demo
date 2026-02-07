@@ -31,9 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 激励视频广告被点击
 - (void)rewardVideoAdDidClick:(LMRewardVideoAd *)rewardVideoAd;
 
-/// 激励视频广告关闭
+///// 激励视频广告关闭
 - (void)rewardVideoAdDidClose:(LMRewardVideoAd *)rewardVideoAd;
-
+/// 激励视频开始播发
+- (void)rewardedVideoAdStartPlay:(LMRewardVideoAd*)rewardVideoAd;
+///激励视频播放完成或者发生错误时回调
+- (void)rewardedVideoAdDidPlayFinish:(LMRewardVideoAd *)rewardedVideoAd withError:(NSError *_Nullable)error;
 /// 激励视频播放完成，用户获得奖励
 - (void)rewardVideoAdDidReward:(LMRewardVideoAd *)rewardVideoAd;
 

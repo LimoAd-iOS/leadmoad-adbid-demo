@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readwrite) BOOL allowRecordAudio;//是否允许使用录音权限（用于语音互动广告
 
+@property (nonatomic, assign) BOOL allowUseIPAddress; //设置是否获取IP地址，YES表示获取，NO表示不获取
+
 @end
 
 typedef NS_ENUM(int, AdbidUserGender) {
@@ -36,7 +38,6 @@ typedef NS_ENUM(int, AdbidUserGender) {
 @property (nonatomic, assign) AdbidLogLevel logLevel;
 
 @property (nonatomic, copy) NSString *appID; //必传 构建Build对象，入参Sdk初始化参数
-
 @property (nonatomic, copy) NSString *appChannel; //设置应用渠道
 
 @property (nonatomic, copy) NSString *appVersion; //设置应用版本
@@ -44,6 +45,8 @@ typedef NS_ENUM(int, AdbidUserGender) {
 @property (nonatomic, assign) NSInteger age; //年龄
 
 @property (nonatomic, copy) NSString * userId; //设置用户ID
+
+@property (nonatomic, copy) NSString * IDFA; //广告Id
 
 @property (nonatomic, assign) AdbidUserGender gender; //设置性别（Male表示男性，Female表示女性）
 

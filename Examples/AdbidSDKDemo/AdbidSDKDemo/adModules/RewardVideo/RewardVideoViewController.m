@@ -294,15 +294,19 @@
     });
 }
 
-- (void)rewardVideoAdDidStartPlay:(AdbidRewardVideoAd *)rewardVideoAd {
+- (void)rewardVideoAdDidStartPlay:(AdbidRewardVideoAd *)rewardedVideoAd {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self addLog:@"▶️ 视频开始播放"];
     });
 }
 
-- (void)rewardVideoAdDidEndPlay:(AdbidRewardVideoAd *)rewardVideoAd {
+- (void)rewardVideoAdDidEndPlay:(AdbidRewardVideoAd *)rewardedVideoAd withError:(NSError *_Nullable)error {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self addLog:@"⏹️ 视频播放完成"];
+        if (error == nil) {
+            [self addLog:@"⏹️ 视频播放完成"];
+        } else {
+            [self addLog:@"⏹️ 视频播放失败"];
+        }
     });
 }
 
