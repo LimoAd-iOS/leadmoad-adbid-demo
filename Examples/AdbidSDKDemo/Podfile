@@ -6,7 +6,7 @@ target 'AdbidSDKDemo' do
   use_frameworks!
   
   pod 'UBiXMerakSDK', '2.9.0'
-  pod 'LeadmoadAdSDK', '1.0.7'
+  pod 'LeadmoadAdSDK', '1.0.8'
   pod 'AdbidSDK','2.1.0.3'
   
 end
