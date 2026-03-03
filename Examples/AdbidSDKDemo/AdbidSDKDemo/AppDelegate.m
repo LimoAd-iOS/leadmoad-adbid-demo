@@ -56,13 +56,12 @@
     configuration.gender = AdbidUserGenderMale;
     [AdbidSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *_Nullable error) {
         if (success) {
-//            [self loadSplashAd];
+             
         } else {
-//            self.window.rootViewController = [self rootViewController];
+  
         }
     }];
     self.window.rootViewController = [self rootViewController];
-
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self requestIDFATracking];
     });

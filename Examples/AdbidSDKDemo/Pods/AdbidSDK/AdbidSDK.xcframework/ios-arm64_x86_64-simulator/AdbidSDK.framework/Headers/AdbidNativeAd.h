@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, readwrite) UIViewController *rootViewController;
 
 /**
- * 广告最大请求时长，单位毫秒。默认5000
+ *  广告最大请求时长，单位毫秒。默认3000 , 最小500毫秒
  */
 @property (nonatomic, assign) NSInteger maxLoadTime;
 
