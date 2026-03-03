@@ -1,0 +1,6 @@
+framework module AdbidSDK {
+  umbrella header "AdbidSDK.h"
+  export *
+
+  module * { export * }
+}
