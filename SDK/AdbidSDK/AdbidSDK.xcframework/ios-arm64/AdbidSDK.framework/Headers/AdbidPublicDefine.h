@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, AdbidPlatform) {
     AdbidPlatform_Mintegral = 10,
     AdbidPlatform_Vungle = 11,
     AdbidPlatform_Chartboost = 12,
+    AdbidPlatform_UBX = 13,
 };
 
 typedef NS_ENUM(NSInteger, AdbidType) {
@@ -100,7 +101,7 @@ typedef NS_ENUM(NSInteger, AdbidBidResult) {
 static NSString *const AdbidSDKErrorDomain = @"com.Adbid.ad.sdk.error";
 
 typedef NS_ENUM(NSInteger, AdbidErrorCode) {
-    AdbidErrorCodeInitFailed = 1100,
+    AdbidErrorCodeInitFailed = -5204,//广告Sdk未初始化
     AdbidErrorCodeParamMissing = 1010, // 参数缺失（通用参数缺失场景）
     AdbidErrorCodeAdTimeout = 1011, // 广告超时
     AdbidErrorCodeNoAd = 1012, // 无广告

@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/AdbidNativeAd.h</key>
 		<data>
-		dqnbiT2MwkZ+9hqPgIfyTZAXVh4=
+		BslzStZZMRdahdZHAtCpSSJwifY=
 		</data>
 		<key>Headers/AdbidNativeMediaView.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Headers/AdbidPublicDefine.h</key>
 		<data>
-		HouyM+jmdOo1aKq78JruZDby4KE=
+		LuldVnBaawr8TOwcfeX2uEpPspk=
 		</data>
 		<key>Headers/AdbidRewardVideoAd.h</key>
 		<data>
-		9Kf7MEASGH5JIoTBud6vLwWMDfg=
+		ROaB1yGstGWEOLvxgodeRz4qDzM=
 		</data>
 		<key>Headers/AdbidSDK.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		x/WYGjj4L8TtbpGObFtlxvT71Fg=
+		WjubyLhoJBJgsCoMyON/n0GfXRA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FM2Bpsf/1SPlzGOnc+PU+R/zgXunLNrEfmANzNnUm/0=
+			dYDXh19VBxaRriuiR7lI5eRNSkYPLMTpdzFNnSWMoXY=
 			</data>
 		</dict>
 		<key>Headers/AdbidNativeMediaView.h</key>
@@ -109,14 +109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BhJ7usRes0ZhW/0Hd6KkAq/pa2laxpn5wGblrrfVohI=
+			eII+zW146N7X1ghIDnc40klK73qFkM825ZGqhCeqfkM=
 			</data>
 		</dict>
 		<key>Headers/AdbidRewardVideoAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			44OKS4q9g+Yk724s+2efqMsCYdmv3Q5bsYki4CKaMxE=
+			E13HAfb0TjCjEU+eeESbNfxSyKxSbsmgjBU6Kd8WnxQ=
 			</data>
 		</dict>
 		<key>Headers/AdbidSDK.h</key>
