@@ -12,6 +12,10 @@
 		<data>
 		pVnpF/BYkrTvJVzIyt7MgwERxXQ=
 		</data>
+		<key>Headers/AdbidInterstitialAd.h</key>
+		<data>
+		TGVjiV0c55cyiZYXKVVSJi9F8Vk=
+		</data>
 		<key>Headers/AdbidNativeAd.h</key>
 		<data>
 		BslzStZZMRdahdZHAtCpSSJwifY=
@@ -30,15 +34,15 @@
 		</data>
 		<key>Headers/AdbidPublicDefine.h</key>
 		<data>
-		LuldVnBaawr8TOwcfeX2uEpPspk=
+		hqdgUMSNI4ee/R3ZyI0ETCTcg7Q=
 		</data>
 		<key>Headers/AdbidRewardVideoAd.h</key>
 		<data>
-		ROaB1yGstGWEOLvxgodeRz4qDzM=
+		odljQDz3vTWoqbhnODQL+DWxL4Y=
 		</data>
 		<key>Headers/AdbidSDK.h</key>
 		<data>
-		mQElJdgcQPWVVic9SNp9cCui7HM=
+		0+4BESWfb9Msmz8FMt8rZ3e/qbI=
 		</data>
 		<key>Headers/AdbidSDKConfiguration.h</key>
 		<data>
@@ -50,7 +54,7 @@
 		</data>
 		<key>Headers/AdbidSplashAd.h</key>
 		<data>
-		aJm4c5Z1Q21zvYkJIVmdnYkaUrU=
+		bEp/KM4Ca2U/gc42mzBbxsOLkmM=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -75,6 +79,13 @@
 			<key>hash2</key>
 			<data>
 			SZg0l9J7QWwYHchFSEM6Msxmvn7ErRG6SSnAMQK5gHc=
+			</data>
+		</dict>
+		<key>Headers/AdbidInterstitialAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DpPamn/wKwJS0VQjcairToX1hmBe3ERo4p4I+0g13qc=
 			</data>
 		</dict>
 		<key>Headers/AdbidNativeAd.h</key>
@@ -109,21 +120,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eII+zW146N7X1ghIDnc40klK73qFkM825ZGqhCeqfkM=
+			WhL4Zm9Kh1SulXHJLuRnqTziBD87j3EPadp60XkWbuY=
 			</data>
 		</dict>
 		<key>Headers/AdbidRewardVideoAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E13HAfb0TjCjEU+eeESbNfxSyKxSbsmgjBU6Kd8WnxQ=
+			QYa+XU8k6SQ0JNbZEMnrGmtA3xHPriBD67uAO0lleEE=
 			</data>
 		</dict>
 		<key>Headers/AdbidSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wYrAkMq6mfyo3hmTXWsTFDXd8utc9ksZxMxvFobAxf8=
+			/z48bIQd5li1lOEeIHtxS/5GKxsL31MwrrVY7r4Mbng=
 			</data>
 		</dict>
 		<key>Headers/AdbidSDKConfiguration.h</key>
@@ -144,7 +155,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ON5W6TFiPF7OdeqfHFUToS6rW+QHOpGqeCizvkGXfb4=
+			XfLbqWxGG8aN4RCUN4WzVYpJ2f325jfyZJU5Nwvzjcc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -10,6 +10,16 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, LMSplashAdLandingPageType) {
+    LMSplashAdLandingPageType_Unknow          = 0, // 未知
+    LMSplashAdLandingPageType_lp    = 1, // 落地页（html/h5）
+    LMSplashAdLandingPageType_Deeplink      = 2, // deep 类型广告落地页
+    LMSplashAdLandingPageType_AppDownload    = 3, // 下载类广告（app下载页）
+    LMSplashAdLandingPageType_WeChat          = 4, // 微信小程序/小游戏
+    LMSplashAdLandingPageType_UniversalLink   = 5, // UniversalLink 唤起
+    LMSplashAdLandingPageType_AppStore        = 6, // ios应用商店下载
+};
+
 @class LMSplashAd;
 @protocol LMSplashAdDelegate <NSObject>
 @optional
@@ -25,6 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)splashAdDidClick:(LMSplashAd *)splashAd;
 /// 开屏广告关闭
 - (void)splashAdDidClose:(LMSplashAd *)splashAd;
+///跳到站外边
+- (void)splashAdDidJumpToAppOutside:(LMSplashAd *)splashAd interactionType:(LMSplashAdLandingPageType)interactionType;
+
 @end
 
 @interface LMSplashAd : NSObject

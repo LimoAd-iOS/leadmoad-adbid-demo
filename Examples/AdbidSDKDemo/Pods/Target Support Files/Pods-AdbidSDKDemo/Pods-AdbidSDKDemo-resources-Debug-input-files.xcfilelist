@@ -1,2 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-resources.sh
+${PODS_ROOT}/Ads-CN-Beta/SDK/CSJAdSDK.bundle
+${PODS_ROOT}/AnyThinkiOS/core/AnyThinkSDK.bundle
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKLiveBase/Resources/VeLive.bundle
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/Resources/ttplayer.metallib
 ${PODS_ROOT}/LeadmoadAdSDK/Leadmoad.bundle
+${PODS_ROOT}/SmartdigimktCNSDK/KuYingSDK/SmartdigimktSDK.bundle

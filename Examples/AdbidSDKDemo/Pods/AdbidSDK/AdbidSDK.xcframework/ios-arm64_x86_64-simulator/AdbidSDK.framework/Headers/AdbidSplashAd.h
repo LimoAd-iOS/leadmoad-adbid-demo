@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)splashAdDidClick:(AdbidSplashAd *)splashAd;
 /// 开屏广告关闭
 - (void)splashAdDidClose:(AdbidSplashAd *)splashAd;
+/// 广告完成转化(关闭落地页)
+- (void)splashAdDidFinishConversion:(AdbidSplashAd *)interstitialAd interactionType:(AdbidAdRedirectionType)interactionType;
+
 @end
 
 @interface AdbidSplashAd : NSObject
@@ -37,6 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
 
+@property (nonatomic, strong, nullable) UIViewController *viewController;
+
 - (instancetype)initWithSlotId:(NSString *)slotId;
 /// 发起拉取广告请求
 - (void)loadAd;
@@ -44,6 +49,10 @@ NS_ASSUME_NONNULL_BEGIN
  * 必须在主线程调用
  */
 - (void)showAd:(UIViewController *)viewController;
+/*
+ * 必须在主线程调用
+ */
+- (void)showAdToWindow:(UIWindow *)window;
 ///  移除SplashView
 - (void)removeSplashView;
 /// 竞胜/竞败上报

@@ -7,29 +7,99 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */ = {
+		129C0EF375D3107604F1F1F5DA5E0732 /* AnyThinkMediationGromoreAdapter */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F6A109D4FB97C376365C1FC5B613F8A2 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */;
+			buildConfigurationList = 2BB7B02BCA3B28756796D81531FA1D6E /* Build configuration list for PBXAggregateTarget "AnyThinkMediationGromoreAdapter" */;
 			buildPhases = (
-				FD7F5685F10C28E6DF2C863304957B32 /* [CP] Copy XCFrameworks */,
+				B44C5856CCC6D4BEBD269B3923703C9B /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
+				13B3FADDE2386395885A52C01729FDB6 /* PBXTargetDependency */,
+				3B070EC4AC983D534B07F3DB5EDA3B2A /* PBXTargetDependency */,
+			);
+			name = AnyThinkMediationGromoreAdapter;
+		};
+		28E71F3E51526C988D0C3A92B6933BA3 /* AnyThinkMediationAdxSmartdigimktCNAdapter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0AD7960F9EF82317006AA549B9EAA79E /* Build configuration list for PBXAggregateTarget "AnyThinkMediationAdxSmartdigimktCNAdapter" */;
+			buildPhases = (
+				5E0DE084405FD3174C2595D267A2E657 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				422719ED58D52B80AF776AB989D7CACE /* PBXTargetDependency */,
+				18295E5EB6F4ABCE46856C56FE15092A /* PBXTargetDependency */,
+			);
+			name = AnyThinkMediationAdxSmartdigimktCNAdapter;
+		};
+		536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9291D1C2E06A020960304FC9223242A4 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */;
+			buildPhases = (
+				64C225E524559555A2EB1C62B5E5D200 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				ED206A63C234E0018667C938F4713FC1 /* PBXTargetDependency */,
+				0638E817404583E87C2F2335278C4B6C /* PBXTargetDependency */,
+				828E8CEA2CCCA85264A23923FE764663 /* PBXTargetDependency */,
+				93204ABE687E43C5EBFB01408BC32D64 /* PBXTargetDependency */,
+				44971269B859ECCB1352C1B42991B884 /* PBXTargetDependency */,
 			);
 			name = AdbidSDK;
 		};
+		53DB8EFBB54B636ACDC70272323792EC /* KSAdSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 02C8AF3CDE69331D4B06B672866E726A /* Build configuration list for PBXAggregateTarget "KSAdSDK" */;
+			buildPhases = (
+				B1947AD203DD5E46A044F6BFA28FC5E1 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = KSAdSDK;
+		};
+		6F2BDBDBBAD8487EF4614E1D729C5DD0 /* GDTMobSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C03A40A3EBAF3E85F23D68142B78A141 /* Build configuration list for PBXAggregateTarget "GDTMobSDK" */;
+			buildPhases = (
+				C5D8A1615AFD6C46C1EEDFAE8F632BAB /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = GDTMobSDK;
+		};
 		7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = BB789EEA5A1F67F03D32AC27C386232F /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */;
+			buildConfigurationList = 685C0DEBD3D43375FFFAFCEEAB187F5D /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */;
 			buildPhases = (
-				8DB9EA1FF61B2222DA0C933C4CDCBAFF /* [CP] Copy XCFrameworks */,
+				78F26134FA75AC4F11C16D134558E966 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
 			name = LeadmoadAdSDK;
 		};
+		8305621A71B4F131D5EB9393C1365F91 /* SmartdigimktCNSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BFB1DA5B7775422FEF51CC42C3E1A2B8 /* Build configuration list for PBXAggregateTarget "SmartdigimktCNSDK" */;
+			buildPhases = (
+				9F77BB671776421C2DFD776E676671A3 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = SmartdigimktCNSDK;
+		};
+		9822EC319158EDF9A392330FE643BC4E /* Ads-CN-Beta */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0F588B25E13FE3D1839C48286B7C07F3 /* Build configuration list for PBXAggregateTarget "Ads-CN-Beta" */;
+			buildPhases = (
+				A090D11CAE7E14C48DEE0CD8E9AAEC63 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				941A2C7B1ADD5B48E19E7298F186C944 /* PBXTargetDependency */,
+			);
+			name = "Ads-CN-Beta";
+		};
 		A99B118F444A264217CA4E5383329549 /* UBiXDaq */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D133331B78F022A5840118AC4858564C /* Build configuration list for PBXAggregateTarget "UBiXDaq" */;
+			buildConfigurationList = 5112EC8D13452DB4E4EC795FA63A1D0C /* Build configuration list for PBXAggregateTarget "UBiXDaq" */;
 			buildPhases = (
 			);
 			dependencies = (
@@ -38,251 +108,936 @@
 		};
 		CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = A2F9D7A3FB9FF005F96BA1D3BE40D3E7 /* Build configuration list for PBXAggregateTarget "UBiXMerakSDK" */;
+			buildConfigurationList = 1FBED414F56FB5DA8E4C868CB53EB529 /* Build configuration list for PBXAggregateTarget "UBiXMerakSDK" */;
 			buildPhases = (
 			);
 			dependencies = (
-				167FA51CCE431124F4E100BC9D8FA92F /* PBXTargetDependency */,
+				1A30D25A049052BCF426E43BB7080216 /* PBXTargetDependency */,
 			);
 			name = UBiXMerakSDK;
+		};
+		F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D4148A0D2B84F24DD9490D76F477390A /* Build configuration list for PBXAggregateTarget "AnyThinkiOS" */;
+			buildPhases = (
+				26823923D4C25266E1709858514D7D70 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = AnyThinkiOS;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0859C84E8286BCF1376F333659D05A72 /* Pods-AdbidSDKDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C89F244BEA2FAAD7D2C08A4A82C0DA09 /* Pods-AdbidSDKDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C34C0F351FC8375474E2C780039625C3 /* Pods-AdbidSDKDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 746BC546DB50C9EFFCEB2B99E35730BF /* Pods-AdbidSDKDemo-dummy.m */; };
-		CE969F1638397A4724462A87634DB844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		02B87D7CB905A2F19F349B1DAF35A618 /* VeLivePlayerData.h in Headers */ = {isa = PBXBuildFile; fileRef = 0756B227D39D5714E9B5796C5A1CB072 /* VeLivePlayerData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F829D5CB281410B03AB35DE201CCB8C /* TTAVPlayerMaskInfoInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 369050B49B6098B3D5AC6AA98B7A1710 /* TTAVPlayerMaskInfoInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1048A96AC50276D5AB53BBEF81855417 /* TVLOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 896A22A33AFAE7BF7A5E1AC732C02C9A /* TVLOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		113420994A7BADCA3FF92DE2EEB1E766 /* VeLiveCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FBCDB9F81BC538C783A7DDAFD6F3298 /* VeLiveCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13B5BA0073CC34966E9C5CB09F513676 /* TTSDKManager+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = EFA27A6386AC0C0C578F7DF813D1B7B1 /* TTSDKManager+Debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23D2A7809FC4F1F829A6F66ECA6A34ED /* TVLManager+Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 77612001349F230AB25B6EEA46B8BC5C /* TVLManager+Interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3133A6E79AFDC0D52A49298D406A288A /* TVLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B53632F9DEEC4402500984CE43EEE2A /* TVLManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32DE517E068E87B91A21D4F1DB07F1C0 /* VeLivePlayerObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = B134ECD395FF1859FD74EFA105F8228F /* VeLivePlayerObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CE1E8DF50DCD64AFF1A7C3D22382F66 /* TTSDKPlayerCoreLiveLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 75404BFD0B2937887E2C525CD6871B12 /* TTSDKPlayerCoreLiveLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E126F14BB3891D36BF3AA82B1A1CD37 /* VeLivePlayerDef.h in Headers */ = {isa = PBXBuildFile; fileRef = F1C45F97612ADA99E6038ADCC4DDE413 /* VeLivePlayerDef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		485E6C28ED4AFE7D1E39390E8C995D38 /* TTVideoLive.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A89BB4B910FB72C67C0DF0D70A58360 /* TTVideoLive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53DD6A8FE27437462A357D07122E3B2F /* TTPlayerDef.h in Headers */ = {isa = PBXBuildFile; fileRef = EF568BBC85AC6B26AE012D80551AC3DF /* TTPlayerDef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58016816293ECA836BF01E2D49142170 /* TVLSettingsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 91AA5E8EEF61A4A0D61FBA5B95318A0E /* TVLSettingsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		591B3CC841DE4DBC222BDAB70E30DC36 /* TTSDKManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6760A3FA31F673D818E09B2BED2483EC /* TTSDKManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A6E0ABD0745B77778B8D01FDCB2920B /* av_audio_wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E776D88C5D9111F24269FA207FBD16 /* av_audio_wrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C1D485CCDD05D6E7D4D6C0B55D19A13 /* TTSDKLivePlayerLite.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4C9F81135077553EB99A34DC60B0EC /* TTSDKLivePlayerLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65803146925CDABDED412E3B7D252A35 /* TTSDKCore_Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE90A98E2A24CC175EB4A8816E8B299 /* TTSDKCore_Dummy.m */; };
+		6605858AAE5299CAD2C8206C4D2A1995 /* TTLicenseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 250BB240F7A7604328BE65F146B4768C /* TTLicenseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D6658456BD1500FF7E27910ADDC4123 /* TTSDKFramework_Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FFD3BA5ED5E69AE9359EA2C51F8BA /* TTSDKFramework_Dummy.m */; };
+		6FCAC6D459E53AD69C69781FF17E062C /* VeLivePlayerError.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CD9481E1B0FA4003997F7E58A8013 /* VeLivePlayerError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70B973CAF607DE16CF23EED16CFACC8F /* VeLivePlayerStreamData.h in Headers */ = {isa = PBXBuildFile; fileRef = 31EF506891308A471F5F6F606DC2B5E1 /* VeLivePlayerStreamData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CFDA2869EE64F184257172161CD599 /* TTSDKCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 321C9F72A9CEC98AB913A835CA227C27 /* TTSDKCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78A74A48E01EBD3F93C3FDD85B24385C /* TTSDKLiveBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA8EA8871C54581EC9F6FFA28F79C73 /* TTSDKLiveBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83F5D3A20F7917004AC91358DD5C7975 /* TTStreamInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CAF443C81A8E9C0DEC51323D1AAAE7 /* TTStreamInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86F04ABD7945C74552ECE5D44318A29A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		8A97BB86ACDCE7BFB1F2B38CCE6C11E6 /* TVLPlayerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7432F67FED50401DA756552EA96ADC18 /* TVLPlayerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		943E6038B7EA9B2DE61EBFAC45F50A1B /* BUTTSDKFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DED7C9A79628C4C0028F90D0421499 /* BUTTSDKFramework-dummy.m */; };
+		9A82CA0288961F78EE3886CCF2E9EF3F /* VeLiveCommonProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = F89147D4F4C65A9AE21DA550C209CBD6 /* VeLiveCommonProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E56CB81217B922B1BAAABB97F6D9ED5 /* VeLivePlayerStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A49E608B0D6440B6211FFFB226D0271 /* VeLivePlayerStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A506CF4473F159111BFD1E3BC9248002 /* VeLivePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53EE10CA26FC5C64544A14F5EF3F94CA /* VeLivePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A60DF4234FBA5EDCD8C6A9E4232BBBF1 /* Pods-AdbidSDKDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E69EEBF63BE123E04B89BC02A08B3E /* Pods-AdbidSDKDemo-dummy.m */; };
+		B302574BA952D2E2CA7D1BC0D7B8E11B /* NSError+TTVideoLive.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0B433D435FE31034E63076E00340B0 /* NSError+TTVideoLive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD44A3A6B0A3B1EC2A9A427F69384028 /* TVLManager+Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2419577DAAD91C9BB06AE65B0368B631 /* TVLManager+Settings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4D02DDF4EF974780E79B574F1C56F8C /* TVLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B162194D799516E2D32FE0740756251 /* TVLProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7198F1C71D081C0B296ABBA63BB72E2 /* Pods-AdbidSDKDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27330A11C06830AAC3BB00BCFB9D4EDE /* Pods-AdbidSDKDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE99A34012B299E84540C25662801EC1 /* TTAVTraitObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C81AC2E8B664039ADAFD1FD2F274A103 /* TTAVTraitObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D515BFAB46247DB283F327BC77F3B5A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		DCBF6E0793DEB0EE2534881F142AEB39 /* BUTTSDKFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A24886EF2D0032AD2B5ADAE5EE3EE988 /* BUTTSDKFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E493CACFE506F4DB9C68D61E45DEFA2C /* TTSDKManager+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E95B473E40D4E835D7688C56D664AE2B /* TTSDKManager+Debug.m */; };
+		EC0F928F2B35CD408BFFE083436A9CFF /* TTAVPlayerLoadControlInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D29CEA2227119DB76E2FDB8E04B0600 /* TTAVPlayerLoadControlInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE7B692E33EE0565FC093F32DA259E3B /* TVLPlayerItemPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D3A1993F523418C94B018813CDE25B /* TVLPlayerItemPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE7F5D1AAE92419F958CC37C22628373 /* av_nativetrait.h in Headers */ = {isa = PBXBuildFile; fileRef = E8292974F06B3FBF5393BB404F53EB84 /* av_nativetrait.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88E0117FC5032FA1B7AFC48B2F03768 /* TTSDKFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 16FF2C9C61289CB0F323120CCE89FD20 /* TTSDKFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB3EF4515C688A928B5252ACD6E16CAB /* TVLConstDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA7E45817131053EFB59D0721B506C1 /* TVLConstDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC5E5F64E182C80584F822A7A54B32A6 /* VeLivePlayerGlobalManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 137103F378EFC27BCEFA512ED54593AD /* VeLivePlayerGlobalManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0DAFB29F8C3A238CFF8371955B563E91 /* PBXContainerItemProxy */ = {
+		1569BF762BD217EF08090CE7A3862703 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 536D79C6E0B4204EB781968E1E53C5A3;
-			remoteInfo = AdbidSDK;
+			remoteGlobalIDString = E01160816B81860F99B1A8F9444635E6;
+			remoteInfo = BUTTSDKFramework;
 		};
-		137F4A2C477718E36E07C0DEDE441B28 /* PBXContainerItemProxy */ = {
+		2B28B7124130ED8E08D888600B3BBF0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A99B118F444A264217CA4E5383329549;
-			remoteInfo = UBiXDaq;
+			remoteGlobalIDString = 129C0EF375D3107604F1F1F5DA5E0732;
+			remoteInfo = AnyThinkMediationGromoreAdapter;
 		};
-		3470E46DA13C4A174C9B18492C4A43F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A99B118F444A264217CA4E5383329549;
-			remoteInfo = UBiXDaq;
-		};
-		7189D021B0CE3F5ED1C28D35999373A9 /* PBXContainerItemProxy */ = {
+		2EC7AC53F328FA88D4673E7A16FEC586 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7ED52757096C24B663582FBC70FA0786;
 			remoteInfo = LeadmoadAdSDK;
 		};
-		C8F967FD8C0BB0A936B210FD1326BD25 /* PBXContainerItemProxy */ = {
+		34A808746007C83A84E271E9586A210F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8305621A71B4F131D5EB9393C1365F91;
+			remoteInfo = SmartdigimktCNSDK;
+		};
+		36A898028912794DE46E5AA547F092F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50E9FD6951069AF0D316E257D27E271;
+			remoteInfo = AnyThinkiOS;
+		};
+		4F6F068F906CA21CBED3D0672D10FF8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50E9FD6951069AF0D316E257D27E271;
+			remoteInfo = AnyThinkiOS;
+		};
+		522E5E64E4E7C86725CDE4A5EBE9CF10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F2BDBDBBAD8487EF4614E1D729C5DD0;
+			remoteInfo = GDTMobSDK;
+		};
+		567DC75ECECE1B0425FD0114BCF070D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50E9FD6951069AF0D316E257D27E271;
+			remoteInfo = AnyThinkiOS;
+		};
+		78CB07F72E79B5CB24BA24ED1711C21D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ED52757096C24B663582FBC70FA0786;
+			remoteInfo = LeadmoadAdSDK;
+		};
+		7DBAC2DD4FCD39BF4992A3C9B4DFB3F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E01160816B81860F99B1A8F9444635E6;
+			remoteInfo = BUTTSDKFramework;
+		};
+		8D099A0650A8B0382E935E9D67EC9EA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28E71F3E51526C988D0C3A92B6933BA3;
+			remoteInfo = AnyThinkMediationAdxSmartdigimktCNAdapter;
+		};
+		91AC1DE88DB7511D2F9EED6EC6502AA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9822EC319158EDF9A392330FE643BC4E;
+			remoteInfo = "Ads-CN-Beta";
+		};
+		A01FDC960548378C7E36EAD51058E39D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28E71F3E51526C988D0C3A92B6933BA3;
+			remoteInfo = AnyThinkMediationAdxSmartdigimktCNAdapter;
+		};
+		A5B6A744CBE706757BC0B4278FECF6D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8305621A71B4F131D5EB9393C1365F91;
+			remoteInfo = SmartdigimktCNSDK;
+		};
+		AA4D163A44074D53AF51F23291B56924 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A99B118F444A264217CA4E5383329549;
+			remoteInfo = UBiXDaq;
+		};
+		AB308BF2250B58691BCD7DCB4556E852 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CB9EF54EB56198AEC6D86185CE31E55F;
 			remoteInfo = UBiXMerakSDK;
 		};
+		C9527549F9ABE074C4F3EC2C41188F69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50E9FD6951069AF0D316E257D27E271;
+			remoteInfo = AnyThinkiOS;
+		};
+		CAE1BAD7486E63B8C6522CDFE74D9F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A99B118F444A264217CA4E5383329549;
+			remoteInfo = UBiXDaq;
+		};
+		CBE83F4B339BFEE56FF8E08CBFF9F33B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 536D79C6E0B4204EB781968E1E53C5A3;
+			remoteInfo = AdbidSDK;
+		};
+		D4800083D882C087216ECAEEE780D4F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB9EF54EB56198AEC6D86185CE31E55F;
+			remoteInfo = UBiXMerakSDK;
+		};
+		DC818221C7C3C202B1B2851AA5732ED5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9822EC319158EDF9A392330FE643BC4E;
+			remoteInfo = "Ads-CN-Beta";
+		};
+		E7C948A64348AF728DF29C0AD179D692 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DB8EFBB54B636ACDC70272323792EC;
+			remoteInfo = KSAdSDK;
+		};
+		F1EBACC56F952FF2B2D16EF9621A321A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 129C0EF375D3107604F1F1F5DA5E0732;
+			remoteInfo = AnyThinkMediationGromoreAdapter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04EF8BC8924CBB1039559D0FFD57B11A /* AdbidSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.debug.xcconfig; sourceTree = "<group>"; };
-		0CFEA8BFE2A00BCA21B2D020FEBEBC9D /* UbiXDaq.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbiXDaq.framework; sourceTree = "<group>"; };
-		1DC50E8C6135C901E45DCF4A3591B5C3 /* LeadmoadAdSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "LeadmoadAdSDK-xcframeworks.sh"; sourceTree = "<group>"; };
-		26A484C0DF088095E89DDF412A14A652 /* Pods-AdbidSDKDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AdbidSDKDemo.modulemap"; sourceTree = "<group>"; };
-		3040AFC4AD89221DC862F57473D1D6F5 /* LeadmoadAdSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.release.xcconfig; sourceTree = "<group>"; };
-		33B725E946A5C22A69A33414961C4D70 /* UBiXMerakSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXMerakSDK.release.xcconfig; sourceTree = "<group>"; };
-		364AF7F601D884BC9BB6E9F17B062208 /* AdbidSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.release.xcconfig; sourceTree = "<group>"; };
+		01DED7C9A79628C4C0028F90D0421499 /* BUTTSDKFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BUTTSDKFramework-dummy.m"; sourceTree = "<group>"; };
+		060D51C752FCE5820CEB398604DD04C6 /* LeadmoadAdSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = LeadmoadAdSDK.xcframework; sourceTree = "<group>"; };
+		0641CF9FFD5A478261FF0379CCC95BED /* TTSDKReachability.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKReachability.xcframework; path = TTSDKFramework/TTSDKReachability/TTSDKReachability.xcframework; sourceTree = "<group>"; };
+		0756B227D39D5714E9B5796C5A1CB072 /* VeLivePlayerData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayerData.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayerData.h; sourceTree = "<group>"; };
+		079B39676A3D82EF184E8794A4094DE6 /* LeadmoadAdSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "LeadmoadAdSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		097CD9481E1B0FA4003997F7E58A8013 /* VeLivePlayerError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayerError.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayerError.h; sourceTree = "<group>"; };
+		0A424625756C0779C937329436C2CAA0 /* BUTTSDKFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BUTTSDKFramework-prefix.pch"; sourceTree = "<group>"; };
+		0D832F20F0ACAC764F413E5C186DF57F /* AnyThinkSmartdigimktAdapter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AnyThinkSmartdigimktAdapter.xcframework; path = "AnyThinkSmartdigimktAdapter-6.5.45.0/AnyThinkSmartdigimktAdapter.xcframework"; sourceTree = "<group>"; };
+		0F7C10571A397EBF1F06BEEE61DF5C00 /* AnyThinkSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AnyThinkSDK.bundle; path = core/AnyThinkSDK.bundle; sourceTree = "<group>"; };
+		0FBCDB9F81BC538C783A7DDAFD6F3298 /* VeLiveCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLiveCommon.h; path = TTSDKFramework/TTSDKLiveBase/Classes/Headers/VeLiveCommon.h; sourceTree = "<group>"; };
+		137103F378EFC27BCEFA512ED54593AD /* VeLivePlayerGlobalManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayerGlobalManager.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayerGlobalManager.h; sourceTree = "<group>"; };
+		16FF2C9C61289CB0F323120CCE89FD20 /* TTSDKFramework.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTSDKFramework.h; path = TTSDKFramework/TTSDKFramework.h; sourceTree = "<group>"; };
+		19BF213EF26E4F62B8AB603388551744 /* UbiXAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbiXAdSDK.framework; sourceTree = "<group>"; };
+		20739D27EF8870785E4643C197C20A20 /* CSJMediation.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = CSJMediation.xcframework; path = SDK/CSJMediation.xcframework; sourceTree = "<group>"; };
+		20A2042C7A6B083D6CAE530BAE262F5B /* Ads-CN-Beta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Ads-CN-Beta.debug.xcconfig"; sourceTree = "<group>"; };
+		20CBEA6974CC1C188003C7F89FDBA3DE /* AdbidSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AdbidSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		2419577DAAD91C9BB06AE65B0368B631 /* TVLManager+Settings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TVLManager+Settings.h"; path = "TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLManager+Settings.h"; sourceTree = "<group>"; };
+		242E840B13946938BEC16B93DAC1B0E7 /* BUTTSDKFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BUTTSDKFramework.release.xcconfig; sourceTree = "<group>"; };
+		250BB240F7A7604328BE65F146B4768C /* TTLicenseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTLicenseManager.h; path = TTSDKFramework/TTSDKCore/Classes/Headers/TTLicenseManager.h; sourceTree = "<group>"; };
+		25550DE6997EA32C0B99EB904246797B /* Pods-AdbidSDKDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdbidSDKDemo-Info.plist"; sourceTree = "<group>"; };
+		27330A11C06830AAC3BB00BCFB9D4EDE /* Pods-AdbidSDKDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AdbidSDKDemo-umbrella.h"; sourceTree = "<group>"; };
+		275B2E3012849F0E14076BCF21656170 /* GDTMobSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GDTMobSDK.xcframework; path = GDTFramework/GDTMobSDK.xcframework; sourceTree = "<group>"; };
+		28C3BDAFD726A791F261F57E2E38DCCF /* AnyThinkMediationAdxSmartdigimktCNAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkMediationAdxSmartdigimktCNAdapter.release.xcconfig; sourceTree = "<group>"; };
+		28E11D65BD33A0C953B48979E806513D /* Ads-CN-Beta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Ads-CN-Beta.release.xcconfig"; sourceTree = "<group>"; };
+		2968DF8B1790D12263C32C3CF1FA387B /* TTSDKCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKCore.xcframework; path = TTSDKFramework/TTSDKCore/TTSDKCore.xcframework; sourceTree = "<group>"; };
+		2D29CEA2227119DB76E2FDB8E04B0600 /* TTAVPlayerLoadControlInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTAVPlayerLoadControlInterface.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/TTAVPlayerLoadControlInterface.h; sourceTree = "<group>"; };
+		3173566BDB42522AE540BD384DDAFECD /* AnyThinkSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AnyThinkSDK.xcframework; path = core/AnyThinkSDK.xcframework; sourceTree = "<group>"; };
+		31EF506891308A471F5F6F606DC2B5E1 /* VeLivePlayerStreamData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayerStreamData.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayerStreamData.h; sourceTree = "<group>"; };
+		321C9F72A9CEC98AB913A835CA227C27 /* TTSDKCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTSDKCore.h; path = TTSDKFramework/TTSDKCore/Classes/Headers/TTSDKCore.h; sourceTree = "<group>"; };
+		3471F6CB20CC3B9DE0ACA6632662A392 /* Pods-AdbidSDKDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AdbidSDKDemo-frameworks.sh"; sourceTree = "<group>"; };
+		369050B49B6098B3D5AC6AA98B7A1710 /* TTAVPlayerMaskInfoInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTAVPlayerMaskInfoInterface.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/TTAVPlayerMaskInfoInterface.h; sourceTree = "<group>"; };
+		3789AA8BBE5980121861E222914754D7 /* GDTMobSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GDTMobSDK.debug.xcconfig; sourceTree = "<group>"; };
+		37F48E35AB6D8789D4A6CC3D3C2C3072 /* KSAdSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KSAdSDK.debug.xcconfig; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		47A42092ABD837EBC10EB20F5DD84D20 /* AdbidSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = AdbidSDK.xcframework; sourceTree = "<group>"; };
+		3B162194D799516E2D32FE0740756251 /* TVLProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TVLProtocol.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLProtocol.h; sourceTree = "<group>"; };
+		3B53632F9DEEC4402500984CE43EEE2A /* TVLManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TVLManager.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLManager.h; sourceTree = "<group>"; };
+		3CA8EA8871C54581EC9F6FFA28F79C73 /* TTSDKLiveBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTSDKLiveBase.h; path = TTSDKFramework/TTSDKLiveBase/Classes/Headers/TTSDKLiveBase.h; sourceTree = "<group>"; };
+		3CEEBCE64B7527DACF36457FABEC39A2 /* CSJAdSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = CSJAdSDK.bundle; path = SDK/CSJAdSDK.bundle; sourceTree = "<group>"; };
+		3E936108B6FBC8A819352EA7E941C413 /* KSAdSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = KSAdSDK.xcframework; sourceTree = "<group>"; };
+		3EE90A98E2A24CC175EB4A8816E8B299 /* TTSDKCore_Dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTSDKCore_Dummy.m; path = TTSDKFramework/TTSDKCore/Classes/Sources/TTSDKCore_Dummy.m; sourceTree = "<group>"; };
+		428FDFA9A8132FC8B7BCB34C59C50610 /* BUTTSDKFramework-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BUTTSDKFramework-Info.plist"; sourceTree = "<group>"; };
+		4745CD50ED3E3528952EE32E46382E3D /* Pods-AdbidSDKDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdbidSDKDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		48EF72BF5D609E3CDF36F00FE64CAA99 /* GDTMobSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GDTMobSDK.release.xcconfig; sourceTree = "<group>"; };
+		49D2A9FDCBD852A26D91A08AC2BA1B98 /* LeadmoadAdSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.debug.xcconfig; sourceTree = "<group>"; };
+		4A89BB4B910FB72C67C0DF0D70A58360 /* TTVideoLive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTVideoLive.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TTVideoLive.h; sourceTree = "<group>"; };
+		51FC1886F666E81DE93DB2A3AFE936D7 /* UBiXDaq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXDaq.debug.xcconfig; sourceTree = "<group>"; };
+		5208776C85BD8997C7FDFCCAAE7205D2 /* KSAdSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "KSAdSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		520CD6B0AD7A7EA10F082C4DC1AC8E37 /* Pods-AdbidSDKDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AdbidSDKDemo"; path = Pods_AdbidSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55F2A3E19B1A30EB9E33AF4F7EFEBE6E /* Pods-AdbidSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdbidSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		597FFC30C1317501AC9310BB51BFA654 /* Pods-AdbidSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdbidSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		623BB1A0D0B6FFC64985D4A225567DF3 /* AdbidSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AdbidSDK-xcframeworks.sh"; sourceTree = "<group>"; };
-		6B89F3581CE36F17BDB9FFB2756AA8D3 /* Pods-AdbidSDKDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AdbidSDKDemo-resources.sh"; sourceTree = "<group>"; };
-		746BC546DB50C9EFFCEB2B99E35730BF /* Pods-AdbidSDKDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AdbidSDKDemo-dummy.m"; sourceTree = "<group>"; };
-		810C3A4AB05FC2B7855D74CE95544A53 /* LeadmoadAdSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = LeadmoadAdSDK.xcframework; sourceTree = "<group>"; };
-		883C1B49C3ACA49DE1E6371ED1CD9A65 /* UBiXMerakSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXMerakSDK.debug.xcconfig; sourceTree = "<group>"; };
-		9141C4A10C3537DFD41A1BB5DEEE17E1 /* UbiXAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbiXAdSDK.framework; sourceTree = "<group>"; };
-		91AF44B4534D0B280096CED69B48657B /* Pods-AdbidSDKDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdbidSDKDemo-Info.plist"; sourceTree = "<group>"; };
-		95B1E83AB57B6FE90A51995E5CB094D9 /* UBiXDaq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXDaq.debug.xcconfig; sourceTree = "<group>"; };
-		9B96DFFFCBABB0B8C5222141D52E576C /* Pods-AdbidSDKDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdbidSDKDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D2F8B670A4C7A84DD5D7AC35694A82A /* LeadmoadAdSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.debug.xcconfig; sourceTree = "<group>"; };
+		53EE10CA26FC5C64544A14F5EF3F94CA /* VeLivePlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayer.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayer.h; sourceTree = "<group>"; };
+		55F769E5B3F2B6DFB53A0456EBF3B80C /* AnyThinkMediationAdxSmartdigimktCNAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkMediationAdxSmartdigimktCNAdapter.debug.xcconfig; sourceTree = "<group>"; };
+		562241243412C6B1F8ECC0CB6DD08123 /* Pods-AdbidSDKDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AdbidSDKDemo-resources.sh"; sourceTree = "<group>"; };
+		5660AC8E8F8927C456BDEE9C6101569C /* TTSDKPlayerCoreLiveLite.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKPlayerCoreLiveLite.xcframework; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/TTSDKPlayerCoreLiveLite.xcframework; sourceTree = "<group>"; };
+		5948BADD25F61ED1EE0424ACEE57D5CC /* UBiXMerakSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXMerakSDK.debug.xcconfig; sourceTree = "<group>"; };
+		5A49E608B0D6440B6211FFFB226D0271 /* VeLivePlayerStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayerStream.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayerStream.h; sourceTree = "<group>"; };
+		5A98E1A9B972772C79914799DA8E1A66 /* Pods-AdbidSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdbidSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5C14AC675B17677FD00EA7A92AE99C98 /* AnyThinkMediationGromoreAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkMediationGromoreAdapter.release.xcconfig; sourceTree = "<group>"; };
+		61E776D88C5D9111F24269FA207FBD16 /* av_audio_wrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = av_audio_wrapper.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/av_audio_wrapper.h; sourceTree = "<group>"; };
+		62BD181E395E096E5EA1C109AB84D0D3 /* GDTMobSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GDTMobSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		65DCE0A1E8A8A9F22111FF03FED603F3 /* Pods-AdbidSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdbidSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6760A3FA31F673D818E09B2BED2483EC /* TTSDKManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTSDKManager.h; path = TTSDKFramework/TTSDKCore/Classes/Headers/TTSDKManager.h; sourceTree = "<group>"; };
+		6AE368C5342D2F2B645BF4F85DDEEBA8 /* AdbidSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = AdbidSDK.xcframework; sourceTree = "<group>"; };
+		6B3FFD3BA5ED5E69AE9359EA2C51F8BA /* TTSDKFramework_Dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTSDKFramework_Dummy.m; path = TTSDKFramework/TTSDKFramework_Dummy.m; sourceTree = "<group>"; };
+		6DFD925D72824F58F6F6F5D7BD0CB018 /* Pods-AdbidSDKDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AdbidSDKDemo.modulemap"; sourceTree = "<group>"; };
+		6F472715B4DBE321011AD5FC70002CA1 /* SmartdigimktSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SmartdigimktSDK.bundle; path = KuYingSDK/SmartdigimktSDK.bundle; sourceTree = "<group>"; };
+		7432F67FED50401DA756552EA96ADC18 /* TVLPlayerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TVLPlayerItem.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLPlayerItem.h; sourceTree = "<group>"; };
+		75404BFD0B2937887E2C525CD6871B12 /* TTSDKPlayerCoreLiveLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTSDKPlayerCoreLiveLite.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/TTSDKPlayerCoreLiveLite.h; sourceTree = "<group>"; };
+		77612001349F230AB25B6EEA46B8BC5C /* TVLManager+Interface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TVLManager+Interface.h"; path = "TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLManager+Interface.h"; sourceTree = "<group>"; };
+		776D27FEA5B5158EAD0E6E3A08D6D41A /* Ads-CN-Beta-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Ads-CN-Beta-xcframeworks.sh"; sourceTree = "<group>"; };
+		7D0AB3B9179B00011AC4C421F150B828 /* TTSDKVolcLog.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKVolcLog.xcframework; path = TTSDKFramework/TTSDKVolcLog/TTSDKVolcLog.xcframework; sourceTree = "<group>"; };
+		830016870FA067E1E5AE0668BE7A9D87 /* BUTTSDKFramework-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "BUTTSDKFramework-xcframeworks.sh"; sourceTree = "<group>"; };
+		838CE69991B2B6537F584E5F30326BF4 /* AdbidSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.release.xcconfig; sourceTree = "<group>"; };
+		86C1A3647900F815FC62A44B6A7F78D1 /* TTSDKTTFFmpegLiveLite.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKTTFFmpegLiveLite.xcframework; path = TTSDKFramework/TTSDKTTFFmpegLiveLite/TTSDKTTFFmpegLiveLite.xcframework; sourceTree = "<group>"; };
+		896A22A33AFAE7BF7A5E1AC732C02C9A /* TVLOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TVLOption.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLOption.h; sourceTree = "<group>"; };
+		8CEE08F8BC4F47F3929C475B18B1FE0B /* TTSDKLiveBase.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKLiveBase.xcframework; path = TTSDKFramework/TTSDKLiveBase/TTSDKLiveBase.xcframework; sourceTree = "<group>"; };
+		8F0AFB576C0698CF6350321C216C3CC5 /* TTSDKStrategyLite.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKStrategyLite.xcframework; path = TTSDKFramework/TTSDKStrategyLite/TTSDKStrategyLite.xcframework; sourceTree = "<group>"; };
+		8F98177CC17EA51E5E6A89995B95DD16 /* SmartdigimktCNSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SmartdigimktCNSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		91AA5E8EEF61A4A0D61FBA5B95318A0E /* TVLSettingsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TVLSettingsManager.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLSettingsManager.h; sourceTree = "<group>"; };
+		93CAF443C81A8E9C0DEC51323D1AAAE7 /* TTStreamInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTStreamInfo.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/TTStreamInfo.h; sourceTree = "<group>"; };
+		96E69EEBF63BE123E04B89BC02A08B3E /* Pods-AdbidSDKDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AdbidSDKDemo-dummy.m"; sourceTree = "<group>"; };
+		9BFE99327FB68AC7C35FEA8E5F41AD94 /* BUTTSDKFramework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BUTTSDKFramework; path = TTSDKFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C67979562C0BECE60DB9C90661D1ECA /* AnyThinkMediationAdxSmartdigimktCNAdapter-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AnyThinkMediationAdxSmartdigimktCNAdapter-xcframeworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B2AAB638394D25D82060A092FEBDD0F3 /* Pods-AdbidSDKDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AdbidSDKDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C89F244BEA2FAAD7D2C08A4A82C0DA09 /* Pods-AdbidSDKDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AdbidSDKDemo-umbrella.h"; sourceTree = "<group>"; };
-		EA90939B9DFED743238B04640D021C6F /* Leadmoad.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Leadmoad.bundle; sourceTree = "<group>"; };
-		F1FC5D30BD7C23DD77B7475BDF0A6B59 /* UBiXDaq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXDaq.release.xcconfig; sourceTree = "<group>"; };
+		A065D9BD4D81319CE9CBF39F4895D77A /* AnyThinkMediationGromoreAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkMediationGromoreAdapter.debug.xcconfig; sourceTree = "<group>"; };
+		A18736D4A2C5084908E5BE8A6F09F8C5 /* BUAdLive.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = BUAdLive.xcframework; path = SDK/BUAdLive.xcframework; sourceTree = "<group>"; };
+		A24886EF2D0032AD2B5ADAE5EE3EE988 /* BUTTSDKFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BUTTSDKFramework-umbrella.h"; sourceTree = "<group>"; };
+		A2CD776D9137EAAEBE702FA018121A87 /* SmartdigimktCNSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartdigimktCNSDK.debug.xcconfig; sourceTree = "<group>"; };
+		A2F4B665B7231D49F80D39992ABEBCDA /* AnyThinkiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkiOS.debug.xcconfig; sourceTree = "<group>"; };
+		AEA5D6C5497F7F7DE5058C91BD09E883 /* AnyThinkMediationGromoreAdapter-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AnyThinkMediationGromoreAdapter-xcframeworks.sh"; sourceTree = "<group>"; };
+		B12CF160633F7437167BC1F8727DA54F /* UBiXMerakSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXMerakSDK.release.xcconfig; sourceTree = "<group>"; };
+		B134ECD395FF1859FD74EFA105F8228F /* VeLivePlayerObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayerObserver.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayerObserver.h; sourceTree = "<group>"; };
+		B234E0512AC7CE3E4C80C9D30875AB92 /* Tquic.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = Tquic.xcframework; path = GDTFramework/Tquic.xcframework; sourceTree = "<group>"; };
+		BA07DD99BB8E5CD5F37FB1704C967D4F /* AnyThinkiOS-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AnyThinkiOS-xcframeworks.sh"; sourceTree = "<group>"; };
+		BB72BA7ECAEBBC95C2A63DA69104466B /* TTFFmpeg.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTFFmpeg.xcframework; path = TTSDKFramework/TTSDKTTFFmpegLiveLite/TTFFmpeg.xcframework; sourceTree = "<group>"; };
+		BBA7E45817131053EFB59D0721B506C1 /* TVLConstDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TVLConstDefine.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLConstDefine.h; sourceTree = "<group>"; };
+		BF75946E78F58EC42EE7BAFE4D725ECE /* SmartdigimktCNSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartdigimktCNSDK.release.xcconfig; sourceTree = "<group>"; };
+		C418546E61CACF6BA3885678D35B5D6A /* TTSDKLivePullVolcLog.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKLivePullVolcLog.xcframework; path = TTSDKFramework/TTSDKLivePullVolcLog/TTSDKLivePullVolcLog.xcframework; sourceTree = "<group>"; };
+		C8103EE7047F16ABF26899780C07FED4 /* Leadmoad.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Leadmoad.bundle; sourceTree = "<group>"; };
+		C81AC2E8B664039ADAFD1FD2F274A103 /* TTAVTraitObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTAVTraitObject.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/TTAVTraitObject.h; sourceTree = "<group>"; };
+		CB822C52C69F281A7298E208B8B96C19 /* KSAdSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KSAdSDK.release.xcconfig; sourceTree = "<group>"; };
+		CCA09FA8E1DDFEA17B93E4E26537AD45 /* UBiXDaq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXDaq.release.xcconfig; sourceTree = "<group>"; };
+		CD43EB67B9F4DE3A0D9E76258D928C4B /* LeadmoadAdSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.release.xcconfig; sourceTree = "<group>"; };
+		D53F675B07F66A1D523C360DC5E05864 /* VolcBaseLog.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = VolcBaseLog.xcframework; path = TTSDKFramework/TTSDKVolcLog/VolcBaseLog.xcframework; sourceTree = "<group>"; };
+		D937844D4648CFAF34A3B8DC618679ED /* SmartdigimktSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = SmartdigimktSDK.xcframework; path = KuYingSDK/SmartdigimktSDK.xcframework; sourceTree = "<group>"; };
+		D966CC6D1B765829398CDB6742AB25F4 /* VeLive.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = VeLive.bundle; path = TTSDKFramework/TTSDKLiveBase/Resources/VeLive.bundle; sourceTree = "<group>"; };
+		D9F53DE421D8D4AB7D293DAFEF1B677B /* TTSDKLivePlayerLite.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TTSDKLivePlayerLite.xcframework; path = TTSDKFramework/TTSDKLivePlayerLite/TTSDKLivePlayerLite.xcframework; sourceTree = "<group>"; };
+		DA2FA9A65E4D9454FF62871B654194C5 /* Pods-AdbidSDKDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AdbidSDKDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE0B433D435FE31034E63076E00340B0 /* NSError+TTVideoLive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+TTVideoLive.h"; path = "TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/NSError+TTVideoLive.h"; sourceTree = "<group>"; };
+		E1AFC2CE2198AB29D73925EAA5180AA6 /* UbiXDaq.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbiXDaq.framework; sourceTree = "<group>"; };
+		E1D55337FC3F81A0BD0378DD630778BD /* AnyThinkGromoreAdapter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AnyThinkGromoreAdapter.xcframework; path = "AnyThinkGromoreAdapter-7.4.0.0.0/AnyThinkGromoreAdapter.xcframework"; sourceTree = "<group>"; };
+		E48DEFA81AFDCFDEB0B8C9CFB7D8D178 /* BUTTSDKFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BUTTSDKFramework.debug.xcconfig; sourceTree = "<group>"; };
+		E8292974F06B3FBF5393BB404F53EB84 /* av_nativetrait.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = av_nativetrait.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/av_nativetrait.h; sourceTree = "<group>"; };
+		E85C1AB55AF61A93468743813DA470FE /* ttplayer.metallib */ = {isa = PBXFileReference; includeInIndex = 1; name = ttplayer.metallib; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Resources/ttplayer.metallib; sourceTree = "<group>"; };
+		E95B473E40D4E835D7688C56D664AE2B /* TTSDKManager+Debug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TTSDKManager+Debug.m"; path = "TTSDKFramework/TTSDKCore/Classes/Sources/TTSDKManager+Debug.m"; sourceTree = "<group>"; };
+		EE81D434FC2ADBEC052FD335CCE167EA /* AnyThinkiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkiOS.release.xcconfig; sourceTree = "<group>"; };
+		EF4C9F81135077553EB99A34DC60B0EC /* TTSDKLivePlayerLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTSDKLivePlayerLite.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TTSDKLivePlayerLite.h; sourceTree = "<group>"; };
+		EF568BBC85AC6B26AE012D80551AC3DF /* TTPlayerDef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTPlayerDef.h; path = TTSDKFramework/TTSDKPlayerCoreLiveLite/Classes/Headers/TTPlayerDef.h; sourceTree = "<group>"; };
+		EFA27A6386AC0C0C578F7DF813D1B7B1 /* TTSDKManager+Debug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TTSDKManager+Debug.h"; path = "TTSDKFramework/TTSDKCore/Classes/Headers/TTSDKManager+Debug.h"; sourceTree = "<group>"; };
+		F17C6869045AB24E64D5FF402ED70A41 /* BUAdSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = BUAdSDK.xcframework; path = SDK/BUAdSDK.xcframework; sourceTree = "<group>"; };
+		F1C45F97612ADA99E6038ADCC4DDE413 /* VeLivePlayerDef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLivePlayerDef.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/VeLivePlayerDef.h; sourceTree = "<group>"; };
+		F3E3164A02BEC63D75526B52659215E3 /* BUTTSDKFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BUTTSDKFramework.modulemap; sourceTree = "<group>"; };
+		F6D3A1993F523418C94B018813CDE25B /* TVLPlayerItemPreferences.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TVLPlayerItemPreferences.h; path = TTSDKFramework/TTSDKLivePlayerLite/Classes/Headers/TVLPlayerItemPreferences.h; sourceTree = "<group>"; };
+		F89147D4F4C65A9AE21DA550C209CBD6 /* VeLiveCommonProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VeLiveCommonProtocol.h; path = TTSDKFramework/TTSDKLiveBase/Classes/Headers/VeLiveCommonProtocol.h; sourceTree = "<group>"; };
+		FC0B4395863A6119878C518EDA07669C /* AdbidSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E2AEC27112596AA49AA253C032C9E836 /* Frameworks */ = {
+		5F6E1855DCE2F093A81641EEF068EFA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE969F1638397A4724462A87634DB844 /* Foundation.framework in Frameworks */,
+				D515BFAB46247DB283F327BC77F3B5A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0980DA7052366F780BF8A4BED21155D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F04ABD7945C74552ECE5D44318A29A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2153EFF4460E1D82B8B32E57A0340C92 /* Support Files */ = {
+		069190A26353F3B38013D4CC8A4448C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				95B1E83AB57B6FE90A51995E5CB094D9 /* UBiXDaq.debug.xcconfig */,
-				F1FC5D30BD7C23DD77B7475BDF0A6B59 /* UBiXDaq.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UBiXDaq";
-			sourceTree = "<group>";
-		};
-		25860B638C1D469E95F28B672420A3CF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				623BB1A0D0B6FFC64985D4A225567DF3 /* AdbidSDK-xcframeworks.sh */,
-				04EF8BC8924CBB1039559D0FFD57B11A /* AdbidSDK.debug.xcconfig */,
-				364AF7F601D884BC9BB6E9F17B062208 /* AdbidSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AdbidSDK";
-			sourceTree = "<group>";
-		};
-		27E8E62ACA2AF0C30E71886946DAFD00 /* AdbidSDK */ = {
-			isa = PBXGroup;
-			children = (
-				E44666A5E6426B537DC20E6DB8A01745 /* Frameworks */,
-				25860B638C1D469E95F28B672420A3CF /* Support Files */,
-			);
-			name = AdbidSDK;
-			path = AdbidSDK;
-			sourceTree = "<group>";
-		};
-		60C5CCA60DEA8F8ABB0F42E920F04090 /* UBiXMerakSDK */ = {
-			isa = PBXGroup;
-			children = (
-				7B17B4F0D377218B9804967845593F65 /* Frameworks */,
-				77EDE94ADCF5D65E71519DE6612956F7 /* Support Files */,
-			);
-			name = UBiXMerakSDK;
-			path = UBiXMerakSDK;
-			sourceTree = "<group>";
-		};
-		77EDE94ADCF5D65E71519DE6612956F7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				883C1B49C3ACA49DE1E6371ED1CD9A65 /* UBiXMerakSDK.debug.xcconfig */,
-				33B725E946A5C22A69A33414961C4D70 /* UBiXMerakSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UBiXMerakSDK";
-			sourceTree = "<group>";
-		};
-		7B17B4F0D377218B9804967845593F65 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9141C4A10C3537DFD41A1BB5DEEE17E1 /* UbiXAdSDK.framework */,
+				19BF213EF26E4F62B8AB603388551744 /* UbiXAdSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7BF2A8DA037BBB85B8869AD88A4FB43D /* Frameworks */ = {
+		0F918FC5B1606FCD04266FCA3B12BA76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				810C3A4AB05FC2B7855D74CE95544A53 /* LeadmoadAdSDK.xcframework */,
+				275B2E3012849F0E14076BCF21656170 /* GDTMobSDK.xcframework */,
+				B234E0512AC7CE3E4C80C9D30875AB92 /* Tquic.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		865BD44DAE847212545627022995A436 /* Targets Support Files */ = {
+		109E273D4D05D9DDCCDFE7E31F00D37C /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				B6EAB856D0887B3FA4791CA8860C5F0B /* Pods-AdbidSDKDemo */,
+				6B602202FF2F7AEB006CBD3BE49C97CB /* Frameworks */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		10FC9D67E2920D4685422E5ACFE478AE /* LivePull-VolcLog */ = {
+			isa = PBXGroup;
+			children = (
+				F5A28DF7FD29D322676E4B7DE787D56E /* Frameworks */,
+			);
+			name = "LivePull-VolcLog";
+			sourceTree = "<group>";
+		};
+		1347630794E7323DAEDF5DC774A245AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				060D51C752FCE5820CEB398604DD04C6 /* LeadmoadAdSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		181B0CD15AC9FE033165FF5B3027E17E /* LiveBase */ = {
+			isa = PBXGroup;
+			children = (
+				3CA8EA8871C54581EC9F6FFA28F79C73 /* TTSDKLiveBase.h */,
+				0FBCDB9F81BC538C783A7DDAFD6F3298 /* VeLiveCommon.h */,
+				F89147D4F4C65A9AE21DA550C209CBD6 /* VeLiveCommonProtocol.h */,
+				5AABDE26D65809F80565C32FE9623E34 /* Frameworks */,
+				8DADE2E55574E011F225322AA4665991 /* Resources */,
+			);
+			name = LiveBase;
+			sourceTree = "<group>";
+		};
+		1F0D2D50D33AAF36B1C8A0C8F388D972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2968DF8B1790D12263C32C3CF1FA387B /* TTSDKCore.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		217DE7620BDAFDC3B6D8EDFA378D7C1D /* GDTMobSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0F918FC5B1606FCD04266FCA3B12BA76 /* Frameworks */,
+				F77BDCA58745AFFEC319B88105B880C8 /* Support Files */,
+			);
+			name = GDTMobSDK;
+			path = GDTMobSDK;
+			sourceTree = "<group>";
+		};
+		2555E2308C9FB96F8D3C51DF9A951A92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F7C10571A397EBF1F06BEEE61DF5C00 /* AnyThinkSDK.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2650569C5857F1A2D834E33439E4DF67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5660AC8E8F8927C456BDEE9C6101569C /* TTSDKPlayerCoreLiveLite.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29D9AA5A5858D06F07CB479F82517EB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A18736D4A2C5084908E5BE8A6F09F8C5 /* BUAdLive.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33E95905CF0E7B14DC5F8BAFD88A5B2F /* PlayerCore */ = {
+			isa = PBXGroup;
+			children = (
+				B7FFBFFCAF331C38B05A635AF1B1DAB4 /* LiveLite */,
+			);
+			name = PlayerCore;
+			sourceTree = "<group>";
+		};
+		3DC90CB9DFF39CA6015A2057FBC5C244 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2CDFFEE856F7ECAE25574D2DF7294 /* Pods-AdbidSDKDemo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8CAA5D0590900EE2BAE33EB9BBAC6DB1 /* Support Files */ = {
+		3E52DE1541EE042A7AB17AC5216F6012 /* BUTTSDKFramework */ = {
 			isa = PBXGroup;
 			children = (
-				1DC50E8C6135C901E45DCF4A3591B5C3 /* LeadmoadAdSDK-xcframeworks.sh */,
-				9D2F8B670A4C7A84DD5D7AC35694A82A /* LeadmoadAdSDK.debug.xcconfig */,
-				3040AFC4AD89221DC862F57473D1D6F5 /* LeadmoadAdSDK.release.xcconfig */,
+				8036BB785741BC4F8938FA1EEB325A85 /* Core */,
+				181B0CD15AC9FE033165FF5B3027E17E /* LiveBase */,
+				ACF18B315AFA69566238A6747998093E /* LivePlayer */,
+				10FC9D67E2920D4685422E5ACFE478AE /* LivePull-VolcLog */,
+				33E95905CF0E7B14DC5F8BAFD88A5B2F /* PlayerCore */,
+				109E273D4D05D9DDCCDFE7E31F00D37C /* Reachability */,
+				FA1CD38391A82BF23CE5A1FCF04A75F1 /* Strategy */,
+				4274DF65EE885351264B958F3E8AFEF1 /* Support Files */,
+				86BB4B2A67E148DF51584F3153FC8218 /* TTFFmpeg */,
+				A8C4281871FAD68EA4B886E6E0F4C984 /* VolcLog */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/LeadmoadAdSDK";
+			name = BUTTSDKFramework;
+			path = BUTTSDKFramework;
 			sourceTree = "<group>";
 		};
-		8F2A1C8DC7A3E79A289BE6140FBED148 /* Frameworks */ = {
+		4274DF65EE885351264B958F3E8AFEF1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CFEA8BFE2A00BCA21B2D020FEBEBC9D /* UbiXDaq.framework */,
+				F3E3164A02BEC63D75526B52659215E3 /* BUTTSDKFramework.modulemap */,
+				01DED7C9A79628C4C0028F90D0421499 /* BUTTSDKFramework-dummy.m */,
+				428FDFA9A8132FC8B7BCB34C59C50610 /* BUTTSDKFramework-Info.plist */,
+				0A424625756C0779C937329436C2CAA0 /* BUTTSDKFramework-prefix.pch */,
+				A24886EF2D0032AD2B5ADAE5EE3EE988 /* BUTTSDKFramework-umbrella.h */,
+				830016870FA067E1E5AE0668BE7A9D87 /* BUTTSDKFramework-xcframeworks.sh */,
+				E48DEFA81AFDCFDEB0B8C9CFB7D8D178 /* BUTTSDKFramework.debug.xcconfig */,
+				242E840B13946938BEC16B93DAC1B0E7 /* BUTTSDKFramework.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BUTTSDKFramework";
+			sourceTree = "<group>";
+		};
+		42AEC8323BA9C9F9B12F3EC771B04E73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8103EE7047F16ABF26899780C07FED4 /* Leadmoad.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5AABDE26D65809F80565C32FE9623E34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CEE08F8BC4F47F3929C475B18B1FE0B /* TTSDKLiveBase.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A3E0C9C9E640C5120153C31BD304C6EB /* Pods */ = {
+		610EB202DE4C4F475AE3B02CFC638270 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				27E8E62ACA2AF0C30E71886946DAFD00 /* AdbidSDK */,
-				A7033CACBF5D83732601944E5C3EDEFA /* LeadmoadAdSDK */,
-				BD1D27C4A198F19764ECFE1B407B8894 /* UBiXDaq */,
-				60C5CCA60DEA8F8ABB0F42E920F04090 /* UBiXMerakSDK */,
+				E1AFC2CE2198AB29D73925EAA5180AA6 /* UbiXDaq.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A7033CACBF5D83732601944E5C3EDEFA /* LeadmoadAdSDK */ = {
+		615258F138B8343A0B324037DBB03CE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BF2A8DA037BBB85B8869AD88A4FB43D /* Frameworks */,
-				BEBA6B0E075A97115EB6D8631D33F54B /* Resources */,
-				8CAA5D0590900EE2BAE33EB9BBAC6DB1 /* Support Files */,
+				BB72BA7ECAEBBC95C2A63DA69104466B /* TTFFmpeg.xcframework */,
+				86C1A3647900F815FC62A44B6A7F78D1 /* TTSDKTTFFmpegLiveLite.xcframework */,
 			);
-			name = LeadmoadAdSDK;
-			path = LeadmoadAdSDK;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B6EAB856D0887B3FA4791CA8860C5F0B /* Pods-AdbidSDKDemo */ = {
+		68ED50B87492DC9A144285C416F63E1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				26A484C0DF088095E89DDF412A14A652 /* Pods-AdbidSDKDemo.modulemap */,
-				B2AAB638394D25D82060A092FEBDD0F3 /* Pods-AdbidSDKDemo-acknowledgements.markdown */,
-				9B96DFFFCBABB0B8C5222141D52E576C /* Pods-AdbidSDKDemo-acknowledgements.plist */,
-				746BC546DB50C9EFFCEB2B99E35730BF /* Pods-AdbidSDKDemo-dummy.m */,
-				91AF44B4534D0B280096CED69B48657B /* Pods-AdbidSDKDemo-Info.plist */,
-				6B89F3581CE36F17BDB9FFB2756AA8D3 /* Pods-AdbidSDKDemo-resources.sh */,
-				C89F244BEA2FAAD7D2C08A4A82C0DA09 /* Pods-AdbidSDKDemo-umbrella.h */,
-				597FFC30C1317501AC9310BB51BFA654 /* Pods-AdbidSDKDemo.debug.xcconfig */,
-				55F2A3E19B1A30EB9E33AF4F7EFEBE6E /* Pods-AdbidSDKDemo.release.xcconfig */,
+				3E936108B6FBC8A819352EA7E941C413 /* KSAdSDK.xcframework */,
 			);
-			name = "Pods-AdbidSDKDemo";
-			path = "Target Support Files/Pods-AdbidSDKDemo";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD1D27C4A198F19764ECFE1B407B8894 /* UBiXDaq */ = {
+		6B602202FF2F7AEB006CBD3BE49C97CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F2A1C8DC7A3E79A289BE6140FBED148 /* Frameworks */,
-				2153EFF4460E1D82B8B32E57A0340C92 /* Support Files */,
+				0641CF9FFD5A478261FF0379CCC95BED /* TTSDKReachability.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B78CF87071A106207ABCFCF15E23455 /* AnyThinkMediationAdxSmartdigimktCNAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				8D69C50556030AB32C1D9F35BDFB9BA0 /* Frameworks */,
+				B6F3A0303877A3643D23192CC581A885 /* Support Files */,
+			);
+			name = AnyThinkMediationAdxSmartdigimktCNAdapter;
+			path = AnyThinkMediationAdxSmartdigimktCNAdapter;
+			sourceTree = "<group>";
+		};
+		71524ED999D717ED2A56E872BD2A0B24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F472715B4DBE321011AD5FC70002CA1 /* SmartdigimktSDK.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		71FB84FF73CB2E4CC9DC1F0751C2E5BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BFE99327FB68AC7C35FEA8E5F41AD94 /* BUTTSDKFramework */,
+				520CD6B0AD7A7EA10F082C4DC1AC8E37 /* Pods-AdbidSDKDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		744B9B27C10A9BE6E1F3C159E6ABFA5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E85C1AB55AF61A93468743813DA470FE /* ttplayer.metallib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		74CB4305517FFD911C10CAA61445765F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F0AFB576C0698CF6350321C216C3CC5 /* TTSDKStrategyLite.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76903422E854F547C37FD5C14BCB9D5D /* Lite */ = {
+			isa = PBXGroup;
+			children = (
+				74CB4305517FFD911C10CAA61445765F /* Frameworks */,
+			);
+			name = Lite;
+			sourceTree = "<group>";
+		};
+		787F4675EDD39AD8A7B3285EDBA3A467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20739D27EF8870785E4643C197C20A20 /* CSJMediation.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8036BB785741BC4F8938FA1EEB325A85 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				250BB240F7A7604328BE65F146B4768C /* TTLicenseManager.h */,
+				321C9F72A9CEC98AB913A835CA227C27 /* TTSDKCore.h */,
+				3EE90A98E2A24CC175EB4A8816E8B299 /* TTSDKCore_Dummy.m */,
+				16FF2C9C61289CB0F323120CCE89FD20 /* TTSDKFramework.h */,
+				6B3FFD3BA5ED5E69AE9359EA2C51F8BA /* TTSDKFramework_Dummy.m */,
+				6760A3FA31F673D818E09B2BED2483EC /* TTSDKManager.h */,
+				EFA27A6386AC0C0C578F7DF813D1B7B1 /* TTSDKManager+Debug.h */,
+				E95B473E40D4E835D7688C56D664AE2B /* TTSDKManager+Debug.m */,
+				1F0D2D50D33AAF36B1C8A0C8F388D972 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		8052A361CFD8CA661FE3C1E5D3BBAF2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CEEBCE64B7527DACF36457FABEC39A2 /* CSJAdSDK.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		81F07CC7A7795AE1C231020C180927C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F17C6869045AB24E64D5FF402ED70A41 /* BUAdSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		844D6883DC5440A739D1FCCEDA764083 /* BUAdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				81F07CC7A7795AE1C231020C180927C8 /* Frameworks */,
+				8052A361CFD8CA661FE3C1E5D3BBAF2A /* Resources */,
+			);
+			name = BUAdSDK;
+			sourceTree = "<group>";
+		};
+		86BB4B2A67E148DF51584F3153FC8218 /* TTFFmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				AF54CF87A7980560A28695280D2CC326 /* LiveLite */,
+			);
+			name = TTFFmpeg;
+			sourceTree = "<group>";
+		};
+		897D50B09DA47D736D51F1AAC3B5CE47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1D55337FC3F81A0BD0378DD630778BD /* AnyThinkGromoreAdapter.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BC989F8A29C6B86638CB5A4DDDF1813 /* UBiXDaq */ = {
+			isa = PBXGroup;
+			children = (
+				610EB202DE4C4F475AE3B02CFC638270 /* Frameworks */,
+				9AB95A924BFE6E48A39CA79E77C19296 /* Support Files */,
 			);
 			name = UBiXDaq;
 			path = UBiXDaq;
 			sourceTree = "<group>";
 		};
-		BEBA6B0E075A97115EB6D8631D33F54B /* Resources */ = {
+		8D69C50556030AB32C1D9F35BDFB9BA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA90939B9DFED743238B04640D021C6F /* Leadmoad.bundle */,
+				0D832F20F0ACAC764F413E5C186DF57F /* AnyThinkSmartdigimktAdapter.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DADE2E55574E011F225322AA4665991 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D966CC6D1B765829398CDB6742AB25F4 /* VeLive.bundle */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		8F9212F24A4EBD7229550564CF1B3A9A /* SmartdigimktCNSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DA3526D0026CFEB1E5F2CDFACB0E469C /* Frameworks */,
+				71524ED999D717ED2A56E872BD2A0B24 /* Resources */,
+				F769A96A27F65AC50C8A4465D1B7917A /* Support Files */,
+			);
+			name = SmartdigimktCNSDK;
+			path = SmartdigimktCNSDK;
+			sourceTree = "<group>";
+		};
+		92BB5533E0AF64133D2D4DB6D1981F20 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				20CBEA6974CC1C188003C7F89FDBA3DE /* AdbidSDK-xcframeworks.sh */,
+				FC0B4395863A6119878C518EDA07669C /* AdbidSDK.debug.xcconfig */,
+				838CE69991B2B6537F584E5F30326BF4 /* AdbidSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AdbidSDK";
+			sourceTree = "<group>";
+		};
+		9718669E9E7FDCAB55B7FE9A19481B73 /* AnyThinkSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C73F2DEEF515E61E6FA4F042CB51108E /* Frameworks */,
+				2555E2308C9FB96F8D3C51DF9A951A92 /* Resources */,
+			);
+			name = AnyThinkSDK;
+			sourceTree = "<group>";
+		};
+		98E96F7B83EBBD21C1CAA0607F40740C /* Ads-CN-Beta */ = {
+			isa = PBXGroup;
+			children = (
+				A579A2F1BDDDEC1D23C61ECBAC47F020 /* BUAdLive */,
+				844D6883DC5440A739D1FCCEDA764083 /* BUAdSDK */,
+				AB9789B89FD1FEE767624460E612E09F /* CSJMediation-Only */,
+				CA5E45933A35514D61CDA573ED84EE0C /* Support Files */,
+			);
+			name = "Ads-CN-Beta";
+			path = "Ads-CN-Beta";
+			sourceTree = "<group>";
+		};
+		9AB95A924BFE6E48A39CA79E77C19296 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51FC1886F666E81DE93DB2A3AFE936D7 /* UBiXDaq.debug.xcconfig */,
+				CCA09FA8E1DDFEA17B93E4E26537AD45 /* UBiXDaq.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UBiXDaq";
+			sourceTree = "<group>";
+		};
+		A127D9C439CABFCA71CC2F9027BBDD64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AE368C5342D2F2B645BF4F85DDEEBA8 /* AdbidSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A579A2F1BDDDEC1D23C61ECBAC47F020 /* BUAdLive */ = {
+			isa = PBXGroup;
+			children = (
+				29D9AA5A5858D06F07CB479F82517EB7 /* Frameworks */,
+			);
+			name = BUAdLive;
+			sourceTree = "<group>";
+		};
+		A73C6E82437BA8E2742A2621999DB354 /* UBiXMerakSDK */ = {
+			isa = PBXGroup;
+			children = (
+				069190A26353F3B38013D4CC8A4448C4 /* Frameworks */,
+				DC48EEAA92B4500FECF882D69C74FBF3 /* Support Files */,
+			);
+			name = UBiXMerakSDK;
+			path = UBiXMerakSDK;
+			sourceTree = "<group>";
+		};
+		A8C4281871FAD68EA4B886E6E0F4C984 /* VolcLog */ = {
+			isa = PBXGroup;
+			children = (
+				D2058780F0D8DAA8C4602E07CB2A52BD /* Frameworks */,
+			);
+			name = VolcLog;
+			sourceTree = "<group>";
+		};
+		AB9789B89FD1FEE767624460E612E09F /* CSJMediation-Only */ = {
+			isa = PBXGroup;
+			children = (
+				787F4675EDD39AD8A7B3285EDBA3A467 /* Frameworks */,
+			);
+			name = "CSJMediation-Only";
+			sourceTree = "<group>";
+		};
+		ACF18B315AFA69566238A6747998093E /* LivePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				BBE4BF42D8187F90BB1349AB0BE198B7 /* Lite */,
+			);
+			name = LivePlayer;
+			sourceTree = "<group>";
+		};
+		AD1914FDE8056BF8CF7B3719011646A5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEA5D6C5497F7F7DE5058C91BD09E883 /* AnyThinkMediationGromoreAdapter-xcframeworks.sh */,
+				A065D9BD4D81319CE9CBF39F4895D77A /* AnyThinkMediationGromoreAdapter.debug.xcconfig */,
+				5C14AC675B17677FD00EA7A92AE99C98 /* AnyThinkMediationGromoreAdapter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AnyThinkMediationGromoreAdapter";
+			sourceTree = "<group>";
+		};
+		AF54CF87A7980560A28695280D2CC326 /* LiveLite */ = {
+			isa = PBXGroup;
+			children = (
+				615258F138B8343A0B324037DBB03CE1 /* Frameworks */,
+			);
+			name = LiveLite;
+			sourceTree = "<group>";
+		};
+		B6F3A0303877A3643D23192CC581A885 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C67979562C0BECE60DB9C90661D1ECA /* AnyThinkMediationAdxSmartdigimktCNAdapter-xcframeworks.sh */,
+				55F769E5B3F2B6DFB53A0456EBF3B80C /* AnyThinkMediationAdxSmartdigimktCNAdapter.debug.xcconfig */,
+				28C3BDAFD726A791F261F57E2E38DCCF /* AnyThinkMediationAdxSmartdigimktCNAdapter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AnyThinkMediationAdxSmartdigimktCNAdapter";
+			sourceTree = "<group>";
+		};
+		B71AC79A248F11774208F9F6FF20DEF4 /* AnyThinkMediationGromoreAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				897D50B09DA47D736D51F1AAC3B5CE47 /* Frameworks */,
+				AD1914FDE8056BF8CF7B3719011646A5 /* Support Files */,
+			);
+			name = AnyThinkMediationGromoreAdapter;
+			path = AnyThinkMediationGromoreAdapter;
+			sourceTree = "<group>";
+		};
+		B7FFBFFCAF331C38B05A635AF1B1DAB4 /* LiveLite */ = {
+			isa = PBXGroup;
+			children = (
+				61E776D88C5D9111F24269FA207FBD16 /* av_audio_wrapper.h */,
+				E8292974F06B3FBF5393BB404F53EB84 /* av_nativetrait.h */,
+				2D29CEA2227119DB76E2FDB8E04B0600 /* TTAVPlayerLoadControlInterface.h */,
+				369050B49B6098B3D5AC6AA98B7A1710 /* TTAVPlayerMaskInfoInterface.h */,
+				C81AC2E8B664039ADAFD1FD2F274A103 /* TTAVTraitObject.h */,
+				EF568BBC85AC6B26AE012D80551AC3DF /* TTPlayerDef.h */,
+				75404BFD0B2937887E2C525CD6871B12 /* TTSDKPlayerCoreLiveLite.h */,
+				93CAF443C81A8E9C0DEC51323D1AAAE7 /* TTStreamInfo.h */,
+				2650569C5857F1A2D834E33439E4DF67 /* Frameworks */,
+				744B9B27C10A9BE6E1F3C159E6ABFA5F /* Resources */,
+			);
+			name = LiveLite;
+			sourceTree = "<group>";
+		};
+		BBE4BF42D8187F90BB1349AB0BE198B7 /* Lite */ = {
+			isa = PBXGroup;
+			children = (
+				DE0B433D435FE31034E63076E00340B0 /* NSError+TTVideoLive.h */,
+				EF4C9F81135077553EB99A34DC60B0EC /* TTSDKLivePlayerLite.h */,
+				4A89BB4B910FB72C67C0DF0D70A58360 /* TTVideoLive.h */,
+				BBA7E45817131053EFB59D0721B506C1 /* TVLConstDefine.h */,
+				3B53632F9DEEC4402500984CE43EEE2A /* TVLManager.h */,
+				77612001349F230AB25B6EEA46B8BC5C /* TVLManager+Interface.h */,
+				2419577DAAD91C9BB06AE65B0368B631 /* TVLManager+Settings.h */,
+				896A22A33AFAE7BF7A5E1AC732C02C9A /* TVLOption.h */,
+				7432F67FED50401DA756552EA96ADC18 /* TVLPlayerItem.h */,
+				F6D3A1993F523418C94B018813CDE25B /* TVLPlayerItemPreferences.h */,
+				3B162194D799516E2D32FE0740756251 /* TVLProtocol.h */,
+				91AA5E8EEF61A4A0D61FBA5B95318A0E /* TVLSettingsManager.h */,
+				53EE10CA26FC5C64544A14F5EF3F94CA /* VeLivePlayer.h */,
+				0756B227D39D5714E9B5796C5A1CB072 /* VeLivePlayerData.h */,
+				F1C45F97612ADA99E6038ADCC4DDE413 /* VeLivePlayerDef.h */,
+				097CD9481E1B0FA4003997F7E58A8013 /* VeLivePlayerError.h */,
+				137103F378EFC27BCEFA512ED54593AD /* VeLivePlayerGlobalManager.h */,
+				B134ECD395FF1859FD74EFA105F8228F /* VeLivePlayerObserver.h */,
+				5A49E608B0D6440B6211FFFB226D0271 /* VeLivePlayerStream.h */,
+				31EF506891308A471F5F6F606DC2B5E1 /* VeLivePlayerStreamData.h */,
+				EBEE8AE4EC1AA7ED4FB5537A66687B9E /* Frameworks */,
+			);
+			name = Lite;
+			sourceTree = "<group>";
+		};
+		C0D266C3E34E8976D06846DACA1C7579 /* LeadmoadAdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1347630794E7323DAEDF5DC774A245AC /* Frameworks */,
+				42AEC8323BA9C9F9B12F3EC771B04E73 /* Resources */,
+				E5E6E2996850FB7237E09B3E7A483359 /* Support Files */,
+			);
+			name = LeadmoadAdSDK;
+			path = LeadmoadAdSDK;
+			sourceTree = "<group>";
+		};
+		C73F2DEEF515E61E6FA4F042CB51108E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3173566BDB42522AE540BD384DDAFECD /* AnyThinkSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA5E45933A35514D61CDA573ED84EE0C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				776D27FEA5B5158EAD0E6E3A08D6D41A /* Ads-CN-Beta-xcframeworks.sh */,
+				20A2042C7A6B083D6CAE530BAE262F5B /* Ads-CN-Beta.debug.xcconfig */,
+				28E11D65BD33A0C953B48979E806513D /* Ads-CN-Beta.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Ads-CN-Beta";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -290,18 +1045,38 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				A3E0C9C9E640C5120153C31BD304C6EB /* Pods */,
-				D17A1D401489916EEB6241791B5FD1CD /* Products */,
-				865BD44DAE847212545627022995A436 /* Targets Support Files */,
+				D1BAD37169B3D2644CB2885261F1020B /* Pods */,
+				71FB84FF73CB2E4CC9DC1F0751C2E5BF /* Products */,
+				3DC90CB9DFF39CA6015A2057FBC5C244 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D17A1D401489916EEB6241791B5FD1CD /* Products */ = {
+		D1BAD37169B3D2644CB2885261F1020B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				520CD6B0AD7A7EA10F082C4DC1AC8E37 /* Pods-AdbidSDKDemo */,
+				F41780FBEDD0B14226A44E0A749B7BCE /* AdbidSDK */,
+				98E96F7B83EBBD21C1CAA0607F40740C /* Ads-CN-Beta */,
+				F0078B01A2A190A9EA94896F96F2A252 /* AnyThinkiOS */,
+				6B78CF87071A106207ABCFCF15E23455 /* AnyThinkMediationAdxSmartdigimktCNAdapter */,
+				B71AC79A248F11774208F9F6FF20DEF4 /* AnyThinkMediationGromoreAdapter */,
+				3E52DE1541EE042A7AB17AC5216F6012 /* BUTTSDKFramework */,
+				217DE7620BDAFDC3B6D8EDFA378D7C1D /* GDTMobSDK */,
+				F34CB0B7D4E199D383232582AB2D9E97 /* KSAdSDK */,
+				C0D266C3E34E8976D06846DACA1C7579 /* LeadmoadAdSDK */,
+				8F9212F24A4EBD7229550564CF1B3A9A /* SmartdigimktCNSDK */,
+				8BC989F8A29C6B86638CB5A4DDDF1813 /* UBiXDaq */,
+				A73C6E82437BA8E2742A2621999DB354 /* UBiXMerakSDK */,
 			);
-			name = Products;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2058780F0D8DAA8C4602E07CB2A52BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D0AB3B9179B00011AC4C421F150B828 /* TTSDKVolcLog.xcframework */,
+				D53F675B07F66A1D523C360DC5E05864 /* VolcBaseLog.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -312,12 +1087,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E44666A5E6426B537DC20E6DB8A01745 /* Frameworks */ = {
+		D89B34AEB73EB70EFBDE8019D26FBC81 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				47A42092ABD837EBC10EB20F5DD84D20 /* AdbidSDK.xcframework */,
+				BA07DD99BB8E5CD5F37FB1704C967D4F /* AnyThinkiOS-xcframeworks.sh */,
+				A2F4B665B7231D49F80D39992ABEBCDA /* AnyThinkiOS.debug.xcconfig */,
+				EE81D434FC2ADBEC052FD335CCE167EA /* AnyThinkiOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AnyThinkiOS";
+			sourceTree = "<group>";
+		};
+		DA3526D0026CFEB1E5F2CDFACB0E469C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D937844D4648CFAF34A3B8DC618679ED /* SmartdigimktSDK.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC48EEAA92B4500FECF882D69C74FBF3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5948BADD25F61ED1EE0424ACEE57D5CC /* UBiXMerakSDK.debug.xcconfig */,
+				B12CF160633F7437167BC1F8727DA54F /* UBiXMerakSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UBiXMerakSDK";
 			sourceTree = "<group>";
 		};
 		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
@@ -328,14 +1124,174 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		E5E6E2996850FB7237E09B3E7A483359 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				079B39676A3D82EF184E8794A4094DE6 /* LeadmoadAdSDK-xcframeworks.sh */,
+				49D2A9FDCBD852A26D91A08AC2BA1B98 /* LeadmoadAdSDK.debug.xcconfig */,
+				CD43EB67B9F4DE3A0D9E76258D928C4B /* LeadmoadAdSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LeadmoadAdSDK";
+			sourceTree = "<group>";
+		};
+		EBEE8AE4EC1AA7ED4FB5537A66687B9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9F53DE421D8D4AB7D293DAFEF1B677B /* TTSDKLivePlayerLite.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE028F1B0763CD20D191BFC4F75CE3EA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5208776C85BD8997C7FDFCCAAE7205D2 /* KSAdSDK-xcframeworks.sh */,
+				37F48E35AB6D8789D4A6CC3D3C2C3072 /* KSAdSDK.debug.xcconfig */,
+				CB822C52C69F281A7298E208B8B96C19 /* KSAdSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KSAdSDK";
+			sourceTree = "<group>";
+		};
+		F0078B01A2A190A9EA94896F96F2A252 /* AnyThinkiOS */ = {
+			isa = PBXGroup;
+			children = (
+				9718669E9E7FDCAB55B7FE9A19481B73 /* AnyThinkSDK */,
+				D89B34AEB73EB70EFBDE8019D26FBC81 /* Support Files */,
+			);
+			name = AnyThinkiOS;
+			path = AnyThinkiOS;
+			sourceTree = "<group>";
+		};
+		F34CB0B7D4E199D383232582AB2D9E97 /* KSAdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				68ED50B87492DC9A144285C416F63E1C /* Frameworks */,
+				EE028F1B0763CD20D191BFC4F75CE3EA /* Support Files */,
+			);
+			name = KSAdSDK;
+			path = KSAdSDK;
+			sourceTree = "<group>";
+		};
+		F41780FBEDD0B14226A44E0A749B7BCE /* AdbidSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A127D9C439CABFCA71CC2F9027BBDD64 /* Frameworks */,
+				92BB5533E0AF64133D2D4DB6D1981F20 /* Support Files */,
+			);
+			name = AdbidSDK;
+			path = AdbidSDK;
+			sourceTree = "<group>";
+		};
+		F4F2CDFFEE856F7ECAE25574D2DF7294 /* Pods-AdbidSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6DFD925D72824F58F6F6F5D7BD0CB018 /* Pods-AdbidSDKDemo.modulemap */,
+				DA2FA9A65E4D9454FF62871B654194C5 /* Pods-AdbidSDKDemo-acknowledgements.markdown */,
+				4745CD50ED3E3528952EE32E46382E3D /* Pods-AdbidSDKDemo-acknowledgements.plist */,
+				96E69EEBF63BE123E04B89BC02A08B3E /* Pods-AdbidSDKDemo-dummy.m */,
+				3471F6CB20CC3B9DE0ACA6632662A392 /* Pods-AdbidSDKDemo-frameworks.sh */,
+				25550DE6997EA32C0B99EB904246797B /* Pods-AdbidSDKDemo-Info.plist */,
+				562241243412C6B1F8ECC0CB6DD08123 /* Pods-AdbidSDKDemo-resources.sh */,
+				27330A11C06830AAC3BB00BCFB9D4EDE /* Pods-AdbidSDKDemo-umbrella.h */,
+				65DCE0A1E8A8A9F22111FF03FED603F3 /* Pods-AdbidSDKDemo.debug.xcconfig */,
+				5A98E1A9B972772C79914799DA8E1A66 /* Pods-AdbidSDKDemo.release.xcconfig */,
+			);
+			name = "Pods-AdbidSDKDemo";
+			path = "Target Support Files/Pods-AdbidSDKDemo";
+			sourceTree = "<group>";
+		};
+		F5A28DF7FD29D322676E4B7DE787D56E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C418546E61CACF6BA3885678D35B5D6A /* TTSDKLivePullVolcLog.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F769A96A27F65AC50C8A4465D1B7917A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F98177CC17EA51E5E6A89995B95DD16 /* SmartdigimktCNSDK-xcframeworks.sh */,
+				A2CD776D9137EAAEBE702FA018121A87 /* SmartdigimktCNSDK.debug.xcconfig */,
+				BF75946E78F58EC42EE7BAFE4D725ECE /* SmartdigimktCNSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SmartdigimktCNSDK";
+			sourceTree = "<group>";
+		};
+		F77BDCA58745AFFEC319B88105B880C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				62BD181E395E096E5EA1C109AB84D0D3 /* GDTMobSDK-xcframeworks.sh */,
+				3789AA8BBE5980121861E222914754D7 /* GDTMobSDK.debug.xcconfig */,
+				48EF72BF5D609E3CDF36F00FE64CAA99 /* GDTMobSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GDTMobSDK";
+			sourceTree = "<group>";
+		};
+		FA1CD38391A82BF23CE5A1FCF04A75F1 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				76903422E854F547C37FD5C14BCB9D5D /* Lite */,
+			);
+			name = Strategy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3E654FE3D0936A02922C049DE6B66438 /* Headers */ = {
+		37E54B67B11CA8C6A3DD2F242DA45B54 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0859C84E8286BCF1376F333659D05A72 /* Pods-AdbidSDKDemo-umbrella.h in Headers */,
+				5A6E0ABD0745B77778B8D01FDCB2920B /* av_audio_wrapper.h in Headers */,
+				EE7F5D1AAE92419F958CC37C22628373 /* av_nativetrait.h in Headers */,
+				DCBF6E0793DEB0EE2534881F142AEB39 /* BUTTSDKFramework-umbrella.h in Headers */,
+				B302574BA952D2E2CA7D1BC0D7B8E11B /* NSError+TTVideoLive.h in Headers */,
+				EC0F928F2B35CD408BFFE083436A9CFF /* TTAVPlayerLoadControlInterface.h in Headers */,
+				0F829D5CB281410B03AB35DE201CCB8C /* TTAVPlayerMaskInfoInterface.h in Headers */,
+				CE99A34012B299E84540C25662801EC1 /* TTAVTraitObject.h in Headers */,
+				6605858AAE5299CAD2C8206C4D2A1995 /* TTLicenseManager.h in Headers */,
+				53DD6A8FE27437462A357D07122E3B2F /* TTPlayerDef.h in Headers */,
+				74CFDA2869EE64F184257172161CD599 /* TTSDKCore.h in Headers */,
+				F88E0117FC5032FA1B7AFC48B2F03768 /* TTSDKFramework.h in Headers */,
+				78A74A48E01EBD3F93C3FDD85B24385C /* TTSDKLiveBase.h in Headers */,
+				5C1D485CCDD05D6E7D4D6C0B55D19A13 /* TTSDKLivePlayerLite.h in Headers */,
+				591B3CC841DE4DBC222BDAB70E30DC36 /* TTSDKManager.h in Headers */,
+				13B5BA0073CC34966E9C5CB09F513676 /* TTSDKManager+Debug.h in Headers */,
+				3CE1E8DF50DCD64AFF1A7C3D22382F66 /* TTSDKPlayerCoreLiveLite.h in Headers */,
+				83F5D3A20F7917004AC91358DD5C7975 /* TTStreamInfo.h in Headers */,
+				485E6C28ED4AFE7D1E39390E8C995D38 /* TTVideoLive.h in Headers */,
+				FB3EF4515C688A928B5252ACD6E16CAB /* TVLConstDefine.h in Headers */,
+				3133A6E79AFDC0D52A49298D406A288A /* TVLManager.h in Headers */,
+				23D2A7809FC4F1F829A6F66ECA6A34ED /* TVLManager+Interface.h in Headers */,
+				BD44A3A6B0A3B1EC2A9A427F69384028 /* TVLManager+Settings.h in Headers */,
+				1048A96AC50276D5AB53BBEF81855417 /* TVLOption.h in Headers */,
+				8A97BB86ACDCE7BFB1F2B38CCE6C11E6 /* TVLPlayerItem.h in Headers */,
+				EE7B692E33EE0565FC093F32DA259E3B /* TVLPlayerItemPreferences.h in Headers */,
+				C4D02DDF4EF974780E79B574F1C56F8C /* TVLProtocol.h in Headers */,
+				58016816293ECA836BF01E2D49142170 /* TVLSettingsManager.h in Headers */,
+				113420994A7BADCA3FF92DE2EEB1E766 /* VeLiveCommon.h in Headers */,
+				9A82CA0288961F78EE3886CCF2E9EF3F /* VeLiveCommonProtocol.h in Headers */,
+				A506CF4473F159111BFD1E3BC9248002 /* VeLivePlayer.h in Headers */,
+				02B87D7CB905A2F19F349B1DAF35A618 /* VeLivePlayerData.h in Headers */,
+				3E126F14BB3891D36BF3AA82B1A1CD37 /* VeLivePlayerDef.h in Headers */,
+				6FCAC6D459E53AD69C69781FF17E062C /* VeLivePlayerError.h in Headers */,
+				FC5E5F64E182C80584F822A7A54B32A6 /* VeLivePlayerGlobalManager.h in Headers */,
+				32DE517E068E87B91A21D4F1DB07F1C0 /* VeLivePlayerObserver.h in Headers */,
+				9E56CB81217B922B1BAAABB97F6D9ED5 /* VeLivePlayerStream.h in Headers */,
+				70B973CAF607DE16CF23EED16CFACC8F /* VeLivePlayerStreamData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388A50223D71820D18ADB185D29FB6E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7198F1C71D081C0B296ABBA63BB72E2 /* Pods-AdbidSDKDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,24 +1300,51 @@
 /* Begin PBXNativeTarget section */
 		B94B14BF2ECB0E382401BE07182EFAEB /* Pods-AdbidSDKDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B285FAB929DAA5D128FE7BCAF0096C3A /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */;
+			buildConfigurationList = 3801092FB361593480424B2AC4FB148C /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */;
 			buildPhases = (
-				3E654FE3D0936A02922C049DE6B66438 /* Headers */,
-				8FB507378DC850E78DAA5881982BD185 /* Sources */,
-				E2AEC27112596AA49AA253C032C9E836 /* Frameworks */,
-				CE428B4D51A66BF4A7C82CC2906BAB97 /* Resources */,
+				388A50223D71820D18ADB185D29FB6E3 /* Headers */,
+				AE1201DD4202B74B4162667D76D6F2F6 /* Sources */,
+				B0980DA7052366F780BF8A4BED21155D /* Frameworks */,
+				6226EE2B0764C066BAF21963C4A295D0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				43C0167F50469E3025BE876337540F7E /* PBXTargetDependency */,
-				D8337C36B545F9B5B29C0037D7A4129F /* PBXTargetDependency */,
-				A542D5F638D8712E8A69A9B109D478C5 /* PBXTargetDependency */,
-				5ED6B8BC788E9C9DFD6EE07E926EA9A8 /* PBXTargetDependency */,
+				8C8EC8D5D8EA14C405682240119EC20A /* PBXTargetDependency */,
+				9985155A8390DD1771E44DDA988D1605 /* PBXTargetDependency */,
+				C86015E787E337D6771031FD5B70086D /* PBXTargetDependency */,
+				CF393E72C37B3DD3385027183E6C1964 /* PBXTargetDependency */,
+				01FA8FB4DDC14B4EC82D5B67EE4CE48F /* PBXTargetDependency */,
+				25B7D648E69836AAC9366B49E589005D /* PBXTargetDependency */,
+				FBE53C0ECB5E4DD659CAAB6EA8A31646 /* PBXTargetDependency */,
+				4B5C3F14EAC6FFC7080E4F126D0CE8E5 /* PBXTargetDependency */,
+				0441F2A8F7A3AFDC05B605ED4F9CAA3A /* PBXTargetDependency */,
+				BCBC78065F3BF919BD71C8797D043BD9 /* PBXTargetDependency */,
+				28B9AEB28A041272FE45EBA4190D5120 /* PBXTargetDependency */,
+				BC264EEA097497240D36E9378E0E904E /* PBXTargetDependency */,
 			);
 			name = "Pods-AdbidSDKDemo";
 			productName = Pods_AdbidSDKDemo;
 			productReference = 520CD6B0AD7A7EA10F082C4DC1AC8E37 /* Pods-AdbidSDKDemo */;
+			productType = "com.apple.product-type.framework";
+		};
+		E01160816B81860F99B1A8F9444635E6 /* BUTTSDKFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00EFD400C5CD34C7356CFB59D429E44E /* Build configuration list for PBXNativeTarget "BUTTSDKFramework" */;
+			buildPhases = (
+				37E54B67B11CA8C6A3DD2F242DA45B54 /* Headers */,
+				4E5E0E1F3B33BC7CE67447560F9AC89E /* [CP] Copy XCFrameworks */,
+				D49451BF4C45AB80E2D8A2AB80343CDD /* Sources */,
+				5F6E1855DCE2F093A81641EEF068EFA8 /* Frameworks */,
+				01A014D0A0C6B002DCBE6ECB986BE0FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BUTTSDKFramework;
+			productName = TTSDKFramework;
+			productReference = 9BFE99327FB68AC7C35FEA8E5F41AD94 /* BUTTSDKFramework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -384,13 +1367,21 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D17A1D401489916EEB6241791B5FD1CD /* Products */;
+			productRefGroup = 71FB84FF73CB2E4CC9DC1F0751C2E5BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */,
+				9822EC319158EDF9A392330FE643BC4E /* Ads-CN-Beta */,
+				F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */,
+				28E71F3E51526C988D0C3A92B6933BA3 /* AnyThinkMediationAdxSmartdigimktCNAdapter */,
+				129C0EF375D3107604F1F1F5DA5E0732 /* AnyThinkMediationGromoreAdapter */,
+				E01160816B81860F99B1A8F9444635E6 /* BUTTSDKFramework */,
+				6F2BDBDBBAD8487EF4614E1D729C5DD0 /* GDTMobSDK */,
+				53DB8EFBB54B636ACDC70272323792EC /* KSAdSDK */,
 				7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */,
 				B94B14BF2ECB0E382401BE07182EFAEB /* Pods-AdbidSDKDemo */,
+				8305621A71B4F131D5EB9393C1365F91 /* SmartdigimktCNSDK */,
 				A99B118F444A264217CA4E5383329549 /* UBiXDaq */,
 				CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */,
 			);
@@ -398,7 +1389,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE428B4D51A66BF4A7C82CC2906BAB97 /* Resources */ = {
+		01A014D0A0C6B002DCBE6ECB986BE0FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6226EE2B0764C066BAF21963C4A295D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,24 +1406,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8DB9EA1FF61B2222DA0C933C4CDCBAFF /* [CP] Copy XCFrameworks */ = {
+		26823923D4C25266E1709858514D7D70 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/LeadmoadAdSDK/LeadmoadAdSDK-xcframeworks-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/AnyThinkiOS/AnyThinkiOS-xcframeworks-input-files.xcfilelist",
 			);
 			name = "[CP] Copy XCFrameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/LeadmoadAdSDK/LeadmoadAdSDK-xcframeworks-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/AnyThinkiOS/AnyThinkiOS-xcframeworks-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/LeadmoadAdSDK/LeadmoadAdSDK-xcframeworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/AnyThinkiOS/AnyThinkiOS-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD7F5685F10C28E6DF2C863304957B32 /* [CP] Copy XCFrameworks */ = {
+		4E5E0E1F3B33BC7CE67447560F9AC89E /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/BUTTSDKFramework/BUTTSDKFramework-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/BUTTSDKFramework/BUTTSDKFramework-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/BUTTSDKFramework/BUTTSDKFramework-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0DE084405FD3174C2595D267A2E657 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AnyThinkMediationAdxSmartdigimktCNAdapter/AnyThinkMediationAdxSmartdigimktCNAdapter-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AnyThinkMediationAdxSmartdigimktCNAdapter/AnyThinkMediationAdxSmartdigimktCNAdapter-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/AnyThinkMediationAdxSmartdigimktCNAdapter/AnyThinkMediationAdxSmartdigimktCNAdapter-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64C225E524559555A2EB1C62B5E5D200 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,56 +1474,347 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/AdbidSDK/AdbidSDK-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		78F26134FA75AC4F11C16D134558E966 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/LeadmoadAdSDK/LeadmoadAdSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/LeadmoadAdSDK/LeadmoadAdSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/LeadmoadAdSDK/LeadmoadAdSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F77BB671776421C2DFD776E676671A3 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SmartdigimktCNSDK/SmartdigimktCNSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/SmartdigimktCNSDK/SmartdigimktCNSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/SmartdigimktCNSDK/SmartdigimktCNSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A090D11CAE7E14C48DEE0CD8E9AAEC63 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Ads-CN-Beta/Ads-CN-Beta-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Ads-CN-Beta/Ads-CN-Beta-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Ads-CN-Beta/Ads-CN-Beta-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1947AD203DD5E46A044F6BFA28FC5E1 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/KSAdSDK/KSAdSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/KSAdSDK/KSAdSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/KSAdSDK/KSAdSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B44C5856CCC6D4BEBD269B3923703C9B /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AnyThinkMediationGromoreAdapter/AnyThinkMediationGromoreAdapter-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AnyThinkMediationGromoreAdapter/AnyThinkMediationGromoreAdapter-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/AnyThinkMediationGromoreAdapter/AnyThinkMediationGromoreAdapter-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5D8A1615AFD6C46C1EEDFAE8F632BAB /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GDTMobSDK/GDTMobSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GDTMobSDK/GDTMobSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/GDTMobSDK/GDTMobSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8FB507378DC850E78DAA5881982BD185 /* Sources */ = {
+		AE1201DD4202B74B4162667D76D6F2F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34C0F351FC8375474E2C780039625C3 /* Pods-AdbidSDKDemo-dummy.m in Sources */,
+				A60DF4234FBA5EDCD8C6A9E4232BBBF1 /* Pods-AdbidSDKDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49451BF4C45AB80E2D8A2AB80343CDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943E6038B7EA9B2DE61EBFAC45F50A1B /* BUTTSDKFramework-dummy.m in Sources */,
+				65803146925CDABDED412E3B7D252A35 /* TTSDKCore_Dummy.m in Sources */,
+				6D6658456BD1500FF7E27910ADDC4123 /* TTSDKFramework_Dummy.m in Sources */,
+				E493CACFE506F4DB9C68D61E45DEFA2C /* TTSDKManager+Debug.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		167FA51CCE431124F4E100BC9D8FA92F /* PBXTargetDependency */ = {
+		01FA8FB4DDC14B4EC82D5B67EE4CE48F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = UBiXDaq;
-			target = A99B118F444A264217CA4E5383329549 /* UBiXDaq */;
-			targetProxy = 137F4A2C477718E36E07C0DEDE441B28 /* PBXContainerItemProxy */;
+			name = AnyThinkiOS;
+			target = F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */;
+			targetProxy = 4F6F068F906CA21CBED3D0672D10FF8C /* PBXContainerItemProxy */;
 		};
-		43C0167F50469E3025BE876337540F7E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AdbidSDK;
-			target = 536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */;
-			targetProxy = 0DAFB29F8C3A238CFF8371955B563E91 /* PBXContainerItemProxy */;
-		};
-		5ED6B8BC788E9C9DFD6EE07E926EA9A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UBiXMerakSDK;
-			target = CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */;
-			targetProxy = C8F967FD8C0BB0A936B210FD1326BD25 /* PBXContainerItemProxy */;
-		};
-		A542D5F638D8712E8A69A9B109D478C5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UBiXDaq;
-			target = A99B118F444A264217CA4E5383329549 /* UBiXDaq */;
-			targetProxy = 3470E46DA13C4A174C9B18492C4A43F5 /* PBXContainerItemProxy */;
-		};
-		D8337C36B545F9B5B29C0037D7A4129F /* PBXTargetDependency */ = {
+		0441F2A8F7A3AFDC05B605ED4F9CAA3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LeadmoadAdSDK;
 			target = 7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */;
-			targetProxy = 7189D021B0CE3F5ED1C28D35999373A9 /* PBXContainerItemProxy */;
+			targetProxy = 78CB07F72E79B5CB24BA24ED1711C21D /* PBXContainerItemProxy */;
+		};
+		0638E817404583E87C2F2335278C4B6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkMediationAdxSmartdigimktCNAdapter;
+			target = 28E71F3E51526C988D0C3A92B6933BA3 /* AnyThinkMediationAdxSmartdigimktCNAdapter */;
+			targetProxy = A01FDC960548378C7E36EAD51058E39D /* PBXContainerItemProxy */;
+		};
+		13B3FADDE2386395885A52C01729FDB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Ads-CN-Beta";
+			target = 9822EC319158EDF9A392330FE643BC4E /* Ads-CN-Beta */;
+			targetProxy = DC818221C7C3C202B1B2851AA5732ED5 /* PBXContainerItemProxy */;
+		};
+		18295E5EB6F4ABCE46856C56FE15092A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SmartdigimktCNSDK;
+			target = 8305621A71B4F131D5EB9393C1365F91 /* SmartdigimktCNSDK */;
+			targetProxy = 34A808746007C83A84E271E9586A210F /* PBXContainerItemProxy */;
+		};
+		1A30D25A049052BCF426E43BB7080216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UBiXDaq;
+			target = A99B118F444A264217CA4E5383329549 /* UBiXDaq */;
+			targetProxy = CAE1BAD7486E63B8C6522CDFE74D9F43 /* PBXContainerItemProxy */;
+		};
+		25B7D648E69836AAC9366B49E589005D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BUTTSDKFramework;
+			target = E01160816B81860F99B1A8F9444635E6 /* BUTTSDKFramework */;
+			targetProxy = 7DBAC2DD4FCD39BF4992A3C9B4DFB3F8 /* PBXContainerItemProxy */;
+		};
+		28B9AEB28A041272FE45EBA4190D5120 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UBiXDaq;
+			target = A99B118F444A264217CA4E5383329549 /* UBiXDaq */;
+			targetProxy = AA4D163A44074D53AF51F23291B56924 /* PBXContainerItemProxy */;
+		};
+		3B070EC4AC983D534B07F3DB5EDA3B2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkiOS;
+			target = F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */;
+			targetProxy = 567DC75ECECE1B0425FD0114BCF070D9 /* PBXContainerItemProxy */;
+		};
+		422719ED58D52B80AF776AB989D7CACE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkiOS;
+			target = F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */;
+			targetProxy = C9527549F9ABE074C4F3EC2C41188F69 /* PBXContainerItemProxy */;
+		};
+		44971269B859ECCB1352C1B42991B884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UBiXMerakSDK;
+			target = CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */;
+			targetProxy = AB308BF2250B58691BCD7DCB4556E852 /* PBXContainerItemProxy */;
+		};
+		4B5C3F14EAC6FFC7080E4F126D0CE8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KSAdSDK;
+			target = 53DB8EFBB54B636ACDC70272323792EC /* KSAdSDK */;
+			targetProxy = E7C948A64348AF728DF29C0AD179D692 /* PBXContainerItemProxy */;
+		};
+		828E8CEA2CCCA85264A23923FE764663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkMediationGromoreAdapter;
+			target = 129C0EF375D3107604F1F1F5DA5E0732 /* AnyThinkMediationGromoreAdapter */;
+			targetProxy = F1EBACC56F952FF2B2D16EF9621A321A /* PBXContainerItemProxy */;
+		};
+		8C8EC8D5D8EA14C405682240119EC20A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AdbidSDK;
+			target = 536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */;
+			targetProxy = CBE83F4B339BFEE56FF8E08CBFF9F33B /* PBXContainerItemProxy */;
+		};
+		93204ABE687E43C5EBFB01408BC32D64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LeadmoadAdSDK;
+			target = 7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */;
+			targetProxy = 2EC7AC53F328FA88D4673E7A16FEC586 /* PBXContainerItemProxy */;
+		};
+		941A2C7B1ADD5B48E19E7298F186C944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BUTTSDKFramework;
+			target = E01160816B81860F99B1A8F9444635E6 /* BUTTSDKFramework */;
+			targetProxy = 1569BF762BD217EF08090CE7A3862703 /* PBXContainerItemProxy */;
+		};
+		9985155A8390DD1771E44DDA988D1605 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Ads-CN-Beta";
+			target = 9822EC319158EDF9A392330FE643BC4E /* Ads-CN-Beta */;
+			targetProxy = 91AC1DE88DB7511D2F9EED6EC6502AA3 /* PBXContainerItemProxy */;
+		};
+		BC264EEA097497240D36E9378E0E904E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UBiXMerakSDK;
+			target = CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */;
+			targetProxy = D4800083D882C087216ECAEEE780D4F6 /* PBXContainerItemProxy */;
+		};
+		BCBC78065F3BF919BD71C8797D043BD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SmartdigimktCNSDK;
+			target = 8305621A71B4F131D5EB9393C1365F91 /* SmartdigimktCNSDK */;
+			targetProxy = A5B6A744CBE706757BC0B4278FECF6D7 /* PBXContainerItemProxy */;
+		};
+		C86015E787E337D6771031FD5B70086D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkMediationAdxSmartdigimktCNAdapter;
+			target = 28E71F3E51526C988D0C3A92B6933BA3 /* AnyThinkMediationAdxSmartdigimktCNAdapter */;
+			targetProxy = 8D099A0650A8B0382E935E9D67EC9EA1 /* PBXContainerItemProxy */;
+		};
+		CF393E72C37B3DD3385027183E6C1964 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkMediationGromoreAdapter;
+			target = 129C0EF375D3107604F1F1F5DA5E0732 /* AnyThinkMediationGromoreAdapter */;
+			targetProxy = 2B28B7124130ED8E08D888600B3BBF0B /* PBXContainerItemProxy */;
+		};
+		ED206A63C234E0018667C938F4713FC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkiOS;
+			target = F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */;
+			targetProxy = 36A898028912794DE46E5AA547F092F2 /* PBXContainerItemProxy */;
+		};
+		FBE53C0ECB5E4DD659CAAB6EA8A31646 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GDTMobSDK;
+			target = 6F2BDBDBBAD8487EF4614E1D729C5DD0 /* GDTMobSDK */;
+			targetProxy = 522E5E64E4E7C86725CDE4A5EBE9CF10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2EC51CD72CD28C4724FB9799CDF5ACA6 /* Debug */ = {
+		0222399BE697E289180D1D9470B7FB21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 597FFC30C1317501AC9310BB51BFA654 /* Pods-AdbidSDKDemo.debug.xcconfig */;
+			baseConfigurationReference = A2CD776D9137EAAEBE702FA018121A87 /* SmartdigimktCNSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EC2786694A6942464A8684252B3F163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49D2A9FDCBD852A26D91A08AC2BA1B98 /* LeadmoadAdSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14B9E8CEACCA6F74A96739D228C11760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB822C52C69F281A7298E208B8B96C19 /* KSAdSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29A86CD8B50559F554211A73AE4FDC57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3789AA8BBE5980121861E222914754D7 /* GDTMobSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		379F8340AAD72D6E4BAA4112BF92EB9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65DCE0A1E8A8A9F22111FF03FED603F3 /* Pods-AdbidSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -528,15 +1851,14 @@
 			};
 			name = Debug;
 		};
-		520F6636EA52DBD630D341C4D20A56EF /* Release */ = {
+		3CA00803D1FDCA2F36EE4376F5EB3AF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 364AF7F601D884BC9BB6E9F17B062208 /* AdbidSDK.release.xcconfig */;
+			baseConfigurationReference = 28C3BDAFD726A791F261F57E2E38DCCF /* AnyThinkMediationAdxSmartdigimktCNAdapter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,9 +1869,28 @@
 			};
 			name = Release;
 		};
-		5E7048953203EC7F128609DC4C6FA687 /* Release */ = {
+		3D9E547D992CC37A6421B5FFA78B16F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33B725E946A5C22A69A33414961C4D70 /* UBiXMerakSDK.release.xcconfig */;
+			baseConfigurationReference = EE81D434FC2ADBEC052FD335CCE167EA /* AnyThinkiOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		440B9B61529336CBF384A069B7873277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28E11D65BD33A0C953B48979E806513D /* Ads-CN-Beta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -566,9 +1907,85 @@
 			};
 			name = Release;
 		};
-		6B3E41926FD1CCC5AF3CB216D125D38D /* Debug */ = {
+		49D4F25C24CE61DCC5474A0A25E92D8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04EF8BC8924CBB1039559D0FFD57B11A /* AdbidSDK.debug.xcconfig */;
+			baseConfigurationReference = 5A98E1A9B972772C79914799DA8E1A66 /* Pods-AdbidSDKDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BA165BE292D34C14095AF2FE2F1BED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5948BADD25F61ED1EE0424ACEE57D5CC /* UBiXMerakSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D6BAECFBDD7E3DE17B05CDEA35EA32E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF75946E78F58EC42EE7BAFE4D725ECE /* SmartdigimktCNSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FFC1FC46107BC4E60D12360F274C073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838CE69991B2B6537F584E5F30326BF4 /* AdbidSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -581,8 +1998,28 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		85544F490F2165C96417655437D7CF6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD43EB67B9F4DE3A0D9E76258D928C4B /* LeadmoadAdSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -650,6 +2087,43 @@
 			};
 			name = Debug;
 		};
+		967FB79D3E4F8C1EE2581F49882F4BE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C14AC675B17677FD00EA7A92AE99C98 /* AnyThinkMediationGromoreAdapter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96E8B9C391335CF5D0BEE3B3A9FE6100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA09FA8E1DDFEA17B93E4E26537AD45 /* UBiXDaq.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -712,102 +2186,9 @@
 			};
 			name = Release;
 		};
-		BA85F1B9CCF8AF24DA7645B1249EDE59 /* Release */ = {
+		A95530CFF5D02E9605F4EB1AAD7C28A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55F2A3E19B1A30EB9E33AF4F7EFEBE6E /* Pods-AdbidSDKDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CE698E5BE82325D3AD83932CD3779532 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1FC5D30BD7C23DD77B7475BDF0A6B59 /* UBiXDaq.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D9AD29420D5A17B5F5EE9162688F9EA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D2F8B670A4C7A84DD5D7AC35694A82A /* LeadmoadAdSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DA80630A0EDAAC3AE44829528498F567 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95B1E83AB57B6FE90A51995E5CB094D9 /* UBiXDaq.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E5F8A9AEBE56874F183E2EFD3D55296D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 883C1B49C3ACA49DE1E6371ED1CD9A65 /* UBiXMerakSDK.debug.xcconfig */;
+			baseConfigurationReference = A065D9BD4D81319CE9CBF39F4895D77A /* AnyThinkMediationGromoreAdapter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -823,15 +2204,219 @@
 			};
 			name = Debug;
 		};
-		FF507E6956180C3301940948908E97FF /* Release */ = {
+		B47F10C0D26D3A68EC72C521B0F91F88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3040AFC4AD89221DC862F57473D1D6F5 /* LeadmoadAdSDK.release.xcconfig */;
+			baseConfigurationReference = E48DEFA81AFDCFDEB0B8C9CFB7D8D178 /* BUTTSDKFramework.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/BUTTSDKFramework/BUTTSDKFramework-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/BUTTSDKFramework/BUTTSDKFramework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/BUTTSDKFramework/BUTTSDKFramework.modulemap";
+				PRODUCT_MODULE_NAME = TTSDKFramework;
+				PRODUCT_NAME = TTSDKFramework;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B65FD883736847FAEA9CC8D26F0F7EDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20A2042C7A6B083D6CAE530BAE262F5B /* Ads-CN-Beta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBB8263DB415516ADB8F5915F8E43910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F48E35AB6D8789D4A6CC3D3C2C3072 /* KSAdSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEAD4473285982EB7CE844A0D4F774AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC0B4395863A6119878C518EDA07669C /* AdbidSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0802005160A0B3C3A11D1EFAFDED2B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242E840B13946938BEC16B93DAC1B0E7 /* BUTTSDKFramework.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/BUTTSDKFramework/BUTTSDKFramework-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/BUTTSDKFramework/BUTTSDKFramework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/BUTTSDKFramework/BUTTSDKFramework.modulemap";
+				PRODUCT_MODULE_NAME = TTSDKFramework;
+				PRODUCT_NAME = TTSDKFramework;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA151E16691032BFC029C450596E7518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48EF72BF5D609E3CDF36F00FE64CAA99 /* GDTMobSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC28B88D54962AF04CBB16804B0DA540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F4B665B7231D49F80D39992ABEBCDA /* AnyThinkiOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC8F06E0BC68E0D18E874B33F3E73134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F769E5B3F2B6DFB53A0456EBF3B80C /* AnyThinkMediationAdxSmartdigimktCNAdapter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE641B3830A639792B32368CE1F06D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51FC1886F666E81DE93DB2A3AFE936D7 /* UBiXDaq.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA7B6B66A680D81350A7D2099DA8BC7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12CF160633F7437167BC1F8727DA54F /* UBiXMerakSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -845,6 +2430,69 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00EFD400C5CD34C7356CFB59D429E44E /* Build configuration list for PBXNativeTarget "BUTTSDKFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B47F10C0D26D3A68EC72C521B0F91F88 /* Debug */,
+				D0802005160A0B3C3A11D1EFAFDED2B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02C8AF3CDE69331D4B06B672866E726A /* Build configuration list for PBXAggregateTarget "KSAdSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB8263DB415516ADB8F5915F8E43910 /* Debug */,
+				14B9E8CEACCA6F74A96739D228C11760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AD7960F9EF82317006AA549B9EAA79E /* Build configuration list for PBXAggregateTarget "AnyThinkMediationAdxSmartdigimktCNAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8F06E0BC68E0D18E874B33F3E73134 /* Debug */,
+				3CA00803D1FDCA2F36EE4376F5EB3AF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F588B25E13FE3D1839C48286B7C07F3 /* Build configuration list for PBXAggregateTarget "Ads-CN-Beta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B65FD883736847FAEA9CC8D26F0F7EDA /* Debug */,
+				440B9B61529336CBF384A069B7873277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FBED414F56FB5DA8E4C868CB53EB529 /* Build configuration list for PBXAggregateTarget "UBiXMerakSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BA165BE292D34C14095AF2FE2F1BED3 /* Debug */,
+				FA7B6B66A680D81350A7D2099DA8BC7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BB7B02BCA3B28756796D81531FA1D6E /* Build configuration list for PBXAggregateTarget "AnyThinkMediationGromoreAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95530CFF5D02E9605F4EB1AAD7C28A5 /* Debug */,
+				967FB79D3E4F8C1EE2581F49882F4BE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3801092FB361593480424B2AC4FB148C /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379F8340AAD72D6E4BAA4112BF92EB9D /* Debug */,
+				49D4F25C24CE61DCC5474A0A25E92D8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -854,47 +2502,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2F9D7A3FB9FF005F96BA1D3BE40D3E7 /* Build configuration list for PBXAggregateTarget "UBiXMerakSDK" */ = {
+		5112EC8D13452DB4E4EC795FA63A1D0C /* Build configuration list for PBXAggregateTarget "UBiXDaq" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5F8A9AEBE56874F183E2EFD3D55296D /* Debug */,
-				5E7048953203EC7F128609DC4C6FA687 /* Release */,
+				EE641B3830A639792B32368CE1F06D0C /* Debug */,
+				96E8B9C391335CF5D0BEE3B3A9FE6100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B285FAB929DAA5D128FE7BCAF0096C3A /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */ = {
+		685C0DEBD3D43375FFFAFCEEAB187F5D /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EC51CD72CD28C4724FB9799CDF5ACA6 /* Debug */,
-				BA85F1B9CCF8AF24DA7645B1249EDE59 /* Release */,
+				0EC2786694A6942464A8684252B3F163 /* Debug */,
+				85544F490F2165C96417655437D7CF6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB789EEA5A1F67F03D32AC27C386232F /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */ = {
+		9291D1C2E06A020960304FC9223242A4 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D9AD29420D5A17B5F5EE9162688F9EA9 /* Debug */,
-				FF507E6956180C3301940948908E97FF /* Release */,
+				CEAD4473285982EB7CE844A0D4F774AE /* Debug */,
+				4FFC1FC46107BC4E60D12360F274C073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D133331B78F022A5840118AC4858564C /* Build configuration list for PBXAggregateTarget "UBiXDaq" */ = {
+		BFB1DA5B7775422FEF51CC42C3E1A2B8 /* Build configuration list for PBXAggregateTarget "SmartdigimktCNSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA80630A0EDAAC3AE44829528498F567 /* Debug */,
-				CE698E5BE82325D3AD83932CD3779532 /* Release */,
+				0222399BE697E289180D1D9470B7FB21 /* Debug */,
+				4D6BAECFBDD7E3DE17B05CDEA35EA32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6A109D4FB97C376365C1FC5B613F8A2 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */ = {
+		C03A40A3EBAF3E85F23D68142B78A141 /* Build configuration list for PBXAggregateTarget "GDTMobSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B3E41926FD1CCC5AF3CB216D125D38D /* Debug */,
-				520F6636EA52DBD630D341C4D20A56EF /* Release */,
+				29A86CD8B50559F554211A73AE4FDC57 /* Debug */,
+				EA151E16691032BFC029C450596E7518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4148A0D2B84F24DD9490D76F477390A /* Build configuration list for PBXAggregateTarget "AnyThinkiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC28B88D54962AF04CBB16804B0DA540 /* Debug */,
+				3D9E547D992CC37A6421B5FFA78B16F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

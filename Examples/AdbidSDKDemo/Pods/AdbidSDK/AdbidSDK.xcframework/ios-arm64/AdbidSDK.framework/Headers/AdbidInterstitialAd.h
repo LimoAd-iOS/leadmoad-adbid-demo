@@ -1,5 +1,5 @@
 //
-//  AdbidSplashAd.h
+//  AdbidInterstitialAd.h
 //  AdbidSDK
 //
 //  Created by youzhadoubao on 2025/9/17.
@@ -7,40 +7,39 @@
 
 #import <Foundation/Foundation.h>
 #import <AdbidSDK/AdbidBidLossInfo.h>
+#import <AdbidSDK/AdbidPublicDefine.h>
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@class AdbidSplashAd;
-@protocol AdbidSplashAdDelegate <NSObject>
+@class AdbidInterstitialAd;
+@protocol AdbidInterstitialAdDelegate <NSObject>
 @optional
-/// 开屏广告素材加载成功
-- (void)splashAdDidLoad:(AdbidSplashAd *)splashAd;
-/// 开屏广告加载失败
-- (void)splashAd:(AdbidSplashAd *)splashAd didFailToLoadWithError:(NSError *)error;
+/// 广告请求成功
+- (void)interstitialAdDidLoad:(AdbidInterstitialAd *)interstitialAd;
+/// 广告请求失败
+- (void)interstitialAdFailedToLoad:(AdbidInterstitialAd *)interstitialAd withError:(NSError *)error;
 /// 开屏广告成功展示
-- (void)splashAdDidShow:(AdbidSplashAd *)splashAd;
+- (void)interstitialAdDidShow:(AdbidInterstitialAd *)interstitialAd;
 /// 开屏广告展示失败
-- (void)splashAd:(AdbidSplashAd *)splashAd didFailToShowWithError:(NSError *)error;
+- (void)interstitialAdFailedToShow:(AdbidInterstitialAd *)interstitialAd  withError:(NSError *)error;
 /// 开屏广告点击
-- (void)splashAdDidClick:(AdbidSplashAd *)splashAd;
+- (void)interstitialAdDidClick:(AdbidInterstitialAd *)interstitialAd;
 /// 开屏广告关闭
-- (void)splashAdDidClose:(AdbidSplashAd *)splashAd;
+- (void)interstitialAdDidClose:(AdbidInterstitialAd *)interstitialAd;
 /// 广告完成转化(关闭落地页)
-- (void)splashAdDidFinishConversion:(AdbidSplashAd *)interstitialAd interactionType:(AdbidAdRedirectionType)interactionType;
+- (void)interstitialAdDidFinishConversion:(AdbidInterstitialAd *)interstitialAd interactionType:(AdbidAdRedirectionType)interactionType;
 
 @end
 
-@interface AdbidSplashAd : NSObject
+@interface AdbidInterstitialAd : NSObject
 
-@property (nonatomic, weak) id<AdbidSplashAdDelegate> delegate;
+@property (nonatomic, weak) id<AdbidInterstitialAdDelegate> delegate;
 
 // 广告最大请求时长，单位毫秒。默认3000 , 最小500毫秒
 @property (nonatomic, assign) NSInteger maxLoadTime;
 
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
-
-@property (nonatomic, strong, nullable) UIViewController *viewController;
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
 /// 发起拉取广告请求
@@ -53,8 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
  * 必须在主线程调用
  */
 - (void)showAdToWindow:(UIWindow *)window;
-///  移除SplashView
-- (void)removeSplashView;
+///  移除InterstitialView
+- (void)removeInterstitialView;
 /// 竞胜/竞败上报
 - (void)winNotice:(NSInteger)price;
 - (void)lossNotice:(AdbidBidLossInfo *)info;
