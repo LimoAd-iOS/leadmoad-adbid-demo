@@ -103,7 +103,7 @@
 - (void)splashAdDidLoad:(AdbidSplashAd *)splashAd {
     NSLog(@"[AppDelegate] splashAd:didLoadAd: %@", splashAd);
     self.window.rootViewController = [self rootViewController];
-    [self.splashAd showAd:self.window.rootViewController];
+    [self.splashAd showAdToWindow:self.window];
 }
 
 // 广告加载失败
@@ -133,7 +133,6 @@
 
 - (void)removeSplashAd {
     if (self.splashAd) {
-        [self.splashAd removeSplashView];
         self.splashAd = nil;
         self.window.rootViewController = [self rootViewController];
     }

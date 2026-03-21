@@ -7,6 +7,9 @@
 
 #import "SplashAdViewController.h"
 #import <AdbidSDK/AdbidSDK.h>
+#import "AppDelegate.h"
+
+
 @interface SplashAdViewController () <AdbidSplashAdDelegate>
 
 @property (nonatomic, strong) AdbidSplashAd *splashAd;
@@ -260,7 +263,11 @@
     if (self.splashAd) {
         self.statusLabel.text = @"正在展示广告...";
         self.statusLabel.textColor = [UIColor colorWithRed:1.0 green:0.4 blue:0.4 alpha:1.0];
-        [self.splashAd showAd:self];
+        // 获取 AppDelegate 单例
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        // 获取 window
+        UIWindow *window = appDelegate.window;
+        [self.splashAd showAdToWindow:window];
     } else {
         self.statusLabel.text = @"请先加载广告";
         self.statusLabel.textColor = [UIColor colorWithRed:1.0 green:0.6 blue:0.0 alpha:1.0];
@@ -357,8 +364,6 @@
 
 - (void)destroyAd {
     if (self.splashAd) {
-        // 移除广告视图
-        [self.splashAd removeSplashView];
         // 清空代理
         self.splashAd.delegate = nil;
         // 释放广告对象
