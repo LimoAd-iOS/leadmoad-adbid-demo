@@ -27,11 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy, readonly) NSString *iconUrl;
 /**
- 广告图片素材地址
+ 广告图片素材信息
  */
 @property (nonatomic, copy, readonly) NSArray<AdbidNativeImageObj*> *images;
 /**
- 广告图片素材信息
+ 广告图片素材地址
  */
 @property (nonatomic, copy, readonly) NSArray *imageURLs;
 
@@ -51,10 +51,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdbidNativeImageObj : NSObject
 
-@property (nonatomic, copy, readonly) NSString *imageUrl;
+@property (nonatomic, copy,   readonly) NSString *imageUrl;
 
-@property (nonatomic, copy, readonly) NSString *materialld;
+@property (nonatomic, copy,   readonly) NSString *materialld; //不一定存在
  
+@property (nonatomic, assign, readonly) CGFloat height;//不一定存在
+
+@property (nonatomic, assign, readonly) CGFloat width;//不一定存在
+
 @end
 
 NS_ASSUME_NONNULL_END

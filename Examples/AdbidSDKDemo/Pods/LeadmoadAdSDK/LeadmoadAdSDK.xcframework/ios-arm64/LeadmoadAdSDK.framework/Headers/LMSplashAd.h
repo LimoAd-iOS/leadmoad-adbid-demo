@@ -47,6 +47,9 @@ typedef NS_ENUM(NSInteger, LMSplashAdLandingPageType) {
 // 广告最大请求时长，单位毫秒。默认5000 , 最小500毫秒
 @property (nonatomic, assign) NSInteger maxLoadTime;
 
+//是否可以展示
+@property (nonatomic, assign, readonly, getter=isAdValid) BOOL valid;
+
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
 

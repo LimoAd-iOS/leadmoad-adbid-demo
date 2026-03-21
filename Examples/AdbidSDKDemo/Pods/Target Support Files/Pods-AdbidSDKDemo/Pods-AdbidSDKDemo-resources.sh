@@ -97,20 +97,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/Ads-CN-Beta/SDK/CSJAdSDK.bundle"
-  install_resource "${PODS_ROOT}/AnyThinkiOS/core/AnyThinkSDK.bundle"
-  install_resource "${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKLiveBase/Resources/VeLive.bundle"
-  install_resource "${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/Resources/ttplayer.metallib"
   install_resource "${PODS_ROOT}/LeadmoadAdSDK/Leadmoad.bundle"
-  install_resource "${PODS_ROOT}/SmartdigimktCNSDK/KuYingSDK/SmartdigimktSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/Ads-CN-Beta/SDK/CSJAdSDK.bundle"
-  install_resource "${PODS_ROOT}/AnyThinkiOS/core/AnyThinkSDK.bundle"
-  install_resource "${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKLiveBase/Resources/VeLive.bundle"
-  install_resource "${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/Resources/ttplayer.metallib"
   install_resource "${PODS_ROOT}/LeadmoadAdSDK/Leadmoad.bundle"
-  install_resource "${PODS_ROOT}/SmartdigimktCNSDK/KuYingSDK/SmartdigimktSDK.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

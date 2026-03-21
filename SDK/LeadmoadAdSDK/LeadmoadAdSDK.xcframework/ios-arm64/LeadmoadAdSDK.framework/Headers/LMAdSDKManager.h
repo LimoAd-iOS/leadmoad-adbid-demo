@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
  * @details @"caid_version" caid版本
  */
 + (void)setExtraUserData:(NSDictionary <NSString *, NSString *>*)userDictionary;
+/**
+ * @brief 设置额外的用户数据. 请在广告初始化前设置该属性
+ */
++ (void)setUserCaids:(NSArray*)caids;
 @end
 
 NS_ASSUME_NONNULL_END

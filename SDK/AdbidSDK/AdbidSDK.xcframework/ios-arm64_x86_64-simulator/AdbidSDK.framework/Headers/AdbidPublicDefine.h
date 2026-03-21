@@ -8,6 +8,17 @@
 #ifndef LMAdPublicDefine_h
 #define LMAdPublicDefine_h
 
+/// 交互类型
+typedef NS_ENUM(NSInteger, AdbidAdRedirectionType) {
+    AdbidAdRedirectionTypeUnknown,        //unknown type
+    AdbidAdRedirectionTypeApp,            //open download page in-app
+    AdbidAdRedirectionTypeWeb,            //open webpage in-app
+    AdbidAdRedirectionTypeDeepLink,       //open deeplink
+    AdbidAdRedirectionTypeAppStore,       //open appstore
+    AdbidAdRedirectionTypeSafari,         //open safari
+    AdbidAdRedirectionTypeError           //can`t open landing page
+};
+
 typedef NS_ENUM(NSInteger, AdbidLogLevel) {
     AdbidLogLevelNone = 0,   // 关闭所有日志
     AdbidLogLevelError,      // 仅错误日志（必须关注）

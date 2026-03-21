@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 激励视频广告被点击
 - (void)rewardVideoAdDidClick:(LMRewardVideoAd *)rewardVideoAd;
 
+/// 广告完成转化(关闭落地页)
+- (void)rewardedVideoAdDidFinishConversion:(LMRewardVideoAd *)interstitialAd interactionType:(LMSplashLandingPageType)interactionType;
+
 ///// 激励视频广告关闭
 - (void)rewardVideoAdDidClose:(LMRewardVideoAd *)rewardVideoAd;
 /// 激励视频开始播发

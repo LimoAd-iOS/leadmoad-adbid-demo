@@ -75,6 +75,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)winNotice:(NSInteger)price;
 - (void)lossNotice:(LMAdBidLossInfo *)info;
 
+/// 检查广告是否可以展示
+- (BOOL)isReady;
+
 @end
 
 NS_ASSUME_NONNULL_END

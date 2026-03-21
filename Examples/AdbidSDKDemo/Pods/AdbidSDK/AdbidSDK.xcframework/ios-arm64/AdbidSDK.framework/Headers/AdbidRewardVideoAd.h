@@ -49,16 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
 
-@property (nonatomic, assign) BOOL AdMuted; //设置静音
+@property (nonatomic, assign) BOOL shouldMuted; //设置静音
 
 @property (nonatomic, strong) NSDictionary* LocalExtra; //设置本地数据用于激励
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
 /// 发起拉取广告请求
 - (void)loadAd;
-/*
- * 必须在主线程调用
- */
+/// 必须在主线程调用
 - (void)showAd:(UIViewController *)viewController;
 /// 竞胜/竞败上报
 - (void)winNotice:(NSInteger)price;

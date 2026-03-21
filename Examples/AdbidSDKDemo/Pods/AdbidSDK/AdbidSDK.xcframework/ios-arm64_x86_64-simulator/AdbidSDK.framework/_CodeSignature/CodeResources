@@ -6,7 +6,7 @@
 	<dict>
 		<key>AdbidInternalDebugConfig.h.backup</key>
 		<data>
-		j/CNFCYKpWGjsNQgy5lYXx56+2U=
+		wJ6lAH9N4N8PA/P/u4BGYs3zpdM=
 		</data>
 		<key>Headers/AdbidBidLossInfo.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/AdbidNativeAd.h</key>
 		<data>
-		BslzStZZMRdahdZHAtCpSSJwifY=
+		bZjYSSisVLZxsgDWvsk4ApcQiOw=
 		</data>
 		<key>Headers/AdbidNativeMediaView.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/AdbidNativeObj.h</key>
 		<data>
-		GImTViDeGCqn1imBASXzCCXZ4uM=
+		ziUlVIwQW2r4CBJ6+OMT4nQRTY8=
 		</data>
 		<key>Headers/AdbidNativeView.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/AdbidRewardVideoAd.h</key>
 		<data>
-		odljQDz3vTWoqbhnODQL+DWxL4Y=
+		JdcnLni8Ry2ueY548gwABSRymw0=
 		</data>
 		<key>Headers/AdbidSDK.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/AdbidSplashAd.h</key>
 		<data>
-		bEp/KM4Ca2U/gc42mzBbxsOLkmM=
+		IWqXWsHUXR9NUD4aPnX+0go7egk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M1vrQX76kQuaggovJA/km7eMl8BZvqYHmYGEJ94pxkQ=
+			jTZzlimFaUsRh+m/eDzOhZgdCw4u1dtQLZrwRb7NV5U=
 			</data>
 		</dict>
 		<key>Headers/AdbidBidLossInfo.h</key>
@@ -92,7 +92,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dYDXh19VBxaRriuiR7lI5eRNSkYPLMTpdzFNnSWMoXY=
+			GXm58CvxwVB3j50mHlwn3hAWpLCi3DkCa1VcBLpb67E=
 			</data>
 		</dict>
 		<key>Headers/AdbidNativeMediaView.h</key>
@@ -106,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bdc2IyTwP+WQNqLW0AF/TgkRGFvmEQMkZ6XnvRrEZ0U=
+			uoOAaeNExhl9PUTgh22ACSh6f6elkDMDiu6wsgwDanc=
 			</data>
 		</dict>
 		<key>Headers/AdbidNativeView.h</key>
@@ -127,7 +127,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QYa+XU8k6SQ0JNbZEMnrGmtA3xHPriBD67uAO0lleEE=
+			DaL5vRv3q3hRNDnHw7r/K4OM9G7QoAkTAIePD0RTMdg=
 			</data>
 		</dict>
 		<key>Headers/AdbidSDK.h</key>
@@ -155,7 +155,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XfLbqWxGG8aN4RCUN4WzVYpJ2f325jfyZJU5Nwvzjcc=
+			CcHihWgD6gjEZ0gjHzvlm7PxxcNeuSRI3uLVNCghxeg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

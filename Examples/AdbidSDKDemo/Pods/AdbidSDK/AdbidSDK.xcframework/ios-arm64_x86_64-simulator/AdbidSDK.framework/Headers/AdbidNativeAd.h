@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <AdbidSDK/adbidNativeObj.h>
 #import <UIKit/UIKit.h>
+#import <AdbidSDK/AdbidBidLossInfo.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -70,8 +71,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)registerContainer:(__kindof UIView *)containerView
        withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews;
 
-//- (void)winNotice:(NSInteger)price;
-//- (void)lossNotice:(LMAdBidLossInfo *)info;
+- (void)winNotice:(NSInteger)price;
+- (void)lossNotice:(AdbidBidLossInfo *)info;
 
 @end
 

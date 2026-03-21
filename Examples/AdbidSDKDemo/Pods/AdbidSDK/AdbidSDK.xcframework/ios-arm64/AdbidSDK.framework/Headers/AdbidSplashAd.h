@@ -36,25 +36,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 广告最大请求时长，单位毫秒。默认3000 , 最小500毫秒
 @property (nonatomic, assign) NSInteger maxLoadTime;
-
+/// 是否静音，默认是静音
+@property (nonatomic, assign) BOOL shouldMuted;
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
 
-@property (nonatomic, strong, nullable) UIViewController *viewController;
+@property (nonatomic, strong, nullable) UIViewController *viewController;// 落地页设置
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
 /// 发起拉取广告请求
 - (void)loadAd;
-/*
- * 必须在主线程调用
- */
-- (void)showAd:(UIViewController *)viewController;
-/*
- * 必须在主线程调用
- */
+ /// 必须在主线程调用
 - (void)showAdToWindow:(UIWindow *)window;
-///  移除SplashView
-- (void)removeSplashView;
 /// 竞胜/竞败上报
 - (void)winNotice:(NSInteger)price;
 - (void)lossNotice:(AdbidBidLossInfo *)info;

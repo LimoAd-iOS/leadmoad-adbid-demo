@@ -1,103 +1,28 @@
 PODS:
-  - AdbidSDK (2.1.0.12):
-    - AnyThinkiOS (= 6.5.43)
-    - AnyThinkMediationAdxSmartdigimktCNAdapter (= 6.5.45.0)
-    - AnyThinkMediationGromoreAdapter (= 7.4.0.0.0)
-    - LeadmoadAdSDK (= 1.0.11)
-    - UBiXMerakSDK (= 2.9.0.11)
-  - Ads-CN-Beta/BUAdLive (7.4.0.0)
-  - Ads-CN-Beta/BUAdLive-Framework (7.4.0.0):
-    - Ads-CN-Beta/BUAdLive
-    - BUTTSDKFramework/LivePull-Lite (= 1.48.2.3-premium)
-  - Ads-CN-Beta/BUAdSDK (7.4.0.0)
-  - Ads-CN-Beta/CSJMediation (7.4.0.0):
-    - Ads-CN-Beta/BUAdLive-Framework
-    - Ads-CN-Beta/CSJMediation-Only
-  - Ads-CN-Beta/CSJMediation-Only (7.4.0.0):
-    - Ads-CN-Beta/BUAdSDK
-  - AnyThinkiOS (6.5.43):
-    - AnyThinkiOS/AnyThinkSDK (= 6.5.43)
-  - AnyThinkiOS/AnyThinkSDK (6.5.43)
-  - AnyThinkMediationAdxSmartdigimktCNAdapter (6.5.45.0):
-    - AnyThinkiOS (>= 6.5.30)
-    - SmartdigimktCNSDK (= 6.5.45)
-  - AnyThinkMediationGromoreAdapter (7.4.0.0.0):
-    - Ads-CN-Beta/BUAdSDK (= 7.4.0.0)
-    - Ads-CN-Beta/CSJMediation (= 7.4.0.0)
-    - AnyThinkiOS (>= 6.4.94)
-  - BUTTSDKFramework/Core (1.48.2.3-premium)
-  - BUTTSDKFramework/LiveBase (1.48.2.3-premium):
-    - BUTTSDKFramework/Core
-    - BUTTSDKFramework/Reachability
-  - BUTTSDKFramework/LivePlayer/Base (1.48.2.3-premium):
-    - BUTTSDKFramework/Core
-    - BUTTSDKFramework/LiveBase
-    - BUTTSDKFramework/LivePull-VolcLog
-    - BUTTSDKFramework/Reachability
-  - BUTTSDKFramework/LivePlayer/Lite (1.48.2.3-premium):
-    - BUTTSDKFramework/LivePlayer/Base
-    - BUTTSDKFramework/PlayerCore/LiveLite
-  - BUTTSDKFramework/LivePull-Lite (1.48.2.3-premium):
-    - BUTTSDKFramework/LivePlayer/Lite
-    - BUTTSDKFramework/Strategy/Lite
-  - BUTTSDKFramework/LivePull-VolcLog (1.48.2.3-premium):
-    - BUTTSDKFramework/VolcLog
-  - BUTTSDKFramework/PlayerCore/Base (1.48.2.3-premium):
-    - BUTTSDKFramework/Core
-  - BUTTSDKFramework/PlayerCore/LiveLite (1.48.2.3-premium):
-    - BUTTSDKFramework/PlayerCore/Base
-    - BUTTSDKFramework/TTFFmpeg/LiveLite
-  - BUTTSDKFramework/Reachability (1.48.2.3-premium)
-  - BUTTSDKFramework/Strategy/Core (1.48.2.3-premium):
-    - BUTTSDKFramework/LiveBase
-    - BUTTSDKFramework/Reachability
-  - BUTTSDKFramework/Strategy/Lite (1.48.2.3-premium):
-    - BUTTSDKFramework/LivePlayer/Lite
-    - BUTTSDKFramework/Strategy/Core
-  - BUTTSDKFramework/TTFFmpeg/LiveLite (1.48.2.3-premium)
-  - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
-  - GDTMobSDK (4.15.70)
-  - KSAdSDK (4.12.20.1)
-  - LeadmoadAdSDK (1.0.11)
-  - SmartdigimktCNSDK (6.5.45)
-  - UBiXDaq (2.5.2)
-  - UBiXMerakSDK (2.9.0.11):
-    - UBiXDaq (~> 2.5.0)
+  - AdbidSDK (2.1.0.13)
+  - LeadmoadAdSDK (1.0.13)
+  - UBiXDaq (2.6.0)
+  - UBiXMerakSDK (2.10.0.11):
+    - UBiXDaq (~> 2.6.0)
 
 DEPENDENCIES:
-  - AdbidSDK (= 2.1.0.12)
-  - GDTMobSDK (= 4.15.70)
-  - KSAdSDK (= 4.12.20.1)
+  - AdbidSDK (= 2.1.0.13)
+  - LeadmoadAdSDK (= 1.0.13)
+  - UBiXMerakSDK (= 2.10.0.11)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AdbidSDK
-    - Ads-CN-Beta
-    - AnyThinkiOS
-    - AnyThinkMediationAdxSmartdigimktCNAdapter
-    - AnyThinkMediationGromoreAdapter
-    - BUTTSDKFramework
-    - GDTMobSDK
-    - KSAdSDK
     - LeadmoadAdSDK
-    - SmartdigimktCNSDK
     - UBiXDaq
     - UBiXMerakSDK
 
 SPEC CHECKSUMS:
-  AdbidSDK: 5c836c15ee8a5bf6c8947be211b33ad8d49f3f8c
-  Ads-CN-Beta: 66fa4d4ceed34ae1f0d643322aa3f9b689c24b4c
-  AnyThinkiOS: 54853606d44105f80a9b046dd6d69dbba3dc2891
-  AnyThinkMediationAdxSmartdigimktCNAdapter: 9605f2d80f4f0fdd1fb1348ccac89b60a1128c31
-  AnyThinkMediationGromoreAdapter: 46f3ceb1f4a9cd06770f648e6b825837de80c0b1
-  BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
-  GDTMobSDK: f362b5177c024d759451894ecdf6d1a59e52f27f
-  KSAdSDK: 89eee6d400d80a102c0c34e576236918ab27d2ff
-  LeadmoadAdSDK: a1316751427febba61a1d104287466f78286c752
-  SmartdigimktCNSDK: acd2e564e496385d6470767335431d91b0daa18b
-  UBiXDaq: 5d5419e9185f5de412800bfcbacc73f054b213ba
-  UBiXMerakSDK: c22b994a5a83702ff64da952e8dfb97eac8b0362
+  AdbidSDK: 69f480a3da5d77494ef57a12001d1f8751f5799e
+  LeadmoadAdSDK: 3f043e2968e0b9ef484bcfe176ad51785a3564ac
+  UBiXDaq: dc9e01975832d4734af08f036e83b41493b124f5
+  UBiXMerakSDK: a4f64fba8dfe72247e7383524c88e8f5fa2c511a
 
-PODFILE CHECKSUM: c0c17c2cfa42f8a28ba9e3e7c81f1493b7f237f5
+PODFILE CHECKSUM: bf94f3995f1919848fc16345494b3ff4498e34af
 
 COCOAPODS: 1.16.2

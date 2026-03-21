@@ -15,6 +15,7 @@ FOUNDATION_EXPORT const unsigned char AdbidSDKVersionString[];
 
 // Public headers
 #import <AdbidSDK/AdbidSplashAd.h>
+#import <AdbidSDK/AdbidInterstitialAd.h>
 #import <AdbidSDK/AdbidRewardVideoAd.h>
 #import <AdbidSDK/AdbidNativeAd.h>
 #import <AdbidSDK/AdbidNativeObj.h>

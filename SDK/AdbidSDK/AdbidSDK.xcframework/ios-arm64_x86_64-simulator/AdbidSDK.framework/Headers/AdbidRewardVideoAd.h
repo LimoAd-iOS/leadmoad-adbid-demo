@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)rewardVideoAd:(AdbidRewardVideoAd *)rewardVideoAd didFailToShowWithError:(NSError *)error;
 /// 开屏广告点击
 - (void)rewardVideoAdDidClick:(AdbidRewardVideoAd *)rewardVideoAd;
+/// 广告完成转化(关闭落地页)
+- (void)splashAdDidFinishConversion:(AdbidRewardVideoAd *)interstitialAd interactionType:(AdbidAdRedirectionType)interactionType;
 /// 开屏广告关闭
 - (void)rewardVideoAdDidClose:(AdbidRewardVideoAd *)rewardVideoAd;
 
@@ -35,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  ///视频广告播放达到激励条件回调
 - (void)rewardVideoAdDidReward:(AdbidRewardVideoAd *)rewardedVideoAd;
 
+
 @end
 
 @interface AdbidRewardVideoAd : NSObject
@@ -46,16 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
 
-@property (nonatomic, assign) BOOL AdMuted; //设置静音
+@property (nonatomic, assign) BOOL shouldMuted; //设置静音
 
 @property (nonatomic, strong) NSDictionary* LocalExtra; //设置本地数据用于激励
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
 /// 发起拉取广告请求
 - (void)loadAd;
-/*
- * 必须在主线程调用
- */
+/// 必须在主线程调用
 - (void)showAd:(UIViewController *)viewController;
 /// 竞胜/竞败上报
 - (void)winNotice:(NSInteger)price;
