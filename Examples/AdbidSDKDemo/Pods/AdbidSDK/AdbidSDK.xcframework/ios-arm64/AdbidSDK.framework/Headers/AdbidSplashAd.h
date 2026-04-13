@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<AdbidSplashAdDelegate> delegate;
 
-// 广告最大请求时长，单位毫秒。默认3000 , 最小500毫秒
+// 广告最大请求时长，单位毫秒。默认3000
 @property (nonatomic, assign) NSInteger maxLoadTime;
 /// 是否静音，默认是静音
 @property (nonatomic, assign) BOOL shouldMuted;

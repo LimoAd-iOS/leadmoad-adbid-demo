@@ -9,6 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface LMImageObj : NSObject
+@property (nonatomic, copy, readonly) NSString *imageUrl;
+@property (nonatomic, assign, readonly) NSInteger width;
+@property (nonatomic, assign, readonly) NSInteger height;
+@end
+
 @interface LMNativeObj : NSObject
 
 /**
@@ -44,6 +50,11 @@ NS_ASSUME_NONNULL_BEGIN
  是否是视频广告
  */
 @property(nonatomic,assign, readonly) BOOL isVideoAd;
+
+@property (nonatomic, copy, readonly) NSString * iconUrl;
+
+@property (nonatomic, copy, readonly) LMImageObj *imageObjc;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -23,20 +23,22 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy, readonly) NSString *desc;
 /**
- 广告创意图标
+ 广告图标
  */
 @property (nonatomic, copy, readonly) NSString *iconUrl;
 /**
- 广告图片素材信息
+ 广告图片素材信息 广告是图片，该属性有值
  */
 @property (nonatomic, copy, readonly) NSArray<AdbidNativeImageObj*> *images;
+ 
 /**
- 广告图片素材地址
+ 广告是图片还是视频
  */
-@property (nonatomic, copy, readonly) NSArray *imageURLs;
-
 @property (nonatomic, assign, readonly) bool isVideoAd;
 
+/**
+ 广告是视频，该属性有值
+ */
 @property (nonatomic, copy, readonly) AdbidNativeVideoObj * videoAdInfo;
 
 @end
@@ -52,12 +54,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdbidNativeImageObj : NSObject
 
 @property (nonatomic, copy,   readonly) NSString *imageUrl;
-
-@property (nonatomic, copy,   readonly) NSString *materialld; //不一定存在
  
-@property (nonatomic, assign, readonly) CGFloat height;//不一定存在
+@property (nonatomic, assign, readonly) CGFloat height;
 
-@property (nonatomic, assign, readonly) CGFloat width;//不一定存在
+@property (nonatomic, assign, readonly) CGFloat width;
 
 @end
 

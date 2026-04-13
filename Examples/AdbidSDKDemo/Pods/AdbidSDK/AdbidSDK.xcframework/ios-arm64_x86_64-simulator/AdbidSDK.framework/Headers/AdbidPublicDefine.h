@@ -1,5 +1,5 @@
 //
-//  LMAdPublicDefine.h
+//  AdbidPublicDefine.h
 //  AdbidSDK
 //
 //  Created by youzhadoubao on 2025/9/17.

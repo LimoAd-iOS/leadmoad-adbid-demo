@@ -72,8 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
        withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews;
 
 - (void)winNotice:(NSInteger)price;
+ 
 - (void)lossNotice:(AdbidBidLossInfo *)info;
 
+///是否准备好，准备好了才能加载广告
+- (BOOL)isReady;
 @end
 
 NS_ASSUME_NONNULL_END

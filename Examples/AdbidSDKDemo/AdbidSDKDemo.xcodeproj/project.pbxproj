@@ -189,9 +189,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AdbidSDKDemo/Pods-AdbidSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,7 +234,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdbidSDKDemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "领摩聚合Ad";
+				INFOPLIST_KEY_CFBundleDisplayName = "LM聚合广告";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "为了向您推荐更感兴趣的广告，我们需要获取您的设备跟踪权限";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -290,7 +294,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdbidSDKDemo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "领摩聚合Ad";
+				INFOPLIST_KEY_CFBundleDisplayName = "LM聚合广告";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "为了向您推荐更感兴趣的广告，我们需要获取您的设备跟踪权限";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
