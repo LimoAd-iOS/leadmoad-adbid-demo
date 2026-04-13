@@ -97,10 +97,10 @@
 
 - (void)setupButtons {
     NSArray *buttonConfigs = @[
-        @{@"title" : @"🚀 Splash Ad", @"color" : @"#4285F4", @"action" : @"splashButtonTapped:"},
-        @{@"title" : @"🎬 Interstitial", @"color" : @"#4285F4", @"action" : @"interstitialButtonTapped:"},
-        @{@"title" : @"📱 Native Ad", @"color" : @"#4285F4", @"action" : @"nativeButtonTapped:"},
-        @{@"title" : @"🎬 Reward Video", @"color" : @"#4285F4", @"action" : @"rewardVideoButtonTapped:"},
+        @{@"title" : @"🚀 开屏广告", @"color" : @"#4285F4", @"action" : @"splashButtonTapped:"},
+        @{@"title" : @"🎬 激励视频", @"color" : @"#4285F4", @"action" : @"rewardVideoButtonTapped:"},
+        @{@"title" : @"🎬 插屏", @"color" : @"#4285F4", @"action" : @"interstitialButtonTapped:"},
+        @{@"title" : @"📱 信息流（draw)", @"color" : @"#4285F4", @"action" : @"nativeButtonTapped:"},
 //        @{@"title" : @"⚙️ Settings", @"color" : @"#95A5A6", @"action" : @"settingsButtonTapped:"},
     ];
 
