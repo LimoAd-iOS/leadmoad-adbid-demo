@@ -7,7 +7,7 @@
 
 #import "RewardVideoViewController.h"
 #import <AdbidSDK/AdbidSDK.h>
-
+#import "AppConfig.h"
 @interface RewardVideoViewController () <AdbidRewardVideoAdDelegate>
 
 /// 激励视频广告实例
@@ -60,7 +60,7 @@
     if (savedId && savedId.length > 0) {
         self.slotIdTextField.text = savedId;
     } else {
-        self.slotIdTextField.text = @"MTc1MzM0NDk5OTk3Mw==";  // 默认广告位ID
+        self.slotIdTextField.text = AppConfig.rewardID;  // 默认广告位ID
     }
 
     self.slotIdTextField.borderStyle = UITextBorderStyleRoundedRect;

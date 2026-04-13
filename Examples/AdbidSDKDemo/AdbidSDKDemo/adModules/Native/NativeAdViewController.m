@@ -7,7 +7,7 @@
 #import "NativeAdViewController.h"
 #import <AdbidSDK/AdbidSDK.h>
 #import "NativeFeedAdView.h"
-
+#import "AppConfig.h"
 typedef NS_ENUM(NSInteger, AdStatus) {
     AdStatusIdle = 0,  // 空闲状态
     AdStatusLoading,   // 加载中
@@ -526,7 +526,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         if (savedId && savedId.length > 0) {
             _slotIdTextField.text = savedId;
         } else {
-            _slotIdTextField.text = @"MTc1MzM0NTA2ODIxOA==";  // 默认广告位ID
+            _slotIdTextField.text = AppConfig.nativeID;  // 默认广告位ID
         }
 
         _slotIdTextField.borderStyle = UITextBorderStyleRoundedRect;

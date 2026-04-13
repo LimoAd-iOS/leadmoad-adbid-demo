@@ -7,6 +7,7 @@
 
 #import "InterstitialViewController.h"
 #import <AdbidSDK/AdbidSDK.h>
+#import "AppConfig.h"
 
 @interface InterstitialViewController () <AdbidInterstitialAdDelegate>
 
@@ -59,7 +60,7 @@
     if (savedId && savedId.length > 0) {
         self.slotIdTextField.text = savedId;
     } else {
-        self.slotIdTextField.text = @"MTc1MzM0NDg4NDc3Mg==";  // 默认广告位ID
+        self.slotIdTextField.text = AppConfig.interstitalID;  // 默认广告位ID
     }
 
     self.slotIdTextField.borderStyle = UITextBorderStyleRoundedRect;

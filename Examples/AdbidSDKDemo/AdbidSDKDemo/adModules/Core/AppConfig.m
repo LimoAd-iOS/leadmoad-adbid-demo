@@ -68,55 +68,55 @@ static NSString *const kHotAppOpenAdSwitchKey = @"kHotAppOpenAdSwitchKey";
 // MARK: - 配置
 + (NSString *)appID {
     switch ([self currentEnv]) {
-        case EnvironmentType_Dev:     return @"10012";
-        case EnvironmentType_Test:    return @"10004";
-        case EnvironmentType_Release: return @"10012";
-        default: return @"10004";
+        case EnvironmentType_Dev:     return @"10011";
+        case EnvironmentType_Test:    return @"10011";
+        case EnvironmentType_Release: return @"10011";
+        default: return @"10011";
     }
 }
 
 + (NSString *)openID {
     switch ([self currentEnv]) {
-        case EnvironmentType_Dev:     return @"MTc2Nzk0ODYwMTczNw==";
-        case EnvironmentType_Test:    return @"MTc1MzM0MzU1MzkzOQ==";
-        case EnvironmentType_Release: return @"MTc2Nzk0ODYwMTczNw==";
-        default: return @"MTc1MzM0MzU1MzkzOQ==";
+        case EnvironmentType_Test:    return @"MTc3NjA2NzE4NjM2OA==";
+        case EnvironmentType_Dev:     return @"";
+        case EnvironmentType_Release: return @"";
+        default: return @"MTc3NjA2NzE4NjM2OA==";
     }
 }
 
 + (NSString *)hotID {
     switch ([self currentEnv]) {
-        case EnvironmentType_Dev:     return @"MTc3MzA1MDUwNjEzMg==";
-        case EnvironmentType_Test:    return @"MTc3NTIwNDUzOTAwOA==";
-        case EnvironmentType_Release: return @"MTc3MzA1MDUwNjEzMg==";
-        default: return @"MTc3NTIwNDUzOTAwOA==";
+        case EnvironmentType_Test:    return @"MTc3NjA2NzE4NjM2OA==";
+        case EnvironmentType_Dev:     return @"";
+        case EnvironmentType_Release: return @"";
+        default: return @"MTc3NjA2NzE4NjM2OA==";
     }
 }
 
 + (NSString *)rewardID {
     switch ([self currentEnv]) {
-        case EnvironmentType_Dev:     return @"MTc1MzM0NDk5OTk3Mw==";
-        case EnvironmentType_Test:    return @"MTc1MzM0NDk5OTk3Mw==";
-        case EnvironmentType_Release: return @"MTc1MzM0NDk5OTk3Mw==";
-        default: return @"MTc1MzM0NDk5OTk3Mw==";
+        case EnvironmentType_Test:    return @"MTc3MzM5MDI3NDU2OA==";
+        case EnvironmentType_Dev:     return @"";
+        case EnvironmentType_Release: return @"";
+        default: return @"MTc3MzM5MDI3NDU2OA==";
     }
 }
 
 + (NSString *)nativeID {
     switch ([self currentEnv]) {
-        case EnvironmentType_Dev:     return @"MTc1MzM0NTA2ODIxOA==";
-        case EnvironmentType_Test:    return @"MTc1MzM0NTA2ODIxOA==";
-        case EnvironmentType_Release: return @"MTc1MzM0NTA2ODIxOA==";
-        default: return @"MTc1MzM0NTA2ODIxOA==";
+        case EnvironmentType_Test:    return @"MTc3NjA2NzI1NzIzNQ==";
+        case EnvironmentType_Dev:     return @"";
+        case EnvironmentType_Release: return @"";
+        default: return @"MTc3NjA2NzI1NzIzNQ==";
     }
 }
 
 + (NSString *)interstitalID {
     switch ([self currentEnv]) {
-        case EnvironmentType_Dev:     return @"MTc3NTA0NjYzMzkxNg==";
-        case EnvironmentType_Test:    return @"MTc1MzM0NDg4NDc3Mg==";
-        case EnvironmentType_Release: return @"MTc3NTA0NjYzMzkxNg==";
-        default: return @"MTc1MzM0NDg4NDc3Mg==";
+        case EnvironmentType_Test:    return @"";
+        case EnvironmentType_Dev:     return @"";
+        case EnvironmentType_Release: return @"";
+        default: return @"";
     }
 }
 @end
