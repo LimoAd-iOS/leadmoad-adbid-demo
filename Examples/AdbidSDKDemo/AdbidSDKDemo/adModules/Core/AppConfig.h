@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 环境定义
 typedef NS_ENUM(NSInteger, EnvironmentType) {
-    EnvironmentType_Dev,      // 开发环境
     EnvironmentType_Test,     // 测试环境
+    EnvironmentType_Dev,      // 开发环境
     EnvironmentType_Release  // 正式环境
 };
 
