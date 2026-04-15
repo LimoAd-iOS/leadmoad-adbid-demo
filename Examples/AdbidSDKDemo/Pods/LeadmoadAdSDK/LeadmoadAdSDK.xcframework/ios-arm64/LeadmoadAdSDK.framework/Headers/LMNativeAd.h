@@ -59,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
 
+- (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId;
+
+
 /**
  * 加载信息流广告
  */

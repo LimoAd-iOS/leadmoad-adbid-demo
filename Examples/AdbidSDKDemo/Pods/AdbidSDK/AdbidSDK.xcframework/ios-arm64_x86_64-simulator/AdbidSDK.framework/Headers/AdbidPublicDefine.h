@@ -56,7 +56,10 @@ typedef NS_ENUM(NSInteger, AdbidPlatform) {
     AdbidPlatform_Mintegral = 10,
     AdbidPlatform_Vungle = 11,
     AdbidPlatform_Chartboost = 12,
-    AdbidPlatform_UBX = 13,
+    AdbidPlatform_LM = 13,
+    AdbidPlatform_UBX = 14,
+    AdbidPlatform_goMore = 15,
+    AdbidPlatform_TaKu = 16,
 };
 
 typedef NS_ENUM(NSInteger, AdbidType) {

@@ -55,6 +55,8 @@ typedef NS_ENUM(NSInteger, LMSplashAdLandingPageType) {
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
 
+- (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId;
+
 /// 发起拉取广告请求
 - (void)loadAd;
 
@@ -62,9 +64,6 @@ typedef NS_ENUM(NSInteger, LMSplashAdLandingPageType) {
  * 必须在主线程调用
  */
 - (void)showAd:(UIViewController *)viewController;
-
-///  移除SplashView
-- (void)removeSplashView;
 
 /// 竞胜/竞败上报
 - (void)winNotice:(NSInteger)price;

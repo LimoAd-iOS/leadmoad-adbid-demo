@@ -51,12 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 必须在主线程调用
  */
 - (void)showAd:(UIViewController *)viewController;
-/*
- * 必须在主线程调用
- */
-- (void)showAdToWindow:(UIWindow *)window;
-///  移除InterstitialView
-- (void)removeInterstitialView;
 /// 竞胜/竞败上报
 - (void)winNotice:(NSInteger)price;
 - (void)lossNotice:(AdbidBidLossInfo *)info;

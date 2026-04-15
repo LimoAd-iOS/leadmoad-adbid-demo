@@ -66,6 +66,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param slotId 广告位ID
 - (instancetype)initWithSlotId:(NSString *)slotId;
 
+- (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId;
+
 /// 加载激励视频广告
 - (void)loadAd;
 
