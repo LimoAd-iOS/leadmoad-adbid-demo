@@ -57,13 +57,14 @@
     [AdbidSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *_Nullable error) {
         if (success) {
             NSLog(@"领摩聚合SDK 初始化成功！时间=%@",[TimeUtil times][0]);
-            if ([AppConfig shared].isOpenAppOpenAd) {
-                [self loadSplashAd];
-            }
-            if ([AppConfig shared].isOpenHotAppOpenAd) {
-                [[AdbidSplashHotAD shared]loadOrShowSplashHotAD];
-            }
-           
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                if ([AppConfig shared].isOpenAppOpenAd) {
+                    [self loadSplashAd];
+                }
+                if ([AppConfig shared].isOpenHotAppOpenAd) {
+                    [[AdbidSplashHotAD shared]loadOrShowSplashHotAD];
+                }
+            });
         } else {
             NSLog(@"领摩聚合SDK 初始化失败！时间=%@",[TimeUtil times][0]);
         }
@@ -102,14 +103,16 @@
 // MARK: - Splash
 - (void)loadSplashAd {
     self.splashAd = [[AdbidSplashAd alloc] initWithSlotId:[AppConfig openID]];
-    self.splashAd.viewController = self.window.rootViewController;
     self.splashAd.delegate = self;
+    self.splashAd.maxLoadTime = 3000;
+    self.splashAd.shouldMuted = YES;
     [self.splashAd loadAd];
 }
 // MARK: - LMSplashAdDelegate
 // 广告加载成功
 - (void)splashAdDidLoad:(AdbidSplashAd *)splashAd {
     NSLog(@"[AppDelegate] splashAd:didLoadAd: %@", splashAd);
+    self.splashAd.viewController = self.window.rootViewController;
     [self.splashAd showAdToWindow:self.window];
 }
 
