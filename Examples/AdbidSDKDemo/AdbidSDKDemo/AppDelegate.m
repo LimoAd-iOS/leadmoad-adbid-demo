@@ -47,8 +47,8 @@
     
     AdbidSDKConfiguration *configuration = [AdbidSDKConfiguration configuration];
     configuration.appID = [AppConfig appID];
-    configuration.debugMode = YES;
-    configuration.logLevel = AdbidLogLevelDebug;
+//    configuration.debugMode = YES;
+//    configuration.logLevel = AdbidLogLevelDebug;
     AdCustomPermissionController* adP = [[AdCustomPermissionController alloc]init];
     adP.allowLocation = YES;
     configuration.adCustomController = adP;

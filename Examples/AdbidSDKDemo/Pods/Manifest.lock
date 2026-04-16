@@ -1,13 +1,13 @@
 PODS:
-  - AdbidSDK (2.1.1.3)
-  - LeadmoadAdSDK (1.0.19)
+  - AdbidSDK (2.1.1.4)
+  - LeadmoadAdSDK (1.0.21)
   - UBiXDaq (2.6.0)
   - UBiXMerakSDK (2.10.0.11):
     - UBiXDaq (~> 2.6.0)
 
 DEPENDENCIES:
-  - AdbidSDK (= 2.1.1.3)
-  - LeadmoadAdSDK (= 1.0.19)
+  - AdbidSDK (= 2.1.1.4)
+  - LeadmoadAdSDK (= 1.0.21)
   - UBiXMerakSDK (= 2.10.0.11)
 
 SPEC REPOS:
@@ -18,11 +18,11 @@ SPEC REPOS:
     - UBiXMerakSDK
 
 SPEC CHECKSUMS:
-  AdbidSDK: 22b7faa9a547d80fca85ecfcc2ccf396161939d0
-  LeadmoadAdSDK: 49b7c0dafbab7cdca7005f25e2c011eec38fa6f4
+  AdbidSDK: 20f90f4b7217e687064280e428e44cf0bdd1d83e
+  LeadmoadAdSDK: 42baa0996020b9610ceb1d411b9b10d47ea4d913
   UBiXDaq: dc9e01975832d4734af08f036e83b41493b124f5
   UBiXMerakSDK: a4f64fba8dfe72247e7383524c88e8f5fa2c511a
 
-PODFILE CHECKSUM: 02326fbd479fd2834da76f4918a2e7adfaf6cfe2
+PODFILE CHECKSUM: 90ccf5c513e342c05be22e75f16246a6958a9ee8
 
 COCOAPODS: 1.16.2

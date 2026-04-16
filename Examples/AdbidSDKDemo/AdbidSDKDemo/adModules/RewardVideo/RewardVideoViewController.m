@@ -208,13 +208,9 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 
-    // 如果广告位ID发生变化，重新创建广告实例
-    if (!self.rewardVideoAd || ![currentSlotId isEqualToString:self.rewardVideoAd.description]) {
-        [self addLog:[NSString stringWithFormat:@"广告位ID已更改为: %@，重新创建广告实例", currentSlotId]];
-        self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:currentSlotId];
-        self.rewardVideoAd.delegate = self;
-    }
-
+ 
+    self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:currentSlotId];
+    self.rewardVideoAd.delegate = self;
     [self addLog:[NSString stringWithFormat:@"开始加载激励视频广告，广告位ID: %@", currentSlotId]];
     self.statusLabel.text = @"状态: 加载中...";
     self.loadButton.enabled = NO;
