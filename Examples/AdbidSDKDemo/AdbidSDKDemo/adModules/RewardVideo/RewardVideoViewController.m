@@ -43,9 +43,7 @@
 
     self.title = @"激励视频广告测试";
     self.view.backgroundColor = [UIColor whiteColor];
-
     [self setupUI];
-    [self setupRewardVideoAd];
 }
 
 #pragma mark - Setup
@@ -187,14 +185,7 @@
     ]];
 }
 
-- (void)setupRewardVideoAd {
-    // 创建激励视频广告实例
-    NSString *slotId = self.slotIdTextField.text.length > 0 ? self.slotIdTextField.text : @"100130105000001";
-    self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:slotId];
-    self.rewardVideoAd.delegate = self;
-
-    [self addLog:[NSString stringWithFormat:@"激励视频广告实例已创建，广告位ID: %@", slotId]];
-}
+ 
 
 #pragma mark - Button Actions
 
@@ -208,14 +199,13 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 
- 
-    self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:currentSlotId];
-    self.rewardVideoAd.delegate = self;
     [self addLog:[NSString stringWithFormat:@"开始加载激励视频广告，广告位ID: %@", currentSlotId]];
     self.statusLabel.text = @"状态: 加载中...";
     self.loadButton.enabled = NO;
     self.showButton.enabled = NO;
 
+    self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:currentSlotId];
+    self.rewardVideoAd.delegate = self;
     [self.rewardVideoAd loadAd];
 }
 
