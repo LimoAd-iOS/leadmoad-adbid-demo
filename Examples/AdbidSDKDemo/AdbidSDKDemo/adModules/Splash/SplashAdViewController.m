@@ -55,14 +55,7 @@
 
     self.adIdTextField = [[UITextField alloc] init];
     self.adIdTextField.placeholder = @"请输入广告ID";
-    
-    // 尝试获取上次输入的ID
-    NSString *savedId = [[NSUserDefaults standardUserDefaults] stringForKey:@"DemoSplashAdID"];
-    if (savedId && savedId.length > 0) {
-        self.adIdTextField.text = savedId;
-    } else {
-        self.adIdTextField.text = AppConfig.openID;  // 默认图片广告ID
-    }
+    self.adIdTextField.text = AppConfig.openID;  // 默认图片广告ID
 
     self.adIdTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.adIdTextField.font = [UIFont systemFontOfSize:14];

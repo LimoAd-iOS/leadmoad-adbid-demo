@@ -16,7 +16,7 @@
 #import "AdbidTabBarViewController.h"
 #import "AppConfig.h"
 #import "AdbidSplashHotAD.h"
-
+#import "HMLaunchController.h"
 
 @interface AppDelegate () <AdbidSplashAdDelegate>
 @property (nonatomic, strong) AdbidSplashAd *splashAd;
@@ -29,16 +29,12 @@
     
     UIWindow *keyWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     AdbidTabBarViewController *tabBar = [[AdbidTabBarViewController alloc] init];
+    UINavigationController* vc = [[UINavigationController alloc]initWithRootViewController:tabBar];
+    
     self.window = keyWindow;
-    self.window.rootViewController = tabBar;
+    self.window.rootViewController = vc;
     [keyWindow makeKeyAndVisible];
     
-    // 清除上次运行保存的广告ID，确保每次重启都使用默认值
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"DemoNativeAdID"];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"DemoRewardVideoAdID"];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"DemoSplashAdID"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-
     [self setupAdbidAdSDK];
     return YES;
 }
@@ -47,8 +43,7 @@
     
     AdbidSDKConfiguration *configuration = [AdbidSDKConfiguration configuration];
     configuration.appID = [AppConfig appID];
-//    configuration.debugMode = YES;
-//    configuration.logLevel = AdbidLogLevelDebug;
+ 
     AdCustomPermissionController* adP = [[AdCustomPermissionController alloc]init];
     adP.allowLocation = YES;
     configuration.adCustomController = adP;
@@ -58,12 +53,7 @@
         if (success) {
             NSLog(@"领摩聚合SDK 初始化成功！时间=%@",[TimeUtil times][0]);
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                if ([AppConfig shared].isOpenAppOpenAd) {
-                    [self loadSplashAd];
-                }
-                if ([AppConfig shared].isOpenHotAppOpenAd) {
-                    [[AdbidSplashHotAD shared]loadOrShowSplashHotAD];
-                }
+                  [[AdbidSplashHotAD shared]loadOrShowSplashHotAD];
             });
         } else {
             NSLog(@"领摩聚合SDK 初始化失败！时间=%@",[TimeUtil times][0]);
@@ -100,69 +90,42 @@
     }
 }
 
-// MARK: - Splash
-- (void)loadSplashAd {
-    self.splashAd = [[AdbidSplashAd alloc] initWithSlotId:[AppConfig openID]];
-    self.splashAd.delegate = self;
-    self.splashAd.maxLoadTime = 3000;
-    self.splashAd.shouldMuted = YES;
-    [self.splashAd loadAd];
-}
-// MARK: - LMSplashAdDelegate
-// 广告加载成功
-- (void)splashAdDidLoad:(AdbidSplashAd *)splashAd {
-    NSLog(@"[AppDelegate] splashAd:didLoadAd: %@", splashAd);
-    self.splashAd.viewController = self.window.rootViewController;
-    [self.splashAd showAdToWindow:self.window];
-}
-
-// 广告加载失败
-- (void)splashAd:(AdbidSplashAd *)splashAd didFailToLoadWithError:(NSError *)error {
-    NSLog(@"[AppDelegate] splashAd:didFailToLoadWithError:%ld %@", error.code,error.localizedDescription);
-}
-// 广告展示成功
-- (void)splashAdDidShow:(AdbidSplashAd *)splashAd {
-    NSLog(@"[AppDelegate] splashAdDidShow");
-}
-
-// 广告展示失败
-- (void)splashAd:(AdbidSplashAd *)splashAd didFailToShowWithError:(NSError *)error {
-    NSLog(@"[AppDelegate] splashAd:didFailToShowWithError: %@", error);
-}
-
-// 广告被点击
-- (void)splashAdDidClick:(AdbidSplashAd *)splashAd {
-    NSLog(@"[AppDelegate] splashAdDidClick");
-}
-
-// 广告被关闭
-- (void)splashAdDidClose:(AdbidSplashAd *)splashAd {
-    NSLog(@"[AppDelegate] splashAdDidClose");
-}
-
-- (void)removeSplashAd {
-    if (self.splashAd) {
-        self.splashAd = nil;
-        self.window.rootViewController = [self rootViewController];
-    }
-}
-
 - (UIViewController *)rootViewController {
     AdbidHomeViewController *mainViewController = [[AdbidHomeViewController alloc] init];
     UINavigationController *navigationVC =
         [[UINavigationController alloc] initWithRootViewController:mainViewController];
     return navigationVC;
 }
+
 - (void)applicationDidEnterBackground:(UIApplication *)application{
     self.isEnterForeground = YES;
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application{
     if (self.isEnterForeground) {
-        if ([AppConfig shared].isOpenHotAppOpenAd) {
-            [[AdbidSplashHotAD shared]loadOrShowSplashHotAD];
+        UINavigationController *nav = [self getCurrentNavigationController];
+        if (nav && ![nav.topViewController isKindOfClass:[HMLaunchController class]]) {
+            HMLaunchController *launchVC = [[HMLaunchController alloc] init];
+            [nav pushViewController:launchVC animated:NO]; // 无动画 push
         }
     }
+}
+
+- (UINavigationController *)getCurrentNavigationController {
+    UIViewController *topVC = [self getTopViewController];
+    if ([topVC isKindOfClass:[UINavigationController class]]) {
+        return (UINavigationController *)topVC;
+    }
+    return topVC.navigationController;
+}
+
+// 获取顶层控制器
+- (UIViewController *)getTopViewController {
+    UIViewController *viewController = self.window.rootViewController;
+    while (viewController.presentedViewController) {
+        viewController = viewController.presentedViewController;
+    }
+    return viewController;
 }
 
 @end

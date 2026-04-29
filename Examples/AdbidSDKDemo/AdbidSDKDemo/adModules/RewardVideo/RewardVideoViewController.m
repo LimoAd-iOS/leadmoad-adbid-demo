@@ -55,12 +55,8 @@
 
     // 尝试获取上次输入的ID
     NSString *savedId = [[NSUserDefaults standardUserDefaults] stringForKey:@"DemoRewardVideoAdID"];
-    if (savedId && savedId.length > 0) {
-        self.slotIdTextField.text = savedId;
-    } else {
-        self.slotIdTextField.text = AppConfig.rewardID;  // 默认广告位ID
-    }
-
+    self.slotIdTextField.text = AppConfig.rewardID;  // 默认广告位ID
+    
     self.slotIdTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.slotIdTextField.font = [UIFont systemFontOfSize:16];
     self.slotIdTextField.clearButtonMode = UITextFieldViewModeWhileEditing;

@@ -31,6 +31,16 @@ typedef NS_ENUM(NSInteger, LMSplashLandingPageType) {
     LMSplashLandingPageType_AppStore        = 6, // ios应用商店下载
 };
 
+typedef NS_ENUM(NSInteger, LMInterstitialLandingPageType) {
+    LMInterstitialLandingPageType_Unknow          = 0, // 未知
+    LMInterstitialLandingPageType_lp    = 1, // 落地页（html/h5）
+    LMInterstitialLandingPageType_Deeplink      = 2, // deep 类型广告落地页
+    LMInterstitialLandingPageType_AppDownload    = 3, // 下载类广告（app下载页）
+    LMInterstitialLandingPageType_WeChat          = 4, // 微信小程序/小游戏
+    LMInterstitialLandingPageType_UniversalLink   = 5, // UniversalLink 唤起
+    LMInterstitialLandingPageType_AppStore        = 6, // ios应用商店下载
+};
+
 typedef NS_ENUM(NSInteger, LMAdPlatform) {
     LMAdPlatform_Unknown = 0,
     LMAdPlatform_GDT = 1,

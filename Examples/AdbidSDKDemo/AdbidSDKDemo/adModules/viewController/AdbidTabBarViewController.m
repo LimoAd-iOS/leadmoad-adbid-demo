@@ -41,25 +41,23 @@
 - (void)addChildVC:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selImage {
     // 设置标题
     vc.title = title;
-    
     // 设置图片
     vc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
     // 包装导航栏
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    nav.navigationBar.tintColor = [UIColor whiteColor]; // 按钮白色
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+  //  nav.navigationBar.tintColor = [UIColor whiteColor]; // 按钮白色
     if (@available(iOS 13.0, *)) {
         UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
         appearance.backgroundColor = [UIColor colorWithRed:66/255.0 green:133/255.0 blue:244/255.0 alpha:1.0]; // 导航背景色（可自己改）
         appearance.titleTextAttributes = @{
             NSForegroundColorAttributeName: [UIColor whiteColor] // 标题白色
         };
-        nav.navigationBar.standardAppearance = appearance;
-        nav.navigationBar.scrollEdgeAppearance = appearance;
+//        nav.navigationBar.standardAppearance = appearance;
+//        nav.navigationBar.scrollEdgeAppearance = appearance;
     }
     // 添加到 tabBar
-    [self addChildViewController:nav];
+    [self addChildViewController:vc];
 }
 
 

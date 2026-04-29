@@ -21,8 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 必传
 @property (nonatomic, copy) NSString *appID;
-/// 必传
+/// 可选
 @property (nonatomic, copy) NSString *userId;
+/// 可选
+@property (nonatomic, strong) NSNumber* latitude;
+/// 可选
+@property (nonatomic, strong) NSNumber* longitude;
 
 @property (nonatomic, assign) BOOL logDirectSend;
 

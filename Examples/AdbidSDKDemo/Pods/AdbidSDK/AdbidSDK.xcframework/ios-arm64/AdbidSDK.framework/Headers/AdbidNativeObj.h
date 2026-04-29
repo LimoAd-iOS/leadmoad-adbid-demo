@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
  广告标题
  */
 @property (nonatomic, copy, readonly) NSString *title;
-
 /**
  广告描述
  */
@@ -27,14 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy, readonly) NSString *iconUrl;
 /**
- 广告图片素材信息 广告是图片，该属性有值
- */
-@property (nonatomic, copy, readonly) NSArray<AdbidNativeImageObj*> *images;
- 
-/**
  广告是图片还是视频
  */
 @property (nonatomic, assign, readonly) bool isVideoAd;
+
+/**
+ 广告是图片，该属性有值
+ */
+@property (nonatomic, copy, readonly) AdbidNativeImageObj * imageAdInfo;
 
 /**
  广告是视频，该属性有值

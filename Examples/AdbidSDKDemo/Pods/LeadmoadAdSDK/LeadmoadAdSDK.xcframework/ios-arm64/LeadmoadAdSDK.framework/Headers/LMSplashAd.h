@@ -53,6 +53,8 @@ typedef NS_ENUM(NSInteger, LMSplashAdLandingPageType) {
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
 
+@property (nonatomic, strong, nullable) UIViewController *baseViewController;// 落地页设置
+
 - (instancetype)initWithSlotId:(NSString *)slotId;
 
 - (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId;
@@ -63,8 +65,7 @@ typedef NS_ENUM(NSInteger, LMSplashAdLandingPageType) {
 /*
  * 必须在主线程调用
  */
-- (void)showAd:(UIViewController *)viewController;
-
+- (void)showAdToWindow:(UIWindow *)window;
 /// 竞胜/竞败上报
 - (void)winNotice:(NSInteger)price;
 - (void)lossNotice:(LMAdBidLossInfo *)info;

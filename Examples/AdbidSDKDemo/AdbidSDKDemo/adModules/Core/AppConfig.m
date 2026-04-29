@@ -58,7 +58,7 @@ static NSString *const kHotAppOpenAdSwitchKey = @"kHotAppOpenAdSwitchKey";
 
 #pragma mark - 获取当前环境（从本地读取）
 + (EnvironmentType)currentEnv {
-    return EnvironmentType_Test;
+    return EnvironmentType_Release;
     // 如果没有保存过，默认返回测试环境
     if ([[NSUserDefaults standardUserDefaults] objectForKey:kEnvironmentKey] == nil) {
         return EnvironmentType_Test;
@@ -80,7 +80,7 @@ static NSString *const kHotAppOpenAdSwitchKey = @"kHotAppOpenAdSwitchKey";
     switch ([self currentEnv]) {
         case EnvironmentType_Test:    return @"MTc3NTIwNDUzOTAwOA==";
         case EnvironmentType_Dev:     return @"";
-        case EnvironmentType_Release: return @"";
+        case EnvironmentType_Release: return @"MTc3Njc0MzMyMjQ1NQ==";
         default: return @"MTc3NjA2NzE4NjM2OA==";
     }
 }
@@ -90,7 +90,7 @@ static NSString *const kHotAppOpenAdSwitchKey = @"kHotAppOpenAdSwitchKey";
         case EnvironmentType_Test:    return @"MTc3NTIwNDUzOTAwOA==";
         //case EnvironmentType_Test:    return @"MTc3NjA2NzE4NjM2OA==";
         case EnvironmentType_Dev:     return @"";
-        case EnvironmentType_Release: return @"";
+        case EnvironmentType_Release: return @"MTc3Njc0MzMyMjQ1NQ==";
         default: return @"MTc3NjA2NzE4NjM2OA==";
     }
 }

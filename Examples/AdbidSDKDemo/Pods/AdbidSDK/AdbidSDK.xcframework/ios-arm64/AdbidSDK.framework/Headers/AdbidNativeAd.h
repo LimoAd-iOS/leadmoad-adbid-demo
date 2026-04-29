@@ -49,6 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak, readwrite) UIViewController *rootViewController;
 
+@property (nonatomic, assign) BOOL shouldMuted; //设置静音
 /**
  *  广告最大请求时长，单位毫秒。默认3000 , 最小500毫秒
  */
@@ -66,9 +67,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  注册点击事件
  @param containerView 原生广告的容器视图。必传
+ @param mainImageView 原生广告的大图容器
  @param clickableViews 可点击的视图数组。可选
  */
-- (void)registerContainer:(__kindof UIView *)containerView
+- (void)registerContainer:(__kindof UIView *)containerView mainImageView:(__kindof UIImageView *) mainImageView
        withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews;
 
 - (void)winNotice:(NSInteger)price;

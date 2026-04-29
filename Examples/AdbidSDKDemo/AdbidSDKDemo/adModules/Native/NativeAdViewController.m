@@ -250,8 +250,8 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     self.customAdView.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.customAdView.imageView.clipsToBounds = NO;
     [self.customAdView bringSubviewToFront:self.customAdView.imageView];
-    if (self.nativeObj.images.count > 0) {
-        AdbidNativeImageObj * objc = self.nativeObj.images[0];
+   
+        AdbidNativeImageObj * objc = self.nativeObj.imageAdInfo;
         NSURL *iconURL = [NSURL URLWithString:objc.imageUrl];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             NSData *imgData = [NSData dataWithContentsOfURL:iconURL];
@@ -261,7 +261,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
                 backgroundImageView.image = img;
             });
         });
-    }
+    
   
 
     CGFloat overlayH = 74;
@@ -300,7 +300,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     [overlay addSubview:self.customAdView.descLabel];
     self.customAdView.imageView.userInteractionEnabled=YES;
     self.customAdView.descLabel.userInteractionEnabled=YES;
-    [self.nativeAd registerContainer:self.customAdView
+    [self.nativeAd registerContainer:self.customAdView mainImageView:self.customAdView.imageView
                   withClickableViews:@[ self.customAdView.imageView, self.customAdView.descLabel ]];
 }
 
@@ -327,6 +327,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 
     // 给视图绑定点击事件
     [self.nativeAd registerContainer:self.customAdView
+                       mainImageView:self.customAdView.imageView
                   withClickableViews:@[ self.customAdView.mediaView, self.customAdView.titleLabel ]];
     // 播放视频
     [self.customAdView refreshData:self.nativeAd];
@@ -520,15 +521,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     if (!_slotIdTextField) {
         _slotIdTextField = [[UITextField alloc] init];
         _slotIdTextField.placeholder = @"请输入广告位ID";
-
-        // 尝试获取上次输入的ID
-        NSString *savedId = [[NSUserDefaults standardUserDefaults] stringForKey:@"DemoNativeAdID"];
-        if (savedId && savedId.length > 0) {
-            _slotIdTextField.text = savedId;
-        } else {
-            _slotIdTextField.text = AppConfig.nativeID;  // 默认广告位ID
-        }
-
+        _slotIdTextField.text = AppConfig.nativeID;  // 默认广告位ID
         _slotIdTextField.borderStyle = UITextBorderStyleRoundedRect;
         _slotIdTextField.font = [UIFont systemFontOfSize:16];
         _slotIdTextField.clearButtonMode = UITextFieldViewModeWhileEditing;

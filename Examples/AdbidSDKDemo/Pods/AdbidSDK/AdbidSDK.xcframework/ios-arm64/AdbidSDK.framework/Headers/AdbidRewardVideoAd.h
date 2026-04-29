@@ -23,8 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)rewardVideoAd:(AdbidRewardVideoAd *)rewardVideoAd didFailToShowWithError:(NSError *)error;
 /// 开屏广告点击
 - (void)rewardVideoAdDidClick:(AdbidRewardVideoAd *)rewardVideoAd;
+
 /// 广告完成转化(关闭落地页)
-- (void)splashAdDidFinishConversion:(AdbidRewardVideoAd *)interstitialAd interactionType:(AdbidAdRedirectionType)interactionType;
+- (void)rewardVideoAdDidFinishConversion:(AdbidRewardVideoAd *)interstitialAd interactionType:(AdbidAdRedirectionType)interactionType;
 /// 开屏广告关闭
 - (void)rewardVideoAdDidClose:(AdbidRewardVideoAd *)rewardVideoAd;
 

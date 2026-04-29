@@ -10,15 +10,19 @@
 		</data>
 		<key>Headers/LMAdPublicDefine.h</key>
 		<data>
-		CLWey823TEghYTFQZeB45+Ap9W8=
+		+VGDGYSM2alowcvx5sRraazBKTc=
 		</data>
 		<key>Headers/LMAdSDKConfiguration.h</key>
 		<data>
-		OJMQO8iJ7UEhT+iF/3DbBGh28YQ=
+		znMjVsqgxclG/kfMMe/IcJqN5pQ=
 		</data>
 		<key>Headers/LMAdSDKManager.h</key>
 		<data>
 		yBrlflOhvpu4RJcIOCMAXEkdeIo=
+		</data>
+		<key>Headers/LMInterstitialAd.h</key>
+		<data>
+		V5h+VAyfehcacDWYelVuCxGjLVY=
 		</data>
 		<key>Headers/LMNativeAd.h</key>
 		<data>
@@ -42,11 +46,11 @@
 		</data>
 		<key>Headers/LMSplashAd.h</key>
 		<data>
-		pkfC4Fnor9rWEc2W3qnPz6izAs0=
+		uOmiYPhSb62wWDUFD6AogfmzufI=
 		</data>
 		<key>Headers/LeadmoadAdSDK.h</key>
 		<data>
-		tFQ+kVhRa0OCdxI+D+c/CJw3rLw=
+		5Wvk7jdOLh8WpJalUjKzQ4iWJds=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -54,7 +58,7 @@
 		</data>
 		<key>LMAdInternalDebugConfig.h.backup</key>
 		<data>
-		q6OlvtrDSB+hy77RFa+YwipO768=
+		frRPxom62zcmsL4i1ESzdRTYN+c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,14 +78,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vwTkQYvO2Tp2VtXC5K8hxcFeW9u/ZD0f/i01701kZ40=
+			A7QWyFTEGBp6yv7421QiMwU4XhqyOLYzXJ5roxmHnX8=
 			</data>
 		</dict>
 		<key>Headers/LMAdSDKConfiguration.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GG4DB2JFpNmEeqV/+zF/emILGPyzlDYKPl27E7KLJiU=
+			39IXXFuV3XJQXqE9+9ueAKdi41NSc+McXy1Z0i3plZ8=
 			</data>
 		</dict>
 		<key>Headers/LMAdSDKManager.h</key>
@@ -89,6 +93,13 @@
 			<key>hash2</key>
 			<data>
 			54miVjMY86YjFvnCjpe2zbbETvtuOoF+Sl3Es/WlJxc=
+			</data>
+		</dict>
+		<key>Headers/LMInterstitialAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6btaAs1PS/Ozrvx3hh3Ziv2mevpRjIYcroQU9cLNjfo=
 			</data>
 		</dict>
 		<key>Headers/LMNativeAd.h</key>
@@ -130,21 +141,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0+iF6egiRExjNNCJWOLN7GXcgroxURCH7vouEYLHkDw=
+			LRY/hK9CGc7EvI8S233FjLUPr34fmFczskvGyCsBlIQ=
 			</data>
 		</dict>
 		<key>Headers/LeadmoadAdSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gHAs/lu8ivgtzfqRCY/LVMJNdMWkZRH/C3OTIjpBLvM=
+			w2oU1MWLLOksRZ0264RMPW0LNO2SvFIkCin9P4Cr0gA=
 			</data>
 		</dict>
 		<key>LMAdInternalDebugConfig.h.backup</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IwEnDhjY99N1uLKV+b/FrUbdjcY1EpZU8gHVkzu3SdU=
+			vnH1nZcUSBpP6IyGcoSlbgsuHsOoxXherXWQgh2p7Jc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
