@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/LMAdPublicDefine.h</key>
 		<data>
-		+VGDGYSM2alowcvx5sRraazBKTc=
+		pDb29hYqOcQ3Zo5u+NfWGql6t6w=
 		</data>
 		<key>Headers/LMAdSDKConfiguration.h</key>
 		<data>
@@ -19,6 +19,10 @@
 		<key>Headers/LMAdSDKManager.h</key>
 		<data>
 		yBrlflOhvpu4RJcIOCMAXEkdeIo=
+		</data>
+		<key>Headers/LMBannerAd.h</key>
+		<data>
+		V7hANAoCLglTqNtFXH5IK5gUegk=
 		</data>
 		<key>Headers/LMInterstitialAd.h</key>
 		<data>
@@ -50,7 +54,7 @@
 		</data>
 		<key>Headers/LeadmoadAdSDK.h</key>
 		<data>
-		5Wvk7jdOLh8WpJalUjKzQ4iWJds=
+		cC9HPsb+6MqZkXj+EAl7OME27kI=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -63,6 +67,10 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		8UpmyK71dHzGySKP3yc+Ynqaj50=
+		</data>
+		<key>README.md</key>
+		<data>
+		kk66eRr/I2xet2QnGbEBeeFH/Hc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -78,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A7QWyFTEGBp6yv7421QiMwU4XhqyOLYzXJ5roxmHnX8=
+			3a2iunFptc5UIfkHZG8gJqAr6fkRU/6vVgYPP2KAz0s=
 			</data>
 		</dict>
 		<key>Headers/LMAdSDKConfiguration.h</key>
@@ -93,6 +101,13 @@
 			<key>hash2</key>
 			<data>
 			54miVjMY86YjFvnCjpe2zbbETvtuOoF+Sl3Es/WlJxc=
+			</data>
+		</dict>
+		<key>Headers/LMBannerAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jWckRjah2tkZkIMANMLWCIni0BL9SxUtLtuKQU9gaH0=
 			</data>
 		</dict>
 		<key>Headers/LMInterstitialAd.h</key>
@@ -148,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w2oU1MWLLOksRZ0264RMPW0LNO2SvFIkCin9P4Cr0gA=
+			jsed7ooqEVg/JzvSxehBx9W7FlHrgQBzkTLdw9roAXY=
 			</data>
 		</dict>
 		<key>LMAdInternalDebugConfig.h.backup</key>
@@ -163,6 +178,13 @@
 			<key>hash2</key>
 			<data>
 			fKxNqKBVbV9EbU1XxqZccK8KoT2QLxmsgZoe7sFIC9w=
+			</data>
+		</dict>
+		<key>README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5cPlqCshhDqG79kbr5n3oFbz3h8G7ajw56Wx7uU2fXc=
 			</data>
 		</dict>
 	</dict>

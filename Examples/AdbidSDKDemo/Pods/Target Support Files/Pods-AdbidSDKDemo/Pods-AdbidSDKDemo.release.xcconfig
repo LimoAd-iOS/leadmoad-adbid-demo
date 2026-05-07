@@ -1,12 +1,11 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AdbidSDK" "${PODS_ROOT}/FunlinkSDK" "${PODS_ROOT}/LeadmoadAdSDK" "${PODS_ROOT}/UBiXDaq" "${PODS_ROOT}/UBiXMerakSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/AdbidSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FunlinkSDK/FunlinkSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/LeadmoadAdSDK"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AdbidSDK" "${PODS_ROOT}/LeadmoadAdSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/AdbidSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/LeadmoadAdSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
-OTHER_LDFLAGS = $(inherited) -ObjC -l"ObjC" -l"bz2" -l"c++" -l"c++abi" -l"iconv" -l"resolv" -l"sqlite3" -l"xml2" -l"z" -framework "AVFoundation" -framework "Accelerate" -framework "AdSupport" -framework "AdbidSDK" -framework "AppTrackingTransparency" -framework "AssetsLibrary" -framework "AudioToolbox" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreML" -framework "CoreMedia" -framework "CoreMotion" -framework "CoreTelephony" -framework "DeviceCheck" -framework "FLinkAdSaas" -framework "Foundation" -framework "ImageIO" -framework "JavaScriptCore" -framework "LeadmoadAdSDK" -framework "MapKit" -framework "MediaPlayer" -framework "MobileCoreServices" -framework "QuartzCore" -framework "SafariServices" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -framework "UbiXAdSDK" -framework "UbiXDaq" -framework "WebKit"
-OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/AdbidSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/FunlinkSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/LeadmoadAdSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/UBiXDaq" "-F${PODS_CONFIGURATION_BUILD_DIR}/UBiXMerakSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "AdbidSDK" -framework "Foundation" -framework "LeadmoadAdSDK" -framework "UIKit"
+OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/AdbidSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/LeadmoadAdSDK"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

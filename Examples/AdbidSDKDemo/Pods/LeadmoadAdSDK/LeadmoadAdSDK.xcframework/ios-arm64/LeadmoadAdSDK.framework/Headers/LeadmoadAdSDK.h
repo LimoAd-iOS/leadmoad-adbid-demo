@@ -22,6 +22,7 @@ FOUNDATION_EXPORT const unsigned char LeadmoadAdSDKVersionString[];
 #import <LeadmoadAdSDK/LMNativeView.h>
 #import <LeadmoadAdSDK/LMNativeObj.h>
 #import <LeadmoadAdSDK/LMNativeMediaView.h>
+#import <LeadmoadAdSDK/LMBannerAd.h>
 #import <LeadmoadAdSDK/LMRewardVideoAd.h>
 #import <LeadmoadAdSDK/LMAdPublicDefine.h>
 #import <LeadmoadAdSDK/LMAdBidLossInfo.h>

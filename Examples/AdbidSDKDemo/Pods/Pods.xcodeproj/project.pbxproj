@@ -9,241 +9,131 @@
 /* Begin PBXAggregateTarget section */
 		536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F6A109D4FB97C376365C1FC5B613F8A2 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */;
+			buildConfigurationList = 4AC9F66458474E89FE2B2F6C1A2AF930 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */;
 			buildPhases = (
-				FD7F5685F10C28E6DF2C863304957B32 /* [CP] Copy XCFrameworks */,
+				DD77F53BC8DAE51FFABDA3DBFA929B3F /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
+				202962B3D139C3A0755021E8CA6BEB5A /* PBXTargetDependency */,
 			);
 			name = AdbidSDK;
 		};
 		7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = BB789EEA5A1F67F03D32AC27C386232F /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */;
+			buildConfigurationList = D8CFAE95DB844B48B178AB4095307C0A /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */;
 			buildPhases = (
-				8DB9EA1FF61B2222DA0C933C4CDCBAFF /* [CP] Copy XCFrameworks */,
+				04EA33A71F655FCDF0DFEA47ACCDB0B1 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
 			name = LeadmoadAdSDK;
 		};
-		A99B118F444A264217CA4E5383329549 /* UBiXDaq */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = D133331B78F022A5840118AC4858564C /* Build configuration list for PBXAggregateTarget "UBiXDaq" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = UBiXDaq;
-		};
-		B10EDE1B6199527B041FBBBA261D8D6D /* FunlinkSDK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 34D4ACAD75251F47640C9B6D8A56D860 /* Build configuration list for PBXAggregateTarget "FunlinkSDK" */;
-			buildPhases = (
-				62E567DE528015AEC9351D6A5F5DA7CA /* [CP] Copy XCFrameworks */,
-			);
-			dependencies = (
-			);
-			name = FunlinkSDK;
-		};
-		CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A2F9D7A3FB9FF005F96BA1D3BE40D3E7 /* Build configuration list for PBXAggregateTarget "UBiXMerakSDK" */;
-			buildPhases = (
-			);
-			dependencies = (
-				54ED2D9C65F38FF31525F566A287BAA2 /* PBXTargetDependency */,
-			);
-			name = UBiXMerakSDK;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		77B05B400DDA3779C5E63C60D0A3D021 /* Pods-AdbidSDKDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C89F244BEA2FAAD7D2C08A4A82C0DA09 /* Pods-AdbidSDKDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		964DE972B910F50EFDAD79CA33C9C8ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		B47CB3190386F15676209D66C5D2D79F /* Pods-AdbidSDKDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 746BC546DB50C9EFFCEB2B99E35730BF /* Pods-AdbidSDKDemo-dummy.m */; };
+		14795C9292D2823C35D35E1FAEEA5275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		45C74767E8D0F5F02012FA92CC4AE642 /* Pods-AdbidSDKDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 746BC546DB50C9EFFCEB2B99E35730BF /* Pods-AdbidSDKDemo-dummy.m */; };
+		ACB25F023BEC4E5F6F06008A545826CF /* Pods-AdbidSDKDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C89F244BEA2FAAD7D2C08A4A82C0DA09 /* Pods-AdbidSDKDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10DA610760AE212C22BBA17131D16900 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B10EDE1B6199527B041FBBBA261D8D6D;
-			remoteInfo = FunlinkSDK;
-		};
-		36515FB8C7B2A373C02C480E51A3C87F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7ED52757096C24B663582FBC70FA0786;
-			remoteInfo = LeadmoadAdSDK;
-		};
-		56B8146D56BD6B10AFC8CE9F8AE74498 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A99B118F444A264217CA4E5383329549;
-			remoteInfo = UBiXDaq;
-		};
-		8DD53EC51CB237EDA52BA46C8B7DF29F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A99B118F444A264217CA4E5383329549;
-			remoteInfo = UBiXDaq;
-		};
-		8F6EA32682AE2FDC70B7BAA2986135A4 /* PBXContainerItemProxy */ = {
+		7D9DC600DAAC3F3E87C72AC0CFA41F36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 536D79C6E0B4204EB781968E1E53C5A3;
 			remoteInfo = AdbidSDK;
 		};
-		F7992DE7930DC6FDB79D7265244D16B0 /* PBXContainerItemProxy */ = {
+		EE8AC20351FABED267D1C5DA2E1D15CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CB9EF54EB56198AEC6D86185CE31E55F;
-			remoteInfo = UBiXMerakSDK;
+			remoteGlobalIDString = 7ED52757096C24B663582FBC70FA0786;
+			remoteInfo = LeadmoadAdSDK;
+		};
+		FB9FF588E8AE2F11D9615E1197A8BD3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ED52757096C24B663582FBC70FA0786;
+			remoteInfo = LeadmoadAdSDK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		103F20624904CA8BE8311FBE3C44C0CD /* UbiXDaq.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbiXDaq.framework; sourceTree = "<group>"; };
-		19B2EC0A694747B3CB1B0102DD644BB5 /* UBiXDaq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXDaq.release.xcconfig; sourceTree = "<group>"; };
-		1B8C58488E28FB2EC5BC157F9375EB8D /* LeadmoadAdSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.debug.xcconfig; sourceTree = "<group>"; };
+		18716E5F6F0CBE5674624ACB3616446F /* Leadmoad.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Leadmoad.bundle; sourceTree = "<group>"; };
 		26A484C0DF088095E89DDF412A14A652 /* Pods-AdbidSDKDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AdbidSDKDemo.modulemap"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		48AEE5548B5B39F00FFD2088E205E27B /* LeadmoadAdSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "LeadmoadAdSDK-xcframeworks.sh"; sourceTree = "<group>"; };
-		510865D968AD161442BEDEC95CFDB03F /* AdbidSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = AdbidSDK.xcframework; sourceTree = "<group>"; };
+		39FCE26ED3051AF0A3DC52F61487CDD9 /* AdbidSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = AdbidSDK.xcframework; sourceTree = "<group>"; };
 		520CD6B0AD7A7EA10F082C4DC1AC8E37 /* Pods-AdbidSDKDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AdbidSDKDemo"; path = Pods_AdbidSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F2A3E19B1A30EB9E33AF4F7EFEBE6E /* Pods-AdbidSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdbidSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		597FFC30C1317501AC9310BB51BFA654 /* Pods-AdbidSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdbidSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		5A5D106006A8D01DFCA56091CEAF834F /* AdbidSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.release.xcconfig; sourceTree = "<group>"; };
-		615ED2E552D8B4F765E5B7D6CFD70F51 /* AdbidSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AdbidSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		6B89F3581CE36F17BDB9FFB2756AA8D3 /* Pods-AdbidSDKDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AdbidSDKDemo-resources.sh"; sourceTree = "<group>"; };
-		6CAE93F312283D59B85B794514DA1CF8 /* UBiXMerakSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXMerakSDK.debug.xcconfig; sourceTree = "<group>"; };
-		6CEF416E3E40064F6BA39D22825BD50A /* FunlinkSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FunlinkSDK.release.xcconfig; sourceTree = "<group>"; };
-		72ED88C87EFC2A6093A65CA9FC1DC6BF /* Leadmoad.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Leadmoad.bundle; sourceTree = "<group>"; };
-		738001B5955932E99D63FF1E88050DE1 /* FLinkAdSaas.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = FLinkAdSaas.xcframework; sourceTree = "<group>"; };
+		7040611F0BC7C9FA065383C9B1E84CCC /* AdbidSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AdbidSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		746BC546DB50C9EFFCEB2B99E35730BF /* Pods-AdbidSDKDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AdbidSDKDemo-dummy.m"; sourceTree = "<group>"; };
+		8AD9E1E782784AEBA17E0BB9CDE9CA15 /* LeadmoadAdSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.release.xcconfig; sourceTree = "<group>"; };
+		8FB8E49AE02B307AC6A2847A19DCA11C /* AdbidSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.debug.xcconfig; sourceTree = "<group>"; };
 		91AF44B4534D0B280096CED69B48657B /* Pods-AdbidSDKDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdbidSDKDemo-Info.plist"; sourceTree = "<group>"; };
-		9492814EB098362253131617E4EC184D /* FunlinkSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FunlinkSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		92ED478EA8FE57D0F70045F15B445D19 /* LeadmoadAdSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "LeadmoadAdSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		9B96DFFFCBABB0B8C5222141D52E576C /* Pods-AdbidSDKDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdbidSDKDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B2AAB638394D25D82060A092FEBDD0F3 /* Pods-AdbidSDKDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AdbidSDKDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B4F794FEBA1DE14038FA69E721608FF1 /* AdbidSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.debug.xcconfig; sourceTree = "<group>"; };
 		C89F244BEA2FAAD7D2C08A4A82C0DA09 /* Pods-AdbidSDKDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AdbidSDKDemo-umbrella.h"; sourceTree = "<group>"; };
-		E13EE7FBB713B9B089D2B10FC3FE86A4 /* LeadmoadAdSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.release.xcconfig; sourceTree = "<group>"; };
-		E1A4D372086B57B7EE1FDE19B0F4AE78 /* LeadmoadAdSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = LeadmoadAdSDK.xcframework; sourceTree = "<group>"; };
-		E91AD9C61888618C0344978896AAF69A /* UbiXAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbiXAdSDK.framework; sourceTree = "<group>"; };
-		EF5A95B5762D4B56EF26A835C391E273 /* UBiXDaq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXDaq.debug.xcconfig; sourceTree = "<group>"; };
-		F07200B85BF3B3BBCFC56787A817C3D6 /* UBiXMerakSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UBiXMerakSDK.release.xcconfig; sourceTree = "<group>"; };
-		FDF51DC916F2F57451395977422A22E1 /* FunlinkSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FunlinkSDK.debug.xcconfig; sourceTree = "<group>"; };
+		D002B7D30F2C1EEEC7B8C6CB1D881457 /* LeadmoadAdSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = LeadmoadAdSDK.xcframework; sourceTree = "<group>"; };
+		E0B1E5C6225EDEC266A6E4FB31185BB8 /* AdbidSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AdbidSDK.release.xcconfig; sourceTree = "<group>"; };
+		FF4E249985DEF581978A88F6F44B6897 /* LeadmoadAdSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LeadmoadAdSDK.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0D6619E99DA69E45662665C5E2002859 /* Frameworks */ = {
+		5EFF28D87758D23216A6DD94140CF478 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964DE972B910F50EFDAD79CA33C9C8ED /* Foundation.framework in Frameworks */,
+				14795C9292D2823C35D35E1FAEEA5275 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BBC013124FFE6165D0ED83B1F78883D /* Support Files */ = {
+		12BECB63BB7284C387B37B4F364C0B7A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9492814EB098362253131617E4EC184D /* FunlinkSDK-xcframeworks.sh */,
-				FDF51DC916F2F57451395977422A22E1 /* FunlinkSDK.debug.xcconfig */,
-				6CEF416E3E40064F6BA39D22825BD50A /* FunlinkSDK.release.xcconfig */,
+				7040611F0BC7C9FA065383C9B1E84CCC /* AdbidSDK-xcframeworks.sh */,
+				8FB8E49AE02B307AC6A2847A19DCA11C /* AdbidSDK.debug.xcconfig */,
+				E0B1E5C6225EDEC266A6E4FB31185BB8 /* AdbidSDK.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/FunlinkSDK";
+			path = "../Target Support Files/AdbidSDK";
 			sourceTree = "<group>";
 		};
-		272813BCC7D689102566D13567876BC6 /* FunlinkSDK */ = {
+		145405673D51E5BA67DF02332C9B7478 /* AdbidSDK */ = {
 			isa = PBXGroup;
 			children = (
-				6890E184CCFB1DAE04965496C39F7920 /* Frameworks */,
-			);
-			name = FunlinkSDK;
-			sourceTree = "<group>";
-		};
-		29DFD6F09389A4B0EACF604B21124AB9 /* UBiXMerakSDK */ = {
-			isa = PBXGroup;
-			children = (
-				97457D21C79AD8C338B96B367C098C25 /* Frameworks */,
-				709D7521D0444F71BF703BBF495EA523 /* Support Files */,
-			);
-			name = UBiXMerakSDK;
-			path = UBiXMerakSDK;
-			sourceTree = "<group>";
-		};
-		3159E0E7BA1FA5A22E38CF57AF941D2D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E1A4D372086B57B7EE1FDE19B0F4AE78 /* LeadmoadAdSDK.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		41B8E05E569FCBA1CEBF45CE5BBF9611 /* FunlinkSDK */ = {
-			isa = PBXGroup;
-			children = (
-				272813BCC7D689102566D13567876BC6 /* FunlinkSDK */,
-				0BBC013124FFE6165D0ED83B1F78883D /* Support Files */,
-			);
-			name = FunlinkSDK;
-			path = FunlinkSDK;
-			sourceTree = "<group>";
-		};
-		48FF10C221A338060085D61739D0E9CA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				510865D968AD161442BEDEC95CFDB03F /* AdbidSDK.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4C1E218A6138BF4510CEB0F504C87C11 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				103F20624904CA8BE8311FBE3C44C0CD /* UbiXDaq.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		54991A90E4E072855CB7D2CB94B3BA05 /* AdbidSDK */ = {
-			isa = PBXGroup;
-			children = (
-				48FF10C221A338060085D61739D0E9CA /* Frameworks */,
-				8CEBF22412F14B1228CA7520CC178DE8 /* Support Files */,
+				494E8EBF567C6BE197EB85A52CA19977 /* Frameworks */,
+				12BECB63BB7284C387B37B4F364C0B7A /* Support Files */,
 			);
 			name = AdbidSDK;
 			path = AdbidSDK;
 			sourceTree = "<group>";
 		};
-		6890E184CCFB1DAE04965496C39F7920 /* Frameworks */ = {
+		263C58D2D0BF58B7D74EE2E553843908 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				738001B5955932E99D63FF1E88050DE1 /* FLinkAdSaas.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		709D7521D0444F71BF703BBF495EA523 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6CAE93F312283D59B85B794514DA1CF8 /* UBiXMerakSDK.debug.xcconfig */,
-				F07200B85BF3B3BBCFC56787A817C3D6 /* UBiXMerakSDK.release.xcconfig */,
+				92ED478EA8FE57D0F70045F15B445D19 /* LeadmoadAdSDK-xcframeworks.sh */,
+				FF4E249985DEF581978A88F6F44B6897 /* LeadmoadAdSDK.debug.xcconfig */,
+				8AD9E1E782784AEBA17E0BB9CDE9CA15 /* LeadmoadAdSDK.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UBiXMerakSDK";
+			path = "../Target Support Files/LeadmoadAdSDK";
+			sourceTree = "<group>";
+		};
+		494E8EBF567C6BE197EB85A52CA19977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39FCE26ED3051AF0A3DC52F61487CDD9 /* AdbidSDK.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		865BD44DAE847212545627022995A436 /* Targets Support Files */ = {
@@ -254,52 +144,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8CEBF22412F14B1228CA7520CC178DE8 /* Support Files */ = {
+		8C9E4A2C6516EB6BDF3BEAA9EACBC1B7 /* LeadmoadAdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				615ED2E552D8B4F765E5B7D6CFD70F51 /* AdbidSDK-xcframeworks.sh */,
-				B4F794FEBA1DE14038FA69E721608FF1 /* AdbidSDK.debug.xcconfig */,
-				5A5D106006A8D01DFCA56091CEAF834F /* AdbidSDK.release.xcconfig */,
+				C0CE1BEF3C0C09C2AE1E528C7D3AF9CE /* Frameworks */,
+				CBC2EBBDA84E7422D3CE39DA7B8EB2CB /* Resources */,
+				263C58D2D0BF58B7D74EE2E553843908 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/AdbidSDK";
-			sourceTree = "<group>";
-		};
-		8FA53A38A1AC4AD0C3231F27C99D07E3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				72ED88C87EFC2A6093A65CA9FC1DC6BF /* Leadmoad.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		97457D21C79AD8C338B96B367C098C25 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E91AD9C61888618C0344978896AAF69A /* UbiXAdSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		993F560119C304AFD8BC4E8503831CF5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				48AEE5548B5B39F00FFD2088E205E27B /* LeadmoadAdSDK-xcframeworks.sh */,
-				1B8C58488E28FB2EC5BC157F9375EB8D /* LeadmoadAdSDK.debug.xcconfig */,
-				E13EE7FBB713B9B089D2B10FC3FE86A4 /* LeadmoadAdSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LeadmoadAdSDK";
-			sourceTree = "<group>";
-		};
-		9DE64F093591D6D36C0D79C7300C6742 /* UBiXDaq */ = {
-			isa = PBXGroup;
-			children = (
-				4C1E218A6138BF4510CEB0F504C87C11 /* Frameworks */,
-				EC696E47AA3D1A806EC0BB21FE00BAC1 /* Support Files */,
-			);
-			name = UBiXDaq;
-			path = UBiXDaq;
+			name = LeadmoadAdSDK;
+			path = LeadmoadAdSDK;
 			sourceTree = "<group>";
 		};
 		B6EAB856D0887B3FA4791CA8860C5F0B /* Pods-AdbidSDKDemo */ = {
@@ -319,16 +172,29 @@
 			path = "Target Support Files/Pods-AdbidSDKDemo";
 			sourceTree = "<group>";
 		};
-		C20CAF2635D543C085DAFAB1B1D0894F /* Pods */ = {
+		C0CE1BEF3C0C09C2AE1E528C7D3AF9CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				54991A90E4E072855CB7D2CB94B3BA05 /* AdbidSDK */,
-				41B8E05E569FCBA1CEBF45CE5BBF9611 /* FunlinkSDK */,
-				E33F84F3656EC929769A17677F6297DC /* LeadmoadAdSDK */,
-				9DE64F093591D6D36C0D79C7300C6742 /* UBiXDaq */,
-				29DFD6F09389A4B0EACF604B21124AB9 /* UBiXMerakSDK */,
+				D002B7D30F2C1EEEC7B8C6CB1D881457 /* LeadmoadAdSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C31A6146150E2A0ED35A3FA4000A8E24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				145405673D51E5BA67DF02332C9B7478 /* AdbidSDK */,
+				8C9E4A2C6516EB6BDF3BEAA9EACBC1B7 /* LeadmoadAdSDK */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CBC2EBBDA84E7422D3CE39DA7B8EB2CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18716E5F6F0CBE5674624ACB3616446F /* Leadmoad.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -336,7 +202,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				C20CAF2635D543C085DAFAB1B1D0894F /* Pods */,
+				C31A6146150E2A0ED35A3FA4000A8E24 /* Pods */,
 				D17A1D401489916EEB6241791B5FD1CD /* Products */,
 				865BD44DAE847212545627022995A436 /* Targets Support Files */,
 			);
@@ -358,17 +224,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E33F84F3656EC929769A17677F6297DC /* LeadmoadAdSDK */ = {
-			isa = PBXGroup;
-			children = (
-				3159E0E7BA1FA5A22E38CF57AF941D2D /* Frameworks */,
-				8FA53A38A1AC4AD0C3231F27C99D07E3 /* Resources */,
-				993F560119C304AFD8BC4E8503831CF5 /* Support Files */,
-			);
-			name = LeadmoadAdSDK;
-			path = LeadmoadAdSDK;
-			sourceTree = "<group>";
-		};
 		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,24 +232,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EC696E47AA3D1A806EC0BB21FE00BAC1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EF5A95B5762D4B56EF26A835C391E273 /* UBiXDaq.debug.xcconfig */,
-				19B2EC0A694747B3CB1B0102DD644BB5 /* UBiXDaq.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UBiXDaq";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DE0C8ADA23440C98E6E20B31EB6844DE /* Headers */ = {
+		2E10B9F22DDBAEF7922226FFA3350EA6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B05B400DDA3779C5E63C60D0A3D021 /* Pods-AdbidSDKDemo-umbrella.h in Headers */,
+				ACB25F023BEC4E5F6F06008A545826CF /* Pods-AdbidSDKDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,21 +248,18 @@
 /* Begin PBXNativeTarget section */
 		B94B14BF2ECB0E382401BE07182EFAEB /* Pods-AdbidSDKDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D3B9C2D7F79F7CA163F0652B9DE2808 /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */;
+			buildConfigurationList = 20F8351FD50015B5F9DA1B43BAD08DA6 /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */;
 			buildPhases = (
-				DE0C8ADA23440C98E6E20B31EB6844DE /* Headers */,
-				139565DA1E1C88D3629CB51ABD4FC3E6 /* Sources */,
-				0D6619E99DA69E45662665C5E2002859 /* Frameworks */,
-				2C73E3507340FDB952DB9CE8991E26A2 /* Resources */,
+				2E10B9F22DDBAEF7922226FFA3350EA6 /* Headers */,
+				E5F71BECD31A47ACBDFC6AB0D8767368 /* Sources */,
+				5EFF28D87758D23216A6DD94140CF478 /* Frameworks */,
+				1CE3F669800A7836CE3047A8531FE8DA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AEF1AF6FED2189E02503EAC68BB46D4E /* PBXTargetDependency */,
-				4476BCA6CAEA29EDE07783C96BD87FCC /* PBXTargetDependency */,
-				66C8139737028BE42EB3EC6FA8AC0A94 /* PBXTargetDependency */,
-				1C50BEFBEE7CF824341F53952DE68BB3 /* PBXTargetDependency */,
-				EDEEBC6CD03D9119A0088B7A9A8348F1 /* PBXTargetDependency */,
+				FC8DB4D590859869F753E3E231B84B2E /* PBXTargetDependency */,
+				B1C17C36ECCFCBF3C6E8EDF34BFDF2E7 /* PBXTargetDependency */,
 			);
 			name = "Pods-AdbidSDKDemo";
 			productName = Pods_AdbidSDKDemo;
@@ -449,17 +291,14 @@
 			projectRoot = "";
 			targets = (
 				536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */,
-				B10EDE1B6199527B041FBBBA261D8D6D /* FunlinkSDK */,
 				7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */,
 				B94B14BF2ECB0E382401BE07182EFAEB /* Pods-AdbidSDKDemo */,
-				A99B118F444A264217CA4E5383329549 /* UBiXDaq */,
-				CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C73E3507340FDB952DB9CE8991E26A2 /* Resources */ = {
+		1CE3F669800A7836CE3047A8531FE8DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -469,24 +308,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		62E567DE528015AEC9351D6A5F5DA7CA /* [CP] Copy XCFrameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/FunlinkSDK/FunlinkSDK-xcframeworks-input-files.xcfilelist",
-			);
-			name = "[CP] Copy XCFrameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/FunlinkSDK/FunlinkSDK-xcframeworks-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/FunlinkSDK/FunlinkSDK-xcframeworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DB9EA1FF61B2222DA0C933C4CDCBAFF /* [CP] Copy XCFrameworks */ = {
+		04EA33A71F655FCDF0DFEA47ACCDB0B1 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -503,7 +325,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/LeadmoadAdSDK/LeadmoadAdSDK-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD7F5685F10C28E6DF2C863304957B32 /* [CP] Copy XCFrameworks */ = {
+		DD77F53BC8DAE51FFABDA3DBFA929B3F /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -523,65 +345,47 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		139565DA1E1C88D3629CB51ABD4FC3E6 /* Sources */ = {
+		E5F71BECD31A47ACBDFC6AB0D8767368 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B47CB3190386F15676209D66C5D2D79F /* Pods-AdbidSDKDemo-dummy.m in Sources */,
+				45C74767E8D0F5F02012FA92CC4AE642 /* Pods-AdbidSDKDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1C50BEFBEE7CF824341F53952DE68BB3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UBiXDaq;
-			target = A99B118F444A264217CA4E5383329549 /* UBiXDaq */;
-			targetProxy = 56B8146D56BD6B10AFC8CE9F8AE74498 /* PBXContainerItemProxy */;
-		};
-		4476BCA6CAEA29EDE07783C96BD87FCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FunlinkSDK;
-			target = B10EDE1B6199527B041FBBBA261D8D6D /* FunlinkSDK */;
-			targetProxy = 10DA610760AE212C22BBA17131D16900 /* PBXContainerItemProxy */;
-		};
-		54ED2D9C65F38FF31525F566A287BAA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UBiXDaq;
-			target = A99B118F444A264217CA4E5383329549 /* UBiXDaq */;
-			targetProxy = 8DD53EC51CB237EDA52BA46C8B7DF29F /* PBXContainerItemProxy */;
-		};
-		66C8139737028BE42EB3EC6FA8AC0A94 /* PBXTargetDependency */ = {
+		202962B3D139C3A0755021E8CA6BEB5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LeadmoadAdSDK;
 			target = 7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */;
-			targetProxy = 36515FB8C7B2A373C02C480E51A3C87F /* PBXContainerItemProxy */;
+			targetProxy = FB9FF588E8AE2F11D9615E1197A8BD3C /* PBXContainerItemProxy */;
 		};
-		AEF1AF6FED2189E02503EAC68BB46D4E /* PBXTargetDependency */ = {
+		B1C17C36ECCFCBF3C6E8EDF34BFDF2E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LeadmoadAdSDK;
+			target = 7ED52757096C24B663582FBC70FA0786 /* LeadmoadAdSDK */;
+			targetProxy = EE8AC20351FABED267D1C5DA2E1D15CD /* PBXContainerItemProxy */;
+		};
+		FC8DB4D590859869F753E3E231B84B2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AdbidSDK;
 			target = 536D79C6E0B4204EB781968E1E53C5A3 /* AdbidSDK */;
-			targetProxy = 8F6EA32682AE2FDC70B7BAA2986135A4 /* PBXContainerItemProxy */;
-		};
-		EDEEBC6CD03D9119A0088B7A9A8348F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UBiXMerakSDK;
-			target = CB9EF54EB56198AEC6D86185CE31E55F /* UBiXMerakSDK */;
-			targetProxy = F7992DE7930DC6FDB79D7265244D16B0 /* PBXContainerItemProxy */;
+			targetProxy = 7D9DC600DAAC3F3E87C72AC0CFA41F36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E14AB55BA749B0633F2BA7DEE6664C0 /* Debug */ = {
+		2F9DEA3C2909AF70D1F99986D4A5B971 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDF51DC916F2F57451395977422A22E1 /* FunlinkSDK.debug.xcconfig */;
+			baseConfigurationReference = 8FB8E49AE02B307AC6A2847A19DCA11C /* AdbidSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,9 +395,9 @@
 			};
 			name = Debug;
 		};
-		4D569C012B7590F184BD8D7AC8EE5298 /* Release */ = {
+		5E828A4F63C9ED2ECB507B4061BBCC0D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55F2A3E19B1A30EB9E33AF4F7EFEBE6E /* Pods-AdbidSDKDemo.release.xcconfig */;
+			baseConfigurationReference = 597FFC30C1317501AC9310BB51BFA654 /* Pods-AdbidSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -625,15 +429,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		520F6636EA52DBD630D341C4D20A56EF /* Release */ = {
+		70AB9E01EB3A0E7B75F3ECE6A7568997 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A5D106006A8D01DFCA56091CEAF834F /* AdbidSDK.release.xcconfig */;
+			baseConfigurationReference = E0B1E5C6225EDEC266A6E4FB31185BB8 /* AdbidSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -650,28 +453,9 @@
 			};
 			name = Release;
 		};
-		5E7048953203EC7F128609DC4C6FA687 /* Release */ = {
+		7AFBE84B5EA11BF1447FD402FF1D31C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F07200B85BF3B3BBCFC56787A817C3D6 /* UBiXMerakSDK.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		6B3E41926FD1CCC5AF3CB216D125D38D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4F794FEBA1DE14038FA69E721608FF1 /* AdbidSDK.debug.xcconfig */;
+			baseConfigurationReference = FF4E249985DEF581978A88F6F44B6897 /* LeadmoadAdSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -815,9 +599,9 @@
 			};
 			name = Release;
 		};
-		BACA91905630024481523D4518437178 /* Debug */ = {
+		A048C2A8F81CC7001E77F4A80C3CDD62 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 597FFC30C1317501AC9310BB51BFA654 /* Pods-AdbidSDKDemo.debug.xcconfig */;
+			baseConfigurationReference = 55F2A3E19B1A30EB9E33AF4F7EFEBE6E /* Pods-AdbidSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -849,104 +633,15 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		CE698E5BE82325D3AD83932CD3779532 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19B2EC0A694747B3CB1B0102DD644BB5 /* UBiXDaq.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
 			name = Release;
 		};
-		CE76AC320AE861D8FA430816892F3879 /* Release */ = {
+		C1A2E8F9818FEC67962F81CF1F487667 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CEF416E3E40064F6BA39D22825BD50A /* FunlinkSDK.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D9AD29420D5A17B5F5EE9162688F9EA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B8C58488E28FB2EC5BC157F9375EB8D /* LeadmoadAdSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DA80630A0EDAAC3AE44829528498F567 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF5A95B5762D4B56EF26A835C391E273 /* UBiXDaq.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E5F8A9AEBE56874F183E2EFD3D55296D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CAE93F312283D59B85B794514DA1CF8 /* UBiXMerakSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FF507E6956180C3301940948908E97FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E13EE7FBB713B9B089D2B10FC3FE86A4 /* LeadmoadAdSDK.release.xcconfig */;
+			baseConfigurationReference = 8AD9E1E782784AEBA17E0BB9CDE9CA15 /* LeadmoadAdSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -966,20 +661,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D3B9C2D7F79F7CA163F0652B9DE2808 /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */ = {
+		20F8351FD50015B5F9DA1B43BAD08DA6 /* Build configuration list for PBXNativeTarget "Pods-AdbidSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BACA91905630024481523D4518437178 /* Debug */,
-				4D569C012B7590F184BD8D7AC8EE5298 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		34D4ACAD75251F47640C9B6D8A56D860 /* Build configuration list for PBXAggregateTarget "FunlinkSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E14AB55BA749B0633F2BA7DEE6664C0 /* Debug */,
-				CE76AC320AE861D8FA430816892F3879 /* Release */,
+				5E828A4F63C9ED2ECB507B4061BBCC0D /* Debug */,
+				A048C2A8F81CC7001E77F4A80C3CDD62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -993,38 +679,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2F9D7A3FB9FF005F96BA1D3BE40D3E7 /* Build configuration list for PBXAggregateTarget "UBiXMerakSDK" */ = {
+		4AC9F66458474E89FE2B2F6C1A2AF930 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5F8A9AEBE56874F183E2EFD3D55296D /* Debug */,
-				5E7048953203EC7F128609DC4C6FA687 /* Release */,
+				2F9DEA3C2909AF70D1F99986D4A5B971 /* Debug */,
+				70AB9E01EB3A0E7B75F3ECE6A7568997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB789EEA5A1F67F03D32AC27C386232F /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */ = {
+		D8CFAE95DB844B48B178AB4095307C0A /* Build configuration list for PBXAggregateTarget "LeadmoadAdSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D9AD29420D5A17B5F5EE9162688F9EA9 /* Debug */,
-				FF507E6956180C3301940948908E97FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D133331B78F022A5840118AC4858564C /* Build configuration list for PBXAggregateTarget "UBiXDaq" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA80630A0EDAAC3AE44829528498F567 /* Debug */,
-				CE698E5BE82325D3AD83932CD3779532 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F6A109D4FB97C376365C1FC5B613F8A2 /* Build configuration list for PBXAggregateTarget "AdbidSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B3E41926FD1CCC5AF3CB216D125D38D /* Debug */,
-				520F6636EA52DBD630D341C4D20A56EF /* Release */,
+				7AFBE84B5EA11BF1447FD402FF1D31C3 /* Debug */,
+				C1A2E8F9818FEC67962F81CF1F487667 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

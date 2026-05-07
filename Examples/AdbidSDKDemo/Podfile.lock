@@ -1,34 +1,20 @@
 PODS:
-  - AdbidSDK (2.1.1.11)
-  - FunlinkSDK (2.9.0.0.7):
-    - FunlinkSDK/FunlinkSDK (= 2.9.0.0.7)
-  - FunlinkSDK/FunlinkSDK (2.9.0.0.7)
-  - LeadmoadAdSDK (1.0.25)
-  - UBiXDaq (2.6.0)
-  - UBiXMerakSDK (2.10.2):
-    - UBiXDaq (~> 2.6.0)
+  - AdbidSDK (2.1.1.15):
+    - LeadmoadAdSDK (~> 1.0)
+  - LeadmoadAdSDK (1.0.26)
 
 DEPENDENCIES:
-  - AdbidSDK (= 2.1.1.11)
-  - FunlinkSDK (= 2.9.0.0.7)
-  - LeadmoadAdSDK (= 1.0.25)
-  - UBiXMerakSDK (= 2.10.2)
+  - AdbidSDK (= 2.1.1.15)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AdbidSDK
-    - FunlinkSDK
     - LeadmoadAdSDK
-    - UBiXDaq
-    - UBiXMerakSDK
 
 SPEC CHECKSUMS:
-  AdbidSDK: ea85e7b55c6d9898313af1a8d6817c68d4deb73c
-  FunlinkSDK: 4630c18367b4bef866f093a1400b86d19603be55
-  LeadmoadAdSDK: 2b6136933603d01700f96da0cf881da207572e31
-  UBiXDaq: dc9e01975832d4734af08f036e83b41493b124f5
-  UBiXMerakSDK: 83178e4a2d5345169444944ae30e4fc796454cfd
+  AdbidSDK: 966efe8678a9678f06c91e1f50a8e0536b0dcf2d
+  LeadmoadAdSDK: aacc8d6e2f5f632082cd2f8d5072bd0d2564e4e1
 
-PODFILE CHECKSUM: 95725533931c3e9bbcada63c1b8e2a8d1c24e7ca
+PODFILE CHECKSUM: 357aeb3d94168b413f0c12fd79ceff67d53013d6
 
 COCOAPODS: 1.16.2

@@ -67,8 +67,9 @@ typedef NS_ENUM(NSInteger, LeadmoadAdType) {
     LeadmoadAdType_Interstitial        = 3, // 插屏
     LeadmoadAdType_Feed                = 4, // 信息流
     LeadmoadAdType_RewardVideo         = 5, // 激励视频
-    LeadmoadAdType_Draw                = 6,  // draw
+    LeadmoadAdType_Draw                = 6, // draw
     LeadmoadAdType_Unknow              = 7, // 未知
+    LeadmoadAdType_RewardImage         = 8, // 激励图片
 };
 
 static inline NSString *LeadmoadAdTypeString(LeadmoadAdType type) {
@@ -79,6 +80,7 @@ static inline NSString *LeadmoadAdTypeString(LeadmoadAdType type) {
         case LeadmoadAdType_Feed: return @"feed";
         case LeadmoadAdType_RewardVideo: return @"reward";
         case LeadmoadAdType_Draw: return @"draw";
+        case LeadmoadAdType_RewardImage: return @"reward_image";
         default: return @"unknown";
     }
 }

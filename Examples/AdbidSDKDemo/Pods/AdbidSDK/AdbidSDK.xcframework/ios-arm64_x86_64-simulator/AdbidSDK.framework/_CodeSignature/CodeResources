@@ -8,6 +8,26 @@
 		<data>
 		DiudhNMoZG/c7Rzjiuxxr1jc/y4=
 		</data>
+		<key>Headers/AdbidBaseInitAdapter.h</key>
+		<data>
+		5s5oP/rMZY+gzSCg0TLoqS5BVlA=
+		</data>
+		<key>Headers/AdbidBaseInterstitialAdapter.h</key>
+		<data>
+		83QWkayZPG5DdpGzdQbdL9tiwCE=
+		</data>
+		<key>Headers/AdbidBaseNativeAdapter.h</key>
+		<data>
+		uwUHuC8sHqY0gc08J9UfShVb52Y=
+		</data>
+		<key>Headers/AdbidBaseRewardVideoAdapter.h</key>
+		<data>
+		Wc7dtpXBYu10lKXofANwS16m7Ro=
+		</data>
+		<key>Headers/AdbidBaseSplashAdapter.h</key>
+		<data>
+		I3bGQZpfK7jLygG657xjW2JNQ9s=
+		</data>
 		<key>Headers/AdbidBidLossInfo.h</key>
 		<data>
 		pVnpF/BYkrTvJVzIyt7MgwERxXQ=
@@ -16,9 +36,17 @@
 		<data>
 		4Bg28UTqdpqanV1vCfVRFKWUIG0=
 		</data>
+		<key>Headers/AdbidInterstitialAdapterProtocol.h</key>
+		<data>
+		q5Dh5ikiCUqQ0h8AQPBpb/JQQVQ=
+		</data>
 		<key>Headers/AdbidNativeAd.h</key>
 		<data>
 		BsFBmD52THug7ynxhdA44mMutzc=
+		</data>
+		<key>Headers/AdbidNativeAdapterProtocol.h</key>
+		<data>
+		5QUrJ9VZt+6/XNk24S5Vj+jTqmw=
 		</data>
 		<key>Headers/AdbidNativeMediaView.h</key>
 		<data>
@@ -40,9 +68,13 @@
 		<data>
 		GODg/b45dfKaTQIytGka4Sj5eLw=
 		</data>
+		<key>Headers/AdbidRewardVideoAdapterProtocol.h</key>
+		<data>
+		/9WejFkSresmjd7TtKR4LRlm+O0=
+		</data>
 		<key>Headers/AdbidSDK.h</key>
 		<data>
-		0+4BESWfb9Msmz8FMt8rZ3e/qbI=
+		9xTFm620oVrw6mM/F0Zcx21soDk=
 		</data>
 		<key>Headers/AdbidSDKConfiguration.h</key>
 		<data>
@@ -55,6 +87,14 @@
 		<key>Headers/AdbidSplashAd.h</key>
 		<data>
 		h1WQsykCf/7GWcQAE2LR6BKFSJc=
+		</data>
+		<key>Headers/AdbidSplashAdapterProtocol.h</key>
+		<data>
+		EdEhXLtYD0pBOLljHBw5v2fV8aY=
+		</data>
+		<key>Headers/AdibidAdInitArgument.h</key>
+		<data>
+		KjglYxIcTA0h6LEpcKXCA2Q743o=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -74,6 +114,41 @@
 			bAf0AZqp3KnsCvflceQTAyS5oUE59RRCG22fXC93tp4=
 			</data>
 		</dict>
+		<key>Headers/AdbidBaseInitAdapter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eJdC4K3+GZtLK2VQ7WmRBKtnVeTK4DHBAKftra1+47g=
+			</data>
+		</dict>
+		<key>Headers/AdbidBaseInterstitialAdapter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XUercxg3Kw4qVaPMRQUODyVHGfF96/zA3yTWxpS8M6w=
+			</data>
+		</dict>
+		<key>Headers/AdbidBaseNativeAdapter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EU7rBLqoHHrmYXZEl338SIV54tTfU+w8hgkYXOr67sI=
+			</data>
+		</dict>
+		<key>Headers/AdbidBaseRewardVideoAdapter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JiGJjDrexF/eZj7meveZ79y1i8xrjV6eIY1o+o+Tczk=
+			</data>
+		</dict>
+		<key>Headers/AdbidBaseSplashAdapter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/qx+SoRW2NO7jIZRrAtFztx5gV0NY88Q8rc0wnHYLkA=
+			</data>
+		</dict>
 		<key>Headers/AdbidBidLossInfo.h</key>
 		<dict>
 			<key>hash2</key>
@@ -88,11 +163,25 @@
 			ykJ0jh3biUvRxYVDtfKfGDSsY1JiOQ60nxFrKoGgO2I=
 			</data>
 		</dict>
+		<key>Headers/AdbidInterstitialAdapterProtocol.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8cPCYQSokhZxMjQnLTAkcpDv/O9YTEloGboNVdnq1yo=
+			</data>
+		</dict>
 		<key>Headers/AdbidNativeAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			bCwXssGMBG4I0oa5gat0X+Kas8HAs8w3oHuc9qGtsIo=
+			</data>
+		</dict>
+		<key>Headers/AdbidNativeAdapterProtocol.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LJNj66Sb+Lr4ce3WY0kfw/pigxJK7jyinVrKShGxzxE=
 			</data>
 		</dict>
 		<key>Headers/AdbidNativeMediaView.h</key>
@@ -130,11 +219,18 @@
 			sARusb3XXReLhlaLeOlYEpRf5kIMNoZETFxlQBV4Zj0=
 			</data>
 		</dict>
+		<key>Headers/AdbidRewardVideoAdapterProtocol.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WKji8NpNcihXRPDDr14+K9/bn4RIIxzV/Jq0lEMAADE=
+			</data>
+		</dict>
 		<key>Headers/AdbidSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/z48bIQd5li1lOEeIHtxS/5GKxsL31MwrrVY7r4Mbng=
+			WEbVWqUEUWx7GLqAZboDnETmTzwcff+dRtk4P6vzf4o=
 			</data>
 		</dict>
 		<key>Headers/AdbidSDKConfiguration.h</key>
@@ -156,6 +252,20 @@
 			<key>hash2</key>
 			<data>
 			juKoKOaCZJpepy9DqRC14txWCSrwVE5IZAk6GvLBZn0=
+			</data>
+		</dict>
+		<key>Headers/AdbidSplashAdapterProtocol.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6Il1uh0TAItVw0hFaTuXN5HW7DY/GcEgFdfaStVv8CA=
+			</data>
+		</dict>
+		<key>Headers/AdibidAdInitArgument.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p91URr722f+n+GllobrnGzwCklDWbsWvZdxaD89zfj0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
