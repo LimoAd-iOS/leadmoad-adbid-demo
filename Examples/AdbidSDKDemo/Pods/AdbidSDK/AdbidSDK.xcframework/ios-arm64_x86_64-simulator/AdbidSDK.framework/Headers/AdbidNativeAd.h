@@ -63,6 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
  * 加载信息流广告
  */
 - (void)loadAd;
+/**
+ * 通过Token加载信息流广告
+ */
+- (void)loadAdWithToken:(NSString *)token;
 
 /**
  注册点击事件

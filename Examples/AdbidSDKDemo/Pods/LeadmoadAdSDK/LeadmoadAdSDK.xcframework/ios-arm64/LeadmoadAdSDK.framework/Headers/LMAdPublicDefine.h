@@ -59,6 +59,8 @@ typedef NS_ENUM(NSInteger, LMAdPlatform) {
     LMAdPlatform_UBX = 14,
     LMAdPlatform_GorMore = 15,
     LMAdPlatform_TaKu = 16,
+    LMAdPlatform_FunLink = 17,
+    LMAdPlatform_YingShi = 18, //萤石
 };
 
 typedef NS_ENUM(NSInteger, LeadmoadAdType) {

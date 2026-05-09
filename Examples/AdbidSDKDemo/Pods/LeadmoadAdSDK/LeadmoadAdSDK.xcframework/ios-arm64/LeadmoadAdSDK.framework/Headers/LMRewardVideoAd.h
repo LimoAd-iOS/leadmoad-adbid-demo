@@ -70,6 +70,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 加载激励视频广告
 - (void)loadAd;
+/// 通过token加载激励视频广告
+- (void)loadAdWithToken:(NSString*)token;
 
 /// 展示激励视频广告
 /// @param viewController 用于展示广告的视图控制器

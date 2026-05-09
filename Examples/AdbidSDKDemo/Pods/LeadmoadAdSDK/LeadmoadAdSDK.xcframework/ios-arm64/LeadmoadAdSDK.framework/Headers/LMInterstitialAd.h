@@ -59,7 +59,8 @@ typedef NS_ENUM(NSInteger, LMInterstitialAdLandingPageType) {
 
 /// 发起拉取广告请求
 - (void)loadAd;
-
+/// 通过token拉取广告请求
+- (void)loadAdWithToken:(NSString*)token;
 /*
  * 必须在主线程调用
  */

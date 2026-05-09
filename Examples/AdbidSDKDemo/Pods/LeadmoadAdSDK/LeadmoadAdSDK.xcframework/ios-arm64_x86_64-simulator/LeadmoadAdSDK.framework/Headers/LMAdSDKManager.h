@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief 设置额外的用户数据. 请在广告初始化前设置该属性
  */
 + (void)setUserCaids:(NSArray*)caids;
+
++ (NSString*)getSDKInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -66,7 +66,10 @@ NS_ASSUME_NONNULL_BEGIN
  * 加载信息流广告
  */
 - (void)loadAd;
-
+/**
+ * 通过token加载信息流广告
+ */
+- (void)loadAdWithToken:(NSString*)token;
 /**
  注册点击事件
  @param containerView 原生广告的容器视图。必传

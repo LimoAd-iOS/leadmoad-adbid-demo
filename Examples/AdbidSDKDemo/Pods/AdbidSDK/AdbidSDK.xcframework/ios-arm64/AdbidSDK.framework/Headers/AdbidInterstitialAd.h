@@ -49,6 +49,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithSlotId:(NSString *)slotId;
 /// 发起拉取广告请求
 - (void)loadAd;
+/**
+ * 通过Token加载信息流广告
+ */
+- (void)loadAdWithToken:(NSString *)token;
+
 /*
  * 必须在主线程调用
  */

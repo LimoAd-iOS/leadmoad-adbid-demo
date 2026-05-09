@@ -52,6 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 加载广告
 - (void)loadAd;
 
+- (void)loadAdWithToken:(NSString *)token;
+
 /// 展示广告（主线程调用）
 - (void)showAd:(UIViewController *)viewController;
 

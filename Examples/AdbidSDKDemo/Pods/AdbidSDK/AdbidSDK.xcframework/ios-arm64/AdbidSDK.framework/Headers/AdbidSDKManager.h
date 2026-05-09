@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdbidSDKManager : NSObject
 
 + (void)startWithAsyncCompletionHandler:(void (^ __nullable)(BOOL success ,NSError * __nullable error))completionHandler;
+
++ (NSString*)getSDKInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

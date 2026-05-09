@@ -82,6 +82,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 加载广告
 - (void)loadAd;
+/// 服务器竞价通过token加载广告
+- (void)loadAdWithToken:(NSString*)token;
 
 /// 竞胜通知
 - (void)winNotice:(NSInteger)price;

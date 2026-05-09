@@ -1,10 +1,10 @@
 PODS:
-  - AdbidSDK (2.1.1.15):
+  - AdbidSDK (2.1.1.16):
     - LeadmoadAdSDK (~> 1.0)
-  - LeadmoadAdSDK (1.0.26)
+  - LeadmoadAdSDK (1.0.27)
 
 DEPENDENCIES:
-  - AdbidSDK (= 2.1.1.15)
+  - AdbidSDK (= 2.1.1.16)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - LeadmoadAdSDK
 
 SPEC CHECKSUMS:
-  AdbidSDK: 966efe8678a9678f06c91e1f50a8e0536b0dcf2d
-  LeadmoadAdSDK: aacc8d6e2f5f632082cd2f8d5072bd0d2564e4e1
+  AdbidSDK: 4f553b7c08deeb3930375b39f105d3622d989672
+  LeadmoadAdSDK: 4433c0b1b9ce6c42cb7706035bb3977f2b26672a
 
-PODFILE CHECKSUM: 357aeb3d94168b413f0c12fd79ceff67d53013d6
+PODFILE CHECKSUM: d9c94753aedf9c3d621f0315bc52f607b4e37d1d
 
 COCOAPODS: 1.16.2

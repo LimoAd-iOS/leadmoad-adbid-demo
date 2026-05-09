@@ -61,6 +61,8 @@ typedef NS_ENUM(NSInteger, LMSplashAdLandingPageType) {
 
 /// 发起拉取广告请求
 - (void)loadAd;
+/// 通过token发起拉取广告请求
+- (void)loadAdWithToken:(NSString*)token;
 
 /*
  * 必须在主线程调用

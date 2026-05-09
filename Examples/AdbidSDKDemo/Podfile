@@ -5,6 +5,6 @@ workspace '../../AdbidSDKWorkspace.xcworkspace'
 target 'AdbidSDKDemo' do
   use_frameworks!
   
-  pod 'AdbidSDK','2.1.1.15'
+  pod 'AdbidSDK','2.1.1.16'
    
 end
