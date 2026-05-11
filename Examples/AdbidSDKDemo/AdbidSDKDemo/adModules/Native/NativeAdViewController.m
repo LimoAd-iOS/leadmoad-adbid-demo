@@ -4,10 +4,12 @@
 //
 //  Created by youzhadoubao on 2025/9/19.
 //
+
 #import "NativeAdViewController.h"
 #import <AdbidSDK/AdbidSDK.h>
 #import "NativeFeedAdView.h"
 #import "AppConfig.h"
+#import <AVFoundation/AVFoundation.h>
 typedef NS_ENUM(NSInteger, AdStatus) {
     AdStatusIdle = 0,  // 空闲状态
     AdStatusLoading,   // 加载中
@@ -34,6 +36,14 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 @property (nonatomic, strong) UIView *adContainerView;
 @property (nonatomic, strong) UILabel *containerView;
 
+// 测试视频（用于验证 native 广告是否打断其他播放器）
+@property (nonatomic, strong) UIView *testVideoContainer;
+@property (nonatomic, strong) UILabel *testVideoTitleLabel;
+@property (nonatomic, strong) UIView *testVideoSurface;
+@property (nonatomic, strong) AVPlayer *testVideoPlayer;
+@property (nonatomic, strong) AVPlayerLayer *testVideoLayer;
+@property (nonatomic, strong) UIButton *testVideoButton;
+
 // 状态管理
 @property (nonatomic, assign) AdStatus currentStatus;
 
@@ -52,13 +62,28 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     // 设置UI
     [self setupUI];
 
-    // 初始化广告
-    [self setupNativeAd];
-
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(onBackgroundTapped)];
     tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [_testVideoPlayer pause];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.testVideoPlayer pause];
+    [self.testVideoButton setTitle:@"▶️ 播放测试视频" forState:UIControlStateNormal];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    if (_testVideoLayer) {
+        _testVideoLayer.frame = self.testVideoSurface.bounds;
+    }
 }
 
 #pragma mark - UI Setup
@@ -77,6 +102,12 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     [self.controlPanel addSubview:self.winNoticeButton];
     [self.controlPanel addSubview:self.lossNoticeButton];
     [self.controlPanel addSubview:self.statusLabel];
+
+    // 添加测试视频区域（用于验证 native 广告是否打断其他视频）
+    [self.scrollView addSubview:self.testVideoContainer];
+    [self.testVideoContainer addSubview:self.testVideoTitleLabel];
+    [self.testVideoContainer addSubview:self.testVideoSurface];
+    [self.testVideoContainer addSubview:self.testVideoButton];
 
     // 添加广告容器
     [self.scrollView addSubview:self.adContainerView];
@@ -156,10 +187,37 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         [self.statusLabel.heightAnchor constraintEqualToConstant:80]
     ]];
 
+    // 测试视频容器约束
+    self.testVideoContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    self.testVideoTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.testVideoSurface.translatesAutoresizingMaskIntoConstraints = NO;
+    self.testVideoButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.testVideoContainer.topAnchor constraintEqualToAnchor:self.controlPanel.bottomAnchor constant:20],
+        [self.testVideoContainer.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20],
+        [self.testVideoContainer.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
+        [self.testVideoContainer.heightAnchor constraintEqualToConstant:240],
+
+        [self.testVideoTitleLabel.topAnchor constraintEqualToAnchor:self.testVideoContainer.topAnchor constant:8],
+        [self.testVideoTitleLabel.leadingAnchor constraintEqualToAnchor:self.testVideoContainer.leadingAnchor constant:12],
+        [self.testVideoTitleLabel.trailingAnchor constraintEqualToAnchor:self.testVideoContainer.trailingAnchor constant:-12],
+        [self.testVideoTitleLabel.heightAnchor constraintEqualToConstant:24],
+
+        [self.testVideoSurface.topAnchor constraintEqualToAnchor:self.testVideoTitleLabel.bottomAnchor constant:8],
+        [self.testVideoSurface.leadingAnchor constraintEqualToAnchor:self.testVideoContainer.leadingAnchor constant:12],
+        [self.testVideoSurface.trailingAnchor constraintEqualToAnchor:self.testVideoContainer.trailingAnchor constant:-12],
+        [self.testVideoSurface.bottomAnchor constraintEqualToAnchor:self.testVideoButton.topAnchor constant:-8],
+
+        [self.testVideoButton.leadingAnchor constraintEqualToAnchor:self.testVideoContainer.leadingAnchor constant:12],
+        [self.testVideoButton.trailingAnchor constraintEqualToAnchor:self.testVideoContainer.trailingAnchor constant:-12],
+        [self.testVideoButton.bottomAnchor constraintEqualToAnchor:self.testVideoContainer.bottomAnchor constant:-8],
+        [self.testVideoButton.heightAnchor constraintEqualToConstant:36],
+    ]];
+
     // 广告容器约束
     self.adContainerView.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint activateConstraints:@[
-        [self.adContainerView.topAnchor constraintEqualToAnchor:self.controlPanel.bottomAnchor constant:20],
+        [self.adContainerView.topAnchor constraintEqualToAnchor:self.testVideoContainer.bottomAnchor constant:20],
         [self.adContainerView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20],
         [self.adContainerView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
         [self.adContainerView.heightAnchor constraintEqualToConstant:300],
@@ -173,15 +231,6 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         [self.containerView.trailingAnchor constraintEqualToAnchor:self.adContainerView.trailingAnchor constant:-20],
         [self.containerView.bottomAnchor constraintEqualToAnchor:self.adContainerView.bottomAnchor constant:-20]
     ]];
-}
-
-#pragma mark - Native Ad Setup
-
-- (void)setupNativeAd {
-    AdbidNativeAd *nativeAd = [[AdbidNativeAd alloc] initWithSlotId:self.slotIdTextField.text];
-    nativeAd.rootViewController = self;
-    nativeAd.delegate = self;
-    self.nativeAd = nativeAd;
 }
 
 #pragma mark - Button Actions
@@ -201,10 +250,12 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         [[NSUserDefaults standardUserDefaults] setObject:self.slotIdTextField.text forKey:@"DemoNativeAdID"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-
     NSLog(@"开始加载信息流广告，广告位ID: %@", slotId);
-    [self setupNativeAd];
-    [self.nativeAd loadAd];
+    AdbidNativeAd *nativeAd = [[AdbidNativeAd alloc] initWithSlotId:self.slotIdTextField.text];
+    nativeAd.rootViewController = self;
+    nativeAd.delegate = self;
+    self.nativeAd = nativeAd;
+    [self.nativeAd loadAdWithToken:@""];
 }
 
 - (void)showButtonTapped:(UIButton *)sender {
@@ -213,15 +264,16 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     }
 
     [self updateStatus:AdStatusShowing];
-
-    // 这里可以添加展示广告的逻辑
-    // 例如：将广告视图添加到容器中
-    NSLog(@"展示广告");
-    BOOL isVideoAd = self.nativeObj.isVideoAd;
-    if (isVideoAd) {
-        [self showVideoNativeAd];
-    } else {
-        [self showImageNativeAd];
+    if ([self.nativeAd isReady]) {
+        // 这里可以添加展示广告的逻辑
+        // 例如：将广告视图添加到容器中
+        NSLog(@"展示广告");
+        BOOL isVideoAd = self.nativeObj.isVideoAd;
+        if (isVideoAd) {
+            [self showVideoNativeAd];
+        } else {
+            [self showImageNativeAd];
+        }
     }
 }
 
@@ -236,21 +288,12 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     CGFloat h = frame.size.height;
 
     CGRect imageArea = CGRectMake(0, 0, w, h - 50);
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:imageArea];
-    backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
-    backgroundImageView.clipsToBounds = YES;
-    [self.customAdView insertSubview:backgroundImageView belowSubview:self.customAdView.imageView];
-    UIVisualEffectView *blurView =
-        [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-    blurView.frame = backgroundImageView.bounds;
-    blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [backgroundImageView addSubview:blurView];
-
+    
     self.customAdView.imageView.frame = imageArea;
     self.customAdView.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.customAdView.imageView.clipsToBounds = NO;
     [self.customAdView bringSubviewToFront:self.customAdView.imageView];
-   
+    if (self.nativeObj.imageAdInfo) {
         AdbidNativeImageObj * objc = self.nativeObj.imageAdInfo;
         NSURL *iconURL = [NSURL URLWithString:objc.imageUrl];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -258,14 +301,13 @@ typedef NS_ENUM(NSInteger, AdStatus) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 UIImage *img = [UIImage imageWithData:imgData];
                 self.customAdView.imageView.image = img;
-                backgroundImageView.image = img;
             });
         });
-    
+    }
   
 
     CGFloat overlayH = 74;
-    UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, imageArea.size.height - overlayH, w, overlayH)];
+    UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, imageArea.size.height, w, overlayH)];
     overlay.backgroundColor = [UIColor colorWithWhite:0 alpha:0.35];
     CAGradientLayer *grad = [CAGradientLayer layer];
     grad.frame = overlay.bounds;
@@ -298,10 +340,16 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     self.customAdView.descLabel.backgroundColor = [UIColor clearColor];
     self.customAdView.descLabel.numberOfLines = 2;
     [overlay addSubview:self.customAdView.descLabel];
+    self.customAdView.logoImageView.frame = CGRectMake(w - 40, 8, 28, 28);
+    self.customAdView.logoImageView.image = self.nativeObj.logoImage;
+    [self.customAdView.logoImageView setHidden:NO];
+    [overlay addSubview:self.customAdView.logoImageView];
+    
     self.customAdView.imageView.userInteractionEnabled=YES;
     self.customAdView.descLabel.userInteractionEnabled=YES;
-    [self.nativeAd registerContainer:self.customAdView mainImageView:self.customAdView.imageView
-                  withClickableViews:@[ self.customAdView.imageView, self.customAdView.descLabel ]];
+    [self.nativeAd registerContainer:self.customAdView
+                       mainImageView: self.customAdView.imageView
+                  withClickableViews:@[self.customAdView]];
 }
 
 - (void)showVideoNativeAd {
@@ -315,21 +363,38 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     CGFloat h = frame.size.height;
     self.customAdView.backgroundColor = [UIColor grayColor];
     // 视频视图
-    [self.customAdView addSubview:self.customAdView.mediaView];
-
+ 
+    if (self.customAdView.mediaView.superview) {
+        [self.customAdView.mediaView removeFromSuperview];
+    }
+    // 插入到最底层
+    [self.customAdView insertSubview:self.customAdView.mediaView atIndex:0];
+    
     self.customAdView.mediaView.frame = CGRectMake(0, 0, w, h - 50);
     self.customAdView.mediaView.delegate = self;
-    [self.customAdView.mediaView setMuted:YES];
 
     // 标题
     self.customAdView.titleLabel.frame = CGRectMake(0, h - 50, w, 50);
     self.customAdView.titleLabel.text = self.nativeObj.title;
 
+    // Logo —— 位置完全由开发者自定义。下面默认放在 mediaView 右下角；
+    // 如需放到标题旁、与 title/desc 一起排列，只需改这里的 frame，例如：
+    //   self.customAdView.logoImageView.frame = CGRectMake(w - 68, h - 42, 60, 34);
+    CGFloat logoW = 28, logoH = 20, pad = 8;
+    self.customAdView.logoImageView.frame =
+        CGRectMake(w - logoW - pad, (h - 50) - logoH - pad, logoW, logoH);
+    [self.customAdView.logoImageView setHidden:NO];
+    self.customAdView.logoImageView.image = self.nativeObj.logoImage;
+
     // 给视图绑定点击事件
     [self.nativeAd registerContainer:self.customAdView
-                       mainImageView:self.customAdView.imageView
-                  withClickableViews:@[ self.customAdView.mediaView, self.customAdView.titleLabel ]];
-    // 播放视频
+                       mainImageView: self.customAdView.imageView
+                  withClickableViews:@[self.customAdView.mediaView, self.customAdView.titleLabel ]];
+
+    // 静音初始值通过 AdbidNativeAd.shouldMuted 下发；默认 YES（信息流默认静音）
+    // 想测试"出声打断"场景时，把下一行改成 NO
+    self.nativeAd.shouldMuted = NO;
+    // 播放视频（refreshData 内部会把 shouldMuted 同步到 mediaView）
     [self.customAdView refreshData:self.nativeAd];
 }
 
@@ -428,16 +493,48 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     if (self.nativeAd && self.nativeAd.data) {
         self.statusLabel.text = @"正在上报竞败...";
         self.statusLabel.textColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
-        
+
         AdbidBidLossInfo *info = [[AdbidBidLossInfo alloc] init];
         info.winnerPrice = self.nativeAd.eCPM + 10; // 模拟竞胜价格高于我方
         info.winnerPlatform = AdbidPlatform_GDT; // 模拟广点通竞胜
-        
+
  //       [self.nativeAd lossNotice:info];
         self.statusLabel.text = [NSString stringWithFormat:@"竞败上报成功\n竞胜价格: %ld", (long)info.winnerPrice];
     } else {
         self.statusLabel.text = @"请先加载广告";
         self.statusLabel.textColor = [UIColor colorWithRed:1.0 green:0.6 blue:0.0 alpha:1.0];
+    }
+}
+
+#pragma mark - 测试视频（验证 native 广告是否打断其他播放器）
+
+- (void)testVideoButtonTapped:(UIButton *)sender {
+    if (self.testVideoPlayer.rate > 0) {
+        [self.testVideoPlayer pause];
+        [sender setTitle:@"▶️ 播放测试视频" forState:UIControlStateNormal];
+        return;
+    }
+
+    // 模拟典型宿主播放器：Playback + MixWithOthers
+    // - Playback：忽略侧边静音键，正常出声
+    // - MixWithOthers：允许 SDK 内的广告视频音轨与本视频混音，互不打断
+    NSError *err = nil;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+                                     withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                                           error:&err];
+    if (err) {
+        NSLog(@"setCategory Playback failed: %@", err);
+    }
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
+    [self.testVideoPlayer play];
+    [sender setTitle:@"⏸ 暂停测试视频" forState:UIControlStateNormal];
+}
+
+- (void)testVideoDidReachEnd:(NSNotification *)note {
+    AVPlayerItem *item = note.object;
+    if (item == self.testVideoPlayer.currentItem) {
+        [item seekToTime:kCMTimeZero completionHandler:nil];
+        [self.testVideoPlayer play];
     }
 }
 
@@ -471,7 +568,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     NSLog(@"nativeMediaViewDidClick");
 }
 /**
- 准备播放
+ 开始播放
  */
 - (void)nativeMediaViewReadyToPlay:(AdbidNativeMediaView *)mediaView {
     NSLog(@"nativeMediaViewReadyToPlay");
@@ -521,7 +618,15 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     if (!_slotIdTextField) {
         _slotIdTextField = [[UITextField alloc] init];
         _slotIdTextField.placeholder = @"请输入广告位ID";
-        _slotIdTextField.text = AppConfig.nativeID;  // 默认广告位ID
+
+        // 尝试获取上次输入的ID
+        NSString *savedId = [[NSUserDefaults standardUserDefaults] stringForKey:@"DemoNativeAdID"];
+        if (savedId && savedId.length > 0) {
+            _slotIdTextField.text = savedId;
+        } else {
+            _slotIdTextField.text =AppConfig.nativeID;  // 默认广告位ID
+        }
+
         _slotIdTextField.borderStyle = UITextBorderStyleRoundedRect;
         _slotIdTextField.font = [UIFont systemFontOfSize:16];
         _slotIdTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -646,6 +751,67 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         _containerView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return _containerView;
+}
+
+- (UIView *)testVideoContainer {
+    if (!_testVideoContainer) {
+        _testVideoContainer = [[UIView alloc] init];
+        _testVideoContainer.backgroundColor = [UIColor whiteColor];
+        _testVideoContainer.layer.cornerRadius = 12;
+        _testVideoContainer.layer.shadowColor = [UIColor blackColor].CGColor;
+        _testVideoContainer.layer.shadowOffset = CGSizeMake(0, 2);
+        _testVideoContainer.layer.shadowOpacity = 0.1;
+        _testVideoContainer.layer.shadowRadius = 8;
+    }
+    return _testVideoContainer;
+}
+
+- (UILabel *)testVideoTitleLabel {
+    if (!_testVideoTitleLabel) {
+        _testVideoTitleLabel = [[UILabel alloc] init];
+        _testVideoTitleLabel.text = @"🎬 测试视频（用于验证 native 广告是否打断）";
+        _testVideoTitleLabel.font = [UIFont boldSystemFontOfSize:14];
+        _testVideoTitleLabel.textColor = [UIColor darkGrayColor];
+    }
+    return _testVideoTitleLabel;
+}
+
+- (UIView *)testVideoSurface {
+    if (!_testVideoSurface) {
+        _testVideoSurface = [[UIView alloc] init];
+        _testVideoSurface.backgroundColor = [UIColor blackColor];
+        _testVideoSurface.layer.cornerRadius = 8;
+        _testVideoSurface.layer.masksToBounds = YES;
+
+        // 使用公开样片，作为"宿主 App 自有视频"的模拟
+        NSURL *url = [NSURL URLWithString:@"https://vjs.zencdn.net/v/oceans.mp4"];
+        _testVideoPlayer = [AVPlayer playerWithURL:url];
+        _testVideoPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+
+        _testVideoLayer = [AVPlayerLayer playerLayerWithPlayer:_testVideoPlayer];
+        _testVideoLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+        [_testVideoSurface.layer addSublayer:_testVideoLayer];
+
+        // 循环播放，便于观察是否被打断
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(testVideoDidReachEnd:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:_testVideoPlayer.currentItem];
+    }
+    return _testVideoSurface;
+}
+
+- (UIButton *)testVideoButton {
+    if (!_testVideoButton) {
+        _testVideoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_testVideoButton setTitle:@"▶️ 播放测试视频" forState:UIControlStateNormal];
+        [_testVideoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _testVideoButton.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+        _testVideoButton.backgroundColor = [UIColor systemPurpleColor];
+        _testVideoButton.layer.cornerRadius = 6;
+        [_testVideoButton addTarget:self action:@selector(testVideoButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _testVideoButton;
 }
 
 - (void)onBackgroundTapped {

@@ -13,6 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class AdbidNativeAd;
+@class AdbidNativeMediaView;
 
 @protocol AdbidNativeAdDelegate <NSObject>
 /// 广告加载成功
@@ -50,6 +51,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, readwrite) UIViewController *rootViewController;
 
 @property (nonatomic, assign) BOOL shouldMuted; //设置静音
+
+/// SDK 内部使用：由 AdbidNativeView 在 refreshData 时绑定，曝光回调到达后由 SDK 触发播放
+@property (nonatomic, weak) AdbidNativeMediaView *mediaView;
 /**
  *  广告最大请求时长，单位毫秒。默认3000 , 最小500毫秒
  */

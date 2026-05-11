@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol AdbidNativeAdapterDelegate <NSObject>
 @optional
 /// 素材加载成功
-- (void)adapterDidLoadNativeAd:(id)adapter data:(NSDictionary*)resource;
+/// data 素材
+/// resource 本地素材
+- (void)adapterDidLoadNativeAd:(id)adapter data:(NSDictionary*)data  localResource:(NSDictionary*)resource;
 /// 加载失败
 - (void)adapter:(id)adapter didFailToLoadNativeAdWithError:(NSError *)error;
 /// 展示成功

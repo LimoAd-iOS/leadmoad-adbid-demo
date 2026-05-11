@@ -238,6 +238,7 @@
     self.splashAd.delegate = self;
     // 加载广告，根据底部视图开关状态调整高度
     [self.splashAd loadAd];
+   // [self.splashAd loadAdWithToken:nil];
 }
 
 - (NSString*)statusLog:(NSString*)text {

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @class AdbidNativeVideoObj;
@@ -25,6 +25,17 @@ NS_ASSUME_NONNULL_BEGIN
  广告图标
  */
 @property (nonatomic, copy, readonly) NSString *iconUrl;
+
+/**
+ 广告logo
+ */
+@property (nonatomic, copy) UIImage *logoImage;
+
+/**
+ 广告logo url(暂时没有值)
+ */
+@property (nonatomic, copy, readonly) NSString *logoUrl;
+
 /**
  广告是图片还是视频
  */

@@ -1,0 +1,6 @@
+framework module UBixAdbidAdapter {
+  umbrella header "UBixAdbidAdapter.h"
+  export *
+
+  module * { export * }
+}
