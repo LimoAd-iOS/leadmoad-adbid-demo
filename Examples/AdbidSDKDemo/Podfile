@@ -6,7 +6,7 @@ target 'AdbidSDKDemo' do
   use_frameworks!
   
   pod 'AdbidSDK','2.1.1.17'
-  pod 'UBixAdbidAdapter','1.0.2'
- # pod 'FunLinkAdbidAdapter','1.0.2'
+  #pod 'UBixAdbidAdapter','1.0.2'
+  #pod 'FunLinkAdbidAdapter','1.0.2'
   
 end

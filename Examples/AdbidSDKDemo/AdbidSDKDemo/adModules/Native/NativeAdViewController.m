@@ -783,8 +783,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         _testVideoSurface.layer.cornerRadius = 8;
         _testVideoSurface.layer.masksToBounds = YES;
 
-        // 使用公开样片，作为"宿主 App 自有视频"的模拟
-        NSURL *url = [NSURL URLWithString:@"https://vjs.zencdn.net/v/oceans.mp4"];
+        NSURL *url = [NSURL URLWithString:@"https://www.w3schools.com/html/mov_bbb.mp4"];
         _testVideoPlayer = [AVPlayer playerWithURL:url];
         _testVideoPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
 
