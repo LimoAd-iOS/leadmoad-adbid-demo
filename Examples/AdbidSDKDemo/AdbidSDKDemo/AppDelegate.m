@@ -43,9 +43,8 @@
     
     AdbidSDKConfiguration *configuration = [AdbidSDKConfiguration configuration];
     configuration.appID = [AppConfig appID];
- 
+
     AdCustomPermissionController* adP = [[AdCustomPermissionController alloc]init];
-    adP.allowLocation = YES;
     configuration.adCustomController = adP;
     NSString* sdkVersion = [AdbidSDKConfiguration sdkVersion];
     NSLog(@"领摩聚合SDK 初始化 version=%@ 时间=%@",sdkVersion,[TimeUtil times][0]);
