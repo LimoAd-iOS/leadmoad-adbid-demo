@@ -1,6 +1,0 @@
-framework module FunLinkAdbidAdapter {
-  umbrella header "FunLinkAdbidAdapter.h"
-  export *
-
-  module * { export * }
-}
