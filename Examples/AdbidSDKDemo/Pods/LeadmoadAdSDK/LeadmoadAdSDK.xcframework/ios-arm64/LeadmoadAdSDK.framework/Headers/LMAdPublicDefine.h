@@ -60,7 +60,9 @@ typedef NS_ENUM(NSInteger, LMAdPlatform) {
     LMAdPlatform_GorMore = 15,
     LMAdPlatform_TaKu = 16,
     LMAdPlatform_FunLink = 17,
-    LMAdPlatform_YingShi = 18, //萤石
+    LMAdPlatform_Ezviz = 18, //萤石
+    LMAdPlatform_MS = 19, //美数
+    LMAdPlatform_Sigmob = 20,
 };
 
 typedef NS_ENUM(NSInteger, LeadmoadAdType) {
@@ -105,6 +107,14 @@ typedef NS_ENUM(NSInteger, LeadmoadInteractionType) {
 typedef NS_ENUM(NSInteger, LeadmoadEventType) {
     LeadmoadEventType_Impression           = 1, // 曝光
     LeadmoadEventType_Click                = 2, // 点击
+};
+
+// 摇一摇检测模式
+// 单向：任一轴单次峰值跨阈值即可触发（更灵敏）
+// 双向：窗口内任一轴出现 ≥N 个交替符号峰值（来回往返）才触发
+typedef NS_ENUM(NSInteger, LeadmoadShakeMode) {
+    LeadmoadShakeMode_OneWay = 1, // 单向（默认）
+    LeadmoadShakeMode_TwoWay = 2, // 双向（来回往返）
 };
 
 typedef NS_ENUM(NSInteger, LeadmoadBidResult) {

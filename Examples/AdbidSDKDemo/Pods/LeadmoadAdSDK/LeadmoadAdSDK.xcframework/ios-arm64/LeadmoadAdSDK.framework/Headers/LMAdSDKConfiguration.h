@@ -18,11 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 默认LMAdLogLevelNone
 @property (nonatomic, assign) LMAdLogLevel logLevel;
-
 /// 必传
-@property (nonatomic, copy) NSString *appID;
+@property (nonatomic, copy) NSString * appID;
 /// 可选
-@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, copy) NSString * userId;
+@property (nonatomic, copy) NSString * idfa;
 /// 可选
 @property (nonatomic, strong) NSNumber* latitude;
 /// 可选

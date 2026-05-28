@@ -27,6 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *iconUrl;
 
 /**
+ 广告图标图片
+ */
+@property (nonatomic, strong, nullable) UIImage *iconImage;
+
+/**
  广告logo
  */
 @property (nonatomic, copy) UIImage *logoImage;
@@ -40,6 +45,18 @@ NS_ASSUME_NONNULL_BEGIN
  广告是图片还是视频
  */
 @property (nonatomic, assign, readonly) bool isVideoAd;
+
+/**
+ 是否模版广告（YES 时调用方不再读 title/desc/iconUrl/imageAdInfo 等字段，
+ 调用 registerContainer 后由适配器把模版视图挂到 containerView 上）
+ */
+@property (nonatomic, assign) BOOL isExpressAd;
+
+/**
+ 视频是否由 adapter 接管渲染（YES 时 SDK 不在 AdbidNativeMediaView 上构造自己的播放器，
+ adapter 会通过 extraConfig[@"mediaView"] 拿到 AdbidNativeMediaView 并把自家 SDK 的播放视图嵌进去）
+ */
+@property (nonatomic, assign) BOOL externalMediaView;
 
 /**
  广告是图片，该属性有值

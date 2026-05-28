@@ -54,7 +54,7 @@ typedef NS_ENUM(int, AdbidUserGender) {
 
 @property (nonatomic, assign) BOOL logDirectSend;
 
-+ (instancetype)configuration;
++ (instancetype)configuration NS_SWIFT_NAME(configurationShared());
 
 @end
 

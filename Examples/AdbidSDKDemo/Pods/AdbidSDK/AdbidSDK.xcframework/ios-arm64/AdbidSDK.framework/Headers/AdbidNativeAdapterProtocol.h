@@ -66,6 +66,18 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)registerContainer:(__kindof UIView *)containerView mainImageView:(__kindof UIImageView *) mainImageView
        withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews;
+
+@optional
+/*
+ * 带额外配置的注册方法。已知 extraConfig key：
+ *   - mediaView      AdbidNativeMediaView*  App 持有的媒体视图,adapter 在视频广告时可把自家 SDK 的播放视图嵌进它
+ *   - adFrame / mediaViewFrame / sizeToFit / adLogoFrame / adOptionsFrame / networkLogoFrame / videoPlayType
+ *     模版广告专用,见 AdbidNativeAd.h 注释
+ */
+- (void)registerContainer:(__kindof UIView *)containerView
+            mainImageView:(__kindof UIImageView *)mainImageView
+       withClickableViews:(NSArray<__kindof UIView *> *)clickableViews
+              extraConfig:(NSDictionary *)extraConfig;
 //是否可以显示
 - (BOOL)isReady;
 

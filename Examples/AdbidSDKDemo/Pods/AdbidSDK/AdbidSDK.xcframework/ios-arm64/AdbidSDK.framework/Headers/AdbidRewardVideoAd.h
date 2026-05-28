@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <AdbidSDK/AdbidBidLossInfo.h>
+#import <AdbidSDK/AdbidAdInfoModel.h>
+
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
@@ -49,12 +51,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger maxLoadTime;
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
+// 广告信息
+@property (nonatomic, readonly) AdbidAdInfoModel* adInfo;
 
 @property (nonatomic, assign) BOOL shouldMuted; //设置静音
 
 @property (nonatomic, strong) NSDictionary* LocalExtra; //设置本地数据用于激励
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
+
+- (NSString*)getRequestId;
+
 /// 发起拉取广告请求
 - (void)loadAd;
 
@@ -62,8 +69,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 必须在主线程调用
 - (void)showAd:(UIViewController *)viewController;
-/// 竞胜/竞败上报
+/// price 二价（即竞败方最高价）
 - (void)winNotice:(NSInteger)price;
+/// info 竞胜方平台  竞胜方最高价
 - (void)lossNotice:(AdbidBidLossInfo *)info;
 ///是否准备好
 - (BOOL)isReady;

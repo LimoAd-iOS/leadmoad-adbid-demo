@@ -24,6 +24,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
+/// 带 extraConfig 的渲染重载，未 override 的子类回落到 3 参版本
+- (void)registerContainer:(__kindof UIView *)containerView
+            mainImageView:(__kindof UIImageView *)mainImageView
+       withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews
+              extraConfig:(nullable NSDictionary *)extraConfig;
+
 //是否可以显示
 - (BOOL)isReady;
 

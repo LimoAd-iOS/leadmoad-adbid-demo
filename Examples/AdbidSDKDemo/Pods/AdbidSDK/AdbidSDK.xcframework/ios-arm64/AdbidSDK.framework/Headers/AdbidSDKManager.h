@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString*)getSDKInfo;
 
++ (NSString*)sdkVersion;
+
 @end
 
 NS_ASSUME_NONNULL_END

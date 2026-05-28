@@ -40,53 +40,46 @@
 }
 // MARK: - setup lm sdk
 - (void)setupAdbidAdSDK {
-    
     AdbidSDKConfiguration *configuration = [AdbidSDKConfiguration configuration];
     configuration.appID = [AppConfig appID];
-
     AdCustomPermissionController* adP = [[AdCustomPermissionController alloc]init];
     configuration.adCustomController = adP;
     NSString* sdkVersion = [AdbidSDKConfiguration sdkVersion];
-    NSLog(@"领摩聚合SDK 初始化 version=%@ 时间=%@",sdkVersion,[TimeUtil times][0]);
+    configuration.debugMode = YES;
+    configuration.logLevel = AdbidLogLevelWarning;
+    NSLog(@"❤️领摩聚合SDK 第一次初始化开始 version=%@ 时间=%@",sdkVersion,[TimeUtil times][0]);
     [AdbidSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *_Nullable error) {
         if (success) {
-            NSLog(@"领摩聚合SDK 初始化成功！时间=%@",[TimeUtil times][0]);
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                  [[AdbidSplashHotAD shared]loadOrShowSplashHotAD];
-            });
+            NSLog(@"❤️领摩聚合SDK 第一次初始化成功！时间=%@",[TimeUtil times][0]);
+//            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//                  [[AdbidSplashHotAD shared]loadOrShowSplashHotAD];
+//            });
         } else {
-            NSLog(@"领摩聚合SDK 初始化失败！时间=%@",[TimeUtil times][0]);
+            NSLog(@"❤️领摩聚合SDK 第一次初始化失败！时间=%@",[TimeUtil times][0]);
         }
     }];
-   // self.window.rootViewController = [self rootViewController];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self requestIDFATracking];
-    });
-}
-
-- (void)requestIDFATracking {
-    if (@available(iOS 14, *)) {
-        // iOS14及以上版本需要先请求权限
-        [ATTrackingManager
-            requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-                // 获取到权限后，依然使用老方法获取idfa
-                if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
-                    NSString *idfa = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
-                    NSLog(@"[AppDelegate] %@", idfa);
-                } else {
-                    NSLog(@"[AppDelegate] 请在设置-隐私-跟踪中允许App请求跟踪");
-                }
-            }];
-    } else {
-        // iOS14以下版本依然使用老方法
-        // 判断在设置-隐私里用户是否打开了广告跟踪
-        if ([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled]) {
-            NSString *idfa = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
-            NSLog(@"[AppDelegate] %@", idfa);
+    
+    NSLog(@"❤️领摩聚合SDK 第二次初始化开始 version=%@ 时间=%@",sdkVersion,[TimeUtil times][0]);
+    [AdbidSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *_Nullable error) {
+        if (success) {
+            NSLog(@"❤️领摩聚合SDK 第二次初始化成功！时间=%@",[TimeUtil times][0]);
+            
         } else {
-            NSLog(@"[AppDelegate] 请在设置-隐私-广告中打开广告跟踪功能");
+            NSLog(@"❤️领摩聚合SDK 第二次初始化失败！时间=%@",[TimeUtil times][0]);
         }
-    }
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"❤️领摩聚合SDK 第三次初始化开始 version=%@ 时间=%@",sdkVersion,[TimeUtil times][0]);
+        [AdbidSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *_Nullable error) {
+            if (success) {
+                NSLog(@"❤️领摩聚合SDK 第三次初始化成功！时间=%@",[TimeUtil times][0]);
+                
+            } else {
+                NSLog(@"❤️领摩聚合SDK 第三次初始化失败！时间=%@",[TimeUtil times][0]);
+            }
+        }];
+    });
 }
 
 - (UIViewController *)rootViewController {
