@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId NS_DESIGNATED_INITIALIZER;
 
+- (void)updateCurrentRequestId:(NSString *)requestId;
+
 - (instancetype)init NS_UNAVAILABLE;
 //是否可以显示
 - (BOOL)isReady;

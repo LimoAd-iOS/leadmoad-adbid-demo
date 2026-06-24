@@ -236,9 +236,7 @@
     [self addLog:message];
     self.splashAd = [[AdbidSplashAd alloc] initWithSlotId:self.adIdTextField.text];
     self.splashAd.delegate = self;
-    // 加载广告，根据底部视图开关状态调整高度
-    [self.splashAd loadAd];
-   // [self.splashAd loadAdWithToken:nil];
+    [self.splashAd loadAdWithToken:@"2222222222"];
 }
 
 - (NSString*)statusLog:(NSString*)text {

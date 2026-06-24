@@ -40,6 +40,7 @@
 }
 // MARK: - setup lm sdk
 - (void)setupAdbidAdSDK {
+    
     AdbidSDKConfiguration *configuration = [AdbidSDKConfiguration configuration];
     configuration.appID = [AppConfig appID];
     AdCustomPermissionController* adP = [[AdCustomPermissionController alloc]init];
@@ -58,6 +59,12 @@
             NSLog(@"❤️领摩聚合SDK 第一次初始化失败！时间=%@",[TimeUtil times][0]);
         }
     }];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"主线程长任务开始");
+        [NSThread sleepForTimeInterval:5];
+        NSLog(@"主线程长任务结束");
+    });
     
     NSLog(@"❤️领摩聚合SDK 第二次初始化开始 version=%@ 时间=%@",sdkVersion,[TimeUtil times][0]);
     [AdbidSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *_Nullable error) {

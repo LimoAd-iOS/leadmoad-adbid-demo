@@ -78,6 +78,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)registerContainer:(__kindof UIView *)containerView
        withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews;
 
+- (void)registerContainer:(__kindof UIView *)containerView
+            mainImageView:(__kindof UIView *_Nullable)mainImageView
+       withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews;
+
 - (void)winNotice:(NSInteger)price;
 - (void)lossNotice:(LMAdBidLossInfo *)info;
 

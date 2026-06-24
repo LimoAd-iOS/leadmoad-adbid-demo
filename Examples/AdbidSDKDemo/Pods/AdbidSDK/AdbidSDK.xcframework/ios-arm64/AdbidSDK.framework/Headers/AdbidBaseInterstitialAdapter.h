@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString* currentRequestId;
 @property (nonatomic, strong) UIViewController* viewController;
 - (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId NS_DESIGNATED_INITIALIZER;
+- (void)updateCurrentRequestId:(NSString *)requestId;
 - (instancetype)init NS_UNAVAILABLE;
 
 +(BOOL)isExistSDK;

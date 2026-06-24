@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) UIImage *logoImage;
 
 /**
- 广告logo url(暂时没有值)
+ 广告logo  logoImage 没值的话，判断logoUrl是否有返回。
  */
 @property (nonatomic, copy, readonly) NSString *logoUrl;
 
