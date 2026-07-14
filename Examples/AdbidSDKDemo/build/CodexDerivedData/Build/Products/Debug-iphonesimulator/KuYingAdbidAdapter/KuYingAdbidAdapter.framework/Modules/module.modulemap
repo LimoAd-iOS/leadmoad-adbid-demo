@@ -1,0 +1,6 @@
+framework module KuYingAdbidAdapter {
+  umbrella header "KuYingAdbidAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

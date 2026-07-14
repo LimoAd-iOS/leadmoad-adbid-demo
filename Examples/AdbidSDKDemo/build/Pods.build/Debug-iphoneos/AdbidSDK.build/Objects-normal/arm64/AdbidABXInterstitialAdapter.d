@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Pods.build/Debug-iphoneos/AdbidSDK.build/module.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/Aggregation/LMAdapter/Interstitial/AdbidABXInterstitialAdapter.m \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/Pods/Target\ Support\ Files/AdbidSDK/AdbidSDK-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/ObjectiveC.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/Aggregation/LMAdapter/Interstitial/AdbidABXInterstitialAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/Interstitial/AdbidBaseInterstitialAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/Interstitial/AdbidInterstitialAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Configuration/AdbidBidLossInfo.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Configuration/AdbidPublicDefine.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/Core/Utility/AdbidInternalLogger.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/Core/Utility/AdbidInternalDebugConfig.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/Core/Utility/AdbidLogger.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/Aggregation/LMAdapter/Base/LMAdAdapterCommonHeader.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdbidSDK.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdMoudles/Splash/AdbidSplashAd.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/AdbidAdInfoModel.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdMoudles/Interstitial/AdbidInterstitialAd.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdMoudles/RewardVideo/AdbidRewardVideoAd.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdMoudles/Native/AdbidNativeAd.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdMoudles/Native/AdbidNativeObj.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdMoudles/Native/AdbidNativeView.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Manager/AdbidSDKManager.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Configuration/AdbidSDKConfiguration.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/AdMoudles/Native/AdbidNativeMediaView.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/Splash/AdbidBaseSplashAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/Splash/AdbidSplashAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/RewardVideo/AdbidBaseRewardVideoAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/RewardVideo/AdbidRewardVideoAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/Native/AdbidBaseNativeAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/Native/AdbidNativeAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/AdbidBaseInitAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/API/Base/AdibidAdInitArgument.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreLocation.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/SDK/AdbidSDK/AdbidSDK/Aggregation/LMAdapter/Base/NSDictionary+AdbidLMSafe.h

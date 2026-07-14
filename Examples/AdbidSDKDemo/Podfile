@@ -3,7 +3,21 @@ source 'https://github.com/CocoaPods/Specs.git'
 workspace '../../AdbidSDKWorkspace.xcworkspace'
 
 target 'AdbidSDKDemo' do
+  
   use_frameworks!
-  pod 'AdbidSDK', :git => 'https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git', :tag => '2.1.1.40'
-  pod 'LeadmoadAdSDK', :git => 'https://gitee.com/leadmoad/leadmoad-adx-pods.git', :tag => '1.0.51'
+  pod 'ReactiveObjC','3.1.1'
+  pod 'AdbidSDK','2.1.1.46'
+  pod 'YSAdbidAdapter','1.0.10'
+  pod 'LeadmoadAdSDK', "1.0.61"
+end
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      # 关闭Bitcode
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      # 可选：指定有效架构（避免其他编译问题）
+      config.build_settings['VALID_ARCHS'] = 'arm64 x86_64'
+    end
+  end
 end

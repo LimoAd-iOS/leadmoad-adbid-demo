@@ -1,0 +1,6 @@
+framework module LeadmoadAdSDK {
+  umbrella header "LeadmoadAdSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,32 +1,29 @@
 PODS:
-  - AdbidSDK (2.1.1.40):
-    - LeadmoadAdSDK (~> 1.0)
-  - LeadmoadAdSDK (1.0.51)
+  - AdbidSDK (2.1.1.46)
+  - LeadmoadAdSDK (1.0.61)
+  - ReactiveObjC (3.1.1)
+  - YSAdbidAdapter (1.0.10):
+    - AdbidSDK
 
 DEPENDENCIES:
-  - AdbidSDK (from `https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git`, tag `2.1.1.40`)
-  - LeadmoadAdSDK (from `https://gitee.com/leadmoad/leadmoad-adx-pods.git`, tag `1.0.51`)
+  - AdbidSDK (= 2.1.1.46)
+  - LeadmoadAdSDK (= 1.0.61)
+  - ReactiveObjC (= 3.1.1)
+  - YSAdbidAdapter (= 1.0.10)
 
-EXTERNAL SOURCES:
-  AdbidSDK:
-    :git: https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git
-    :tag: 2.1.1.40
-  LeadmoadAdSDK:
-    :git: https://gitee.com/leadmoad/leadmoad-adx-pods.git
-    :tag: 1.0.51
-
-CHECKOUT OPTIONS:
-  AdbidSDK:
-    :git: https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git
-    :tag: 2.1.1.40
-  LeadmoadAdSDK:
-    :git: https://gitee.com/leadmoad/leadmoad-adx-pods.git
-    :tag: 1.0.51
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AdbidSDK
+    - LeadmoadAdSDK
+    - ReactiveObjC
+    - YSAdbidAdapter
 
 SPEC CHECKSUMS:
-  AdbidSDK: a4c4b8bf225f6d133bd2a32ecbeea1eb88b82f27
-  LeadmoadAdSDK: 3da3c267f2a184a04e4f5385d43b1b824203f15a
+  AdbidSDK: 730509547f64424b9a96e5f25bf4eaee30b7c9b2
+  LeadmoadAdSDK: b001f5d13059cbc9b9cd138f3e634cae7b5a4148
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  YSAdbidAdapter: 288d2d03f3f500decfc12b68cc7c1e6722c5db2f
 
-PODFILE CHECKSUM: 65b69377c8338dce44d15af4974ab9a8dfe54771
+PODFILE CHECKSUM: 2420727c3a3a6e121c30c206094e7aa2f3bf6b44
 
 COCOAPODS: 1.16.2

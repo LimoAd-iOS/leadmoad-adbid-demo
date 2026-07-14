@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'AdbidSDK' in project 'Pods' (no dependencies)

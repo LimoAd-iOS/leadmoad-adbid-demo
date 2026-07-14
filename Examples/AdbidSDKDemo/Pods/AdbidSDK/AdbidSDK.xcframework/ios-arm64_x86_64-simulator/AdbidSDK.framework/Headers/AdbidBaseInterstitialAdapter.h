@@ -23,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 
 +(BOOL)isExistSDK;
+
+//是否可以显示
+- (BOOL)isReady;
+
 @end
 
 NS_ASSUME_NONNULL_END

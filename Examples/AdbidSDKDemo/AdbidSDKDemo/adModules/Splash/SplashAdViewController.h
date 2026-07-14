@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SplashAdViewController : UIViewController
 
+- (void)runServerBidTokenConfigCostTestWithSlotId:(NSString *)slotId;
+
 @end
 
 NS_ASSUME_NONNULL_END

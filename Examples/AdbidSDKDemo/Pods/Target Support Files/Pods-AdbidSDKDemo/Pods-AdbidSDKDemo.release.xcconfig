@@ -1,11 +1,12 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AdbidSDK" "${PODS_ROOT}/LeadmoadAdSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/AdbidSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/LeadmoadAdSDK"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveObjC" "${PODS_ROOT}/AdbidSDK" "${PODS_ROOT}/LeadmoadAdSDK" "${PODS_ROOT}/YSAdbidAdapter" "${PODS_XCFRAMEWORKS_BUILD_DIR}/AdbidSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/LeadmoadAdSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/YSAdbidAdapter"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveObjC/ReactiveObjC.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "AdbidSDK" -framework "Foundation" -framework "LeadmoadAdSDK" -framework "UIKit"
-OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/AdbidSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/LeadmoadAdSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "AdbidSDK" -framework "Foundation" -framework "LeadmoadAdSDK" -framework "ReactiveObjC" -framework "UIKit" -framework "YSAdvSDK" -framework "ysAdbidAdapter"
+OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/AdbidSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/LeadmoadAdSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/ReactiveObjC" "-F${PODS_CONFIGURATION_BUILD_DIR}/YSAdbidAdapter"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

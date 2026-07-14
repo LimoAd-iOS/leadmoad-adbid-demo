@@ -1,0 +1,24 @@
+moduledependenciestarget: \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAdSDK.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYPublicLoadingDelegate.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYSDKConfiguration.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYDebuggerConfig.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYDebuggerConfigDefine.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYDeviceInfoList.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYShowConfig.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAPI.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAdFormatDefine.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYSDKGlobalSetting.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYBaseAd.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAdRequest.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAd.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAdEcpmInfo.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAdPlaceInfo.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYWinInfo.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYLossInfo.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYAdLogger.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYSplashAd.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/CodexDerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/KuYingAdbidAdapter/LMKYAdSDK.framework/Headers/LMKYPubSplashDelegate.h

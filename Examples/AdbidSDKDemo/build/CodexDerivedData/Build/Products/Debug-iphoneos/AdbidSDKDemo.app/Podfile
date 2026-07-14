@@ -1,0 +1,65 @@
+platform :ios, '13.0'
+source 'https://github.com/CocoaPods/Specs.git'
+workspace '../../AdbidSDKWorkspace.xcworkspace'
+
+target 'AdbidSDKDemo' do
+  
+  use_frameworks!
+  
+  #萤石SDK依赖
+#  pod 'Masonry','1.1.0'
+   pod 'ReactiveObjC','3.1.1'
+#  pod 'lottie-ios','2.5.3'
+  
+  #pod 'AdbidSDK','2.1.1.38'
+  # pod 'LeadmoadAdbidAdapter','1.0.1'
+  # pod 'UBixAdbidAdapter','1.0.1'
+  #pod 'KSAdbidAdapter','1.0.1'
+  #  pod 'GDTAdbidAdapter','1.0.1'
+  # pod 'TaKuAdbidAdapter','1.0.1'
+  # pod 'MSAdbidAdapter','1.0.3'
+  # pod 'FunLinkAdbidAdapter','1.0.3'  // , :tag => '1.0.1'
+   
+   #pod 'AdbidSDK','2.1.1.41'
+  pod 'LeadmoadAdSDK', :path => '/Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK'
+  #pod 'YSAdbidAdapter', :git => 'https://gitee.com/pekingcy/ys-adapter-adbid-pods.git',:tag => '1.0.7'
+  #pod 'YSAdbidAdapter', '1.0.7'
+  #pod 'UBixAdbidAdapter', '1.0.4'
+  pod 'UBixAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/ubix-adapter-adbid'
+  #pod 'FunLinkAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/funlink-adapter-adbid'
+  #pod 'FunlinkSDK', '2.9.0.2.1'
+  #pod 'FunlinkSDK', '2.9.0.1.9'
+  
+  #pod 'SigmobAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/sigmob-adapter-adbid'
+    
+    #pod 'TaKuAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/taku-adapter-adbid'
+  # 'GDTAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/gdt-adapter-adbid'
+  #pod 'KSAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/ks-adapter-adbid'
+  #pod 'MSAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/ms-adapter-adbid'
+  #pod 'YSAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/ys-adapter-adbid'
+  # pod 'LeadmoadAdSDK', "1.0.54"
+  #pod 'UBiXMerakSDK', "2.10.0.11"
+  pod 'AdbidSDK', :path => '../../SDK/AdbidSDK'
+  #pod 'LMKYAdbidAdapter', :path => '/Users/chaizhiyong/Documents/LOMO/kuying-adapter'
+#   pod 'GDTMobSDK','4.15.70'
+#  pod 'KSAdSDK','4.12.20.1'
+#  pod  'FunlinkSDK','2.9.0.0.7'
+#    pod 'AnyThinkiOS','6.5.43'
+#    pod 'AnyThinkMediationGromoreAdapter','7.4.0.0.0'
+#    pod 'AnyThinkMediationAdxSmartdigimktCNAdapter','6.5.45.0'
+#  
+end
+
+#萤石SDK太老出现编译问题系统库libarclite在Xcode15以上已经废弃，ios13 以上跑 ios 12 一下SDK 编译报错，SDK does not contain 'libarclite' at the path '/Applications/Xcode_26.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphoneos.a'; try increasing the minimum deployment target 在下边添加 config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      # 关闭Bitcode
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      # 可选：指定有效架构（避免其他编译问题）
+      config.build_settings['VALID_ARCHS'] = 'arm64 x86_64'
+    end
+  end
+end

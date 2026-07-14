@@ -4,15 +4,15 @@
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>dz://</string>
+		<string>hmjc</string>
+		<string>hemashow://</string>
+		<string>hmjc://</string>
 		<string>taobao</string>
 		<string>pinduoduo</string>
-		<string>openapp.jdmobile</string>
 		<string>imeituan</string>
-		<string>iosamap</string>
 		<string>alipay</string>
 		<string>baiduboxapp</string>
-		<string>vipshop</string>
-		<string>tmall</string>
 		<string>meituanwaimai</string>
 		<string>kwai</string>
 		<string>eleme</string>
@@ -60,5 +60,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCellularNetworkUsageDescription</key>
+	<string>为了获取运营商信息，需要使用蜂窝移动网络</string>
+	<key>com.apple.security.network.cellplaninfo</key>
+	<true/>
 </dict>
 </plist>

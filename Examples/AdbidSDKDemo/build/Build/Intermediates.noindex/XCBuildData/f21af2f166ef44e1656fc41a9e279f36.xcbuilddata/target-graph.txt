@@ -1,0 +1,34 @@
+Target dependency graph (11 targets)
+Target 'AdbidSDKDemo' in project 'AdbidSDKDemo'
+➜ Implicit dependency on target 'Pods-AdbidSDKDemo' in project 'Pods' via file 'Pods_AdbidSDKDemo.framework' in build phase 'Link Binary'
+➜ Implicit dependency on target 'AdbidSDK' in project 'Pods' via options '-framework AdbidSDK' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'FunLinkAdbidAdapter' in project 'Pods' via options '-framework FunLinkAdbidAdapter' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'LeadmoadAdSDK' in project 'Pods' via options '-framework LeadmoadAdSDK' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'ReactiveObjC' in project 'Pods' via options '-framework ReactiveObjC' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'UBixAdbidAdapter' in project 'Pods' via options '-framework UBixAdbidAdapter' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'YSAdbidAdapter' in project 'Pods' via options '-framework YSAdbidAdapter' in build setting 'OTHER_LDFLAGS'
+Target 'Pods-AdbidSDKDemo' in project 'Pods'
+➜ Explicit dependency on target 'AdbidSDK' in project 'Pods'
+➜ Explicit dependency on target 'FunLinkAdbidAdapter' in project 'Pods'
+➜ Explicit dependency on target 'FunlinkSDK' in project 'Pods'
+➜ Explicit dependency on target 'LeadmoadAdSDK' in project 'Pods'
+➜ Explicit dependency on target 'ReactiveObjC' in project 'Pods'
+➜ Explicit dependency on target 'UBiXDaq' in project 'Pods'
+➜ Explicit dependency on target 'UBiXMerakSDK' in project 'Pods'
+➜ Explicit dependency on target 'UBixAdbidAdapter' in project 'Pods'
+➜ Explicit dependency on target 'YSAdbidAdapter' in project 'Pods'
+Target 'YSAdbidAdapter' in project 'Pods'
+➜ Explicit dependency on target 'AdbidSDK' in project 'Pods'
+Target 'UBixAdbidAdapter' in project 'Pods'
+➜ Explicit dependency on target 'AdbidSDK' in project 'Pods'
+➜ Explicit dependency on target 'UBiXMerakSDK' in project 'Pods'
+Target 'UBiXMerakSDK' in project 'Pods'
+➜ Explicit dependency on target 'UBiXDaq' in project 'Pods'
+Target 'UBiXDaq' in project 'Pods' (no dependencies)
+Target 'ReactiveObjC' in project 'Pods' (no dependencies)
+Target 'LeadmoadAdSDK' in project 'Pods' (no dependencies)
+Target 'FunLinkAdbidAdapter' in project 'Pods'
+➜ Explicit dependency on target 'AdbidSDK' in project 'Pods'
+➜ Explicit dependency on target 'FunlinkSDK' in project 'Pods'
+Target 'FunlinkSDK' in project 'Pods' (no dependencies)
+Target 'AdbidSDK' in project 'Pods' (no dependencies)

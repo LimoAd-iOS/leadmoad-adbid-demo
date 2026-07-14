@@ -1,0 +1,6 @@
+framework module YSAdbidAdapter {
+  umbrella header "YSAdbidAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

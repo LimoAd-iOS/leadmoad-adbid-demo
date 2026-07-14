@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/LMAdPublicDefine.h</key>
 		<data>
-		dP/NbaQWKedTu/MRr5tWUQ/MV14=
+		abnTHCCfJuxI0vXGo02SBAXsqmg=
 		</data>
 		<key>Headers/LMAdSDKConfiguration.h</key>
 		<data>
@@ -64,6 +64,26 @@
 		<data>
 		NT2SptpYD6GI7+aSyaBGCZWpuHc=
 		</data>
+		<key>LMAdRequestManager.m.orig</key>
+		<data>
+		rBkR7iLYVlnLGXmuI9BxBnXaTA0=
+		</data>
+		<key>LMDeveiceTools.m.orig</key>
+		<data>
+		2f18eBHalilX/K54p0twLU9ZHHI=
+		</data>
+		<key>LMShakeInteractionDetector.h.orig</key>
+		<data>
+		OqKbm8Dzcz5zMTmllinh8h8DWUo=
+		</data>
+		<key>LMShakeInteractionDetector.m.orig</key>
+		<data>
+		Pvehm+yBYMOVxQvTZ88avZztcD4=
+		</data>
+		<key>LMSplashRTBAd.m.orig</key>
+		<data>
+		yBxYnV9MB6UfglxgN436C44W9EY=
+		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		8UpmyK71dHzGySKP3yc+Ynqaj50=
@@ -86,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7rk1P+6pdUFg9SnXBogm21v2yEJs39+yrSSTQp2ryaQ=
+			wL4Lkksri/ZmkYxHDKeVOUr+mi+aXu3o87A8be2vTsE=
 			</data>
 		</dict>
 		<key>Headers/LMAdSDKConfiguration.h</key>
@@ -171,6 +191,41 @@
 			<key>hash2</key>
 			<data>
 			abpir29OKwfgSvVJx90yurrhiI+CdZraGvrJbee6MYk=
+			</data>
+		</dict>
+		<key>LMAdRequestManager.m.orig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NXjxeoQZUuOP7RcNZoaws6o9L30/6R0kePETUZ9LY4U=
+			</data>
+		</dict>
+		<key>LMDeveiceTools.m.orig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Yq8Xf6QEMskKA0YGvYNXf9ZFV+VzV7IcFHhdwVzppvE=
+			</data>
+		</dict>
+		<key>LMShakeInteractionDetector.h.orig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rRiFRoAIVFRD+4xW5DOyOwYaHWvmfM2D3zR68Bdw+YI=
+			</data>
+		</dict>
+		<key>LMShakeInteractionDetector.m.orig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tIeuQn5UEjlvR7mvmTHGynVKlJkznEdBsMjwY3L+OOc=
+			</data>
+		</dict>
+		<key>LMSplashRTBAd.m.orig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6z1h3bqMxcm63Qf7aoNyOrGq6/GGup7AHaPYTjAbd5A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -1,0 +1,46 @@
+dependencies: \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/LeadmoadAdSDK.build/module.modulemap \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/AdMoudles/Splash/LMSplashRTBAd.m \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/Pods/Target\ Support\ Files/LeadmoadAdSDK/LeadmoadAdSDK-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/ObjectiveC.modulemap \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/AdMoudles/Splash/LMSplashRTBAd.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/API/Configuration/LMAdPublicDefine.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/API/Configuration/LMAdBidLossInfo.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMAdCachePoolManager.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMAdInternalLogger.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMAdInternalDebugConfig.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMAdLogger.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Config/LMAdLoadConfig.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Logging/LMAdLogReporter.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Models/LMAdModel.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/LMMJExtension.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/NSObject+LMMJCoding.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/LMMJExtensionConst.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/NSObject+LMMJProperty.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/NSObject+LMMJClass.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/NSObject+LMMJKeyValue.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreData.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/LMMJProperty.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/LMMJPropertyType.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/LMMJPropertyKey.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/NSString+LMMJExtension.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMMJExtension/LMMJFoundation.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Network/LMAdProvider.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMAdSDKTools.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMCommonUtility.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/AdMoudles/Splash/Renderer/LMSplashRenderer.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Config/LMLaunchAdConfig.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/AdMoudles/Splash/LMLaunchAdButton.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaPlayer.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMCacheManager.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMImageCache.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMVideoCache.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMPathResolver.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMMetadataStore.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMFileCache.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Cache/LMCachePolicy.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Asset/LMAssetPreparer.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/LMViewUtils.h \
+  /Users/chaizhiyong/Documents/LOMO/leadmoad-ad-sdk/SDK/LeadMoadAdSDK/LeadmoadAdSDK/Core/Utility/NSDictionary+LMSafe.h

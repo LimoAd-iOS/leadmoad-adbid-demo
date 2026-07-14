@@ -7,7 +7,6 @@
 
 #import "AdbidSplashHotAD.h"
 #import "AppConfig.h"
-#import "TimeUtil.h"
 #import "AppDelegate.h"
 
 @interface AdbidSplashHotAD ()<AdbidSplashAdDelegate>
@@ -27,6 +26,14 @@
 
 @implementation AdbidSplashHotAD
 
+- (void)performOnMainThread:(dispatch_block_t)block {
+    if ([NSThread isMainThread]) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
 #pragma mark - 单例
 + (instancetype)shared {
     static AdbidSplashHotAD *sharedInstance = nil;
@@ -41,11 +48,6 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        if (self.splashHotAD) {
-            NSLog(@"【领摩广告】【热启动】 self..... = %@", self.splashHotAD);
-        } else {
-            NSLog(@"【领摩广告】【热启动】 self..... =  splashHotAD = nil");
-        }
         self.havedLoad = NO;
     }
     return self;
@@ -54,12 +56,9 @@
 #pragma mark - 公开方法
 - (void)loadOrShowSplashHotAD {
     if (self.havedLoad) {
-        NSLog(@"【领摩广告】【热启动】已缓存，去展示 -- %@", [TimeUtil times].firstObject);
         [self showLimoSplashHotAD];
     } else {
-        NSLog(@"【领摩广告】【热启动】未缓存，去加载 -- %@", [TimeUtil times].firstObject);
         self.splashHotAD = [[AdbidSplashAd alloc] initWithSlotId:[AppConfig hotID]];
-        NSLog(@"【领摩广告】【热启动】实际加载的splashHotAD = %@", self.splashHotAD);
         self.splashHotAD.delegate = self;
         
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -93,7 +92,6 @@
 }
 
 - (void)preloadAD {
-    NSLog(@"【领摩广告】【热启动】去预加载 --- %@", [TimeUtil times].firstObject);
     self.havedLoad = NO;
     self.splashHotAD = nil;
     [self loadOrShowSplashHotAD];
@@ -101,57 +99,68 @@
 
 #pragma mark - AdbidSplashAdDelegate
 - (void)splashAdDidLoad:(AdbidSplashAd *)splashAd {
-    NSLog(@"【领摩广告】【热启动】加载成功 --- %@", [TimeUtil times].firstObject);
-    if ([self.delegate respondsToSelector:@selector(splashHotAdDidLoad)]) {
-        [self.delegate splashHotAdDidLoad];
-    }
-    self.havedLoad = YES;
+    BOOL callbackOnMainThread = [NSThread isMainThread];
+    NSLog(@"热启动开屏广告加载成功回调 isMainThread=%@ 当前线程=%@",
+          callbackOnMainThread ? @"YES" : @"NO",
+          [NSThread currentThread]);
+    [self performOnMainThread:^{
+        if ([self.delegate respondsToSelector:@selector(splashHotAdDidLoad)]) {
+            [self.delegate splashHotAdDidLoad];
+        }
+        self.havedLoad = YES;
+    }];
 }
 
 - (void)splashAd:(AdbidSplashAd *)splashAd didFailToLoadWithError:(NSError *)error {
-    NSLog(@"【领摩广告】【热启动】加载失败:%@ --- %@", error, [TimeUtil times].firstObject);
-    self.havedLoad = NO;
-    if ([self.delegate respondsToSelector:@selector(splashHotAdLoadFailed:)]) {
-        [self.delegate splashHotAdLoadFailed:error];
-    }
+    [self performOnMainThread:^{
+        self.havedLoad = NO;
+        if ([self.delegate respondsToSelector:@selector(splashHotAdLoadFailed:)]) {
+            [self.delegate splashHotAdLoadFailed:error];
+        }
+    }];
 }
 
 - (void)splashAdDidShow:(AdbidSplashAd *)splashAd {
-    NSLog(@"【领摩广告】【热启动】展示成功 --- %@", [TimeUtil times].firstObject);
-    if ([self.delegate respondsToSelector:@selector(splashHotAdDidShow)]) {
-        [self.delegate splashHotAdDidShow];
-    }
+    [self performOnMainThread:^{
+        if ([self.delegate respondsToSelector:@selector(splashHotAdDidShow)]) {
+            [self.delegate splashHotAdDidShow];
+        }
+    }];
 }
 
 - (void)splashAd:(AdbidSplashAd *)splashAd didFailToShowWithError:(NSError *)error {
-    NSLog(@"【领摩广告】【热启动】展示失败 --- %@", [TimeUtil times].firstObject);
-    self.havedLoad = NO;
-    if ([self.delegate respondsToSelector:@selector(splashHotAdShowFailed:)]) {
-        [self.delegate splashHotAdShowFailed:error];
-    }
-    [self preloadAD]; // 预加载下一次
+    [self performOnMainThread:^{
+        self.havedLoad = NO;
+        if ([self.delegate respondsToSelector:@selector(splashHotAdShowFailed:)]) {
+            [self.delegate splashHotAdShowFailed:error];
+        }
+        [self preloadAD]; // 预加载下一次
+    }];
 }
 
 - (void)splashAdDidClick:(AdbidSplashAd *)splashAd {
-    NSLog(@"【领摩广告】【热启动】被点击 --- %@", [TimeUtil times].firstObject);
-    if ([self.delegate respondsToSelector:@selector(splashHotAdDidClick)]) {
-        [self.delegate splashHotAdDidClick];
-    }
+    [self performOnMainThread:^{
+        if ([self.delegate respondsToSelector:@selector(splashHotAdDidClick)]) {
+            [self.delegate splashHotAdDidClick];
+        }
+    }];
 }
 
 - (void)splashAdDidClose:(AdbidSplashAd *)splashAd {
-    NSLog(@"【领摩广告】【热启动】关闭 --- %@", [TimeUtil times].firstObject);
-    if ([self.delegate respondsToSelector:@selector(splashHotAdDidClose)]) {
-        [self.delegate splashHotAdDidClose];
-    }
-    [self preloadAD]; // 预加载下一次
+    [self performOnMainThread:^{
+        if ([self.delegate respondsToSelector:@selector(splashHotAdDidClose)]) {
+            [self.delegate splashHotAdDidClose];
+        }
+        [self preloadAD]; // 预加载下一次
+    }];
 }
 
 - (void)splashAdDidFinishConversion:(AdbidSplashAd *)interstitialAd interactionType:(AdbidAdRedirectionType)interactionType {
-    NSLog(@"【领摩广告】【热启动】深链接跳转%@ --- %@", @(YES), [TimeUtil times].firstObject);
-    if ([self.delegate respondsToSelector:@selector(splashHotAdDeepLinkOrJump:)]) {
-        [self.delegate splashHotAdDeepLinkOrJump:YES];
-    }
+    [self performOnMainThread:^{
+        if ([self.delegate respondsToSelector:@selector(splashHotAdDeepLinkOrJump:)]) {
+            [self.delegate splashHotAdDeepLinkOrJump:YES];
+        }
+    }];
 }
 
 @end

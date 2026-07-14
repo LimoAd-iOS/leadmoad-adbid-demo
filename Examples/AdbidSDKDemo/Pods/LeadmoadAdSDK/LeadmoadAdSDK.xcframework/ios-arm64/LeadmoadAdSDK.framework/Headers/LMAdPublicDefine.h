@@ -142,6 +142,9 @@ typedef NS_ENUM(NSInteger, LMAdErrorCode) {
     LMAdErrorCode_VideoPlayError = 1020, // 视频播放错误
     LMAdErrorCodeAdNotReady = 1021, // 广告未准备好
     LMAdErrorCodeAdShowing = 1022, // 广告正在展示中
+    LMAdPrepareErrorCodeAdTimeout = 1023, // 1.2s视频广告准备超时
+    LMAdImageErrorCodeAdTimeout = 1024, // 兜底图片准备失败
+    
 };
 
 // 错误描述细化，明确指出是广告ID缺失

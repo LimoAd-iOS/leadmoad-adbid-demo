@@ -1,0 +1,8 @@
+Target dependency graph (4 targets)
+Target 'UBixAdbidAdapter' in project 'Pods'
+➜ Explicit dependency on target 'AdbidSDK' in project 'Pods'
+➜ Explicit dependency on target 'UBiXMerakSDK' in project 'Pods'
+Target 'UBiXMerakSDK' in project 'Pods'
+➜ Explicit dependency on target 'UBiXDaq' in project 'Pods'
+Target 'UBiXDaq' in project 'Pods' (no dependencies)
+Target 'AdbidSDK' in project 'Pods' (no dependencies)

@@ -1,0 +1,29 @@
+moduledependenciestarget: \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidSDK-umbrella.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidSDK.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidSplashAd.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidBidLossInfo.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidPublicDefine.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidAdInfoModel.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidInterstitialAd.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidRewardVideoAd.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidNativeAd.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/adbidNativeObj.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidNativeView.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidSDKManager.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidSDKConfiguration.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidNativeMediaView.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidBaseSplashAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidSplashAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidBaseRewardVideoAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidRewardVideoAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidBaseNativeAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidNativeAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidBaseInterstitialAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidInterstitialAdapterProtocol.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdbidBaseInitAdapter.h \
+  /Users/chaizhiyong/Documents/AggAds/Examples/AdbidSDKDemo/build/Build/Products/Debug-iphoneos/AdbidSDK/AdbidSDK.framework/Headers/AdibidAdInitArgument.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/CoreLocation.framework/Modules/module.modulemap
