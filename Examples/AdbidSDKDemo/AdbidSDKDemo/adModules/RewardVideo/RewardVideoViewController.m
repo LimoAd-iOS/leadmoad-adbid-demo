@@ -19,6 +19,9 @@
 /// 展示按钮
 @property (nonatomic, strong) UIButton *showButton;
 
+/// 静音切换按钮
+@property (nonatomic, strong) UIButton *muteButton;
+
 /// 竞胜上报按钮
 @property (nonatomic, strong) UIButton *winNoticeButton;
 
@@ -34,6 +37,9 @@
 /// 广告位ID输入框
 @property (nonatomic, strong) UITextField *slotIdTextField;
 
+/// 激励视频是否静音
+@property (nonatomic, assign) BOOL rewardVideoMuted;
+
 @end
 
 @implementation RewardVideoViewController
@@ -43,6 +49,7 @@
 
     self.title = @"激励视频广告测试";
     self.view.backgroundColor = [UIColor colorWithRed:245/255.0 green:247/255.0 blue:250/255.0 alpha:1.0];
+    self.rewardVideoMuted = YES;
 
     [self setupUI];
    // [self setupRewardVideoAd];
@@ -92,6 +99,15 @@
     [self.showButton addTarget:self action:@selector(showButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self configureButton:self.showButton backgroundColor:[UIColor colorWithRed:0.18 green:0.65 blue:0.35 alpha:1.0]];
     [self.view addSubview:self.showButton];
+
+    // 静音切换按钮
+    self.muteButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.muteButton.titleLabel.font = [UIFont systemFontOfSize:16];
+    [self.muteButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.muteButton addTarget:self action:@selector(muteButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self configureButton:self.muteButton backgroundColor:[UIColor colorWithRed:0.42 green:0.46 blue:0.52 alpha:1.0]];
+    [self updateMuteButtonState];
+    [self.view addSubview:self.muteButton];
 
     // 竞胜上报按钮
     self.winNoticeButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -195,6 +211,7 @@
     self.slotIdTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.loadButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.showButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.muteButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.winNoticeButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.lossNoticeButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -207,8 +224,14 @@
         [self.slotIdTextField.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
         [self.slotIdTextField.heightAnchor constraintEqualToConstant:44],
 
+        // 静音切换按钮
+        [self.muteButton.topAnchor constraintEqualToAnchor:self.slotIdTextField.bottomAnchor constant:14],
+        [self.muteButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20],
+        [self.muteButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
+        [self.muteButton.heightAnchor constraintEqualToConstant:46],
+
         // 加载按钮
-        [self.loadButton.topAnchor constraintEqualToAnchor:self.slotIdTextField.bottomAnchor constant:14],
+        [self.loadButton.topAnchor constraintEqualToAnchor:self.muteButton.bottomAnchor constant:12],
         [self.loadButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20],
         [self.loadButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
         [self.loadButton.heightAnchor constraintEqualToConstant:46],
@@ -247,11 +270,11 @@
 
 - (void)setupRewardVideoAd {
     // 创建激励视频广告实例
-    NSString *slotId = self.slotIdTextField.text.length > 0 ? self.slotIdTextField.text : @"100130105000001";
+    NSString *slotId = self.slotIdTextField.text;
     self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:slotId];
     self.rewardVideoAd.delegate = self;
 
-    [self addLog:[NSString stringWithFormat:@"激励视频广告实例已创建，广告位ID: %@", slotId]];
+    [self addLog:[NSString stringWithFormat:@"激励视频广告实例已创建，广告位ID: %@，静音: %@", slotId, self.rewardVideoMuted ? @"开启" : @"关闭"]];
 }
 
 #pragma mark - Button Actions
@@ -260,7 +283,7 @@
     
     [self setupRewardVideoAd];
     // 获取当前输入的广告位ID
-    NSString *currentSlotId = self.slotIdTextField.text.length > 0 ? self.slotIdTextField.text : @"100130105000001";
+    NSString *currentSlotId = self.slotIdTextField.text;
 
     // 保存输入的ID
     if (self.slotIdTextField.text.length > 0) {
@@ -317,6 +340,12 @@
     } else {
         [self addLog:@"请先加载广告"];
     }
+}
+
+- (void)muteButtonTapped {
+    self.rewardVideoMuted = !self.rewardVideoMuted;
+    [self updateMuteButtonState];
+    [self addLog:[NSString stringWithFormat:@"激励视频静音已%@", self.rewardVideoMuted ? @"开启" : @"关闭"]];
 }
 
 #pragma mark - AdbidRewardVideoAdDelegate
@@ -415,6 +444,15 @@
             [self.logTextView scrollRangeToVisible:bottom];
         }
     });
+}
+
+- (void)updateMuteButtonState {
+    NSString *title = self.rewardVideoMuted ? @"静音：开启" : @"静音：关闭";
+    UIColor *backgroundColor = self.rewardVideoMuted ? [UIColor colorWithRed:0.42 green:0.46 blue:0.52 alpha:1.0] : [UIColor colorWithRed:0.93 green:0.43 blue:0.18 alpha:1.0];
+    [self.muteButton setTitle:title forState:UIControlStateNormal];
+    self.muteButton.backgroundColor = backgroundColor;
+    self.muteButton.layer.shadowColor = backgroundColor.CGColor;
+    self.muteButton.accessibilityLabel = title;
 }
 
 @end

@@ -749,7 +749,6 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     NSString *slotId = self.rewardSlotIdTextField.text.length > 0 ? self.rewardSlotIdTextField.text : AppConfig.rewardID;
     self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:slotId];
     self.rewardVideoAd.delegate = self;
-    self.rewardVideoAd.shouldMuted = NO;
 }
 
 - (void)rewardLoadButtonTapped:(UIButton *)sender {
@@ -805,7 +804,6 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     NSString *slotId = self.hotSplashSlotIdTextField.text.length > 0 ? self.hotSplashSlotIdTextField.text : AppConfig.hotID;
     self.hotSplashAd = [[AdbidSplashAd alloc] initWithSlotId:slotId];
     self.hotSplashAd.delegate = self;
-    self.hotSplashAd.shouldMuted = !self.hotSplashSoundSwitch.isOn;
     self.hotSplashAd.viewController = [self viewControllerForHotSplashAd];
 }
 
@@ -848,7 +846,6 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         return;
     }
 
-    self.hotSplashAd.shouldMuted = !self.hotSplashSoundSwitch.isOn;
     self.hotSplashAd.viewController = [self viewControllerForHotSplashAd];
     NSLog(@"开始展示热开屏广告");
     [self updateHotSplashStatus:@"状态：热开屏展示中\n请观察底通信息流视频声音是否被暂停或混音"
@@ -858,7 +855,6 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 }
 
 - (void)hotSplashSoundSwitchValueChanged:(UISwitch *)sender {
-    self.hotSplashAd.shouldMuted = !sender.isOn;
     NSString *status = sender.isOn ? @"状态：热开屏已切换为出声" : @"状态：热开屏已切换为静音";
     [self updateHotSplashStatus:status color:[UIColor systemGrayColor]];
 }

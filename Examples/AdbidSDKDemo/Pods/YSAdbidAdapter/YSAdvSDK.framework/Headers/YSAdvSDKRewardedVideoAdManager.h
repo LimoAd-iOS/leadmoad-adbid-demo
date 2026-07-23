@@ -99,6 +99,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)showRewardedVideo:(UIViewController *)rootViewController;
 
+/**
+ * 视频是否静音（默认 YES 静音）
+ * 需在 show 之前设置；设置为 NO 则视频有声播放
+ */
+@property (nonatomic, assign) BOOL videoMuted;
+
 @end
 
 NS_ASSUME_NONNULL_END

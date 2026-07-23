@@ -152,6 +152,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showInKeyWindow:(UIWindow *)window;
 
+/**
+ * 视频开屏是否静音（默认 YES 静音）
+ * 需在 show 之前设置
+ */
+@property (nonatomic, assign) BOOL videoMuted;
+
 @end
 
 NS_ASSUME_NONNULL_END

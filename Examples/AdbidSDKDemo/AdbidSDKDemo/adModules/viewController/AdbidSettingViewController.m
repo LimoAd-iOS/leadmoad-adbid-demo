@@ -90,6 +90,8 @@
     [self addInfoRowToStack:statusStack
                       title:@"AdbidSDK"
                  valueLabel:[self createValueLabelWithText:[AdbidSDKConfiguration sdkVersion]]];
+
+    [self addOptionalSDKVersionRowsToStack:statusStack];
     [self.contentStackView addArrangedSubview:statusCard];
 
     UILabel *switchTitleLabel = [self createSectionTitleLabelWithText:@"开屏设置"];
@@ -271,6 +273,43 @@
     ]];
 
     [stack addArrangedSubview:row];
+}
+
+- (void)addOptionalSDKVersionRowsToStack:(UIStackView *)stack {
+    NSArray<NSDictionary *> *sdkConfigs = @[
+        @{@"title" : @"YSAdvSDK", @"className" : @"YSAdvSDKManager", @"selectorName" : @"sdkVersion"},
+        @{@"title" : @"FunlinkSDK", @"className" : @"FLinkAdSDKManager", @"selectorName" : @"SDKVersion"},
+        @{@"title" : @"UBiXMerakSDK", @"className" : @"UBiXAdSDKManager", @"selectorName" : @"SDKVersion"},
+    ];
+
+    for (NSDictionary *config in sdkConfigs) {
+        NSString *version = [self sdkVersionForClassName:config[@"className"] selectorName:config[@"selectorName"]];
+        if (version.length == 0) {
+            continue;
+        }
+
+        [stack addArrangedSubview:[self createDividerView]];
+        [self addInfoRowToStack:stack
+                          title:config[@"title"]
+                     valueLabel:[self createValueLabelWithText:version]];
+    }
+}
+
+- (NSString *)sdkVersionForClassName:(NSString *)className selectorName:(NSString *)selectorName {
+    Class sdkClass = NSClassFromString(className);
+    SEL selector = NSSelectorFromString(selectorName);
+    if (!sdkClass || ![sdkClass respondsToSelector:selector]) {
+        return nil;
+    }
+
+    IMP implementation = [sdkClass methodForSelector:selector];
+    NSString *(*versionFunction)(id, SEL) = (NSString *(*)(id, SEL))implementation;
+    id version = versionFunction(sdkClass, selector);
+    if (![version isKindOfClass:[NSString class]]) {
+        return nil;
+    }
+
+    return version;
 }
 
 - (void)addSwitchRowToStack:(UIStackView *)stack title:(NSString *)title switchView:(UISwitch *)switchView {

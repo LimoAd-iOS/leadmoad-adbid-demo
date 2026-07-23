@@ -7,9 +7,11 @@ target 'AdbidSDKDemo' do
   use_frameworks!
   pod 'ReactiveObjC','3.1.1'
   pod 'AdbidSDK','2.1.1.46'
-  pod 'YSAdbidAdapter','1.0.10'
+  pod 'YSAdbidAdapter', :git => 'https://gitee.com/pekingcy/ys-adapter-adbid-pods.git', :tag => '1.0.11'
   pod 'LeadmoadAdSDK', "1.0.61"
+  
 end
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

@@ -86,7 +86,7 @@ static NSString *const kLegacySelectedPlatformsKey = @"flatform";
 
 #pragma mark - 广告平台
 + (NSArray<NSString *> *)availablePlatforms {
-    return @[@"LM", @"Ezviz"];
+    return @[@"LM", @"UBX", @"FL", @"Ezviz",@"GTD",@"other"];
 }
 
 + (NSString *)selectedPlatformsKeyForCurrentEnvironment {

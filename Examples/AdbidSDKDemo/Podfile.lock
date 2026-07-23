@@ -2,28 +2,37 @@ PODS:
   - AdbidSDK (2.1.1.46)
   - LeadmoadAdSDK (1.0.61)
   - ReactiveObjC (3.1.1)
-  - YSAdbidAdapter (1.0.10):
+  - YSAdbidAdapter (1.0.11):
     - AdbidSDK
 
 DEPENDENCIES:
   - AdbidSDK (= 2.1.1.46)
   - LeadmoadAdSDK (= 1.0.61)
   - ReactiveObjC (= 3.1.1)
-  - YSAdbidAdapter (= 1.0.10)
+  - YSAdbidAdapter (from `https://gitee.com/pekingcy/ys-adapter-adbid-pods.git`, tag `1.0.11`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AdbidSDK
     - LeadmoadAdSDK
     - ReactiveObjC
-    - YSAdbidAdapter
+
+EXTERNAL SOURCES:
+  YSAdbidAdapter:
+    :git: https://gitee.com/pekingcy/ys-adapter-adbid-pods.git
+    :tag: 1.0.11
+
+CHECKOUT OPTIONS:
+  YSAdbidAdapter:
+    :git: https://gitee.com/pekingcy/ys-adapter-adbid-pods.git
+    :tag: 1.0.11
 
 SPEC CHECKSUMS:
   AdbidSDK: 730509547f64424b9a96e5f25bf4eaee30b7c9b2
   LeadmoadAdSDK: b001f5d13059cbc9b9cd138f3e634cae7b5a4148
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  YSAdbidAdapter: 288d2d03f3f500decfc12b68cc7c1e6722c5db2f
+  YSAdbidAdapter: 14bfc800689b78f92ac5fd1686c1bdfc072ea5ef
 
-PODFILE CHECKSUM: 2420727c3a3a6e121c30c206094e7aa2f3bf6b44
+PODFILE CHECKSUM: a62edbfb7e512ab7183fd3365ed37ec3009c9940
 
 COCOAPODS: 1.16.2

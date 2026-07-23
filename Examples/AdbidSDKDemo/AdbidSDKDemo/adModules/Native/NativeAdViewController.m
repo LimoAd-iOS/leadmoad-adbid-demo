@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     AdStatusError      // 错误状态
 };
 
-@interface NativeAdViewController () <AdbidNativeAdDelegate,AdbidNativeMediaViewDelegate>
+@interface NativeAdViewController () <AdbidNativeAdDelegate,AdbidNativeMediaViewDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, strong) AdbidNativeAd *nativeAd;
 @property (nonatomic, strong) NativeFeedAdView *customAdView;
@@ -27,11 +27,18 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 @property (nonatomic, strong) UIImage *prefetchedVideoCoverImage;
 @property (nonatomic, copy) NSString *prefetchingVideoCoverUrl;
 @property (nonatomic, strong) UIView *fullscreenAdOverlayView;
+@property (nonatomic, strong) UIScrollView *fullscreenEpisodeScrollView;
+@property (nonatomic, strong) UIView *fullscreenAdPageView;
 @property (nonatomic, strong) NativeFeedAdView *fullscreenAdView;
 @property (nonatomic, strong) UIView *fullscreenBottomCardView;
 @property (nonatomic, strong) UIImageView *fullscreenIconImageView;
 @property (nonatomic, strong) UIButton *fullscreenDetailButton;
+@property (nonatomic, strong) UIButton *fullscreenMuteButton;
+@property (nonatomic, strong) NSMutableArray<AVPlayer *> *fullscreenEpisodePlayers;
+@property (nonatomic, strong) NSMutableArray<AVPlayerLayer *> *fullscreenEpisodePlayerLayers;
+@property (nonatomic, strong) NSMutableArray<UIView *> *fullscreenEpisodeVideoSurfaces;
 @property (nonatomic, assign) BOOL hasBoundFullscreenAdContent;
+@property (nonatomic, assign) BOOL fullscreenMuted;
 
 // UI 控件
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -112,6 +119,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [self updateTestVideoLayerFrame];
+    [self updateFullscreenEpisodePlayerLayerFrames];
 }
 
 #pragma mark - UI Setup
@@ -321,6 +329,9 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 
     self.nativeAd.rootViewController = self;
     self.hasBoundFullscreenAdContent = NO;
+    self.fullscreenEpisodePlayers = [NSMutableArray array];
+    self.fullscreenEpisodePlayerLayers = [NSMutableArray array];
+    self.fullscreenEpisodeVideoSurfaces = [NSMutableArray array];
 
     UIView *hostView = self.navigationController.view ?: self.view;
     UIView *overlayView = [[UIView alloc] init];
@@ -334,16 +345,17 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         [overlayView.bottomAnchor constraintEqualToAnchor:hostView.bottomAnchor],
     ]];
     self.fullscreenAdOverlayView = overlayView;
+    [self setupFullscreenEpisodePagerInOverlayView:overlayView];
 
     self.fullscreenAdView = [[NativeFeedAdView alloc] init];
     self.fullscreenAdView.translatesAutoresizingMaskIntoConstraints = NO;
     self.fullscreenAdView.backgroundColor = [UIColor blackColor];
-    [overlayView addSubview:self.fullscreenAdView];
+    [self.fullscreenAdPageView addSubview:self.fullscreenAdView];
     [NSLayoutConstraint activateConstraints:@[
-        [self.fullscreenAdView.topAnchor constraintEqualToAnchor:overlayView.topAnchor],
-        [self.fullscreenAdView.leadingAnchor constraintEqualToAnchor:overlayView.leadingAnchor],
-        [self.fullscreenAdView.trailingAnchor constraintEqualToAnchor:overlayView.trailingAnchor],
-        [self.fullscreenAdView.bottomAnchor constraintEqualToAnchor:overlayView.bottomAnchor],
+        [self.fullscreenAdView.topAnchor constraintEqualToAnchor:self.fullscreenAdPageView.topAnchor],
+        [self.fullscreenAdView.leadingAnchor constraintEqualToAnchor:self.fullscreenAdPageView.leadingAnchor],
+        [self.fullscreenAdView.trailingAnchor constraintEqualToAnchor:self.fullscreenAdPageView.trailingAnchor],
+        [self.fullscreenAdView.bottomAnchor constraintEqualToAnchor:self.fullscreenAdPageView.bottomAnchor],
     ]];
 
     if (self.nativeObj.isVideoAd) {
@@ -352,12 +364,138 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         [self setupFullscreenImageAdView];
     }
     [self setupFullscreenBottomCardView];
+    [self setupFullscreenMuteButtonIfNeeded];
     [self setupFullscreenCloseButton];
 
     [overlayView layoutIfNeeded];
+    [self scrollFullscreenPagerToAdPageAnimated:NO];
+    [self updateFullscreenEpisodePlayerLayerFrames];
+    [self updateFullscreenEpisodePlaybackForCurrentPage];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self bindFullscreenAdContentIfNeeded];
     });
+}
+
+- (void)setupFullscreenEpisodePagerInOverlayView:(UIView *)overlayView {
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    scrollView.backgroundColor = [UIColor blackColor];
+    scrollView.pagingEnabled = YES;
+    scrollView.bounces = YES;
+    scrollView.alwaysBounceVertical = YES;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.delegate = self;
+    scrollView.scrollsToTop = NO;
+    if (@available(iOS 11.0, *)) {
+        scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    [overlayView addSubview:scrollView];
+    self.fullscreenEpisodeScrollView = scrollView;
+
+    UIView *contentView = [[UIView alloc] init];
+    contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    contentView.backgroundColor = [UIColor blackColor];
+    [scrollView addSubview:contentView];
+
+    UIView *previousEpisodePage = [self createFullscreenEpisodePageWithTitle:@"第 1 集"];
+    UIView *adPageView = [[UIView alloc] init];
+    adPageView.translatesAutoresizingMaskIntoConstraints = NO;
+    adPageView.backgroundColor = [UIColor blackColor];
+    UIView *nextEpisodePage = [self createFullscreenEpisodePageWithTitle:@"第 2 集"];
+    [contentView addSubview:previousEpisodePage];
+    [contentView addSubview:adPageView];
+    [contentView addSubview:nextEpisodePage];
+    self.fullscreenAdPageView = adPageView;
+
+    UILayoutGuide *contentGuide = scrollView.contentLayoutGuide;
+    UILayoutGuide *frameGuide = scrollView.frameLayoutGuide;
+    [NSLayoutConstraint activateConstraints:@[
+        [scrollView.topAnchor constraintEqualToAnchor:overlayView.topAnchor],
+        [scrollView.leadingAnchor constraintEqualToAnchor:overlayView.leadingAnchor],
+        [scrollView.trailingAnchor constraintEqualToAnchor:overlayView.trailingAnchor],
+        [scrollView.bottomAnchor constraintEqualToAnchor:overlayView.bottomAnchor],
+
+        [contentView.topAnchor constraintEqualToAnchor:contentGuide.topAnchor],
+        [contentView.leadingAnchor constraintEqualToAnchor:contentGuide.leadingAnchor],
+        [contentView.trailingAnchor constraintEqualToAnchor:contentGuide.trailingAnchor],
+        [contentView.bottomAnchor constraintEqualToAnchor:contentGuide.bottomAnchor],
+        [contentView.widthAnchor constraintEqualToAnchor:frameGuide.widthAnchor],
+
+        [previousEpisodePage.topAnchor constraintEqualToAnchor:contentView.topAnchor],
+        [previousEpisodePage.leadingAnchor constraintEqualToAnchor:contentView.leadingAnchor],
+        [previousEpisodePage.trailingAnchor constraintEqualToAnchor:contentView.trailingAnchor],
+        [previousEpisodePage.widthAnchor constraintEqualToAnchor:frameGuide.widthAnchor],
+        [previousEpisodePage.heightAnchor constraintEqualToAnchor:frameGuide.heightAnchor],
+
+        [adPageView.topAnchor constraintEqualToAnchor:previousEpisodePage.bottomAnchor],
+        [adPageView.leadingAnchor constraintEqualToAnchor:contentView.leadingAnchor],
+        [adPageView.trailingAnchor constraintEqualToAnchor:contentView.trailingAnchor],
+        [adPageView.widthAnchor constraintEqualToAnchor:frameGuide.widthAnchor],
+        [adPageView.heightAnchor constraintEqualToAnchor:frameGuide.heightAnchor],
+
+        [nextEpisodePage.topAnchor constraintEqualToAnchor:adPageView.bottomAnchor],
+        [nextEpisodePage.leadingAnchor constraintEqualToAnchor:contentView.leadingAnchor],
+        [nextEpisodePage.trailingAnchor constraintEqualToAnchor:contentView.trailingAnchor],
+        [nextEpisodePage.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor],
+        [nextEpisodePage.widthAnchor constraintEqualToAnchor:frameGuide.widthAnchor],
+        [nextEpisodePage.heightAnchor constraintEqualToAnchor:frameGuide.heightAnchor],
+    ]];
+}
+
+- (UIView *)createFullscreenEpisodePageWithTitle:(NSString *)title {
+    UIView *pageView = [[UIView alloc] init];
+    pageView.translatesAutoresizingMaskIntoConstraints = NO;
+    pageView.backgroundColor = [UIColor blackColor];
+
+    UIView *videoSurface = [[UIView alloc] init];
+    videoSurface.translatesAutoresizingMaskIntoConstraints = NO;
+    videoSurface.backgroundColor = [UIColor blackColor];
+    videoSurface.clipsToBounds = YES;
+    [pageView addSubview:videoSurface];
+    [NSLayoutConstraint activateConstraints:@[
+        [videoSurface.topAnchor constraintEqualToAnchor:pageView.topAnchor],
+        [videoSurface.leadingAnchor constraintEqualToAnchor:pageView.leadingAnchor],
+        [videoSurface.trailingAnchor constraintEqualToAnchor:pageView.trailingAnchor],
+        [videoSurface.bottomAnchor constraintEqualToAnchor:pageView.bottomAnchor],
+    ]];
+
+    NSURL *url = [self fullscreenEpisodeVideoURL];
+    AVPlayer *player = [AVPlayer playerWithURL:url];
+    player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
+    playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    [videoSurface.layer insertSublayer:playerLayer atIndex:0];
+    [self.fullscreenEpisodePlayers addObject:player];
+    [self.fullscreenEpisodePlayerLayers addObject:playerLayer];
+    [self.fullscreenEpisodeVideoSurfaces addObject:videoSurface];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(fullscreenEpisodeDidReachEnd:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:player.currentItem];
+
+    UILabel *episodeLabel = [[UILabel alloc] init];
+    episodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    episodeLabel.text = title;
+    episodeLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightSemibold];
+    episodeLabel.textColor = [UIColor whiteColor];
+    episodeLabel.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.42];
+    episodeLabel.textAlignment = NSTextAlignmentCenter;
+    episodeLabel.layer.cornerRadius = 15;
+    episodeLabel.layer.masksToBounds = YES;
+    [pageView addSubview:episodeLabel];
+    [NSLayoutConstraint activateConstraints:@[
+        [episodeLabel.leadingAnchor constraintEqualToAnchor:pageView.leadingAnchor constant:16],
+        [episodeLabel.bottomAnchor constraintEqualToAnchor:pageView.safeAreaLayoutGuide.bottomAnchor constant:-24],
+        [episodeLabel.widthAnchor constraintEqualToConstant:70],
+        [episodeLabel.heightAnchor constraintEqualToConstant:30],
+    ]];
+
+    return pageView;
+}
+
+- (NSURL *)fullscreenEpisodeVideoURL {
+    return [NSURL URLWithString:@"https://www.w3schools.com/html/mov_bbb.mp4"];
 }
 
 - (void)setupFullscreenVideoAdView {
@@ -366,7 +504,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     }
     self.fullscreenAdView.mediaView.translatesAutoresizingMaskIntoConstraints = NO;
     self.fullscreenAdView.mediaView.delegate = self;
-    self.fullscreenAdView.mediaView.backgroundColor = [UIColor clearColor];
+    self.fullscreenAdView.mediaView.backgroundColor = [self isFLinkNativeAd] ? [UIColor blackColor] : [UIColor clearColor];
     self.fullscreenAdView.mediaView.userInteractionEnabled = YES;
     [self.fullscreenAdView insertSubview:self.fullscreenAdView.mediaView aboveSubview:self.fullscreenAdView.imageView];
     [self pinFullscreenSubview:self.fullscreenAdView.mediaView toContainer:self.fullscreenAdView];
@@ -381,7 +519,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     [self.fullscreenAdView insertSubview:self.fullscreenAdView.imageView belowSubview:self.fullscreenAdView.mediaView];
     [self pinFullscreenSubview:self.fullscreenAdView.imageView toContainer:self.fullscreenAdView];
 
-    if (self.nativeObj.externalMediaView) {
+    if (self.nativeObj.externalMediaView && ![self isFLinkNativeAd]) {
         self.fullscreenAdView.imageView.hidden = YES;
         return;
     }
@@ -427,6 +565,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 }
 
 - (void)setupFullscreenBottomCardView {
+    UIView *containerView = self.fullscreenAdPageView ?: self.fullscreenAdOverlayView;
     UIView *bottomCardView = [[UIView alloc] init];
     bottomCardView.translatesAutoresizingMaskIntoConstraints = NO;
     bottomCardView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.94];
@@ -437,7 +576,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     bottomCardView.layer.shadowRadius = 24;
     bottomCardView.layer.shadowOpacity = 0.22;
     bottomCardView.userInteractionEnabled = YES;
-    [self.fullscreenAdOverlayView addSubview:bottomCardView];
+    [containerView addSubview:bottomCardView];
     self.fullscreenBottomCardView = bottomCardView;
 
     self.fullscreenIconImageView = [[UIImageView alloc] init];
@@ -489,10 +628,10 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     [self.fullscreenDetailButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [bottomCardView addSubview:self.fullscreenDetailButton];
 
-    UILayoutGuide *safeGuide = self.fullscreenAdOverlayView.safeAreaLayoutGuide;
+    UILayoutGuide *safeGuide = containerView.safeAreaLayoutGuide;
     [NSLayoutConstraint activateConstraints:@[
-        [bottomCardView.leadingAnchor constraintEqualToAnchor:self.fullscreenAdOverlayView.leadingAnchor constant:16],
-        [bottomCardView.trailingAnchor constraintEqualToAnchor:self.fullscreenAdOverlayView.trailingAnchor constant:-16],
+        [bottomCardView.leadingAnchor constraintEqualToAnchor:containerView.leadingAnchor constant:16],
+        [bottomCardView.trailingAnchor constraintEqualToAnchor:containerView.trailingAnchor constant:-16],
         [bottomCardView.bottomAnchor constraintEqualToAnchor:safeGuide.bottomAnchor constant:-18],
         [bottomCardView.heightAnchor constraintGreaterThanOrEqualToConstant:140],
 
@@ -579,6 +718,44 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     ]];
 }
 
+- (void)setupFullscreenMuteButtonIfNeeded {
+    if (!self.nativeObj.isVideoAd) {
+        return;
+    }
+
+    UIView *containerView = self.fullscreenAdPageView ?: self.fullscreenAdOverlayView;
+    UIButton *muteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    muteButton.translatesAutoresizingMaskIntoConstraints = NO;
+    muteButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.42];
+    muteButton.layer.cornerRadius = 22;
+    muteButton.tintColor = [UIColor whiteColor];
+    muteButton.titleLabel.font = [UIFont systemFontOfSize:13 weight:UIFontWeightSemibold];
+    muteButton.contentEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 12);
+    muteButton.imageEdgeInsets = UIEdgeInsetsMake(0, -4, 0, 4);
+    muteButton.titleEdgeInsets = UIEdgeInsetsMake(0, 4, 0, -4);
+    [muteButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [muteButton addTarget:self action:@selector(fullscreenMuteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [containerView addSubview:muteButton];
+    self.fullscreenMuteButton = muteButton;
+    [self updateFullscreenMuteButton];
+
+    [NSLayoutConstraint activateConstraints:@[
+        [muteButton.topAnchor constraintEqualToAnchor:containerView.safeAreaLayoutGuide.topAnchor constant:12],
+        [muteButton.leadingAnchor constraintEqualToAnchor:containerView.leadingAnchor constant:16],
+        [muteButton.widthAnchor constraintGreaterThanOrEqualToConstant:88],
+        [muteButton.heightAnchor constraintEqualToConstant:44],
+    ]];
+}
+
+- (void)updateFullscreenMuteButton {
+    NSString *imageName = self.fullscreenMuted ? @"speaker.slash.fill" : @"speaker.wave.2.fill";
+    NSString *title = self.fullscreenMuted ? @"静音" : @"非静音";
+    UIImage *image = [UIImage systemImageNamed:imageName];
+    [self.fullscreenMuteButton setImage:image forState:UIControlStateNormal];
+    [self.fullscreenMuteButton setTitle:title forState:UIControlStateNormal];
+    self.fullscreenMuteButton.accessibilityLabel = self.fullscreenMuted ? @"全屏信息流已静音" : @"全屏信息流非静音";
+}
+
 - (void)bindFullscreenAdContentIfNeeded {
     if (self.hasBoundFullscreenAdContent || !self.fullscreenAdView.superview) {
         return;
@@ -590,35 +767,175 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     NSMutableArray<UIView *> *clickableViews = [NSMutableArray array];
     UIImageView *mainImageView = self.fullscreenAdView.imageView;
     if (self.nativeObj.isVideoAd) {
-        [clickableViews addObject:self.fullscreenAdView.mediaView];
+        if ([self isFLinkNativeAd]) {
+            [clickableViews addObject:self.fullscreenAdView];
+            [clickableViews addObject:self.fullscreenAdView.mediaView];
+            [clickableViews addObject:self.fullscreenAdView.imageView];
+        } else {
+            [clickableViews addObject:self.fullscreenAdView.mediaView];
+        }
     } else {
         [clickableViews addObject:self.fullscreenAdView.imageView];
     }
     [clickableViews addObject:self.fullscreenBottomCardView];
     [clickableViews addObject:self.fullscreenDetailButton];
 
-    if (self.nativeObj.isVideoAd) {
-       self.nativeAd.shouldMuted = NO;
-    }
+    [self applyFullscreenMutedState];
     [self.nativeAd registerContainer:self.fullscreenAdView
                        mainImageView:mainImageView
                   withClickableViews:clickableViews];
     self.hasBoundFullscreenAdContent = YES;
     [self.fullscreenAdView refreshData:self.nativeAd];
+    [self applyFullscreenMutedState];
+    [self updateFullscreenEpisodePlaybackForCurrentPage];
 }
 
 - (void)closeFullscreenButtonTapped:(UIButton *)sender {
     [self removeFullscreenNativeAdViewAndUpdateStatus:YES];
 }
 
+- (void)fullscreenMuteButtonTapped:(UIButton *)sender {
+    self.fullscreenMuted = !self.fullscreenMuted;
+    [self applyFullscreenMutedState];
+}
+
+- (void)applyFullscreenMutedState {
+    if (!self.nativeObj.isVideoAd) {
+        return;
+    }
+    self.nativeAd.shouldMuted = self.fullscreenMuted;
+    [self updateFullscreenMuteButton];
+}
+
+- (void)scrollFullscreenPagerToAdPageAnimated:(BOOL)animated {
+    CGFloat pageHeight = CGRectGetHeight(self.fullscreenEpisodeScrollView.bounds);
+    if (pageHeight <= 0) {
+        return;
+    }
+    [self.fullscreenEpisodeScrollView setContentOffset:CGPointMake(0, pageHeight) animated:animated];
+}
+
+- (NSInteger)currentFullscreenPageIndex {
+    CGFloat pageHeight = CGRectGetHeight(self.fullscreenEpisodeScrollView.bounds);
+    if (pageHeight <= 0) {
+        return 1;
+    }
+    NSInteger pageIndex = (NSInteger)llround(self.fullscreenEpisodeScrollView.contentOffset.y / pageHeight);
+    return MAX(0, MIN(2, pageIndex));
+}
+
+- (void)updateFullscreenEpisodePlaybackForCurrentPage {
+    if (!self.fullscreenAdOverlayView.superview) {
+        return;
+    }
+
+    NSInteger pageIndex = [self currentFullscreenPageIndex];
+    NSInteger activeEpisodeIndex = NSNotFound;
+    if (pageIndex == 0) {
+        activeEpisodeIndex = 0;
+    } else if (pageIndex == 2) {
+        activeEpisodeIndex = 1;
+    }
+
+    for (NSInteger index = 0; index < self.fullscreenEpisodePlayers.count; index++) {
+        AVPlayer *player = self.fullscreenEpisodePlayers[index];
+        if (index == activeEpisodeIndex) {
+            [self configureFullscreenEpisodeAudioSession];
+            [player play];
+        } else {
+            [player pause];
+        }
+    }
+
+    if (!self.nativeObj.isVideoAd) {
+        return;
+    }
+    if (pageIndex == 1 && self.hasBoundFullscreenAdContent) {
+        [self.fullscreenAdView.mediaView play];
+    } else {
+        [self.fullscreenAdView.mediaView pause];
+    }
+}
+
+- (void)configureFullscreenEpisodeAudioSession {
+    NSError *error = nil;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+                                     withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                                           error:&error];
+    if (error) {
+        NSLog(@"setCategory Playback failed: %@", error);
+    }
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
+}
+
+- (void)updateFullscreenEpisodePlayerLayerFrames {
+    NSUInteger count = MIN(self.fullscreenEpisodePlayerLayers.count, self.fullscreenEpisodeVideoSurfaces.count);
+    for (NSUInteger index = 0; index < count; index++) {
+        AVPlayerLayer *playerLayer = self.fullscreenEpisodePlayerLayers[index];
+        UIView *videoSurface = self.fullscreenEpisodeVideoSurfaces[index];
+        if (!CGRectEqualToRect(playerLayer.frame, videoSurface.bounds)) {
+            playerLayer.frame = videoSurface.bounds;
+        }
+    }
+}
+
+- (void)fullscreenEpisodeDidReachEnd:(NSNotification *)note {
+    AVPlayerItem *item = note.object;
+    [item seekToTime:kCMTimeZero completionHandler:nil];
+    if ([self currentFullscreenPageIndex] != 1) {
+        [self updateFullscreenEpisodePlaybackForCurrentPage];
+    }
+}
+
+- (void)pauseFullscreenEpisodePlayers {
+    for (AVPlayer *player in self.fullscreenEpisodePlayers) {
+        [player pause];
+    }
+}
+
+- (void)clearFullscreenEpisodePlayers {
+    for (AVPlayer *player in self.fullscreenEpisodePlayers) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:AVPlayerItemDidPlayToEndTimeNotification
+                                                      object:player.currentItem];
+        [player pause];
+    }
+    self.fullscreenEpisodePlayers = nil;
+    self.fullscreenEpisodePlayerLayers = nil;
+    self.fullscreenEpisodeVideoSurfaces = nil;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (scrollView == self.fullscreenEpisodeScrollView) {
+        [self updateFullscreenEpisodePlaybackForCurrentPage];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (scrollView == self.fullscreenEpisodeScrollView && !decelerate) {
+        [self updateFullscreenEpisodePlaybackForCurrentPage];
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    if (scrollView == self.fullscreenEpisodeScrollView) {
+        [self updateFullscreenEpisodePlaybackForCurrentPage];
+    }
+}
+
 - (void)removeFullscreenNativeAdViewAndUpdateStatus:(BOOL)updateStatus {
+    [self clearFullscreenEpisodePlayers];
     [self.fullscreenAdView.mediaView stop];
+    self.fullscreenEpisodeScrollView.delegate = nil;
     [self.fullscreenAdOverlayView removeFromSuperview];
     self.fullscreenAdOverlayView = nil;
+    self.fullscreenEpisodeScrollView = nil;
+    self.fullscreenAdPageView = nil;
     self.fullscreenAdView = nil;
     self.fullscreenBottomCardView = nil;
     self.fullscreenIconImageView = nil;
     self.fullscreenDetailButton = nil;
+    self.fullscreenMuteButton = nil;
     self.hasBoundFullscreenAdContent = NO;
 
     if (!updateStatus) {
@@ -629,6 +946,15 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     } else {
         [self updateStatus:AdStatusIdle];
     }
+}
+
+- (BOOL)isFLinkNativeAd {
+    NSString *platform = self.nativeAd.adInfo.platform;
+    if (platform.length == 0) {
+        platform = AppConfig.selectedPlatforms.firstObject;
+    }
+    platform = platform.uppercaseString;
+    return [platform isEqualToString:@"FL"];
 }
 
 - (void)loadImageWithURLString:(NSString *)urlString completion:(void (^)(UIImage *image))completion {
