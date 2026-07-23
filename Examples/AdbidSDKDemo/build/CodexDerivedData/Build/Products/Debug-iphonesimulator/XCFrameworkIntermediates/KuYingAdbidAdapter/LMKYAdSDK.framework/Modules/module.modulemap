@@ -1,6 +1,0 @@
-framework module LMKYAdSDK {
-  umbrella header "LMKYAdSDK.h"
-  export *
-
-  module * { export * }
-}

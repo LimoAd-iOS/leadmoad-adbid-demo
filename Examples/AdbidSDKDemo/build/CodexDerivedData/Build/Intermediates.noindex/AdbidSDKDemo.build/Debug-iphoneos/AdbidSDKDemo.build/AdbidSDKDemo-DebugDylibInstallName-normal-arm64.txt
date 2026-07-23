@@ -1,1 +1,0 @@
-@rpath/AdbidSDKDemo.debug.dylib

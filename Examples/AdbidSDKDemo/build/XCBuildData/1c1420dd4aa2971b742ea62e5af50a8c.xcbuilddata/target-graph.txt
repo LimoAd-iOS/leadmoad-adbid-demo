@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-Target 'LeadmoadAdSDK' in project 'Pods' (no dependencies)
