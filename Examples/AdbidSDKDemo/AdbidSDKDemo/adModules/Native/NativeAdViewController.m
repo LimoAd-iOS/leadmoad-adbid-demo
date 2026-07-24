@@ -9,6 +9,7 @@
 #import <AdbidSDK/AdbidSDK.h>
 #import "NativeFeedAdView.h"
 #import "AppConfig.h"
+#import "AppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
 
 typedef NS_ENUM(NSInteger, AdStatus) {
@@ -19,11 +20,13 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     AdStatusError      // 错误状态
 };
 
-@interface NativeAdViewController () <AdbidNativeAdDelegate,AdbidNativeMediaViewDelegate,UIScrollViewDelegate>
+@interface NativeAdViewController () <AdbidNativeAdDelegate,AdbidNativeMediaViewDelegate,AdbidRewardVideoAdDelegate,AdbidSplashAdDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, strong) AdbidNativeAd *nativeAd;
 @property (nonatomic, strong) NativeFeedAdView *customAdView;
 @property (nonatomic, strong) AdbidNativeObj *nativeObj;
+@property (nonatomic, strong) AdbidRewardVideoAd *rewardVideoAd;
+@property (nonatomic, strong) AdbidSplashAd *hotSplashAd;
 @property (nonatomic, strong) UIImage *prefetchedVideoCoverImage;
 @property (nonatomic, copy) NSString *prefetchingVideoCoverUrl;
 @property (nonatomic, strong) UIView *fullscreenAdOverlayView;
@@ -34,6 +37,9 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 @property (nonatomic, strong) UIImageView *fullscreenIconImageView;
 @property (nonatomic, strong) UIButton *fullscreenDetailButton;
 @property (nonatomic, strong) UIButton *fullscreenMuteButton;
+@property (nonatomic, strong) UIStackView *fullscreenAdEntryStackView;
+@property (nonatomic, assign) BOOL shouldShowRewardAfterLoad;
+@property (nonatomic, assign) BOOL shouldShowHotSplashAfterLoad;
 @property (nonatomic, strong) NSMutableArray<AVPlayer *> *fullscreenEpisodePlayers;
 @property (nonatomic, strong) NSMutableArray<AVPlayerLayer *> *fullscreenEpisodePlayerLayers;
 @property (nonatomic, strong) NSMutableArray<UIView *> *fullscreenEpisodeVideoSurfaces;
@@ -52,6 +58,24 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, strong) UIView *adContainerView;
 @property (nonatomic, strong) UILabel *containerView;
+
+// 激励视频（用于验证全屏 Draw 与激励视频的播放切换）
+@property (nonatomic, strong) UIView *rewardVideoContainer;
+@property (nonatomic, strong) UILabel *rewardVideoTitleLabel;
+@property (nonatomic, strong) UITextField *rewardSlotIdTextField;
+@property (nonatomic, strong) UIButton *rewardLoadButton;
+@property (nonatomic, strong) UIButton *rewardShowButton;
+@property (nonatomic, strong) UILabel *rewardStatusLabel;
+
+// 热开屏（用于验证全屏 Draw 与开屏广告的播放切换）
+@property (nonatomic, strong) UIView *hotSplashContainer;
+@property (nonatomic, strong) UILabel *hotSplashTitleLabel;
+@property (nonatomic, strong) UITextField *hotSplashSlotIdTextField;
+@property (nonatomic, strong) UILabel *hotSplashSoundTitleLabel;
+@property (nonatomic, strong) UISwitch *hotSplashSoundSwitch;
+@property (nonatomic, strong) UIButton *hotSplashLoadButton;
+@property (nonatomic, strong) UIButton *hotSplashShowButton;
+@property (nonatomic, strong) UILabel *hotSplashStatusLabel;
 
 // 测试视频（用于验证 native 广告是否打断其他播放器）
 @property (nonatomic, strong) UIView *testVideoContainer;
@@ -103,6 +127,8 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     [self removeFullscreenNativeAdViewAndUpdateStatus:NO];
     _nativeAd.delegate = nil;
     _nativeAd.rootViewController = nil;
+    _rewardVideoAd.delegate = nil;
+    _hotSplashAd.delegate = nil;
     [_testVideoPlayer pause];
 }
 
@@ -140,6 +166,24 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     [self.controlPanel addSubview:self.lossNoticeButton];
     [self.controlPanel addSubview:self.statusLabel];
 
+    // 添加激励视频测试区域
+    [self.scrollView addSubview:self.rewardVideoContainer];
+    [self.rewardVideoContainer addSubview:self.rewardVideoTitleLabel];
+    [self.rewardVideoContainer addSubview:self.rewardSlotIdTextField];
+    [self.rewardVideoContainer addSubview:self.rewardLoadButton];
+    [self.rewardVideoContainer addSubview:self.rewardShowButton];
+    [self.rewardVideoContainer addSubview:self.rewardStatusLabel];
+
+    // 添加热开屏测试区域
+    [self.scrollView addSubview:self.hotSplashContainer];
+    [self.hotSplashContainer addSubview:self.hotSplashTitleLabel];
+    [self.hotSplashContainer addSubview:self.hotSplashSlotIdTextField];
+    [self.hotSplashContainer addSubview:self.hotSplashSoundTitleLabel];
+    [self.hotSplashContainer addSubview:self.hotSplashSoundSwitch];
+    [self.hotSplashContainer addSubview:self.hotSplashLoadButton];
+    [self.hotSplashContainer addSubview:self.hotSplashShowButton];
+    [self.hotSplashContainer addSubview:self.hotSplashStatusLabel];
+
     // 添加测试视频区域（用于验证 native 广告是否打断其他视频）
     [self.scrollView addSubview:self.testVideoContainer];
     [self.testVideoContainer addSubview:self.testVideoTitleLabel];
@@ -156,6 +200,8 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 
     // 更新UI状态
     [self updateUIForStatus:self.currentStatus];
+    [self updateRewardVideoButtonsWithLoadEnabled:YES showEnabled:NO];
+    [self updateHotSplashButtonsWithLoadEnabled:YES showEnabled:NO];
 }
 
 - (void)setupConstraints {
@@ -231,6 +277,94 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         [self.statusLabel.heightAnchor constraintEqualToConstant:80]
     ]];
 
+    // 激励视频测试区域约束
+    self.rewardVideoContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    self.rewardVideoTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.rewardSlotIdTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.rewardLoadButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.rewardShowButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.rewardStatusLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.rewardVideoContainer.topAnchor constraintEqualToAnchor:self.controlPanel.bottomAnchor constant:20],
+        [self.rewardVideoContainer.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20],
+        [self.rewardVideoContainer.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
+        [self.rewardVideoContainer.heightAnchor constraintEqualToConstant:210],
+
+        [self.rewardVideoTitleLabel.topAnchor constraintEqualToAnchor:self.rewardVideoContainer.topAnchor constant:14],
+        [self.rewardVideoTitleLabel.leadingAnchor constraintEqualToAnchor:self.rewardVideoContainer.leadingAnchor constant:16],
+        [self.rewardVideoTitleLabel.trailingAnchor constraintEqualToAnchor:self.rewardVideoContainer.trailingAnchor constant:-16],
+        [self.rewardVideoTitleLabel.heightAnchor constraintEqualToConstant:22],
+
+        [self.rewardSlotIdTextField.topAnchor constraintEqualToAnchor:self.rewardVideoTitleLabel.bottomAnchor constant:10],
+        [self.rewardSlotIdTextField.leadingAnchor constraintEqualToAnchor:self.rewardVideoContainer.leadingAnchor constant:16],
+        [self.rewardSlotIdTextField.trailingAnchor constraintEqualToAnchor:self.rewardVideoContainer.trailingAnchor constant:-16],
+        [self.rewardSlotIdTextField.heightAnchor constraintEqualToConstant:40],
+
+        [self.rewardLoadButton.topAnchor constraintEqualToAnchor:self.rewardSlotIdTextField.bottomAnchor constant:12],
+        [self.rewardLoadButton.leadingAnchor constraintEqualToAnchor:self.rewardVideoContainer.leadingAnchor constant:16],
+        [self.rewardLoadButton.trailingAnchor constraintEqualToAnchor:self.rewardVideoContainer.centerXAnchor constant:-6],
+        [self.rewardLoadButton.heightAnchor constraintEqualToConstant:42],
+
+        [self.rewardShowButton.topAnchor constraintEqualToAnchor:self.rewardSlotIdTextField.bottomAnchor constant:12],
+        [self.rewardShowButton.leadingAnchor constraintEqualToAnchor:self.rewardVideoContainer.centerXAnchor constant:6],
+        [self.rewardShowButton.trailingAnchor constraintEqualToAnchor:self.rewardVideoContainer.trailingAnchor constant:-16],
+        [self.rewardShowButton.heightAnchor constraintEqualToConstant:42],
+
+        [self.rewardStatusLabel.topAnchor constraintEqualToAnchor:self.rewardLoadButton.bottomAnchor constant:10],
+        [self.rewardStatusLabel.leadingAnchor constraintEqualToAnchor:self.rewardVideoContainer.leadingAnchor constant:16],
+        [self.rewardStatusLabel.trailingAnchor constraintEqualToAnchor:self.rewardVideoContainer.trailingAnchor constant:-16],
+        [self.rewardStatusLabel.bottomAnchor constraintEqualToAnchor:self.rewardVideoContainer.bottomAnchor constant:-12],
+    ]];
+
+    // 热开屏测试区域约束
+    self.hotSplashContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    self.hotSplashTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.hotSplashSlotIdTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.hotSplashSoundTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.hotSplashSoundSwitch.translatesAutoresizingMaskIntoConstraints = NO;
+    self.hotSplashLoadButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.hotSplashShowButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.hotSplashStatusLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.hotSplashContainer.topAnchor constraintEqualToAnchor:self.rewardVideoContainer.bottomAnchor constant:20],
+        [self.hotSplashContainer.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20],
+        [self.hotSplashContainer.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
+        [self.hotSplashContainer.heightAnchor constraintEqualToConstant:240],
+
+        [self.hotSplashTitleLabel.topAnchor constraintEqualToAnchor:self.hotSplashContainer.topAnchor constant:14],
+        [self.hotSplashTitleLabel.leadingAnchor constraintEqualToAnchor:self.hotSplashContainer.leadingAnchor constant:16],
+        [self.hotSplashTitleLabel.trailingAnchor constraintEqualToAnchor:self.hotSplashContainer.trailingAnchor constant:-16],
+        [self.hotSplashTitleLabel.heightAnchor constraintEqualToConstant:22],
+
+        [self.hotSplashSlotIdTextField.topAnchor constraintEqualToAnchor:self.hotSplashTitleLabel.bottomAnchor constant:10],
+        [self.hotSplashSlotIdTextField.leadingAnchor constraintEqualToAnchor:self.hotSplashContainer.leadingAnchor constant:16],
+        [self.hotSplashSlotIdTextField.trailingAnchor constraintEqualToAnchor:self.hotSplashContainer.trailingAnchor constant:-16],
+        [self.hotSplashSlotIdTextField.heightAnchor constraintEqualToConstant:40],
+
+        [self.hotSplashSoundTitleLabel.topAnchor constraintEqualToAnchor:self.hotSplashSlotIdTextField.bottomAnchor constant:10],
+        [self.hotSplashSoundTitleLabel.leadingAnchor constraintEqualToAnchor:self.hotSplashContainer.leadingAnchor constant:16],
+        [self.hotSplashSoundTitleLabel.trailingAnchor constraintLessThanOrEqualToAnchor:self.hotSplashSoundSwitch.leadingAnchor constant:-12],
+        [self.hotSplashSoundTitleLabel.heightAnchor constraintEqualToConstant:31],
+
+        [self.hotSplashSoundSwitch.trailingAnchor constraintEqualToAnchor:self.hotSplashContainer.trailingAnchor constant:-16],
+        [self.hotSplashSoundSwitch.centerYAnchor constraintEqualToAnchor:self.hotSplashSoundTitleLabel.centerYAnchor],
+
+        [self.hotSplashLoadButton.topAnchor constraintEqualToAnchor:self.hotSplashSoundTitleLabel.bottomAnchor constant:10],
+        [self.hotSplashLoadButton.leadingAnchor constraintEqualToAnchor:self.hotSplashContainer.leadingAnchor constant:16],
+        [self.hotSplashLoadButton.trailingAnchor constraintEqualToAnchor:self.hotSplashContainer.centerXAnchor constant:-6],
+        [self.hotSplashLoadButton.heightAnchor constraintEqualToConstant:42],
+
+        [self.hotSplashShowButton.topAnchor constraintEqualToAnchor:self.hotSplashSoundTitleLabel.bottomAnchor constant:10],
+        [self.hotSplashShowButton.leadingAnchor constraintEqualToAnchor:self.hotSplashContainer.centerXAnchor constant:6],
+        [self.hotSplashShowButton.trailingAnchor constraintEqualToAnchor:self.hotSplashContainer.trailingAnchor constant:-16],
+        [self.hotSplashShowButton.heightAnchor constraintEqualToConstant:42],
+
+        [self.hotSplashStatusLabel.topAnchor constraintEqualToAnchor:self.hotSplashLoadButton.bottomAnchor constant:10],
+        [self.hotSplashStatusLabel.leadingAnchor constraintEqualToAnchor:self.hotSplashContainer.leadingAnchor constant:16],
+        [self.hotSplashStatusLabel.trailingAnchor constraintEqualToAnchor:self.hotSplashContainer.trailingAnchor constant:-16],
+        [self.hotSplashStatusLabel.bottomAnchor constraintEqualToAnchor:self.hotSplashContainer.bottomAnchor constant:-12],
+    ]];
+
     // 测试视频容器约束
     self.testVideoContainer.translatesAutoresizingMaskIntoConstraints = NO;
     self.testVideoTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -239,7 +373,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     self.testVideoToggleButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.testVideoContainerHeightConstraint = [self.testVideoContainer.heightAnchor constraintEqualToConstant:52];
     [NSLayoutConstraint activateConstraints:@[
-        [self.testVideoContainer.topAnchor constraintEqualToAnchor:self.controlPanel.bottomAnchor constant:20],
+        [self.testVideoContainer.topAnchor constraintEqualToAnchor:self.hotSplashContainer.bottomAnchor constant:20],
         [self.testVideoContainer.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20],
         [self.testVideoContainer.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20],
         self.testVideoContainerHeightConstraint,
@@ -365,6 +499,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     }
     [self setupFullscreenBottomCardView];
     [self setupFullscreenMuteButtonIfNeeded];
+    [self setupFullscreenAdEntryButtons];
     [self setupFullscreenCloseButton];
 
     [overlayView layoutIfNeeded];
@@ -718,6 +853,62 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     ]];
 }
 
+- (void)setupFullscreenAdEntryButtons {
+    UIView *containerView = self.fullscreenAdPageView ?: self.fullscreenAdOverlayView;
+    UIButton *rewardEntryButton = [self fullscreenEntryButtonWithTitle:@"激励视频"
+                                                              imageName:@"play.rectangle.fill"
+                                                                  color:[UIColor colorWithRed:0.96 green:0.40 blue:0.16 alpha:1.0]
+                                                                 action:@selector(fullscreenRewardEntryButtonTapped:)];
+    UIButton *splashEntryButton = [self fullscreenEntryButtonWithTitle:@"开屏广告"
+                                                              imageName:@"sparkles"
+                                                                  color:[UIColor colorWithRed:0.18 green:0.48 blue:0.95 alpha:1.0]
+                                                                 action:@selector(fullscreenSplashEntryButtonTapped:)];
+
+    UIStackView *entryStackView = [[UIStackView alloc] initWithArrangedSubviews:@[
+        rewardEntryButton,
+        splashEntryButton,
+    ]];
+    entryStackView.translatesAutoresizingMaskIntoConstraints = NO;
+    entryStackView.axis = UILayoutConstraintAxisVertical;
+    entryStackView.spacing = 10;
+    entryStackView.alignment = UIStackViewAlignmentFill;
+    entryStackView.distribution = UIStackViewDistributionFillEqually;
+    [containerView addSubview:entryStackView];
+    self.fullscreenAdEntryStackView = entryStackView;
+
+    [NSLayoutConstraint activateConstraints:@[
+        [entryStackView.topAnchor constraintEqualToAnchor:containerView.safeAreaLayoutGuide.topAnchor constant:72],
+        [entryStackView.trailingAnchor constraintEqualToAnchor:containerView.trailingAnchor constant:-16],
+        [entryStackView.widthAnchor constraintEqualToConstant:108],
+        [entryStackView.heightAnchor constraintEqualToConstant:98],
+    ]];
+}
+
+- (UIButton *)fullscreenEntryButtonWithTitle:(NSString *)title
+                                    imageName:(NSString *)imageName
+                                        color:(UIColor *)color
+                                       action:(SEL)action {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [color colorWithAlphaComponent:0.92];
+    button.layer.cornerRadius = 22;
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOffset = CGSizeMake(0, 3);
+    button.layer.shadowRadius = 8;
+    button.layer.shadowOpacity = 0.22;
+    button.tintColor = [UIColor whiteColor];
+    button.titleLabel.font = [UIFont systemFontOfSize:13 weight:UIFontWeightSemibold];
+    button.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    button.contentEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 12);
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, -3, 0, 3);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0, 3, 0, -3);
+    [button setImage:[UIImage systemImageNamed:imageName] forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    button.accessibilityLabel = [NSString stringWithFormat:@"展示%@", title];
+    return button;
+}
+
 - (void)setupFullscreenMuteButtonIfNeeded {
     if (!self.nativeObj.isVideoAd) {
         return;
@@ -797,6 +988,42 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 - (void)fullscreenMuteButtonTapped:(UIButton *)sender {
     self.fullscreenMuted = !self.fullscreenMuted;
     [self applyFullscreenMutedState];
+}
+
+- (void)fullscreenRewardEntryButtonTapped:(UIButton *)sender {
+    if ([self.rewardVideoAd isReady]) {
+        [self rewardShowButtonTapped:sender];
+        return;
+    }
+    if (self.shouldShowRewardAfterLoad) {
+        return;
+    }
+    if (self.rewardVideoAd && !self.rewardLoadButton.enabled) {
+        self.shouldShowRewardAfterLoad = YES;
+        [self updateRewardVideoStatus:@"状态：激励视频正在加载，成功后将自动展示" color:[UIColor systemBlueColor]];
+        return;
+    }
+
+    self.shouldShowRewardAfterLoad = YES;
+    [self rewardLoadButtonTapped:sender];
+}
+
+- (void)fullscreenSplashEntryButtonTapped:(UIButton *)sender {
+    if ([self.hotSplashAd isReady]) {
+        [self hotSplashShowButtonTapped:sender];
+        return;
+    }
+    if (self.shouldShowHotSplashAfterLoad) {
+        return;
+    }
+    if (self.hotSplashAd && !self.hotSplashLoadButton.enabled) {
+        self.shouldShowHotSplashAfterLoad = YES;
+        [self updateHotSplashStatus:@"状态：热开屏正在加载，成功后将自动展示" color:[UIColor systemBlueColor]];
+        return;
+    }
+
+    self.shouldShowHotSplashAfterLoad = YES;
+    [self hotSplashLoadButtonTapped:sender];
 }
 
 - (void)applyFullscreenMutedState {
@@ -936,6 +1163,9 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     self.fullscreenIconImageView = nil;
     self.fullscreenDetailButton = nil;
     self.fullscreenMuteButton = nil;
+    self.fullscreenAdEntryStackView = nil;
+    self.shouldShowRewardAfterLoad = NO;
+    self.shouldShowHotSplashAfterLoad = NO;
     self.hasBoundFullscreenAdContent = NO;
 
     if (!updateStatus) {
@@ -1251,6 +1481,146 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     }
 }
 
+#pragma mark - 激励视频测试
+
+- (void)setupRewardVideoAd {
+    NSString *slotId = self.rewardSlotIdTextField.text.length > 0 ? self.rewardSlotIdTextField.text : AppConfig.rewardID;
+    self.rewardVideoAd.delegate = nil;
+    self.rewardVideoAd = [[AdbidRewardVideoAd alloc] initWithSlotId:slotId];
+    self.rewardVideoAd.delegate = self;
+}
+
+- (void)rewardLoadButtonTapped:(UIButton *)sender {
+    [self setupRewardVideoAd];
+
+    NSString *slotId = self.rewardSlotIdTextField.text.length > 0 ? self.rewardSlotIdTextField.text : AppConfig.rewardID;
+    NSLog(@"开始加载激励视频广告，广告位ID: %@", slotId);
+    NSString *loadingStatus = self.shouldShowRewardAfterLoad ? @"状态：全屏 Draw 入口触发，激励视频加载中" : @"状态：激励视频加载中";
+    [self updateRewardVideoStatus:[NSString stringWithFormat:@"%@\n广告位ID: %@", loadingStatus, slotId]
+                            color:[UIColor systemBlueColor]];
+    [self updateRewardVideoButtonsWithLoadEnabled:NO showEnabled:NO];
+    [self.rewardVideoAd loadAd];
+}
+
+- (void)rewardShowButtonTapped:(UIButton *)sender {
+    if (![self.rewardVideoAd isReady]) {
+        [self updateRewardVideoStatus:@"状态：激励视频未准备好，请先加载" color:[UIColor systemOrangeColor]];
+        return;
+    }
+
+    NSLog(@"开始展示激励视频广告");
+    [self updateRewardVideoStatus:@"状态：激励视频展示中\n请观察全屏 Draw 视频的声音和播放状态"
+                            color:[UIColor systemOrangeColor]];
+    [self updateRewardVideoButtonsWithLoadEnabled:YES showEnabled:NO];
+    [self.rewardVideoAd showAd:self];
+}
+
+- (void)updateRewardVideoStatus:(NSString *)status color:(UIColor *)color {
+    [self performOnMainThread:^{
+        self.rewardStatusLabel.text = status;
+        self.rewardStatusLabel.textColor = color;
+    }];
+}
+
+- (void)updateRewardVideoButtonsWithLoadEnabled:(BOOL)loadEnabled showEnabled:(BOOL)showEnabled {
+    [self performOnMainThread:^{
+        UIColor *disabledColor = [UIColor colorWithRed:0.58 green:0.62 blue:0.68 alpha:1.0];
+        UIColor *loadColor = [self primaryColor];
+        UIColor *showColor = [UIColor colorWithRed:0.18 green:0.65 blue:0.35 alpha:1.0];
+
+        self.rewardLoadButton.enabled = loadEnabled;
+        self.rewardShowButton.enabled = showEnabled;
+        self.rewardLoadButton.backgroundColor = loadEnabled ? loadColor : disabledColor;
+        self.rewardShowButton.backgroundColor = showEnabled ? showColor : disabledColor;
+        self.rewardLoadButton.alpha = loadEnabled ? 1.0 : 0.6;
+        self.rewardShowButton.alpha = showEnabled ? 1.0 : 0.6;
+    }];
+}
+
+#pragma mark - 热开屏测试
+
+- (void)setupHotSplashAd {
+    NSString *slotId = self.hotSplashSlotIdTextField.text.length > 0 ? self.hotSplashSlotIdTextField.text : AppConfig.hotID;
+    self.hotSplashAd.delegate = nil;
+    self.hotSplashAd = [[AdbidSplashAd alloc] initWithSlotId:slotId];
+    self.hotSplashAd.delegate = self;
+    self.hotSplashAd.viewController = [self viewControllerForHotSplashAd];
+}
+
+- (UIViewController *)viewControllerForHotSplashAd {
+    UIWindow *window = [self windowForHotSplashAd];
+    return window.rootViewController ?: self;
+}
+
+- (UIWindow *)windowForHotSplashAd {
+    if (self.view.window) {
+        return self.view.window;
+    }
+
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    return appDelegate.window;
+}
+
+- (void)hotSplashLoadButtonTapped:(UIButton *)sender {
+    [self setupHotSplashAd];
+
+    NSString *slotId = self.hotSplashSlotIdTextField.text.length > 0 ? self.hotSplashSlotIdTextField.text : AppConfig.hotID;
+    NSLog(@"开始加载热开屏广告，广告位ID: %@", slotId);
+    NSString *loadingStatus = self.shouldShowHotSplashAfterLoad ? @"状态：全屏 Draw 入口触发，热开屏加载中" : @"状态：热开屏加载中";
+    [self updateHotSplashStatus:[NSString stringWithFormat:@"%@\n广告位ID: %@", loadingStatus, slotId]
+                          color:[UIColor systemBlueColor]];
+    [self updateHotSplashButtonsWithLoadEnabled:NO showEnabled:NO];
+    [self.hotSplashAd loadAd];
+}
+
+- (void)hotSplashShowButtonTapped:(UIButton *)sender {
+    if (![self.hotSplashAd isReady]) {
+        [self updateHotSplashStatus:@"状态：热开屏未准备好，请先加载" color:[UIColor systemOrangeColor]];
+        return;
+    }
+
+    UIWindow *window = [self windowForHotSplashAd];
+    if (!window) {
+        [self updateHotSplashStatus:@"状态：展示失败，未找到可展示 window" color:[UIColor systemRedColor]];
+        [self updateHotSplashButtonsWithLoadEnabled:YES showEnabled:[self.hotSplashAd isReady]];
+        return;
+    }
+
+    self.hotSplashAd.viewController = [self viewControllerForHotSplashAd];
+    NSLog(@"开始展示热开屏广告");
+    [self updateHotSplashStatus:@"状态：热开屏展示中\n请观察全屏 Draw 视频的声音和播放状态"
+                          color:[UIColor systemOrangeColor]];
+    [self updateHotSplashButtonsWithLoadEnabled:YES showEnabled:NO];
+    [self.hotSplashAd showAdToWindow:window];
+}
+
+- (void)hotSplashSoundSwitchValueChanged:(UISwitch *)sender {
+    NSString *status = sender.isOn ? @"状态：热开屏已切换为出声" : @"状态：热开屏已切换为静音";
+    [self updateHotSplashStatus:status color:[UIColor systemGrayColor]];
+}
+
+- (void)updateHotSplashStatus:(NSString *)status color:(UIColor *)color {
+    [self performOnMainThread:^{
+        self.hotSplashStatusLabel.text = status;
+        self.hotSplashStatusLabel.textColor = color;
+    }];
+}
+
+- (void)updateHotSplashButtonsWithLoadEnabled:(BOOL)loadEnabled showEnabled:(BOOL)showEnabled {
+    [self performOnMainThread:^{
+        UIColor *disabledColor = [UIColor colorWithRed:0.58 green:0.62 blue:0.68 alpha:1.0];
+        UIColor *loadColor = [self primaryColor];
+        UIColor *showColor = [UIColor colorWithRed:0.18 green:0.65 blue:0.35 alpha:1.0];
+
+        self.hotSplashLoadButton.enabled = loadEnabled;
+        self.hotSplashShowButton.enabled = showEnabled;
+        self.hotSplashLoadButton.backgroundColor = loadEnabled ? loadColor : disabledColor;
+        self.hotSplashShowButton.backgroundColor = showEnabled ? showColor : disabledColor;
+        self.hotSplashLoadButton.alpha = loadEnabled ? 1.0 : 0.6;
+        self.hotSplashShowButton.alpha = showEnabled ? 1.0 : 0.6;
+    }];
+}
+
 #pragma mark - 测试视频（验证 native 广告是否打断其他播放器）
 
 - (void)testVideoButtonTapped:(UIButton *)sender {
@@ -1322,6 +1692,143 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         [item seekToTime:kCMTimeZero completionHandler:nil];
         [self.testVideoPlayer play];
     }
+}
+
+#pragma mark - AdbidRewardVideoAdDelegate
+
+- (void)rewardVideoAdDidLoad:(AdbidRewardVideoAd *)rewardVideoAd {
+    [self performOnMainThread:^{
+        [self updateRewardVideoStatus:@"状态：激励视频已加载，可以从页面或全屏 Draw 入口展示" color:[UIColor systemGreenColor]];
+        [self updateRewardVideoButtonsWithLoadEnabled:YES showEnabled:YES];
+
+        BOOL shouldAutoShow = self.shouldShowRewardAfterLoad && self.fullscreenAdOverlayView.superview;
+        self.shouldShowRewardAfterLoad = NO;
+        if (shouldAutoShow) {
+            [self rewardShowButtonTapped:nil];
+        }
+    }];
+}
+
+- (void)rewardVideoAd:(AdbidRewardVideoAd *)rewardVideoAd didFailToLoadWithError:(NSError *)error {
+    [self performOnMainThread:^{
+        self.shouldShowRewardAfterLoad = NO;
+        NSString *message = [NSString stringWithFormat:@"状态：激励视频加载失败\n%@", error.localizedDescription ?: @"未知错误"];
+        [self updateRewardVideoStatus:message color:[UIColor systemRedColor]];
+        [self updateRewardVideoButtonsWithLoadEnabled:YES showEnabled:NO];
+    }];
+}
+
+- (void)rewardVideoAdDidShow:(AdbidRewardVideoAd *)rewardVideoAd {
+    [self updateRewardVideoStatus:@"状态：激励视频已展示\n请观察全屏 Draw 视频是否暂停" color:[UIColor systemOrangeColor]];
+}
+
+- (void)rewardVideoAd:(AdbidRewardVideoAd *)rewardVideoAd didFailToShowWithError:(NSError *)error {
+    NSString *message = [NSString stringWithFormat:@"状态：激励视频展示失败\n%@", error.localizedDescription ?: @"未知错误"];
+    [self updateRewardVideoStatus:message color:[UIColor systemRedColor]];
+    [self updateRewardVideoButtonsWithLoadEnabled:YES showEnabled:[rewardVideoAd isReady]];
+    [self updateFullscreenEpisodePlaybackForCurrentPage];
+}
+
+- (void)rewardVideoAdDidStartPlay:(AdbidRewardVideoAd *)rewardVideoAd {
+    [self updateRewardVideoStatus:@"状态：激励视频播放中" color:[UIColor systemOrangeColor]];
+}
+
+- (void)rewardVideoAdDidEndPlay:(AdbidRewardVideoAd *)rewardedVideoAd withError:(NSError *_Nullable)error {
+    NSString *message = error ? @"状态：激励视频播放结束，存在播放错误" : @"状态：激励视频播放完成";
+    [self updateRewardVideoStatus:message color:error ? [UIColor systemRedColor] : [UIColor systemGreenColor]];
+}
+
+- (void)rewardVideoAdDidReward:(AdbidRewardVideoAd *)rewardVideoAd {
+    [self updateRewardVideoStatus:@"状态：激励条件达成" color:[UIColor systemGreenColor]];
+}
+
+- (void)rewardVideoAdDidClick:(AdbidRewardVideoAd *)rewardVideoAd {
+    [self updateRewardVideoStatus:@"状态：激励视频被点击" color:[UIColor systemOrangeColor]];
+}
+
+- (void)rewardVideoAdDidClose:(AdbidRewardVideoAd *)rewardVideoAd {
+    [self updateRewardVideoStatus:@"状态：激励视频已关闭，可重新加载" color:[UIColor systemGrayColor]];
+    [self updateRewardVideoButtonsWithLoadEnabled:YES showEnabled:NO];
+    [self updateFullscreenEpisodePlaybackForCurrentPage];
+}
+
+#pragma mark - AdbidSplashAdDelegate
+
+- (void)splashAdDidLoad:(AdbidSplashAd *)splashAd {
+    if (splashAd != self.hotSplashAd) {
+        return;
+    }
+
+    [self performOnMainThread:^{
+        [self updateHotSplashStatus:@"状态：热开屏已加载，可以从页面或全屏 Draw 入口展示" color:[UIColor systemGreenColor]];
+        [self updateHotSplashButtonsWithLoadEnabled:YES showEnabled:YES];
+
+        BOOL shouldAutoShow = self.shouldShowHotSplashAfterLoad && self.fullscreenAdOverlayView.superview;
+        self.shouldShowHotSplashAfterLoad = NO;
+        if (shouldAutoShow) {
+            [self hotSplashShowButtonTapped:nil];
+        }
+    }];
+}
+
+- (void)splashAd:(AdbidSplashAd *)splashAd didFailToLoadWithError:(NSError *)error {
+    if (splashAd != self.hotSplashAd) {
+        return;
+    }
+
+    [self performOnMainThread:^{
+        self.shouldShowHotSplashAfterLoad = NO;
+        NSString *message = [NSString stringWithFormat:@"状态：热开屏加载失败\n%@", error.localizedDescription ?: @"未知错误"];
+        [self updateHotSplashStatus:message color:[UIColor systemRedColor]];
+        [self updateHotSplashButtonsWithLoadEnabled:YES showEnabled:NO];
+    }];
+}
+
+- (void)splashAdDidShow:(AdbidSplashAd *)splashAd {
+    if (splashAd != self.hotSplashAd) {
+        return;
+    }
+
+    [self updateHotSplashStatus:@"状态：热开屏已展示\n请观察全屏 Draw 视频是否暂停" color:[UIColor systemOrangeColor]];
+}
+
+- (void)splashAd:(AdbidSplashAd *)splashAd didFailToShowWithError:(NSError *)error {
+    if (splashAd != self.hotSplashAd) {
+        return;
+    }
+
+    NSString *message = [NSString stringWithFormat:@"状态：热开屏展示失败\n%@", error.localizedDescription ?: @"未知错误"];
+    [self updateHotSplashStatus:message color:[UIColor systemRedColor]];
+    [self updateHotSplashButtonsWithLoadEnabled:YES showEnabled:[splashAd isReady]];
+    [self updateFullscreenEpisodePlaybackForCurrentPage];
+}
+
+- (void)splashAdDidClick:(AdbidSplashAd *)splashAd {
+    if (splashAd != self.hotSplashAd) {
+        return;
+    }
+
+    [self updateHotSplashStatus:@"状态：热开屏被点击" color:[UIColor systemOrangeColor]];
+}
+
+- (void)splashAdDidClose:(AdbidSplashAd *)splashAd {
+    if (splashAd != self.hotSplashAd) {
+        return;
+    }
+
+    [self updateHotSplashStatus:@"状态：热开屏已关闭，可重新加载" color:[UIColor systemGrayColor]];
+    [self updateHotSplashButtonsWithLoadEnabled:YES showEnabled:NO];
+    self.hotSplashAd.delegate = nil;
+    self.hotSplashAd = nil;
+    [self updateFullscreenEpisodePlaybackForCurrentPage];
+}
+
+- (void)splashAdDidFinishConversion:(AdbidSplashAd *)splashAd interactionType:(AdbidAdRedirectionType)interactionType {
+    if (splashAd != self.hotSplashAd) {
+        return;
+    }
+
+    [self updateHotSplashStatus:@"状态：热开屏完成转化或跳转" color:[UIColor systemGreenColor]];
 }
 
 #pragma mark - AdbidNativeAdDelegate
@@ -1574,6 +2081,178 @@ typedef NS_ENUM(NSInteger, AdStatus) {
         _containerView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return _containerView;
+}
+
+- (UIView *)rewardVideoContainer {
+    if (!_rewardVideoContainer) {
+        _rewardVideoContainer = [[UIView alloc] init];
+        [self configureCardView:_rewardVideoContainer];
+    }
+    return _rewardVideoContainer;
+}
+
+- (UILabel *)rewardVideoTitleLabel {
+    if (!_rewardVideoTitleLabel) {
+        _rewardVideoTitleLabel = [[UILabel alloc] init];
+        _rewardVideoTitleLabel.text = @"激励视频（测试与全屏 Draw 的播放切换）";
+        _rewardVideoTitleLabel.font = [UIFont boldSystemFontOfSize:14];
+        _rewardVideoTitleLabel.textColor = [UIColor colorWithRed:0.16 green:0.20 blue:0.27 alpha:1.0];
+        _rewardVideoTitleLabel.adjustsFontSizeToFitWidth = YES;
+        _rewardVideoTitleLabel.minimumScaleFactor = 0.75;
+    }
+    return _rewardVideoTitleLabel;
+}
+
+- (UITextField *)rewardSlotIdTextField {
+    if (!_rewardSlotIdTextField) {
+        _rewardSlotIdTextField = [[UITextField alloc] init];
+        _rewardSlotIdTextField.placeholder = @"请输入激励视频广告位ID";
+        _rewardSlotIdTextField.text = AppConfig.rewardID;
+        _rewardSlotIdTextField.borderStyle = UITextBorderStyleRoundedRect;
+        _rewardSlotIdTextField.font = [UIFont systemFontOfSize:15];
+        _rewardSlotIdTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _rewardSlotIdTextField.backgroundColor = [UIColor whiteColor];
+        _rewardSlotIdTextField.layer.cornerRadius = 10;
+        _rewardSlotIdTextField.layer.borderWidth = 1;
+        _rewardSlotIdTextField.layer.borderColor = [UIColor colorWithWhite:0.88 alpha:1.0].CGColor;
+        [self configurePlatformRightViewForTextField:_rewardSlotIdTextField];
+    }
+    return _rewardSlotIdTextField;
+}
+
+- (UIButton *)rewardLoadButton {
+    if (!_rewardLoadButton) {
+        _rewardLoadButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_rewardLoadButton setTitle:@"加载激励视频" forState:UIControlStateNormal];
+        [_rewardLoadButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self configureActionButton:_rewardLoadButton backgroundColor:[self primaryColor]];
+        [_rewardLoadButton addTarget:self action:@selector(rewardLoadButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _rewardLoadButton;
+}
+
+- (UIButton *)rewardShowButton {
+    if (!_rewardShowButton) {
+        _rewardShowButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_rewardShowButton setTitle:@"展示激励视频" forState:UIControlStateNormal];
+        [_rewardShowButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self configureActionButton:_rewardShowButton backgroundColor:[UIColor colorWithRed:0.18 green:0.65 blue:0.35 alpha:1.0]];
+        [_rewardShowButton addTarget:self action:@selector(rewardShowButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        _rewardShowButton.enabled = NO;
+        _rewardShowButton.alpha = 0.6;
+    }
+    return _rewardShowButton;
+}
+
+- (UILabel *)rewardStatusLabel {
+    if (!_rewardStatusLabel) {
+        _rewardStatusLabel = [[UILabel alloc] init];
+        _rewardStatusLabel.text = @"状态：未加载激励视频";
+        _rewardStatusLabel.numberOfLines = 0;
+        _rewardStatusLabel.textAlignment = NSTextAlignmentCenter;
+        _rewardStatusLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
+        _rewardStatusLabel.textColor = [UIColor systemGrayColor];
+        _rewardStatusLabel.backgroundColor = [UIColor colorWithRed:0.96 green:0.98 blue:1.0 alpha:1.0];
+        _rewardStatusLabel.layer.cornerRadius = 8;
+        _rewardStatusLabel.layer.masksToBounds = YES;
+    }
+    return _rewardStatusLabel;
+}
+
+- (UIView *)hotSplashContainer {
+    if (!_hotSplashContainer) {
+        _hotSplashContainer = [[UIView alloc] init];
+        [self configureCardView:_hotSplashContainer];
+    }
+    return _hotSplashContainer;
+}
+
+- (UILabel *)hotSplashTitleLabel {
+    if (!_hotSplashTitleLabel) {
+        _hotSplashTitleLabel = [[UILabel alloc] init];
+        _hotSplashTitleLabel.text = @"热开屏（测试与全屏 Draw 的播放切换）";
+        _hotSplashTitleLabel.font = [UIFont boldSystemFontOfSize:14];
+        _hotSplashTitleLabel.textColor = [UIColor colorWithRed:0.16 green:0.20 blue:0.27 alpha:1.0];
+        _hotSplashTitleLabel.adjustsFontSizeToFitWidth = YES;
+        _hotSplashTitleLabel.minimumScaleFactor = 0.75;
+    }
+    return _hotSplashTitleLabel;
+}
+
+- (UITextField *)hotSplashSlotIdTextField {
+    if (!_hotSplashSlotIdTextField) {
+        _hotSplashSlotIdTextField = [[UITextField alloc] init];
+        _hotSplashSlotIdTextField.placeholder = @"请输入热开屏广告位ID";
+        _hotSplashSlotIdTextField.text = AppConfig.hotID;
+        _hotSplashSlotIdTextField.borderStyle = UITextBorderStyleRoundedRect;
+        _hotSplashSlotIdTextField.font = [UIFont systemFontOfSize:15];
+        _hotSplashSlotIdTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _hotSplashSlotIdTextField.backgroundColor = [UIColor whiteColor];
+        _hotSplashSlotIdTextField.layer.cornerRadius = 10;
+        _hotSplashSlotIdTextField.layer.borderWidth = 1;
+        _hotSplashSlotIdTextField.layer.borderColor = [UIColor colorWithWhite:0.88 alpha:1.0].CGColor;
+        [self configurePlatformRightViewForTextField:_hotSplashSlotIdTextField];
+    }
+    return _hotSplashSlotIdTextField;
+}
+
+- (UILabel *)hotSplashSoundTitleLabel {
+    if (!_hotSplashSoundTitleLabel) {
+        _hotSplashSoundTitleLabel = [[UILabel alloc] init];
+        _hotSplashSoundTitleLabel.text = @"热开屏出声";
+        _hotSplashSoundTitleLabel.font = [UIFont systemFontOfSize:14 weight:UIFontWeightMedium];
+        _hotSplashSoundTitleLabel.textColor = [UIColor colorWithRed:0.16 green:0.20 blue:0.27 alpha:1.0];
+    }
+    return _hotSplashSoundTitleLabel;
+}
+
+- (UISwitch *)hotSplashSoundSwitch {
+    if (!_hotSplashSoundSwitch) {
+        _hotSplashSoundSwitch = [[UISwitch alloc] init];
+        _hotSplashSoundSwitch.on = YES;
+        _hotSplashSoundSwitch.onTintColor = [self primaryColor];
+        [_hotSplashSoundSwitch addTarget:self action:@selector(hotSplashSoundSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
+    }
+    return _hotSplashSoundSwitch;
+}
+
+- (UIButton *)hotSplashLoadButton {
+    if (!_hotSplashLoadButton) {
+        _hotSplashLoadButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_hotSplashLoadButton setTitle:@"加载热开屏" forState:UIControlStateNormal];
+        [_hotSplashLoadButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self configureActionButton:_hotSplashLoadButton backgroundColor:[self primaryColor]];
+        [_hotSplashLoadButton addTarget:self action:@selector(hotSplashLoadButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _hotSplashLoadButton;
+}
+
+- (UIButton *)hotSplashShowButton {
+    if (!_hotSplashShowButton) {
+        _hotSplashShowButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_hotSplashShowButton setTitle:@"展示热开屏" forState:UIControlStateNormal];
+        [_hotSplashShowButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self configureActionButton:_hotSplashShowButton backgroundColor:[UIColor colorWithRed:0.18 green:0.65 blue:0.35 alpha:1.0]];
+        [_hotSplashShowButton addTarget:self action:@selector(hotSplashShowButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        _hotSplashShowButton.enabled = NO;
+        _hotSplashShowButton.alpha = 0.6;
+    }
+    return _hotSplashShowButton;
+}
+
+- (UILabel *)hotSplashStatusLabel {
+    if (!_hotSplashStatusLabel) {
+        _hotSplashStatusLabel = [[UILabel alloc] init];
+        _hotSplashStatusLabel.text = @"状态：未加载热开屏";
+        _hotSplashStatusLabel.numberOfLines = 0;
+        _hotSplashStatusLabel.textAlignment = NSTextAlignmentCenter;
+        _hotSplashStatusLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
+        _hotSplashStatusLabel.textColor = [UIColor systemGrayColor];
+        _hotSplashStatusLabel.backgroundColor = [UIColor colorWithRed:0.96 green:0.98 blue:1.0 alpha:1.0];
+        _hotSplashStatusLabel.layer.cornerRadius = 8;
+        _hotSplashStatusLabel.layer.masksToBounds = YES;
+    }
+    return _hotSplashStatusLabel;
 }
 
 - (UIView *)testVideoContainer {

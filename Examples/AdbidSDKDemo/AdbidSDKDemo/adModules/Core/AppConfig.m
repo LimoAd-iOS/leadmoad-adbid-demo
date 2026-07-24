@@ -80,13 +80,14 @@ static NSString *const kLegacySelectedPlatformsKey = @"flatform";
 + (NSString *)currentEnvironmentDisplayText {
     switch ([self currentEnv]) {
         case EnvironmentType_Test_10011:     return @"10011";
+      
         default:                             return @"10011";
     }
 }
 
 #pragma mark - 广告平台
 + (NSArray<NSString *> *)availablePlatforms {
-    return @[@"LM", @"UBX", @"FL", @"Ezviz",@"GTD",@"other"];
+    return @[@"LM",@"Ezviz"];
 }
 
 + (NSString *)selectedPlatformsKeyForCurrentEnvironment {
@@ -96,6 +97,7 @@ static NSString *const kLegacySelectedPlatformsKey = @"flatform";
 + (NSArray<NSString *> *)defaultPlatformsForCurrentEnvironment {
     switch ([self currentEnv]) {
         case EnvironmentType_Test_10011:
+       
         default:
             return @[];
     }

@@ -1,6 +1,6 @@
 {
   "name": "YSAdbidAdapter",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "summary": "YS Ad SDK Adapter for Adbid",
   "description": "YS Ad SDK Adapter implementation for Adbid mediation platform.",
   "homepage": "https://gitee.com/pekingcy/ys-adapter-adbid-pods",
@@ -18,7 +18,7 @@
   "module_name": "YSAdbidAdapter",
   "source": {
     "git": "https://gitee.com/pekingcy/ys-adapter-adbid-pods.git",
-    "tag": "1.0.11"
+    "tag": "1.0.12"
   },
   "vendored_frameworks": [
     "YSAdbidAdapter.xcframework",
