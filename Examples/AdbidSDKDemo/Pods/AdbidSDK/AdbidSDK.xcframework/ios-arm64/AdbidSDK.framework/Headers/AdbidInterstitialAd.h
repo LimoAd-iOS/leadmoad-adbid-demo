@@ -9,6 +9,7 @@
 #import <AdbidSDK/AdbidBidLossInfo.h>
 #import <AdbidSDK/AdbidPublicDefine.h>
 #import <AdbidSDK/AdbidAdInfoModel.h>
+#import <AdbidSDK/AdbidMaterialModel.h>
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
@@ -36,19 +37,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<AdbidInterstitialAdDelegate> delegate;
 
-@property (nonatomic, strong, nullable) UIViewController *viewController;// 落地页设置
-
-// 广告最大请求时长，单位毫秒。默认3000 , 最小500毫秒
-@property (nonatomic, assign) NSInteger maxLoadTime;
-
-/// 是否静音，默认是静音
-@property (nonatomic, assign) BOOL shouldMuted;
-
+/// 落地页控制器。由调用方持有，SDK 不保留，避免和页面互相持有。
+@property (nonatomic, weak, nullable) UIViewController *viewController;
 /// 返回广告的eCPM，单位：分
 @property (nonatomic, readonly) NSInteger eCPM;
-
 // 广告信息
 @property (nonatomic, readonly) AdbidAdInfoModel* adInfo;
+/// 广告素材。选出赢家后才赋值，字典和模型来自同一个渠道。
+@property (nonatomic, copy, readonly, nullable) NSDictionary *material;
+/// 广告素材模型。和 material 来自同一个赢家。
+@property (nonatomic, strong, readonly, nullable) AdbidMaterialModel *materialModel;
 
 
 - (instancetype)initWithSlotId:(NSString *)slotId;
@@ -61,9 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 通过Token加载信息流广告
  */
 - (void)loadAdWithToken:(NSString *)token;
-/*
- * 必须在主线程调用
- */
+/// 已在主线程则直接展示；非主线程会切到主线程再展示。
 - (void)showAd:(UIViewController *)viewController;
 /// price 二价（即竞败方最高价）
 - (void)winNotice:(NSInteger)price;

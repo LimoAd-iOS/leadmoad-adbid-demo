@@ -5,8 +5,8 @@
 //  Created by youzhadoubao on 2025/9/17.
 //
 
-#ifndef LMAdPublicDefine_h
-#define LMAdPublicDefine_h
+#ifndef AdbidPublicDefine_h
+#define AdbidPublicDefine_h
 
 /// 交互类型
 typedef NS_ENUM(NSInteger, AdbidAdRedirectionType) {
@@ -63,7 +63,8 @@ typedef NS_ENUM(NSInteger, AdbidPlatform) {
     AdbidPlatform_FunLink = 17, //泛连
     AdbidPlatform_Ezviz = 18, //萤石
     AdbidPlatform_MS = 19, //美数
-    AdbidPlatform_Sigmob = 20
+    AdbidPlatform_Sigmob = 20,
+    AdbidPlatform_WM = 21
 };
 
 typedef NS_ENUM(NSInteger, AdbidType) {
@@ -136,7 +137,7 @@ typedef NS_ENUM(NSInteger, AdbidErrorCode) {
 };
 
 // 错误描述细化，明确指出是广告ID缺失
-static inline NSString *LMAdErrorDescription(AdbidErrorCode code) {
+static inline NSString *AdbidErrorDescription(AdbidErrorCode code) {
     switch (code) {
         // ... 其他描述
         case AdbidErrorCodeInitFailed:
@@ -165,4 +166,4 @@ static inline NSString *LMAdErrorDescription(AdbidErrorCode code) {
     }
 }
 
-#endif /* LMAdPublicDefine_h */
+#endif /* AdbidPublicDefine_h */

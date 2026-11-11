@@ -380,7 +380,7 @@
 
     // 选项1：切换测试
     UIAlertAction *testAction = [UIAlertAction actionWithTitle:@"切换到10011" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self saveEnvironmentAndShowRestartAlert:EnvironmentType_Test_10011];
+        [self saveEnvironmentAndShowRestartAlert:EnvironmentType_Test_10004];
     }];
 
     // 取消

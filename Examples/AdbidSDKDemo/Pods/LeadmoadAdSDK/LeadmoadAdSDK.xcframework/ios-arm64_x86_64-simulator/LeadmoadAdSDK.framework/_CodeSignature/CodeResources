@@ -4,85 +4,61 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/LMAdBidLossInfo.h</key>
+		<key>Headers/LeadMoadAdBidLossInfo.h</key>
 		<data>
-		bBPvcHj/aYmnCBpUJyCyldNP4E0=
+		iCivSgPdTJHlOnA7yUKbWnTtAyQ=
 		</data>
-		<key>Headers/LMAdPublicDefine.h</key>
+		<key>Headers/LeadMoadAdPublicDefine.h</key>
 		<data>
-		abnTHCCfJuxI0vXGo02SBAXsqmg=
+		fEg8tuiLAlRgT86AKTZsAF+jqN4=
 		</data>
-		<key>Headers/LMAdSDKConfiguration.h</key>
+		<key>Headers/LeadMoadAdSDKConfiguration.h</key>
 		<data>
-		inidUjrAlq0b50vODhi0RPJZkD4=
+		02qCFSyxgMWAIaV4HRj53je/tWY=
 		</data>
-		<key>Headers/LMAdSDKManager.h</key>
+		<key>Headers/LeadMoadAdSDKManager.h</key>
 		<data>
-		p490nF/N+VV/EN1HsUtbVgfQxp4=
+		P5vzve4OHZYRT2YzqeyqRg+I4OE=
 		</data>
-		<key>Headers/LMBannerAd.h</key>
+		<key>Headers/LeadMoadBannerAd.h</key>
 		<data>
-		rcz902ZGkPgh4dbB2cWeSADfClU=
+		EOW0VMKnAzhtZmg3XEdBTt9Ggxc=
 		</data>
-		<key>Headers/LMInterstitialAd.h</key>
+		<key>Headers/LeadMoadInterstitialAd.h</key>
 		<data>
-		33jYPBYoN/9OYEADx6DK+Wd1KJc=
+		J6+fubH3h5gLPfwVPMEBEGmdmAk=
 		</data>
-		<key>Headers/LMNativeAd.h</key>
+		<key>Headers/LeadMoadNativeAd.h</key>
 		<data>
-		BoNVWtW+VVpsqocuZk0EgBk0J5w=
+		7O6RbIEqfJ5V1SI9qBTEd+MrBPA=
 		</data>
-		<key>Headers/LMNativeMediaView.h</key>
+		<key>Headers/LeadMoadNativeMediaView.h</key>
 		<data>
-		m/LVP/ITU6RVgDGxctG9FxYY82s=
+		r81p9uCh87n8JyB9/4iMeP1IxSI=
 		</data>
-		<key>Headers/LMNativeObj.h</key>
+		<key>Headers/LeadMoadNativeObj.h</key>
 		<data>
-		xNXQTlm4K3eQcoJ3dC6naATJje4=
+		En6nJE2IvfsCSA4Oslreb9upOKE=
 		</data>
-		<key>Headers/LMNativeView.h</key>
+		<key>Headers/LeadMoadNativeView.h</key>
 		<data>
-		WeCpn/etZrsT2dDtQ47+D9nmYXc=
+		O9MblsLwwHEgVdVYzCL27BgYj7M=
 		</data>
-		<key>Headers/LMRewardVideoAd.h</key>
+		<key>Headers/LeadMoadRewardVideoAd.h</key>
 		<data>
-		X8pBCyw8zDqCVuwd/w9u13NLBJ0=
+		4UHtv1O8xkNdNSZcqPI0Uo3ii/g=
 		</data>
-		<key>Headers/LMSplashAd.h</key>
+		<key>Headers/LeadMoadSplashAd.h</key>
 		<data>
-		57VqG86Lfw9GxgpqXOljD3aTNWc=
+		2COKs2fOnmd6fKQFfiHfaHbdP3M=
 		</data>
 		<key>Headers/LeadmoadAdSDK.h</key>
 		<data>
-		cC9HPsb+6MqZkXj+EAl7OME27kI=
+		IsbiWVOYeon1aboGdAyCvFNoeCQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
 		5iIoabnZDya3G8Ak1az/lcyU0wo=
-		</data>
-		<key>LMAdInternalDebugConfig.h.backup</key>
-		<data>
-		NT2SptpYD6GI7+aSyaBGCZWpuHc=
-		</data>
-		<key>LMAdRequestManager.m.orig</key>
-		<data>
-		rBkR7iLYVlnLGXmuI9BxBnXaTA0=
-		</data>
-		<key>LMDeveiceTools.m.orig</key>
-		<data>
-		2f18eBHalilX/K54p0twLU9ZHHI=
-		</data>
-		<key>LMShakeInteractionDetector.h.orig</key>
-		<data>
-		OqKbm8Dzcz5zMTmllinh8h8DWUo=
-		</data>
-		<key>LMShakeInteractionDetector.m.orig</key>
-		<data>
-		Pvehm+yBYMOVxQvTZ88avZztcD4=
-		</data>
-		<key>LMSplashRTBAd.m.orig</key>
-		<data>
-		yBxYnV9MB6UfglxgN436C44W9EY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -95,137 +71,95 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/LMAdBidLossInfo.h</key>
+		<key>Headers/LeadMoadAdBidLossInfo.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nXQd0ihT0eNfsbzlf1afi1qUy7zI5WoQ2dfqr6++M7I=
+			zo13tpNwXyoDzigH5aEJMg6xs5EJ7dgl5izmrR3BI2s=
 			</data>
 		</dict>
-		<key>Headers/LMAdPublicDefine.h</key>
+		<key>Headers/LeadMoadAdPublicDefine.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wL4Lkksri/ZmkYxHDKeVOUr+mi+aXu3o87A8be2vTsE=
+			7LkE27w6K0FBuHtu68yJVDjVErlezl2kNqQMXvUNAC4=
 			</data>
 		</dict>
-		<key>Headers/LMAdSDKConfiguration.h</key>
+		<key>Headers/LeadMoadAdSDKConfiguration.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			53HghgwiwH/iimClol0b9aWAcOyApnnIqCzniH4fBvs=
+			k9rQFSKubdcTcA2JVc2SF3yNEq+bR/S4PfVOz5Ll+Sg=
 			</data>
 		</dict>
-		<key>Headers/LMAdSDKManager.h</key>
+		<key>Headers/LeadMoadAdSDKManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tha4nF5LLfnDnyCPzYclyoAxXSGI+VL4bIJPtI+C8hc=
+			WJgENOALUTaNVXhbHEiQcKJffcEMYhlPamdXr+QerdY=
 			</data>
 		</dict>
-		<key>Headers/LMBannerAd.h</key>
+		<key>Headers/LeadMoadBannerAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			quz9CrfsRmVBpnFGZx7/Z9ea7b1eufrN142bOKaREsQ=
+			UiNeeM8ucvk9hH3uF/l8E6RuPLBz34UemxP59STWtk8=
 			</data>
 		</dict>
-		<key>Headers/LMInterstitialAd.h</key>
+		<key>Headers/LeadMoadInterstitialAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JDhtZ6Ek3QfCfMX0BMlSDaSlSUOGAwI3rTbtw74WSfg=
+			5Tnj6ZB7hHBxnqzyml/3Fcug/0T+0n421brrzqE0wNw=
 			</data>
 		</dict>
-		<key>Headers/LMNativeAd.h</key>
+		<key>Headers/LeadMoadNativeAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NGrfOBljaE+DGHJXjNu/csTZQ1lTyUsEC1rj4vZ4xAE=
+			Yn43P7gsEjfkU+lCjYzwhySP4ZyT9krUP2oF7EtQyMk=
 			</data>
 		</dict>
-		<key>Headers/LMNativeMediaView.h</key>
+		<key>Headers/LeadMoadNativeMediaView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n3TOWOO0hOcH8qOiesxmTnfN5GAe9ztWD0KNwiiJfcI=
+			zV92NnVpQNSvAJB2UIXqXbgQcyGkH3LfJhUhFdCh0TA=
 			</data>
 		</dict>
-		<key>Headers/LMNativeObj.h</key>
+		<key>Headers/LeadMoadNativeObj.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fy9PkPd3EJ3ma10wbbA8LZjc8MU5tp1dagepzN5hpLs=
+			tQWeER98EaX4qVTi06auTkRo/mngOFvkKKBrISfDebU=
 			</data>
 		</dict>
-		<key>Headers/LMNativeView.h</key>
+		<key>Headers/LeadMoadNativeView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q2ukp4+ZOl35DeDibxC3K+K2XtG2OAAS84ftlfVc2dc=
+			yyaVPnAPYfQT4rTmSkKu4vC+6Pz+Rj+17xmaOB1TQSA=
 			</data>
 		</dict>
-		<key>Headers/LMRewardVideoAd.h</key>
+		<key>Headers/LeadMoadRewardVideoAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X82vOIZDRGb5wbkUjEAHveJlKXy00KjAB3L0D4cXnXs=
+			OJgTvRAsGOKERIos//+n85/rwXME2ONXdabS9+HLrgI=
 			</data>
 		</dict>
-		<key>Headers/LMSplashAd.h</key>
+		<key>Headers/LeadMoadSplashAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k+wYtCqrCUS6haozQTy45yR84NFoOuWnr4ixCIwFRQo=
+			U8vqYSgecRPs3+354nAbm1YLVjvfv/zd/8d7PVG/QDw=
 			</data>
 		</dict>
 		<key>Headers/LeadmoadAdSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jsed7ooqEVg/JzvSxehBx9W7FlHrgQBzkTLdw9roAXY=
-			</data>
-		</dict>
-		<key>LMAdInternalDebugConfig.h.backup</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			abpir29OKwfgSvVJx90yurrhiI+CdZraGvrJbee6MYk=
-			</data>
-		</dict>
-		<key>LMAdRequestManager.m.orig</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NXjxeoQZUuOP7RcNZoaws6o9L30/6R0kePETUZ9LY4U=
-			</data>
-		</dict>
-		<key>LMDeveiceTools.m.orig</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Yq8Xf6QEMskKA0YGvYNXf9ZFV+VzV7IcFHhdwVzppvE=
-			</data>
-		</dict>
-		<key>LMShakeInteractionDetector.h.orig</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rRiFRoAIVFRD+4xW5DOyOwYaHWvmfM2D3zR68Bdw+YI=
-			</data>
-		</dict>
-		<key>LMShakeInteractionDetector.m.orig</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tIeuQn5UEjlvR7mvmTHGynVKlJkznEdBsMjwY3L+OOc=
-			</data>
-		</dict>
-		<key>LMSplashRTBAd.m.orig</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6z1h3bqMxcm63Qf7aoNyOrGq6/GGup7AHaPYTjAbd5A=
+			1pDmui1lVQGT523OexmFaTTY079ncZ6mVTjH3XyEMc8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

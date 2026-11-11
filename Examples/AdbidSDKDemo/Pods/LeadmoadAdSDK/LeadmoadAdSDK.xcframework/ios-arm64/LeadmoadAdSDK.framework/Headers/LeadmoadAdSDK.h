@@ -14,17 +14,16 @@ FOUNDATION_EXPORT double LeadmoadAdSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char LeadmoadAdSDKVersionString[];
 
 // Public headers
-#import <LeadmoadAdSDK/LMAdSDKConfiguration.h>
-#import <LeadmoadAdSDK/LMAdSDKManager.h>
-#import <LeadmoadAdSDK/LMSplashAd.h>
-#import <LeadmoadAdSDK/LMInterstitialAd.h>
-#import <LeadmoadAdSDK/LMNativeAd.h>
-#import <LeadmoadAdSDK/LMNativeView.h>
-#import <LeadmoadAdSDK/LMNativeObj.h>
-#import <LeadmoadAdSDK/LMNativeMediaView.h>
-#import <LeadmoadAdSDK/LMBannerAd.h>
-#import <LeadmoadAdSDK/LMRewardVideoAd.h>
-#import <LeadmoadAdSDK/LMAdPublicDefine.h>
-#import <LeadmoadAdSDK/LMAdBidLossInfo.h>
-
+#import <LeadmoadAdSDK/LeadMoadAdSDKConfiguration.h>
+#import <LeadmoadAdSDK/LeadMoadAdSDKManager.h>
+#import <LeadmoadAdSDK/LeadMoadSplashAd.h>
+#import <LeadmoadAdSDK/LeadMoadInterstitialAd.h>
+#import <LeadmoadAdSDK/LeadMoadNativeAd.h>
+#import <LeadmoadAdSDK/LeadMoadNativeView.h>
+#import <LeadmoadAdSDK/LeadMoadNativeObj.h>
+#import <LeadmoadAdSDK/LeadMoadNativeMediaView.h>
+#import <LeadmoadAdSDK/LeadMoadBannerAd.h>
+#import <LeadmoadAdSDK/LeadMoadRewardVideoAd.h>
+#import <LeadmoadAdSDK/LeadMoadAdPublicDefine.h>
+#import <LeadmoadAdSDK/LeadMoadAdBidLossInfo.h>
 

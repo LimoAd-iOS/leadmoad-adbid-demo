@@ -13,13 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdCustomPermissionController : NSObject
 @property (nonatomic, assign, readwrite) BOOL allowPersonalizedAd; //是否允许个性化广告（基于用户画像推荐）
 @property (nonatomic, assign, readwrite) BOOL allowLocation;//是否允许获取地理位置信息（用于地域化广告）
-
-@property (nonatomic, assign, readwrite) BOOL allowShakeAd; //是否允许加载摇一摇广告（需传感器权限）
-
-@property (nonatomic, assign, readwrite) BOOL allowRecordAudio;//是否允许使用录音权限（用于语音互动广告
-
-@property (nonatomic, assign) BOOL allowUseIPAddress; //设置是否获取IP地址，YES表示获取，NO表示不获取
-
 @end
 
 typedef NS_ENUM(int, AdbidUserGender) {

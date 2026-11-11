@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 /// 素材加载成功
 - (void)adapterDidLoadRewardVideoAd:(id)adapter;
+/// 素材加载成功，并携带平台扩展数据
+- (void)adapterDidLoadRewardVideoAd:(id)adapter extra:(NSDictionary *)extra;
 /// 加载失败
 - (void)adapter:(id)adapter didFailToLoadRewardVideoAdWithError:(NSError *)error;
 /// 展示成功
@@ -27,15 +29,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告关闭
 - (void)adapterDidCloseRewardVideoAd:(id)adapter;
 /// 广告完成转化(关闭落地页)
-- (void)adapterRewardedVideoAdDidFinishConversion:(id)interstitialAd interactionType:(int)interactionType;
+- (void)adapterRewardedVideoAdDidFinishConversion:(id)adapter interactionType:(int)interactionType;
 
 ///激励视频开始播放
-- (void)adapterRewardedVideoAdStartPlay:(id)rewardedVideoAd;
+- (void)adapterRewardedVideoAdStartPlay:(id)adapter;
 
  ///激励视频播放完成或者发生错误时回调
-- (void)adapterRewardedVideoAdDidPlayFinish:(id)rewardedVideoAd withError:(NSError *_Nullable)error;
+- (void)adapterRewardedVideoAdDidPlayFinish:(id)adapter withError:(NSError *_Nullable)error;
  ///视频广告播放达到激励条件回调
-- (void)adapterRewardVideoAdDidRewardEffective:(id)rewardedVideoAd;
+- (void)adapterRewardVideoAdDidRewardEffective:(id)adapter;
 
 @end
 
@@ -59,7 +61,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 加载广告
 - (void)loadAd;
 
-- (void)loadAdWithToken:(NSString *)token;
 /// 展示广告（主线程调用）
 - (void)showAd:(UIViewController *)viewController;
 
@@ -72,6 +73,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 //是否可以显示
 - (BOOL)isReady;
+
+@optional
+/// 通过 bidding token 加载。旧版 adapter 可不实现，聚合层会回落到 loadAd。
+- (void)loadAdWithToken:(NSString *)token;
 @end
 
 NS_ASSUME_NONNULL_END

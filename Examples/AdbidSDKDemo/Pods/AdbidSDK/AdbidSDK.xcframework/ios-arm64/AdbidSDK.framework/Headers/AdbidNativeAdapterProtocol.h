@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// data 素材
 /// resource 本地素材
 - (void)adapterDidLoadNativeAd:(id)adapter data:(NSDictionary*)data  localResource:(NSDictionary*)resource;
+/// 素材加载成功，并携带平台扩展数据
+- (void)adapterDidLoadNativeAd:(id)adapter
+                          data:(NSDictionary *)data
+                 localResource:(NSDictionary *)resource
+                         extra:(NSDictionary *)extra;
 /// 加载失败
 - (void)adapter:(id)adapter didFailToLoadNativeAdWithError:(NSError *)error;
 /// 展示成功
@@ -53,7 +58,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 加载广告
 - (void)loadAd;
 
-- (void)loadAdWithToken:(NSString *)token;
 /// 竞胜上报
 - (void)winNotice:(NSInteger)price;
 
@@ -68,8 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
        withClickableViews:(NSArray<__kindof UIView *> *_Nullable)clickableViews;
 
 @optional
+/// 通过 bidding token 加载。旧版 adapter 可不实现，聚合层会回落到 loadAd。
+- (void)loadAdWithToken:(NSString *)token;
 /*
  * 带额外配置的注册方法。已知 extraConfig key：
+ *   - templateView   UIView*              模版广告的渲染容器，adapter/Taku 会将真实模版视图插入其中
  *   - mediaView      AdbidNativeMediaView*  App 持有的媒体视图,adapter 在视频广告时可把自家 SDK 的播放视图嵌进它
  *   - adFrame / mediaViewFrame / sizeToFit / adLogoFrame / adOptionsFrame / networkLogoFrame / videoPlayType
  *     模版广告专用,见 AdbidNativeAd.h 注释

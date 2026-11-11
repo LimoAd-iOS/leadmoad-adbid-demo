@@ -13,13 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol AdbidNativeMediaViewDelegate <NSObject>
 
 @optional
-
-/**
- 用户点击 MediaView 回调
-
- @param mediaView 播放器实例
- */
-- (void)nativeMediaViewDidClick:(AdbidNativeMediaView *)mediaView;
 /**
  准备播放
  */
@@ -48,23 +41,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  播放视频
  */
-- (void)play;
+- (void)play __attribute__((deprecated("Do nothing now, it will work in a future version")));
 
 /**
  暂停视频，调用 pause 后，需要被暂停的视频广告对象，不会再自动播放，需要调用 play 才能恢复播放。
  */
-- (void)pause;
+- (void)pause __attribute__((deprecated("Do nothing now, it will work in a future version")));
 
 /**
  停止播放，并展示第一帧
  */
-- (void)stop;
-
-/**
- 播放静音开关
- @param muted 是否静音
- */
-- (void)setMuted:(BOOL)muted;
+- (void)stop __attribute__((deprecated("Do nothing now, it will work in a future version")));
 
 @end
 

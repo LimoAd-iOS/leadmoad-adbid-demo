@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *slotId;
 @property (nonatomic, copy, readonly) NSString* currentRequestId;
 @property (nonatomic, weak, nullable) UIViewController *viewController;
+@property (nonatomic, strong, nullable) UIView *bottomView;
 
 - (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId NS_DESIGNATED_INITIALIZER;
 

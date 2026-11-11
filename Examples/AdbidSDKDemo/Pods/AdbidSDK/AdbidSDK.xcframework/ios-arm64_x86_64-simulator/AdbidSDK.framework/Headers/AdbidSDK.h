@@ -19,13 +19,16 @@ FOUNDATION_EXPORT const unsigned char AdbidSDKVersionString[];
 #import <AdbidSDK/AdbidRewardVideoAd.h>
 #import <AdbidSDK/AdbidNativeAd.h>
 #import <AdbidSDK/AdbidNativeObj.h>
+#import <AdbidSDK/AdbidEcommerceModel.h>
 #import <AdbidSDK/AdbidNativeView.h>
 #import <AdbidSDK/AdbidPublicDefine.h>
 #import <AdbidSDK/AdbidBidLossInfo.h>
 #import <AdbidSDK/AdbidAdInfoModel.h>
+#import <AdbidSDK/AdbidMaterialModel.h>
 #import <AdbidSDK/AdbidSDKManager.h>
 #import <AdbidSDK/AdbidSDKConfiguration.h>
 #import <AdbidSDK/AdbidNativeMediaView.h>
+#import <AdbidSDK/AdbidBannerAd.h>
 
 #import <AdbidSDK/AdbidBaseSplashAdapter.h>
 #import <AdbidSDK/AdbidBaseRewardVideoAdapter.h>
