@@ -12,6 +12,7 @@
 #import "RewardVideoViewController.h"
 #import "SplashAdViewController.h"
 #import "InterstitialViewController.h"
+#import "BannerViewController.h"
 
 // 导入头文件
 #import <AdSupport/AdSupport.h>
@@ -90,6 +91,7 @@
         @{@"title" : @"开屏广告", @"subtitle" : @"Splash", @"icon" : @"sparkles", @"action" : @"splashButtonTapped:"},
         @{@"title" : @"激励视频", @"subtitle" : @"Reward Video", @"icon" : @"play.rectangle.fill", @"action" : @"rewardVideoButtonTapped:"},
         @{@"title" : @"插屏广告", @"subtitle" : @"Interstitial", @"icon" : @"rectangle.stack", @"action" : @"interstitialButtonTapped:"},
+        @{@"title" : @"横幅广告", @"subtitle" : @"Banner", @"icon" : @"rectangle", @"action" : @"bannerButtonTapped:"},
         @{@"title" : @"信息流（draw）", @"subtitle" : @"Native", @"icon" : @"list.bullet.rectangle", @"action" : @"nativeButtonTapped:"},
         @{@"title" : @"底通信息流", @"subtitle" : @"Native", @"icon" : @"list.bullet.rectangle", @"action" : @"bottomNativeFeedButtonTapped:"},
     ];
@@ -224,6 +226,11 @@
 - (void)interstitialButtonTapped:(UIButton *)sender {
     InterstitialViewController *rewardVideoVC = [[InterstitialViewController alloc] init];
     [self pushSecondLevelViewController:rewardVideoVC];
+}
+
+- (void)bannerButtonTapped:(UIButton *)sender {
+    BannerViewController *bannerVC = [[BannerViewController alloc] init];
+    [self pushSecondLevelViewController:bannerVC];
 }
 
 - (void)pushSecondLevelViewController:(UIViewController *)viewController {

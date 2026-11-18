@@ -55,6 +55,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) NSInteger maxLoadTime;
 
+//聚合设置扩展字段
+@property (nonatomic, strong) NSDictionary* localExtra;
+
 @property (nonatomic, assign, readonly) NSInteger eCPM;
 
 /// 竞价素材信息，字段对齐聚合 material：appName/appPackageName/url/title/desc/jump_url/logo

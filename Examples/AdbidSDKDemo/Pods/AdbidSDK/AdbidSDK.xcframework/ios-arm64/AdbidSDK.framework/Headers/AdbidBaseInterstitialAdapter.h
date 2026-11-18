@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *slotId;
 @property (nonatomic, copy, readonly) NSString* currentRequestId;
 @property (nonatomic, weak, nullable) UIViewController *viewController;
+/// 聚合层写入的本地上下文。包含 requestId、positionId、adUnitId。
+@property (nonatomic, copy, nullable) NSDictionary *localExtra;
 - (instancetype)initWithSlotId:(NSString *)slotId requestId:(NSString*)requestId NS_DESIGNATED_INITIALIZER;
 - (void)updateCurrentRequestId:(NSString *)requestId;
 - (instancetype)init NS_UNAVAILABLE;

@@ -48,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) NSInteger maxLoadTime;
 
+//聚合设置扩展字段
+@property (nonatomic, strong) NSDictionary* localExtra;
+
 /**
  自动刷新间隔，单位秒。0 表示不自动刷新（默认）。建议 ≥ 30。
  */

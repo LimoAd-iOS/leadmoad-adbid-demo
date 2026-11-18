@@ -5,8 +5,8 @@ workspace '../../AdbidSDKWorkspace.xcworkspace'
 target 'AdbidSDKDemo' do
   
   use_frameworks!
-  pod 'AdbidSDK', :git => 'https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git', :tag => '2.1.2.8'
-  pod 'LeadmoadAdSDK', :git => 'https://gitee.com/leadmoad/leadmoad-adx-pods.git', :tag => '1.2.8'
+  pod 'AdbidSDK', :git => 'https://github.com/LimoAd-iOS/adbid-limo-pods.git', :tag => '2.1.2.9'
+  pod 'LeadmoadAdSDK', :git => 'https://github.com/LimoAd-iOS/limo-adx-pods.git', :tag => '1.2.9'
   
 end
 

@@ -654,7 +654,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
     [self.fullscreenAdView insertSubview:self.fullscreenAdView.imageView belowSubview:self.fullscreenAdView.mediaView];
     [self pinFullscreenSubview:self.fullscreenAdView.imageView toContainer:self.fullscreenAdView];
 
-    if (self.nativeObj.externalMediaView && ![self isFLinkNativeAd]) {
+    if ( ![self isFLinkNativeAd]) {
         self.fullscreenAdView.imageView.hidden = YES;
         return;
     }
@@ -1844,7 +1844,7 @@ typedef NS_ENUM(NSInteger, AdStatus) {
 }
 
 - (void)prefetchVideoCoverImageIfNeeded:(AdbidNativeObj *)nativeObj {
-    NSString *coverImageUrl = (nativeObj.isVideoAd && !nativeObj.externalMediaView) ? nativeObj.videoAdInfo.coverImageUrl : nil;
+    NSString *coverImageUrl = (nativeObj.isVideoAd) ? nativeObj.videoAdInfo.coverImageUrl : nil;
     if (coverImageUrl.length == 0) {
         return;
     }

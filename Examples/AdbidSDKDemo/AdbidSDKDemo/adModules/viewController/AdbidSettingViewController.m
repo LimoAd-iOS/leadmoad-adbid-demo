@@ -82,9 +82,6 @@
     [self addInfoRowToStack:statusStack title:@"广告平台" valueLabel:self.flatTitleLabel];
     [statusStack addArrangedSubview:[self createDividerView]];
 
-    [self addInfoRowToStack:statusStack
-                      title:@"LeadmoadAdSDK"
-                 valueLabel:[self createValueLabelWithText:[LMAdSDKConfiguration sdkVersion]]];
     [statusStack addArrangedSubview:[self createDividerView]];
 
     [self addInfoRowToStack:statusStack

@@ -40,6 +40,7 @@ typedef NS_ENUM(NSInteger, EnvironmentType) {
 + (NSString *)nativeID; //自渲染
 + (NSString *)nativeDrawID;//2级draw
 + (NSString *)interstitalID;
++ (NSString *)bannerID;
 @end
 
 NS_ASSUME_NONNULL_END

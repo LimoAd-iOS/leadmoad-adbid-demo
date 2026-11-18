@@ -224,7 +224,7 @@ static NSString *const kLegacySelectedPlatformsKey = @"flatform";
     NSString *platform = [self selectedPlatform];
     switch ([self currentEnv]) {
             case EnvironmentType_Test_10004:
-            if ([platform isEqualToString:@"FL"]) {
+            if ([platform isEqualToString:@"LM"]) {
                 return @"MTc1MzM0NTA2ODIxOA=="; // 泛连
             }
             return @"MTc1MzM0NTA2ODIxOA==";
@@ -241,6 +241,18 @@ static NSString *const kLegacySelectedPlatformsKey = @"flatform";
                 }
                 return @"MTc1MzM0NDg4NDc3Mg==";
         default: return @"MTc1MzM0NDg4NDc3Mg==";
+    }
+}
+
++ (NSString *)bannerID {
+    NSString *platform = [self selectedPlatform];
+    switch ([self currentEnv]) {
+            case EnvironmentType_Test_10004:
+                if ([platform isEqualToString:@"LM"]) {
+                    return @"MTc1MzM0NTExNjc2NA=="; // LM
+                }
+                return @"MTc1MzM0NTExNjc2NA==";
+        default: return @"MTc1MzM0NTExNjc2NA==";
     }
 }
 

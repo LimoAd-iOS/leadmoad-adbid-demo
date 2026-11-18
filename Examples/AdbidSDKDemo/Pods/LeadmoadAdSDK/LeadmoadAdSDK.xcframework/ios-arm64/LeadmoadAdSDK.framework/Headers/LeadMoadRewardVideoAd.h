@@ -53,6 +53,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告最大请求时长，单位毫秒。默认5000，最小500毫秒
 @property (nonatomic, assign) NSInteger maxLoadTime;
 
+//聚合设置扩展字段
+@property (nonatomic, strong) NSDictionary* localExtra;
+
 /// 是否静音播放，默认 YES
 @property (nonatomic, assign) BOOL shouldMuted;
 

@@ -1,31 +1,31 @@
 PODS:
-  - AdbidSDK (2.1.2.8)
-  - LeadmoadAdSDK (1.2.8)
+  - AdbidSDK (2.1.2.9)
+  - LeadmoadAdSDK (1.2.9)
 
 DEPENDENCIES:
-  - AdbidSDK (from `https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git`, tag `2.1.2.8`)
-  - LeadmoadAdSDK (from `https://gitee.com/leadmoad/leadmoad-adx-pods.git`, tag `1.2.8`)
+  - AdbidSDK (from `https://github.com/LimoAd-iOS/adbid-limo-pods.git`, tag `2.1.2.9`)
+  - LeadmoadAdSDK (from `https://github.com/LimoAd-iOS/limo-adx-pods.git`, tag `1.2.9`)
 
 EXTERNAL SOURCES:
   AdbidSDK:
-    :git: https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git
-    :tag: 2.1.2.8
+    :git: https://github.com/LimoAd-iOS/adbid-limo-pods.git
+    :tag: 2.1.2.9
   LeadmoadAdSDK:
-    :git: https://gitee.com/leadmoad/leadmoad-adx-pods.git
-    :tag: 1.2.8
+    :git: https://github.com/LimoAd-iOS/limo-adx-pods.git
+    :tag: 1.2.9
 
 CHECKOUT OPTIONS:
   AdbidSDK:
-    :git: https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git
-    :tag: 2.1.2.8
+    :git: https://github.com/LimoAd-iOS/adbid-limo-pods.git
+    :tag: 2.1.2.9
   LeadmoadAdSDK:
-    :git: https://gitee.com/leadmoad/leadmoad-adx-pods.git
-    :tag: 1.2.8
+    :git: https://github.com/LimoAd-iOS/limo-adx-pods.git
+    :tag: 1.2.9
 
 SPEC CHECKSUMS:
-  AdbidSDK: cb27350b7d2fb2db65ea1d14ad1e95f348ff77f4
-  LeadmoadAdSDK: aed13cfe6ec5707f3d95c213b48458dd708e6d27
+  AdbidSDK: 964411170079d9401643e06021a3163b2ed16f8a
+  LeadmoadAdSDK: c3c177c405958557430605629728fe3b4ffe299f
 
-PODFILE CHECKSUM: eba43c0d80f7ad6bf60fbf4e3bb731c015ab052d
+PODFILE CHECKSUM: 2e39a05dff7ba04d49456ddc51218db99ef61067
 
 COCOAPODS: 1.16.2

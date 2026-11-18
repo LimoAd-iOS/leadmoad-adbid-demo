@@ -1,6 +1,6 @@
 {
   "name": "AdbidSDK",
-  "version": "2.1.2.8",
+  "version": "2.1.2.9",
   "summary": "Adbid广告SDK",
   "description": "Adbid广告SDK提供了广告展示和管理功能",
   "homepage": "https://github.com/LimoAd-iOS/leadmoad-adbid-pods",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/LimoAd-iOS/leadmoad-adbid-pods.git",
-    "tag": "2.1.2.8"
+    "tag": "2.1.2.9"
   },
   "vendored_frameworks": "AdbidSDK.xcframework",
   "swift_versions": "5.0",
